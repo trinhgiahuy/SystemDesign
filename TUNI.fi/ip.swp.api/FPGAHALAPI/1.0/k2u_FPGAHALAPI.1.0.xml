@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<kactus2:apiDefinition xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd" xmlns:kactus2="http://funbase.cs.TUNI.fi/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ipxact:vendor xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014">TUNI.fi</ipxact:vendor>
+  <ipxact:library xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014">ip.swp.api</ipxact:library>
+  <ipxact:name xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014">FPGAHALAPI</ipxact:name>
+  <ipxact:version xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014">1.0</ipxact:version>
+  <kactus2:comDefinitionRef vendor="" library="" name="" version="" />
+  <kactus2:dataTypes />
+  <kactus2:functions>
+    <kactus2:function name="map_phys_to_virt" description="Maps to memory the given physical  address to a virtual address, if successful.">
+      <kactus2:returnValue type="void*" description="" />
+    </kactus2:function>
+    <kactus2:function name="init_fpga_mapping" description="Maps certain mandatory thing to memory, to make FPGA access via H2F, LWH2F, and FPGA2SDRAM usable.">
+      <kactus2:returnValue type="int" description="" />
+    </kactus2:function>
+  </kactus2:functions>
+</kactus2:apiDefinition>

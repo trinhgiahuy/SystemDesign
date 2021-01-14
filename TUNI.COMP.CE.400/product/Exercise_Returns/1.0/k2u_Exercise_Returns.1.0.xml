@@ -92,8 +92,33 @@
 				<ipxact:description>Calls script that runs Kvazaar with exercise-specific parameters and output the terminal prints to a log file as well.</ipxact:description>
 			</ipxact:file>
 		</ipxact:fileSet>
-	</ipxact:fileSets>		
-	<ipxact:description>Each file set contains returns of the exercise with same name.
+		<ipxact:fileSet>
+			<ipxact:name>Exercise04</ipxact:name>
+			<ipxact:description>Exercise return files.</ipxact:description>
+			<ipxact:file>
+				<ipxact:name>Exercise04/Answers.txt</ipxact:name>
+				<ipxact:fileType>textFile</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="false">false</ipxact:isIncludeFile>
+				<ipxact:description>INSERT ANSWERS TO QUESTIONS HERE!</ipxact:description>
+				<ipxact:vendorExtensions xmlns:kactus2="http://funbase.cs.TUNI.fi/">
+					<kactus2:hash>1409ed282b8893dcfc2451ec58a90f26</kactus2:hash>
+			</ipxact:vendorExtensions>
+			</ipxact:file>
+		</ipxact:fileSet>
+
+
+		<ipxact:fileSet>
+			<ipxact:name>ExerciseB</ipxact:name>
+			<ipxact:description>Exercise return files.</ipxact:description>
+			<ipxact:file>
+				<ipxact:name>ExerciseB/AnswersB.txt</ipxact:name>
+				<ipxact:fileType user="textFile">user</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="false">false</ipxact:isIncludeFile>
+				<ipxact:description>INSERT ANSWERS TO QUESTIONS HERE!</ipxact:description>
+			</ipxact:file>
+		</ipxact:fileSet>
+	</ipxact:fileSets>
+	<ipxact:description>Each file set contains returns of the exercisewith same name.
 
 In addition the actual returns, may also contain some scripts used to generate those returns.</ipxact:description>
 	<ipxact:vendorExtensions>

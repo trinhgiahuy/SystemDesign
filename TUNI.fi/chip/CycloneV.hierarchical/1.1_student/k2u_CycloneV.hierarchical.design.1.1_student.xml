@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014/ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>TUNI.fi</ipxact:vendor>
+	<ipxact:library>chip</ipxact:library>
+	<ipxact:name>CycloneV.hierarchical.design</ipxact:name>
+	<ipxact:version>1.1_student</ipxact:version>
+	<ipxact:componentInstances>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>FPGA.Measurements_0</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="soc" name="FPGA.Measurements" version="1.1_student"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{fdb7fabc-b09d-44dc-bb46-78b96245232b}</kactus2:uuid>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="FPGA2SDRAM" x="-110" y="40"/>
+					<kactus2:portPosition busRef="H2F" x="-110" y="60"/>
+					<kactus2:portPosition busRef="LWH2F" x="-110" y="80"/>
+				</kactus2:portPositions>
+				<kactus2:position x="600" y="60"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>HPS_0</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="soc" name="HPS" version="1.2_student"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{58c3afb4-a8e9-463e-bf06-8ffbb017e983}</kactus2:uuid>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="F2H" x="-110" y="80"/>
+					<kactus2:portPosition busRef="FPGA2SDRAM" x="110" y="40"/>
+					<kactus2:portPosition busRef="H2F" x="110" y="60"/>
+					<kactus2:portPosition busRef="LWH2F" x="110" y="80"/>
+					<kactus2:portPosition busRef="mem_interface" x="-110" y="40"/>
+				</kactus2:portPositions>
+				<kactus2:position x="280" y="60"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+	</ipxact:componentInstances>
+	<ipxact:interconnections>
+		<ipxact:interconnection>
+			<ipxact:name>FPGA.Measurements_0_LWH2F_to_HPS_0_LWH2F</ipxact:name>
+			<ipxact:activeInterface componentRef="FPGA.Measurements_0" busRef="LWH2F"/>
+			<ipxact:activeInterface componentRef="HPS_0" busRef="LWH2F"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>FPGA.Measurements_0_H2F_to_HPS_0_H2F</ipxact:name>
+			<ipxact:activeInterface componentRef="FPGA.Measurements_0" busRef="H2F"/>
+			<ipxact:activeInterface componentRef="HPS_0" busRef="H2F"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>HPS_0_FPGA2SDRAM_to_FPGA.Measurements_0_FPGA2SDRAM</ipxact:name>
+			<ipxact:activeInterface componentRef="HPS_0" busRef="FPGA2SDRAM"/>
+			<ipxact:activeInterface componentRef="FPGA.Measurements_0" busRef="FPGA2SDRAM"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>mem_interface_hps</ipxact:name>
+			<ipxact:activeInterface componentRef="HPS_0" busRef="mem_interface"/>
+			<ipxact:hierInterface busRef="mem_interface_hps"/>
+		</ipxact:interconnection>
+	</ipxact:interconnections>
+	<ipxact:vendorExtensions>
+		<kactus2:version>2,8,49,0</kactus2:version>
+		<kactus2:columnLayout>
+			<kactus2:column name="IO" contentType="0" allowedItems="1" minWidth="119" width="119" x="760"/>
+			<kactus2:column name="Components" contentType="2" allowedItems="2" minWidth="319" width="319" x="440"/>
+			<kactus2:column name="Components" contentType="2" allowedItems="2" minWidth="319" width="319" x="120"/>
+			<kactus2:column name="IO" contentType="0" allowedItems="1" minWidth="119" width="119" x="0"/>
+		</kactus2:columnLayout>
+		<kactus2:routes>
+			<kactus2:route kactus2:connRef="" kactus2:offPage="false">
+				<kactus2:position x="490" y="140"/>
+				<kactus2:position x="390" y="140"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="" kactus2:offPage="false">
+				<kactus2:position x="490" y="120"/>
+				<kactus2:position x="390" y="120"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="" kactus2:offPage="false">
+				<kactus2:position x="390" y="100"/>
+				<kactus2:position x="490" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="FPGA.Measurements_0_LWH2F_to_HPS_0_LWH2F" kactus2:offPage="false"/>
+			<kactus2:route kactus2:connRef="FPGA.Measurements_0_H2F_to_HPS_0_H2F" kactus2:offPage="false"/>
+			<kactus2:route kactus2:connRef="HPS_0_FPGA2SDRAM_to_FPGA.Measurements_0_FPGA2SDRAM" kactus2:offPage="false"/>
+			<kactus2:route kactus2:connRef="mem_interface_hps" kactus2:offPage="false"/>
+		</kactus2:routes>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_interface_hps</kactus2:name>
+			<kactus2:position x="60" y="70"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+	</ipxact:vendorExtensions>
+</ipxact:design>

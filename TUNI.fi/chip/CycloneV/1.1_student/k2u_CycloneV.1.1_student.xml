@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014/ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>TUNI.fi</ipxact:vendor>
+	<ipxact:library>chip</ipxact:library>
+	<ipxact:name>CycloneV</ipxact:name>
+	<ipxact:version>1.1_student</ipxact:version>
+	<ipxact:busInterfaces>
+		<ipxact:busInterface>
+			<ipxact:name>mem_interface_hps</ipxact:name>
+			<ipxact:description>DDR memory access for the HPS.</ipxact:description>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="memory_interface" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="memory_interface.absDef" version="1.0"/>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:master/>
+			<ipxact:connectionRequired>false</ipxact:connectionRequired>
+			<ipxact:bitsInLau>8</ipxact:bitsInLau>
+			<ipxact:endianness>little</ipxact:endianness>
+		</ipxact:busInterface>
+	</ipxact:busInterfaces>
+	<ipxact:model>
+		<ipxact:views>
+			<ipxact:view>
+				<ipxact:name>flat</ipxact:name>
+				<ipxact:envIdentifier>::</ipxact:envIdentifier>
+				<ipxact:componentInstantiationRef>flat</ipxact:componentInstantiationRef>
+			</ipxact:view>
+			<ipxact:view>
+				<ipxact:name>hierarchical</ipxact:name>
+				<ipxact:envIdentifier>::</ipxact:envIdentifier>
+				<ipxact:designConfigurationInstantiationRef>hierarchical</ipxact:designConfigurationInstantiationRef>
+			</ipxact:view>
+		</ipxact:views>
+		<ipxact:instantiations>
+			<ipxact:componentInstantiation>
+				<ipxact:name>flat</ipxact:name>
+			</ipxact:componentInstantiation>
+			<ipxact:designConfigurationInstantiation>
+				<ipxact:name>hierarchical</ipxact:name>
+				<ipxact:designConfigurationRef vendor="TUNI.fi" library="chip" name="CycloneV.hierarchical.designcfg" version="1.1_student"/>
+			</ipxact:designConfigurationInstantiation>
+		</ipxact:instantiations>
+	</ipxact:model>
+	<ipxact:fileSets>
+		<ipxact:fileSet>
+			<ipxact:name>doc</ipxact:name>
+			<ipxact:description>The documentation of the chip.</ipxact:description>
+			<ipxact:group>Double_click_to_add_new_item.</ipxact:group>
+			<ipxact:file>
+				<ipxact:name>doc/cv_51001.pdf</ipxact:name>
+				<ipxact:fileType user="pdfFile">user</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>doc/cv_51002.pdf</ipxact:name>
+				<ipxact:fileType user="pdfFile">user</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>doc/cyclone5_handbook.pdf</ipxact:name>
+				<ipxact:fileType user="pdfFile">user</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>doc/cv_blockdiagram.jpg</ipxact:name>
+				<ipxact:fileType user="picture">user</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+		</ipxact:fileSet>
+	</ipxact:fileSets>
+	<ipxact:description>Cyclone V SX SoC 5CSXFC6D6F31C6N with ARM processor and FPGA. May use external DDR memory: One for HPS and one for FPGA.
+
+http://www.altera.com/literature/lit-cyclone-v.jsp
+
+This component features hardware design of the HPS and the FPGA. For new projects this component is supposed to be copied and the FPGA replaced with the FPGA of the project.</ipxact:description>
+	<ipxact:vendorExtensions>
+		<kactus2:kts_attributes>
+			<kactus2:kts_productHier>Chip</kactus2:kts_productHier>
+			<kactus2:kts_implementation>HW</kactus2:kts_implementation>
+			<kactus2:kts_firmness>Fixed</kactus2:kts_firmness>
+		</kactus2:kts_attributes>
+	</ipxact:vendorExtensions>
+</ipxact:component>

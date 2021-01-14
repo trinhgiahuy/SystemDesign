@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ipxact:component xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ipxact:vendor>TUNI.fi</ipxact:vendor>
+  <ipxact:library>soc</ipxact:library>
+  <ipxact:name>FPGA.Measurements</ipxact:name>
+  <ipxact:version>1.1_student</ipxact:version>
+  <ipxact:busInterfaces>
+    <ipxact:busInterface>
+      <ipxact:name>H2F</ipxact:name>
+      <ipxact:description>Interface to access HPS via bridge.</ipxact:description>
+      <ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="axi3_bus" version="1.0" />
+      <ipxact:abstractionTypes>
+        <ipxact:abstractionType>
+          <ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="axi3_bus.absDef" version="1.0" />
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+      <ipxact:slave />
+      <ipxact:connectionRequired>false</ipxact:connectionRequired>
+      <ipxact:bitsInLau>8</ipxact:bitsInLau>
+      <ipxact:endianness>little</ipxact:endianness>
+    </ipxact:busInterface>
+    <ipxact:busInterface>
+      <ipxact:name>LWH2F</ipxact:name>
+      <ipxact:description>Interface to access HPS via bridge.</ipxact:description>
+      <ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="axi3_bus" version="1.0" />
+      <ipxact:abstractionTypes>
+        <ipxact:abstractionType>
+          <ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="axi3_bus.absDef" version="1.0" />
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+      <ipxact:slave />
+      <ipxact:connectionRequired>false</ipxact:connectionRequired>
+      <ipxact:bitsInLau>8</ipxact:bitsInLau>
+      <ipxact:endianness>little</ipxact:endianness>
+    </ipxact:busInterface>
+    <ipxact:busInterface>
+      <ipxact:name>FPGA2SDRAM</ipxact:name>
+      <ipxact:description>Interface to access HPS DDR via HPS memory control.</ipxact:description>
+      <ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="SDRAM_access" version="1.0" />
+      <ipxact:abstractionTypes>
+        <ipxact:abstractionType>
+          <ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="SDRAM_access.absDef" version="1.0" />
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+      <ipxact:master />
+      <ipxact:connectionRequired>false</ipxact:connectionRequired>
+      <ipxact:bitsInLau>8</ipxact:bitsInLau>
+      <ipxact:endianness>little</ipxact:endianness>
+    </ipxact:busInterface>
+  </ipxact:busInterfaces>
+  <ipxact:model>
+    <ipxact:views>
+      <ipxact:view>
+        <ipxact:name>rtl</ipxact:name>
+        <ipxact:envIdentifier>::</ipxact:envIdentifier>
+        <ipxact:componentInstantiationRef>rtl</ipxact:componentInstantiationRef>
+      </ipxact:view>
+      <ipxact:view>
+        <ipxact:name>hierarchical</ipxact:name>
+        <ipxact:envIdentifier>::</ipxact:envIdentifier>
+        <ipxact:designConfigurationInstantiationRef>hierarchical</ipxact:designConfigurationInstantiationRef>
+      </ipxact:view>
+    </ipxact:views>
+    <ipxact:instantiations>
+      <ipxact:componentInstantiation>
+        <ipxact:name>rtl</ipxact:name>
+      </ipxact:componentInstantiation>
+      <ipxact:designConfigurationInstantiation>
+        <ipxact:name>hierarchical</ipxact:name>
+        <ipxact:designConfigurationRef vendor="TUNI.fi" library="soc" name="FPGA.Measurements.hierarchical.designcfg" version="1.1_student" />
+      </ipxact:designConfigurationInstantiation>
+    </ipxact:instantiations>
+  </ipxact:model>
+  <ipxact:description>This FPGA design is used to measure various speeds concerning transfers between HPS and FPGA, but also transferring back to FPGA via the same media.
+
+See the measurement product for more details on measurements and measurement results.
+
+Each board should have its own measurement product, but the measurement design itself should be reusable.</ipxact:description>
+  <ipxact:vendorExtensions xmlns:kactus2="http://funbase.cs.TUNI.fi/">
+    <kactus2:kts_attributes>
+      <kactus2:kts_productHier>SoC</kactus2:kts_productHier>
+      <kactus2:kts_implementation>HW</kactus2:kts_implementation>
+      <kactus2:kts_firmness>Mutable</kactus2:kts_firmness>
+    </kactus2:kts_attributes>
+    <kactus2:author>Janne Virtanen</kactus2:author>
+  </ipxact:vendorExtensions>
+</ipxact:component>

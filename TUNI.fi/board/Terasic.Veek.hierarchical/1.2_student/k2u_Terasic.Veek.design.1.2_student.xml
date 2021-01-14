@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014/ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>TUNI.fi</ipxact:vendor>
+	<ipxact:library>board</ipxact:library>
+	<ipxact:name>Terasic.Veek.design</ipxact:name>
+	<ipxact:version>1.2_student</ipxact:version>
+	<ipxact:componentInstances>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>ram_ddr3_1</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="ip.hwp.mem" name="ram.ddr3" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{c3308440-860b-4eb5-a7bf-56ef7ae58aa1}</kactus2:uuid>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="mem_interface" x="-110" y="40"/>
+				</kactus2:portPositions>
+				<kactus2:position x="600" y="60"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>CycloneV_0</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="chip" name="CycloneV" version="1.1_student"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{3dcf6c71-bf7e-461f-b92a-393a824ae0ce}</kactus2:uuid>
+				<kactus2:position x="160" y="60"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="mem_interface_hps" x="110" y="40"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+	</ipxact:componentInstances>
+	<ipxact:interconnections>
+		<ipxact:interconnection>
+			<ipxact:name>ram_ddr3_1_mem_interface_to_CycloneV_0_mem_interface_hps</ipxact:name>
+			<ipxact:activeInterface componentRef="ram_ddr3_1" busRef="mem_interface"/>
+			<ipxact:activeInterface componentRef="CycloneV_0" busRef="mem_interface_hps"/>
+		</ipxact:interconnection>
+	</ipxact:interconnections>
+	<ipxact:vendorExtensions>
+		<kactus2:columnLayout>
+			<kactus2:column name="Components" contentType="2" allowedItems="2" minWidth="319" width="319" x="440"/>
+			<kactus2:column name="Memory" contentType="3" allowedItems="2" minWidth="319" width="319" x="120"/>
+			<kactus2:column name="IO" contentType="0" allowedItems="1" minWidth="119" width="119" x="0"/>
+		</kactus2:columnLayout>
+		<kactus2:routes>
+			<kactus2:route kactus2:connRef="" kactus2:offPage="false">
+				<kactus2:position x="370" y="100"/>
+				<kactus2:position x="270" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ram_ddr3_1_mem_interface_to_CycloneV_0_mem_interface_hps" kactus2:offPage="false"/>
+		</kactus2:routes>
+		<kactus2:note>
+			<kactus2:position x="610" y="150"/>
+			<kactus2:content>U.7 end
+K.7 end</kactus2:content>
+			<kactus2:associations>
+				<kactus2:position x="480" y="90"/>
+			</kactus2:associations>
+			<kactus2:timestamp>16.2.2016 14:29:32</kactus2:timestamp>
+		</kactus2:note>
+	</ipxact:vendorExtensions>
+</ipxact:design>
