@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ipxact:design xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ipxact:vendor>TUNI.fi</ipxact:vendor>
+  <ipxact:library>product</ipxact:library>
+  <ipxact:name>Kvazaar.SW-Timed-Simulation.sysdesign</ipxact:name>
+  <ipxact:version>1.0_student</ipxact:version>
+  <ipxact:componentInstances>
+    <ipxact:componentInstance>
+      <ipxact:instanceName>x86_64_0</ipxact:instanceName>
+      <ipxact:displayName />
+      <ipxact:description />
+      <ipxact:componentRef vendor="TUNI.fi" library="ip.hwp.cpu" name="x86-64" version="1.0" />
+      <ipxact:vendorExtensions xmlns:kactus2="http://funbase.cs.TUNI.fi/">
+        <kactus2:position x="190" y="60" />
+        <kactus2:imported importRef="" />
+        <kactus2:propertyValues />
+        <kactus2:uuid>{a76f2486-cf2e-4899-b5f8-399ccbeb8e33}</kactus2:uuid>
+      </ipxact:vendorExtensions>
+    </ipxact:componentInstance>
+  </ipxact:componentInstances>
+  <ipxact:vendorExtensions xmlns:kactus2="http://funbase.cs.TUNI.fi/">
+    <kactus2:swInstances>
+      <kactus2:swInstance>
+        <kactus2:instanceName>Kvazaar_0</kactus2:instanceName>
+        <kactus2:displayName />
+        <kactus2:description />
+        <kactus2:componentRef vendor="TUNI.fi" library="ip.sw" name="Kvazaar" version="0.7.2" />
+        <kactus2:mapping hwRef="{a76f2486-cf2e-4899-b5f8-399ccbeb8e33}" />
+        <kactus2:position x="0" y="40" />
+        <kactus2:apiInterfacePositions>
+          <kactus2:apiInterfacePosition apiRef="Main2Dep">
+            <kactus2:position x="-110" y="40" />
+          </kactus2:apiInterfacePosition>
+        </kactus2:apiInterfacePositions>
+      </kactus2:swInstance>
+      <kactus2:swInstance>
+        <kactus2:instanceName>Kvazaar_sim_support_0</kactus2:instanceName>
+        <kactus2:displayName />
+        <kactus2:description />
+        <kactus2:componentRef vendor="TUNI.fi" library="ip.swp.stack" name="Kvazaar_sim_support" version="1.0_student" />
+        <kactus2:mapping hwRef="{a76f2486-cf2e-4899-b5f8-399ccbeb8e33}" />
+        <kactus2:position x="0" y="120" />
+        <kactus2:apiInterfacePositions>
+          <kactus2:apiInterfacePosition apiRef="Sup2Main">
+            <kactus2:position x="-110" y="40" />
+          </kactus2:apiInterfacePosition>
+        </kactus2:apiInterfacePositions>
+      </kactus2:swInstance>
+    </kactus2:swInstances>
+    <kactus2:apiConnections>
+      <kactus2:apiConnection>
+        <ipxact:name>Kvazaar_0_Main2Dep_to_Kvazaar_sim_support_0_Sup2Main</ipxact:name>
+        <ipxact:displayName />
+        <ipxact:description />
+        <kactus2:activeApiInterface componentRef="Kvazaar_0" apiRef="Main2Dep" />
+        <kactus2:activeApiInterface componentRef="Kvazaar_sim_support_0" apiRef="Sup2Main" />
+        <kactus2:route offPage="false">
+          <kactus2:position x="80" y="140" />
+          <kactus2:position x="60" y="140" />
+          <kactus2:position x="60" y="220" />
+          <kactus2:position x="80" y="220" />
+        </kactus2:route>
+      </kactus2:apiConnection>
+    </kactus2:apiConnections>
+    <kactus2:columnLayout>
+      <kactus2:column name="SW Components" contentType="2" allowedItems="2" minWidth="379" width="379" />
+      <kactus2:column name="SW Components" contentType="2" allowedItems="2" minWidth="379" width="379" />
+    </kactus2:columnLayout>
+    <kactus2:routes />
+    <kactus2:version>2,8,49,0</kactus2:version>
+  </ipxact:vendorExtensions>
+</ipxact:design>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014/ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>TUNI.fi</ipxact:vendor>
+	<ipxact:library>ip.sw</ipxact:library>
+	<ipxact:name>ARM_FPGA_memory_benchmarker</ipxact:name>
+	<ipxact:version>1.0_student</ipxact:version>
+	<ipxact:model>
+		<ipxact:views>
+			<ipxact:view>
+				<ipxact:name>default</ipxact:name>
+				<ipxact:componentInstantiationRef>default_sw_component_instantiation</ipxact:componentInstantiationRef>
+			</ipxact:view>
+			<ipxact:view>
+				<ipxact:name>null</ipxact:name>
+				<ipxact:componentInstantiationRef>null_sw_component_instantiation</ipxact:componentInstantiationRef>
+			</ipxact:view>
+		</ipxact:views>
+		<ipxact:instantiations>
+			<ipxact:componentInstantiation>
+				<ipxact:name>default_sw_component_instantiation</ipxact:name>
+				<ipxact:defaultFileBuilder>
+					<ipxact:fileType>cSource</ipxact:fileType>
+					<ipxact:command></ipxact:command>
+					<ipxact:flags>-std=gnu99 -O2 -lm -pthread -lrt</ipxact:flags>
+					<ipxact:replaceDefaultFlags>false</ipxact:replaceDefaultFlags>
+				</ipxact:defaultFileBuilder>
+				<ipxact:fileSetRef>
+					<ipxact:localName>cSource</ipxact:localName>
+				</ipxact:fileSetRef>
+			</ipxact:componentInstantiation>
+			<ipxact:componentInstantiation>
+				<ipxact:name>null_sw_component_instantiation</ipxact:name>
+			</ipxact:componentInstantiation>
+		</ipxact:instantiations>
+	</ipxact:model>
+	<ipxact:fileSets>
+		<ipxact:fileSet>
+			<ipxact:name>cSource</ipxact:name>
+			<ipxact:file>
+				<ipxact:name>src/benchmark.c</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:description>Benchmarker for ARM</ipxact:description>
+			</ipxact:file>
+		</ipxact:fileSet>
+		<ipxact:fileSet>
+			<ipxact:name>kernel_driver</ipxact:name>
+			<ipxact:file>
+				<ipxact:name>kernel_driver/benchmark_driver.ko</ipxact:name>
+				<ipxact:fileType user="kernel_object">user</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+		</ipxact:fileSet>
+	</ipxact:fileSets>
+	<ipxact:vendorExtensions>
+		<kactus2:version>2,8,49,0</kactus2:version>
+		<kactus2:kts_attributes>
+			<kactus2:kts_implementation>SW</kactus2:kts_implementation>
+		</kactus2:kts_attributes>
+	</ipxact:vendorExtensions>
+</ipxact:component>

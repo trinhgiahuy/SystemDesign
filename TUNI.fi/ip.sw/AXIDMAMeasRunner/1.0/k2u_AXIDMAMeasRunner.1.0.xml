@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014/ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>TUNI.fi</ipxact:vendor>
+	<ipxact:library>ip.sw</ipxact:library>
+	<ipxact:name>AXIDMAMeasRunner</ipxact:name>
+	<ipxact:version>1.0</ipxact:version>
+	<ipxact:model>
+		<ipxact:views>
+			<ipxact:view>
+				<ipxact:name>default</ipxact:name>
+				<ipxact:description>Default software view referring to all source files.</ipxact:description>
+				<ipxact:componentInstantiationRef>default_sw_component_instantiation</ipxact:componentInstantiationRef>
+			</ipxact:view>
+		</ipxact:views>
+		<ipxact:instantiations>
+			<ipxact:componentInstantiation>
+				<ipxact:name>default_sw_component_instantiation</ipxact:name>
+				<ipxact:defaultFileBuilder>
+					<ipxact:fileType>cSource</ipxact:fileType>
+					<ipxact:command></ipxact:command>
+					<ipxact:replaceDefaultFlags>false</ipxact:replaceDefaultFlags>
+				</ipxact:defaultFileBuilder>
+				<ipxact:fileSetRef>
+					<ipxact:localName>src</ipxact:localName>
+				</ipxact:fileSetRef>
+			</ipxact:componentInstantiation>
+		</ipxact:instantiations>
+	</ipxact:model>
+	<ipxact:fileSets>
+		<ipxact:fileSet>
+			<ipxact:name>src</ipxact:name>
+			<ipxact:file>
+				<ipxact:name>AXI_DMA-measurements.c</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType user="padsCAEDecal">user</ipxact:fileType>
+			</ipxact:file>
+		</ipxact:fileSet>
+	</ipxact:fileSets>
+	<ipxact:vendorExtensions>
+		<kactus2:apiInterfaces>
+			<kactus2:apiInterface>
+				<ipxact:name>HAL</ipxact:name>
+				<kactus2:apiType vendor="TUNI.fi" library="ip.swp.api" name="FPGAHALAPI" version="1.0"/>
+				<kactus2:dependencyDirection>requester</kactus2:dependencyDirection>
+			</kactus2:apiInterface>
+		</kactus2:apiInterfaces>
+		<kactus2:author>virtan39</kactus2:author>
+		<kactus2:version></kactus2:version>
+		<kactus2:kts_attributes>
+			<kactus2:kts_implementation>SW</kactus2:kts_implementation>
+		</kactus2:kts_attributes>
+	</ipxact:vendorExtensions>
+</ipxact:component>

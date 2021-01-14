@@ -105,7 +105,46 @@
 			</ipxact:vendorExtensions>
 			</ipxact:file>
 		</ipxact:fileSet>
-
+		<ipxact:fileSet>
+			<ipxact:name>Exercise05</ipxact:name>
+			<ipxact:description>Exercise return files.</ipxact:description>
+			<ipxact:file>
+				<ipxact:name>Exercise05/Answers.txt</ipxact:name>
+				<ipxact:fileType>textFile</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="false">false</ipxact:isIncludeFile>
+				<ipxact:description>INSERT ANSWERS TO QUESTIONS HERE!</ipxact:description>
+				<ipxact:vendorExtensions xmlns:kactus2="http://funbase.cs.TUNI.fi/">
+					<kactus2:hash>9f7ece7da78b6bd781945664ac36b520</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>Exercise05/profile_image.sh</ipxact:name>
+				<ipxact:fileType>shellScript</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="false">false</ipxact:isIncludeFile>
+				<ipxact:description>Runs gprof2dot.py with exercise-specific parameter, thus creating profile.png to the same folder.</ipxact:description>
+				<ipxact:vendorExtensions xmlns:kactus2="http://funbase.cs.TUNI.fi/">
+					<kactus2:hash>2ffab87c6852e202480464f6e688bf85</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+		</ipxact:fileSet>
+		<ipxact:fileSet>
+			<ipxact:name>Exercise06</ipxact:name>
+			<ipxact:description>Exercise return files.</ipxact:description>
+			<ipxact:file>
+				<ipxact:name>Exercise06/Answers.txt</ipxact:name>
+				<ipxact:fileType>textFile</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="false">false</ipxact:isIncludeFile>
+				<ipxact:description>INSERT ANSWERS TO QUESTIONS HERE!</ipxact:description>
+				<ipxact:vendorExtensions xmlns:kactus2="http://funbase.cs.TUNI.fi/">
+					<kactus2:hash>99eac4da6e22ea60850839ab223e2b43</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>Exercise06/encode_run.sh</ipxact:name>
+				<ipxact:fileType user="shellScript">user</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="false">false</ipxact:isIncludeFile>
+			</ipxact:file>
+		</ipxact:fileSet>
 
 		<ipxact:fileSet>
 			<ipxact:name>ExerciseB</ipxact:name>

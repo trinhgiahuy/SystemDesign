@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014/ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>TUNI.fi</ipxact:vendor>
+	<ipxact:library>product</ipxact:library>
+	<ipxact:name>Kvazaar.Veek-System.sysdesign</ipxact:name>
+	<ipxact:version>1.0_student</ipxact:version>
+	<ipxact:componentInstances>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>arm_cortex_a9_0</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="ip.hwp.cpu" name="arm.cortex_a9" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{3a49ce0a-71bd-4107-ad43-5b3a4c23daff}</kactus2:uuid>
+				<kactus2:imported/>
+				<kactus2:position x="190" y="60"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+	</ipxact:componentInstances>
+	<ipxact:vendorExtensions>
+		<kactus2:version>2,7,1108,0</kactus2:version>
+		<kactus2:columnLayout>
+			<kactus2:column name="SW Components" contentType="2" allowedItems="2" minWidth="379" width="379" x="0"/>
+		</kactus2:columnLayout>
+		<kactus2:swInstances>
+			<kactus2:swInstance>
+				<kactus2:instanceName>Kvazaar_acc_support_0</kactus2:instanceName>
+				<kactus2:componentRef vendor="TUNI.fi" library="ip.swp.stack" name="Kvazaar_acc_support" version="1.0"/>
+				<kactus2:mapping hwRef="{3a49ce0a-71bd-4107-ad43-5b3a4c23daff}"/>
+				<kactus2:position x="190" y="180"/>
+			</kactus2:swInstance>
+			<kactus2:swInstance>
+				<kactus2:instanceName>Kvazaar_0</kactus2:instanceName>
+				<kactus2:componentRef vendor="TUNI.fi" library="ip.sw" name="Kvazaar" version="0.7.2"/>
+				<kactus2:mapping hwRef="{3a49ce0a-71bd-4107-ad43-5b3a4c23daff}"/>
+				<kactus2:position x="190" y="100"/>
+			</kactus2:swInstance>
+		</kactus2:swInstances>
+		<kactus2:apiConnections>
+			<kactus2:apiConnection>
+				<ipxact:name>Kvazaar_acc_support_0_Sup2Main_to_Kvazaar_0_Main2Dep</ipxact:name>
+				<kactus2:activeApiInterface componentRef="Kvazaar_acc_support_0" apiRef="Sup2Main"/>
+				<kactus2:activeApiInterface componentRef="Kvazaar_0" apiRef="Main2Dep"/>
+			</kactus2:apiConnection>
+		</kactus2:apiConnections>
+	</ipxact:vendorExtensions>
+</ipxact:design>
