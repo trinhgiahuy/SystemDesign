@@ -1,0 +1,1001 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>TUNI.fi</ipxact:vendor>
+	<ipxact:library>ip.hw</ipxact:library>
+	<ipxact:name>IP_SAD_Accelerator</ipxact:name>
+	<ipxact:version>1.0</ipxact:version>
+	<ipxact:busInterfaces>
+		<ipxact:busInterface>
+			<ipxact:name>config_channel</ipxact:name>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="catapult_channel" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="catapult_channel.absDef" version="1.0"/>
+					<ipxact:portMaps>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CHANNEL_DATA</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>31</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>ip_config_in_z</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>31</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CHANNEL_LZ</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>0</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>ip_config_in_vz</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>0</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CHANNEL_VZ</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>0</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>ip_config_in_lz</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>0</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+					</ipxact:portMaps>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:slave/>
+			<ipxact:connectionRequired>false</ipxact:connectionRequired>
+			<ipxact:bitsInLau>8</ipxact:bitsInLau>
+			<ipxact:endianness>little</ipxact:endianness>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>top_ref_channel</ipxact:name>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="catapult_channel" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="catapult_channel.absDef" version="1.0"/>
+					<ipxact:portMaps>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CHANNEL_DATA</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>15</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>unfiltered1_z</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>15</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CHANNEL_LZ</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>0</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>unfiltered1_vz</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>0</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CHANNEL_VZ</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>0</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>unfiltered1_lz</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>0</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+					</ipxact:portMaps>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:slave/>
+			<ipxact:connectionRequired>false</ipxact:connectionRequired>
+			<ipxact:bitsInLau>8</ipxact:bitsInLau>
+			<ipxact:endianness>little</ipxact:endianness>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>left_ref_channel</ipxact:name>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="catapult_channel" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="catapult_channel.absDef" version="1.0"/>
+					<ipxact:portMaps>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CHANNEL_DATA</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>15</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>unfiltered2_z</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>15</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CHANNEL_LZ</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>0</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>unfiltered2_vz</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>0</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CHANNEL_VZ</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>0</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>unfiltered2_lz</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>0</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+					</ipxact:portMaps>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:slave/>
+			<ipxact:connectionRequired>false</ipxact:connectionRequired>
+			<ipxact:bitsInLau>8</ipxact:bitsInLau>
+			<ipxact:endianness>little</ipxact:endianness>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>orig_channel</ipxact:name>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="catapult_channel" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="catapult_channel.absDef" version="1.0"/>
+					<ipxact:portMaps>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CHANNEL_DATA</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>31</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>orig_block_data_in_z</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>31</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CHANNEL_LZ</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>0</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>orig_block_data_in_vz</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>0</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CHANNEL_VZ</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>0</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>orig_block_data_in_lz</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>0</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+					</ipxact:portMaps>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:slave/>
+			<ipxact:connectionRequired>false</ipxact:connectionRequired>
+			<ipxact:bitsInLau>8</ipxact:bitsInLau>
+			<ipxact:endianness>little</ipxact:endianness>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>clock_75MHz</ipxact:name>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="clock_reset" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="clock_reset.absDef" version="1.0"/>
+					<ipxact:portMaps>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CLK</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>0</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>clk</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>0</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>RST_N</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>0</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>arst_n</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>0</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+					</ipxact:portMaps>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:slave/>
+			<ipxact:connectionRequired>false</ipxact:connectionRequired>
+			<ipxact:bitsInLau>8</ipxact:bitsInLau>
+			<ipxact:endianness>little</ipxact:endianness>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>sad_result</ipxact:name>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="sad_result" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="sad_result.absDef" version="1.0"/>
+					<ipxact:portMaps>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>SAD_RESULT</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>63</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>sad_result</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>63</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+					</ipxact:portMaps>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:master/>
+			<ipxact:connectionRequired>false</ipxact:connectionRequired>
+			<ipxact:bitsInLau>8</ipxact:bitsInLau>
+			<ipxact:endianness>little</ipxact:endianness>
+		</ipxact:busInterface>
+	</ipxact:busInterfaces>
+	<ipxact:model>
+		<ipxact:views>
+			<ipxact:view>
+				<ipxact:name>flat</ipxact:name>
+				<ipxact:envIdentifier>VHDL:Kactus2:</ipxact:envIdentifier>
+				<ipxact:componentInstantiationRef>flat</ipxact:componentInstantiationRef>
+			</ipxact:view>
+		</ipxact:views>
+		<ipxact:instantiations>
+			<ipxact:componentInstantiation>
+				<ipxact:name>flat</ipxact:name>
+				<ipxact:language strict="true">vhdl</ipxact:language>
+				<ipxact:moduleName>IP_SAD_Accelerator</ipxact:moduleName>
+				<ipxact:moduleParameters>
+					<ipxact:moduleParameter dataType="integer" parameterId="uuid_72886232_3eb9_45b4_a547_bbcd6c4ff0e2" usageType="nontyped">
+						<ipxact:name>unfilt_width_g</ipxact:name>
+						<ipxact:value>uuid_139b4ae6_fab6_408b_8635_c466dbf0c333</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter dataType="integer" parameterId="uuid_406b5f95_afdb_4f89_a944_15bcf37ab1e6" usageType="nontyped">
+						<ipxact:name>ctrl_to_ip_units_width_g</ipxact:name>
+						<ipxact:value>uuid_1398bb60_4284_4a0d_8c89_2b235f8abd2d</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter dataType="integer" parameterId="uuid_e7be4ec2_3012_410e_81bc_1d2d3784953c" usageType="nontyped">
+						<ipxact:name>ip_units_to_sad_width_g</ipxact:name>
+						<ipxact:value>uuid_d7ff7b71_102a_45da_8a17_5f5e39f193d8</ipxact:value>
+					</ipxact:moduleParameter>
+				</ipxact:moduleParameters>
+				<ipxact:fileSetRef>
+					<ipxact:localName>qip</ipxact:localName>
+				</ipxact:fileSetRef>
+				<ipxact:fileSetRef>
+					<ipxact:localName>top_level</ipxact:localName>
+				</ipxact:fileSetRef>
+			</ipxact:componentInstantiation>
+		</ipxact:instantiations>
+		<ipxact:ports>
+			<ipxact:port>
+				<ipxact:name>clk</ipxact:name>
+				<ipxact:wire allLogicalDirectionsAllowed="true">
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>0</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName constrained="true">std_logic</ipxact:typeName>
+							<ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+							<ipxact:viewRef>flat</ipxact:viewRef>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>arst_n</ipxact:name>
+				<ipxact:wire allLogicalDirectionsAllowed="true">
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>0</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName constrained="true">std_logic</ipxact:typeName>
+							<ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+							<ipxact:viewRef>flat</ipxact:viewRef>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>ip_config_in_z</ipxact:name>
+				<ipxact:wire allLogicalDirectionsAllowed="true">
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>31</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName constrained="true">STD_LOGIC_VECTOR</ipxact:typeName>
+							<ipxact:viewRef>flat</ipxact:viewRef>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>ip_config_in_vz</ipxact:name>
+				<ipxact:wire allLogicalDirectionsAllowed="true">
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>0</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName constrained="true">STD_LOGIC</ipxact:typeName>
+							<ipxact:viewRef>flat</ipxact:viewRef>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>ip_config_in_lz</ipxact:name>
+				<ipxact:wire allLogicalDirectionsAllowed="true">
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>0</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName constrained="true">STD_LOGIC</ipxact:typeName>
+							<ipxact:viewRef>flat</ipxact:viewRef>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>unfiltered1_z</ipxact:name>
+				<ipxact:wire allLogicalDirectionsAllowed="true">
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>15</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName constrained="true">STD_LOGIC_VECTOR</ipxact:typeName>
+							<ipxact:viewRef>flat</ipxact:viewRef>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>unfiltered1_vz</ipxact:name>
+				<ipxact:wire allLogicalDirectionsAllowed="true">
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>0</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName constrained="true">STD_LOGIC</ipxact:typeName>
+							<ipxact:viewRef>flat</ipxact:viewRef>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>unfiltered1_lz</ipxact:name>
+				<ipxact:wire allLogicalDirectionsAllowed="true">
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>0</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName constrained="true">STD_LOGIC</ipxact:typeName>
+							<ipxact:viewRef>flat</ipxact:viewRef>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>unfiltered2_z</ipxact:name>
+				<ipxact:wire allLogicalDirectionsAllowed="true">
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>15</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName constrained="true">STD_LOGIC_VECTOR</ipxact:typeName>
+							<ipxact:viewRef>flat</ipxact:viewRef>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>unfiltered2_vz</ipxact:name>
+				<ipxact:wire allLogicalDirectionsAllowed="true">
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>0</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName constrained="true">STD_LOGIC</ipxact:typeName>
+							<ipxact:viewRef>flat</ipxact:viewRef>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>unfiltered2_lz</ipxact:name>
+				<ipxact:wire allLogicalDirectionsAllowed="true">
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>0</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName constrained="true">STD_LOGIC</ipxact:typeName>
+							<ipxact:viewRef>flat</ipxact:viewRef>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>orig_block_data_in_z</ipxact:name>
+				<ipxact:wire allLogicalDirectionsAllowed="true">
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>31</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName constrained="true">STD_LOGIC_VECTOR</ipxact:typeName>
+							<ipxact:viewRef>flat</ipxact:viewRef>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>orig_block_data_in_vz</ipxact:name>
+				<ipxact:wire allLogicalDirectionsAllowed="true">
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>0</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName constrained="true">STD_LOGIC</ipxact:typeName>
+							<ipxact:viewRef>flat</ipxact:viewRef>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>orig_block_data_in_lz</ipxact:name>
+				<ipxact:wire allLogicalDirectionsAllowed="true">
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>0</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName constrained="true">STD_LOGIC</ipxact:typeName>
+							<ipxact:viewRef>flat</ipxact:viewRef>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>sad_result</ipxact:name>
+				<ipxact:wire allLogicalDirectionsAllowed="true">
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>63</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName constrained="true">STD_LOGIC_VECTOR</ipxact:typeName>
+							<ipxact:viewRef>flat</ipxact:viewRef>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>result_ready</ipxact:name>
+				<ipxact:wire allLogicalDirectionsAllowed="true">
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>1</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName constrained="true">STD_LOGIC_VECTOR</ipxact:typeName>
+							<ipxact:viewRef>flat</ipxact:viewRef>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+				<ipxact:vendorExtensions>
+					<kactus2:adHocVisible/>
+				</ipxact:vendorExtensions>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>lcu_loaded</ipxact:name>
+				<ipxact:wire allLogicalDirectionsAllowed="true">
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>0</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName constrained="true">STD_LOGIC</ipxact:typeName>
+							<ipxact:viewRef>flat</ipxact:viewRef>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+				<ipxact:vendorExtensions>
+					<kactus2:adHocVisible/>
+				</ipxact:vendorExtensions>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>lambda_loaded</ipxact:name>
+				<ipxact:wire allLogicalDirectionsAllowed="true">
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>0</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName constrained="true">STD_LOGIC</ipxact:typeName>
+							<ipxact:viewRef>flat</ipxact:viewRef>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+				<ipxact:vendorExtensions>
+					<kactus2:adHocVisible/>
+				</ipxact:vendorExtensions>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>clear_unfilt1_fifo</ipxact:name>
+				<ipxact:wire allLogicalDirectionsAllowed="true">
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>0</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName constrained="true">STD_LOGIC</ipxact:typeName>
+							<ipxact:viewRef>flat</ipxact:viewRef>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+				<ipxact:vendorExtensions>
+					<kactus2:adHocVisible/>
+				</ipxact:vendorExtensions>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>clear_unfilt2_fifo</ipxact:name>
+				<ipxact:wire allLogicalDirectionsAllowed="true">
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>0</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName constrained="true">STD_LOGIC</ipxact:typeName>
+							<ipxact:viewRef>flat</ipxact:viewRef>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+				<ipxact:vendorExtensions>
+					<kactus2:adHocVisible/>
+				</ipxact:vendorExtensions>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>clear_orig_fifo</ipxact:name>
+				<ipxact:wire allLogicalDirectionsAllowed="true">
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>0</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName constrained="true">STD_LOGIC</ipxact:typeName>
+							<ipxact:viewRef>flat</ipxact:viewRef>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+				<ipxact:vendorExtensions>
+					<kactus2:adHocVisible/>
+				</ipxact:vendorExtensions>
+			</ipxact:port>
+		</ipxact:ports>
+	</ipxact:model>
+	<ipxact:fileSets>
+		<ipxact:fileSet>
+			<ipxact:name>top_level</ipxact:name>
+			<ipxact:file>
+				<ipxact:name>top_level/ip_sad.vhd</ipxact:name>
+				<ipxact:fileType>vhdlSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>83b5f99a1e281969ce4f9f68db1f5e4483b9f68b</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+		</ipxact:fileSet>
+		<ipxact:fileSet>
+			<ipxact:name>qip</ipxact:name>
+			<ipxact:file>
+				<ipxact:name>qip/ip_sad.qip</ipxact:name>
+				<ipxact:fileType user="quartusIpfile">user</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>7a19d372d18b823f88c69b5ed37f09d2</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+		</ipxact:fileSet>
+		<ipxact:fileSet>
+			<ipxact:name>vqm_src</ipxact:name>
+			<ipxact:file>
+				<ipxact:name>vqm_src/main_ip_config.vqm</ipxact:name>
+				<ipxact:fileType>unknown</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>5db6b0db95cb713d9a50cd51ae31d6e7</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>vqm_src/main_ip_ctrl.vqm</ipxact:name>
+				<ipxact:fileType>unknown</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>68d04e779466c8fa1cc8ee866ece773c</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>vqm_src/main_ip_get_ang_neg.vqm</ipxact:name>
+				<ipxact:fileType>unknown</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>deb3d3529b97d3a2fcd85b2e5145d663</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>vqm_src/main_ip_get_ang_pos.vqm</ipxact:name>
+				<ipxact:fileType>unknown</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>5be8b149c863eb0b31a03a86bd335b37</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>vqm_src/main_ip_get_ang_zero.vqm</ipxact:name>
+				<ipxact:fileType>unknown</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>ca61cd0d5d626504edb4868a3d0c1b3b</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>vqm_src/main_ip_get_dc.vqm</ipxact:name>
+				<ipxact:fileType>unknown</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>b876d05c3a11eb4776076afc43d9a6d0</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>vqm_src/main_ip_get_planar.vqm</ipxact:name>
+				<ipxact:fileType>unknown</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>c11974bd62d0725ab0a0bd63b40cde4f</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>vqm_src/main_sad_parallel.vqm</ipxact:name>
+				<ipxact:fileType>unknown</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>1f20ef0ebcedd16abcb258ca8cb09223</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+		</ipxact:fileSet>
+	</ipxact:fileSets>
+	<ipxact:parameters>
+		<ipxact:parameter parameterId="uuid_139b4ae6_fab6_408b_8635_c466dbf0c333">
+			<ipxact:name>unfilt_width_g</ipxact:name>
+			<ipxact:value>16</ipxact:value>
+		</ipxact:parameter>
+		<ipxact:parameter parameterId="uuid_1398bb60_4284_4a0d_8c89_2b235f8abd2d">
+			<ipxact:name>ctrl_to_ip_units_width_g</ipxact:name>
+			<ipxact:value>32</ipxact:value>
+		</ipxact:parameter>
+		<ipxact:parameter parameterId="uuid_d7ff7b71_102a_45da_8a17_5f5e39f193d8">
+			<ipxact:name>ip_units_to_sad_width_g</ipxact:name>
+			<ipxact:value>16</ipxact:value>
+		</ipxact:parameter>
+	</ipxact:parameters>
+	<ipxact:vendorExtensions>
+		<kactus2:fileDependencies>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>ip_sad.vhd</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/main_ip_config.vhd</kactus2:fileRef2>
+				<ipxact:description>Component instantiation for entity main_ip_config</ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>ip_sad.vhd</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/main_ip_ctrl.vhd</kactus2:fileRef2>
+				<ipxact:description>Component instantiation for entity main_ip_ctrl</ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>ip_sad.vhd</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/main_ip_get_planar.vhd</kactus2:fileRef2>
+				<ipxact:description>Component instantiation for entity main_ip_get_planar</ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>ip_sad.vhd</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/main_ip_get_dc.vhd</kactus2:fileRef2>
+				<ipxact:description>Component instantiation for entity main_ip_get_dc</ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>ip_sad.vhd</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/main_ip_get_ang_pos.vhd</kactus2:fileRef2>
+				<ipxact:description>Component instantiation for entity main_ip_get_ang_pos</ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>ip_sad.vhd</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/main_ip_get_ang_zero.vhd</kactus2:fileRef2>
+				<ipxact:description>Component instantiation for entity main_ip_get_ang_zero</ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>ip_sad.vhd</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/main_ip_get_ang_neg.vhd</kactus2:fileRef2>
+				<ipxact:description>Component instantiation for entity main_ip_get_ang_neg</ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>ip_sad.vhd</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/main_sad_parallel.vhd</kactus2:fileRef2>
+				<ipxact:description>Component instantiation for entity main_sad_parallel</ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>top_level/ip_sad.vhd</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/main_ip_config.vhd</kactus2:fileRef2>
+				<ipxact:description>Component instantiation for entity main_ip_config</ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>top_level/ip_sad.vhd</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/main_ip_ctrl.vhd</kactus2:fileRef2>
+				<ipxact:description>Component instantiation for entity main_ip_ctrl</ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>top_level/ip_sad.vhd</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/main_ip_get_planar.vhd</kactus2:fileRef2>
+				<ipxact:description>Component instantiation for entity main_ip_get_planar</ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>top_level/ip_sad.vhd</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/main_ip_get_dc.vhd</kactus2:fileRef2>
+				<ipxact:description>Component instantiation for entity main_ip_get_dc</ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>top_level/ip_sad.vhd</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/main_ip_get_ang_pos.vhd</kactus2:fileRef2>
+				<ipxact:description>Component instantiation for entity main_ip_get_ang_pos</ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>top_level/ip_sad.vhd</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/main_ip_get_ang_zero.vhd</kactus2:fileRef2>
+				<ipxact:description>Component instantiation for entity main_ip_get_ang_zero</ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>top_level/ip_sad.vhd</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/main_ip_get_ang_neg.vhd</kactus2:fileRef2>
+				<ipxact:description>Component instantiation for entity main_ip_get_ang_neg</ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>top_level/ip_sad.vhd</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/main_sad_parallel.vhd</kactus2:fileRef2>
+				<ipxact:description>Component instantiation for entity main_sad_parallel</ipxact:description>
+			</kactus2:fileDependency>
+		</kactus2:fileDependencies>
+		<kactus2:author>sjovallp</kactus2:author>
+		<kactus2:version>2,8,49,0</kactus2:version>
+		<kactus2:kts_attributes>
+			<kactus2:kts_productHier>Flat</kactus2:kts_productHier>
+			<kactus2:kts_implementation>HW</kactus2:kts_implementation>
+			<kactus2:kts_firmness>Mutable</kactus2:kts_firmness>
+		</kactus2:kts_attributes>
+	</ipxact:vendorExtensions>
+</ipxact:component>

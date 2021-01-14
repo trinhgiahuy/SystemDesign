@@ -145,7 +145,59 @@
 				<ipxact:isIncludeFile externalDeclarations="false">false</ipxact:isIncludeFile>
 			</ipxact:file>
 		</ipxact:fileSet>
-
+		<ipxact:fileSet>
+			<ipxact:name>Exercise07</ipxact:name>
+			<ipxact:description>Exercise return files.</ipxact:description>
+			<ipxact:file>
+				<ipxact:name>Exercise07/Answers.txt</ipxact:name>
+				<ipxact:fileType>textFile</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="false">false</ipxact:isIncludeFile>
+				<ipxact:description>INSERT ANSWERS TO QUESTIONS HERE!!!</ipxact:description>
+				<ipxact:vendorExtensions xmlns:kactus2="http://funbase.cs.TUNI.fi/">
+				<kactus2:hash>7a13164c81a5e9f1d6465071bbed7f7d</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>Exercise07/encode_run.sh</ipxact:name>
+				<ipxact:fileType user="shellScript">user</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="false">false</ipxact:isIncludeFile>
+			</ipxact:file>
+		</ipxact:fileSet>
+		<ipxact:fileSet>
+			<ipxact:name>Exercise08</ipxact:name>
+			<ipxact:description>Exercise return files.</ipxact:description>
+			<ipxact:file>
+				<ipxact:name>Exercise08/Answers.txt</ipxact:name>
+				<ipxact:fileType>textFile</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="false">false</ipxact:isIncludeFile>
+				<ipxact:description>INSERT ANSWERS TO QUESTIONS HERE!!!</ipxact:description>
+				<ipxact:vendorExtensions xmlns:kactus2="http://funbase.cs.TUNI.fi/">
+				<kactus2:hash>63e751cfaf98b5c4aeac3ac6993d30f1</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+		</ipxact:fileSet>
+		<ipxact:fileSet>
+			<ipxact:name>Exercise09</ipxact:name>
+			<ipxact:description>Return files of the MANDATORY final exercise.</ipxact:description>
+			<ipxact:file>
+				<ipxact:name>Exercise09/Answers.txt</ipxact:name>
+				<ipxact:fileType user="textFile">user</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="false">false</ipxact:isIncludeFile>
+				<ipxact:description>INSERT ANSWERS TO QUESTIONS HERE!!!</ipxact:description>
+				<ipxact:vendorExtensions xmlns:kactus2="http://funbase.cs.TUNI.fi/">
+				<kactus2:hash>09906f2f09fe69cf8fe9d1bb4f2b8318</kactus2:hash>
+				</ipxact:vendorExtensions>
+				</ipxact:file>
+				<ipxact:file>
+				<ipxact:name>Exercise09/TIE-50506_Ex09_report.docx</ipxact:name>
+				<ipxact:fileType user="doc">user</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="false">false</ipxact:isIncludeFile>
+				<ipxact:description>MANDATORY template for the MANDATORY final report!!!</ipxact:description>
+				<ipxact:vendorExtensions xmlns:kactus2="http://funbase.cs.TUNI.fi/">
+				<kactus2:hash>d48e0d478add261236c8bb73909ec320</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>			
+		</ipxact:fileSet>
 		<ipxact:fileSet>
 			<ipxact:name>ExerciseB</ipxact:name>
 			<ipxact:description>Exercise return files.</ipxact:description>

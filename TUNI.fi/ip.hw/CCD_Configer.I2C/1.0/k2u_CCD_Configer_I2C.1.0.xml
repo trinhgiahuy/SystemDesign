@@ -1,0 +1,788 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ipxact:component xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ipxact:vendor>TUNI.fi</ipxact:vendor>
+  <ipxact:library>ip.hw</ipxact:library>
+  <ipxact:name>CCD_Configer_I2C</ipxact:name>
+  <ipxact:version>1.0</ipxact:version>
+  <ipxact:busInterfaces>
+    <ipxact:busInterface>
+      <ipxact:name>CCD_config</ipxact:name>
+      <ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="ccd_config" version="1.0" />
+      <ipxact:abstractionTypes>
+        <ipxact:abstractionType>
+          <ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="ccd_config.absDef" version="1.0" />
+          <ipxact:portMaps>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>BLUE_GAIN</ipxact:name>
+                <ipxact:range>
+                  <ipxact:left>15</ipxact:left>
+                  <ipxact:right>0</ipxact:right>
+                </ipxact:range>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>iblue_gain</ipxact:name>
+                <ipxact:partSelect>
+                  <ipxact:range>
+                    <ipxact:left>15</ipxact:left>
+                    <ipxact:right>0</ipxact:right>
+                  </ipxact:range>
+                </ipxact:partSelect>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>GREEN1_GAIN</ipxact:name>
+                <ipxact:range>
+                  <ipxact:left>15</ipxact:left>
+                  <ipxact:right>0</ipxact:right>
+                </ipxact:range>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>igreen1_gain</ipxact:name>
+                <ipxact:partSelect>
+                  <ipxact:range>
+                    <ipxact:left>15</ipxact:left>
+                    <ipxact:right>0</ipxact:right>
+                  </ipxact:range>
+                </ipxact:partSelect>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>GREEN2_GAIN</ipxact:name>
+                <ipxact:range>
+                  <ipxact:left>15</ipxact:left>
+                  <ipxact:right>0</ipxact:right>
+                </ipxact:range>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>igreen2_gain</ipxact:name>
+                <ipxact:partSelect>
+                  <ipxact:range>
+                    <ipxact:left>15</ipxact:left>
+                    <ipxact:right>0</ipxact:right>
+                  </ipxact:range>
+                </ipxact:partSelect>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>RED_GAIN</ipxact:name>
+                <ipxact:range>
+                  <ipxact:left>15</ipxact:left>
+                  <ipxact:right>0</ipxact:right>
+                </ipxact:range>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>ired_gain</ipxact:name>
+                <ipxact:partSelect>
+                  <ipxact:range>
+                    <ipxact:left>15</ipxact:left>
+                    <ipxact:right>0</ipxact:right>
+                  </ipxact:range>
+                </ipxact:partSelect>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>SENSOR_COLUMN_SIZE</ipxact:name>
+                <ipxact:range>
+                  <ipxact:left>15</ipxact:left>
+                  <ipxact:right>0</ipxact:right>
+                </ipxact:range>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>sensor_column_size</ipxact:name>
+                <ipxact:partSelect>
+                  <ipxact:range>
+                    <ipxact:left>15</ipxact:left>
+                    <ipxact:right>0</ipxact:right>
+                  </ipxact:range>
+                </ipxact:partSelect>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>SENSOR_COLUMN_MODE</ipxact:name>
+                <ipxact:range>
+                  <ipxact:left>15</ipxact:left>
+                  <ipxact:right>0</ipxact:right>
+                </ipxact:range>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>sensor_column_mode</ipxact:name>
+                <ipxact:partSelect>
+                  <ipxact:range>
+                    <ipxact:left>15</ipxact:left>
+                    <ipxact:right>0</ipxact:right>
+                  </ipxact:range>
+                </ipxact:partSelect>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>SENSOR_EXPOSURE</ipxact:name>
+                <ipxact:range>
+                  <ipxact:left>15</ipxact:left>
+                  <ipxact:right>0</ipxact:right>
+                </ipxact:range>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>sensor_exposure</ipxact:name>
+                <ipxact:partSelect>
+                  <ipxact:range>
+                    <ipxact:left>15</ipxact:left>
+                    <ipxact:right>0</ipxact:right>
+                  </ipxact:range>
+                </ipxact:partSelect>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>SENSOR_ROW_MODE</ipxact:name>
+                <ipxact:range>
+                  <ipxact:left>15</ipxact:left>
+                  <ipxact:right>0</ipxact:right>
+                </ipxact:range>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>sensor_row_mode</ipxact:name>
+                <ipxact:partSelect>
+                  <ipxact:range>
+                    <ipxact:left>15</ipxact:left>
+                    <ipxact:right>0</ipxact:right>
+                  </ipxact:range>
+                </ipxact:partSelect>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>SENSOR_ROW_SIZE</ipxact:name>
+                <ipxact:range>
+                  <ipxact:left>15</ipxact:left>
+                  <ipxact:right>0</ipxact:right>
+                </ipxact:range>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>sensor_row_size</ipxact:name>
+                <ipxact:partSelect>
+                  <ipxact:range>
+                    <ipxact:left>15</ipxact:left>
+                    <ipxact:right>0</ipxact:right>
+                  </ipxact:range>
+                </ipxact:partSelect>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>SENSOR_START_COLUMN</ipxact:name>
+                <ipxact:range>
+                  <ipxact:left>15</ipxact:left>
+                  <ipxact:right>0</ipxact:right>
+                </ipxact:range>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>sensor_start_column</ipxact:name>
+                <ipxact:partSelect>
+                  <ipxact:range>
+                    <ipxact:left>15</ipxact:left>
+                    <ipxact:right>0</ipxact:right>
+                  </ipxact:range>
+                </ipxact:partSelect>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>SENSOR_START_ROW</ipxact:name>
+                <ipxact:range>
+                  <ipxact:left>15</ipxact:left>
+                  <ipxact:right>0</ipxact:right>
+                </ipxact:range>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>sensor_start_row</ipxact:name>
+                <ipxact:partSelect>
+                  <ipxact:range>
+                    <ipxact:left>15</ipxact:left>
+                    <ipxact:right>0</ipxact:right>
+                  </ipxact:range>
+                </ipxact:partSelect>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>SET_CONF</ipxact:name>
+                <ipxact:range>
+                  <ipxact:left>0</ipxact:left>
+                  <ipxact:right>0</ipxact:right>
+                </ipxact:range>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>iSetConf</ipxact:name>
+                <ipxact:partSelect>
+                  <ipxact:range>
+                    <ipxact:left>0</ipxact:left>
+                    <ipxact:right>0</ipxact:right>
+                  </ipxact:range>
+                </ipxact:partSelect>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+          </ipxact:portMaps>
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+      <ipxact:slave />
+      <ipxact:connectionRequired>false</ipxact:connectionRequired>
+      <ipxact:bitsInLau>8</ipxact:bitsInLau>
+      <ipxact:endianness>little</ipxact:endianness>
+    </ipxact:busInterface>
+    <ipxact:busInterface>
+      <ipxact:name>dip_switch</ipxact:name>
+      <ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="dip_switch" version="1.0" />
+      <ipxact:abstractionTypes>
+        <ipxact:abstractionType>
+          <ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="dip_switch.absDef" version="1.0" />
+          <ipxact:portMaps>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>USER_DIPSW_FPGA</ipxact:name>
+                <ipxact:range>
+                  <ipxact:left>3</ipxact:left>
+                  <ipxact:right>3</ipxact:right>
+                </ipxact:range>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>iMIRROR_SW</ipxact:name>
+                <ipxact:partSelect>
+                  <ipxact:range>
+                    <ipxact:left>0</ipxact:left>
+                    <ipxact:right>0</ipxact:right>
+                  </ipxact:range>
+                </ipxact:partSelect>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+          </ipxact:portMaps>
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+      <ipxact:slave />
+      <ipxact:connectionRequired>false</ipxact:connectionRequired>
+      <ipxact:bitsInLau>8</ipxact:bitsInLau>
+      <ipxact:endianness>little</ipxact:endianness>
+    </ipxact:busInterface>
+    <ipxact:busInterface>
+      <ipxact:name>I2C_data</ipxact:name>
+      <ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="i2c_data" version="1.0" />
+      <ipxact:abstractionTypes>
+        <ipxact:abstractionType>
+          <ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="i2c_data.absDef" version="1.0" />
+          <ipxact:portMaps>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>CAMERA_SCLK</ipxact:name>
+                <ipxact:range>
+                  <ipxact:left>0</ipxact:left>
+                  <ipxact:right>0</ipxact:right>
+                </ipxact:range>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>I2C_SCLK</ipxact:name>
+                <ipxact:partSelect>
+                  <ipxact:range>
+                    <ipxact:left>0</ipxact:left>
+                    <ipxact:right>0</ipxact:right>
+                  </ipxact:range>
+                </ipxact:partSelect>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>CAMERA_SDATA</ipxact:name>
+                <ipxact:range>
+                  <ipxact:left>0</ipxact:left>
+                  <ipxact:right>0</ipxact:right>
+                </ipxact:range>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>I2C_SDAT</ipxact:name>
+                <ipxact:partSelect>
+                  <ipxact:range>
+                    <ipxact:left>0</ipxact:left>
+                    <ipxact:right>0</ipxact:right>
+                  </ipxact:range>
+                </ipxact:partSelect>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+          </ipxact:portMaps>
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+      <ipxact:master />
+      <ipxact:connectionRequired>false</ipxact:connectionRequired>
+      <ipxact:bitsInLau>8</ipxact:bitsInLau>
+      <ipxact:endianness>little</ipxact:endianness>
+    </ipxact:busInterface>
+    <ipxact:busInterface>
+      <ipxact:name>clock_75MHz</ipxact:name>
+      <ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="clock_reset" version="1.0" />
+      <ipxact:abstractionTypes>
+        <ipxact:abstractionType>
+          <ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="clock_reset.absDef" version="1.0" />
+          <ipxact:portMaps>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>CLK</ipxact:name>
+                <ipxact:range>
+                  <ipxact:left>0</ipxact:left>
+                  <ipxact:right>0</ipxact:right>
+                </ipxact:range>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>iCLK</ipxact:name>
+                <ipxact:partSelect>
+                  <ipxact:range>
+                    <ipxact:left>0</ipxact:left>
+                    <ipxact:right>0</ipxact:right>
+                  </ipxact:range>
+                </ipxact:partSelect>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>RST_N</ipxact:name>
+                <ipxact:range>
+                  <ipxact:left>0</ipxact:left>
+                  <ipxact:right>0</ipxact:right>
+                </ipxact:range>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>iRST_N</ipxact:name>
+                <ipxact:partSelect>
+                  <ipxact:range>
+                    <ipxact:left>0</ipxact:left>
+                    <ipxact:right>0</ipxact:right>
+                  </ipxact:range>
+                </ipxact:partSelect>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+          </ipxact:portMaps>
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+      <ipxact:slave />
+      <ipxact:connectionRequired>false</ipxact:connectionRequired>
+      <ipxact:bitsInLau>8</ipxact:bitsInLau>
+      <ipxact:endianness>little</ipxact:endianness>
+    </ipxact:busInterface>
+  </ipxact:busInterfaces>
+  <ipxact:model>
+    <ipxact:views>
+      <ipxact:view>
+        <ipxact:name>flat</ipxact:name>
+        <ipxact:envIdentifier>verilog:Kactus2:</ipxact:envIdentifier>
+        <ipxact:componentInstantiationRef>flat</ipxact:componentInstantiationRef>
+      </ipxact:view>
+    </ipxact:views>
+    <ipxact:instantiations>
+      <ipxact:componentInstantiation>
+        <ipxact:name>flat</ipxact:name>
+        <ipxact:language strict="false">verilog</ipxact:language>
+        <ipxact:moduleName>CCD_Configer_I2C</ipxact:moduleName>
+        <ipxact:moduleParameters>
+          <ipxact:moduleParameter usageType="nontyped">
+            <ipxact:name>CLK_Freq</ipxact:name>
+            <ipxact:description>50	MHz</ipxact:description>
+            <ipxact:value>uuid_b95ad623_54c1_4036_b8dd_243c191e53d4</ipxact:value>
+          </ipxact:moduleParameter>
+          <ipxact:moduleParameter usageType="nontyped">
+            <ipxact:name>I2C_Freq</ipxact:name>
+            <ipxact:description>20	KHz</ipxact:description>
+            <ipxact:value>uuid_9a1e7ef6_67ac_46f5_9db2_3b23d3abf5fc</ipxact:value>
+          </ipxact:moduleParameter>
+          <ipxact:moduleParameter usageType="nontyped">
+            <ipxact:name>LUT_SIZE</ipxact:name>
+            <ipxact:description>row black target</ipxact:description>
+            <ipxact:value>uuid_41b09fef_bc43_4cc9_84ea_9942412cbf76</ipxact:value>
+          </ipxact:moduleParameter>
+        </ipxact:moduleParameters>
+        <ipxact:fileSetRef>
+          <ipxact:localName>base</ipxact:localName>
+        </ipxact:fileSetRef>
+        <ipxact:vendorExtensions xmlns:kactus2="http://funbase.cs.TUNI.fi/">
+          <kactus2:componentInstantiation>
+            <ipxact:name>flat</ipxact:name>
+          </kactus2:componentInstantiation>
+        </ipxact:vendorExtensions>
+      </ipxact:componentInstantiation>
+    </ipxact:instantiations>
+    <ipxact:ports>
+      <ipxact:port>
+        <ipxact:name>iCLK</ipxact:name>
+        <ipxact:wire allLogicalDirectionsAllowed="false">
+          <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors>
+            <ipxact:vector>
+              <ipxact:left>0</ipxact:left>
+              <ipxact:right>0</ipxact:right>
+            </ipxact:vector>
+          </ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName constrained="false">std_logic</ipxact:typeName>
+              <ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+              <ipxact:viewRef>flat</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>iRST_N</ipxact:name>
+        <ipxact:wire allLogicalDirectionsAllowed="false">
+          <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors>
+            <ipxact:vector>
+              <ipxact:left>0</ipxact:left>
+              <ipxact:right>0</ipxact:right>
+            </ipxact:vector>
+          </ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName constrained="false">std_logic</ipxact:typeName>
+              <ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+              <ipxact:viewRef>flat</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>iMIRROR_SW</ipxact:name>
+        <ipxact:wire allLogicalDirectionsAllowed="false">
+          <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors>
+            <ipxact:vector>
+              <ipxact:left>0</ipxact:left>
+              <ipxact:right>0</ipxact:right>
+            </ipxact:vector>
+          </ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName constrained="false">std_logic</ipxact:typeName>
+              <ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+              <ipxact:viewRef>flat</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>I2C_SCLK</ipxact:name>
+        <ipxact:wire allLogicalDirectionsAllowed="false">
+          <ipxact:direction>out</ipxact:direction>
+          <ipxact:vectors>
+            <ipxact:vector>
+              <ipxact:left>0</ipxact:left>
+              <ipxact:right>0</ipxact:right>
+            </ipxact:vector>
+          </ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName constrained="false">std_logic</ipxact:typeName>
+              <ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+              <ipxact:viewRef>flat</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>I2C_SDAT</ipxact:name>
+        <ipxact:wire allLogicalDirectionsAllowed="false">
+          <ipxact:direction>inout</ipxact:direction>
+          <ipxact:vectors>
+            <ipxact:vector>
+              <ipxact:left>0</ipxact:left>
+              <ipxact:right>0</ipxact:right>
+            </ipxact:vector>
+          </ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName constrained="false">std_logic</ipxact:typeName>
+              <ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+              <ipxact:viewRef>flat</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>iSetConf</ipxact:name>
+        <ipxact:wire allLogicalDirectionsAllowed="false">
+          <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors>
+            <ipxact:vector>
+              <ipxact:left>0</ipxact:left>
+              <ipxact:right>0</ipxact:right>
+            </ipxact:vector>
+          </ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName constrained="false">std_logic</ipxact:typeName>
+              <ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+              <ipxact:viewRef>flat</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>igreen1_gain</ipxact:name>
+        <ipxact:wire allLogicalDirectionsAllowed="false">
+          <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors>
+            <ipxact:vector>
+              <ipxact:left expression="15">15</ipxact:left>
+              <ipxact:right expression="0">0</ipxact:right>
+            </ipxact:vector>
+          </ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName constrained="false">std_logic_vector</ipxact:typeName>
+              <ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+              <ipxact:viewRef>flat</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>iblue_gain</ipxact:name>
+        <ipxact:wire allLogicalDirectionsAllowed="false">
+          <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors>
+            <ipxact:vector>
+              <ipxact:left expression="15">15</ipxact:left>
+              <ipxact:right expression="0">0</ipxact:right>
+            </ipxact:vector>
+          </ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName constrained="false">std_logic_vector</ipxact:typeName>
+              <ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+              <ipxact:viewRef>flat</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>ired_gain</ipxact:name>
+        <ipxact:wire allLogicalDirectionsAllowed="false">
+          <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors>
+            <ipxact:vector>
+              <ipxact:left expression="15">15</ipxact:left>
+              <ipxact:right expression="0">0</ipxact:right>
+            </ipxact:vector>
+          </ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName constrained="false">std_logic_vector</ipxact:typeName>
+              <ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+              <ipxact:viewRef>flat</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>igreen2_gain</ipxact:name>
+        <ipxact:wire allLogicalDirectionsAllowed="false">
+          <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors>
+            <ipxact:vector>
+              <ipxact:left expression="15">15</ipxact:left>
+              <ipxact:right expression="0">0</ipxact:right>
+            </ipxact:vector>
+          </ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName constrained="false">std_logic_vector</ipxact:typeName>
+              <ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+              <ipxact:viewRef>flat</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>sensor_exposure</ipxact:name>
+        <ipxact:wire allLogicalDirectionsAllowed="false">
+          <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors>
+            <ipxact:vector>
+              <ipxact:left expression="15">15</ipxact:left>
+              <ipxact:right expression="0">0</ipxact:right>
+            </ipxact:vector>
+          </ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName constrained="false">std_logic_vector</ipxact:typeName>
+              <ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+              <ipxact:viewRef>flat</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>sensor_start_row</ipxact:name>
+        <ipxact:wire allLogicalDirectionsAllowed="false">
+          <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors>
+            <ipxact:vector>
+              <ipxact:left expression="15">15</ipxact:left>
+              <ipxact:right expression="0">0</ipxact:right>
+            </ipxact:vector>
+          </ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName constrained="false">std_logic_vector</ipxact:typeName>
+              <ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+              <ipxact:viewRef>flat</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>sensor_start_column</ipxact:name>
+        <ipxact:wire allLogicalDirectionsAllowed="false">
+          <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors>
+            <ipxact:vector>
+              <ipxact:left expression="15">15</ipxact:left>
+              <ipxact:right expression="0">0</ipxact:right>
+            </ipxact:vector>
+          </ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName constrained="false">std_logic_vector</ipxact:typeName>
+              <ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+              <ipxact:viewRef>flat</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>sensor_row_size</ipxact:name>
+        <ipxact:wire allLogicalDirectionsAllowed="false">
+          <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors>
+            <ipxact:vector>
+              <ipxact:left expression="15">15</ipxact:left>
+              <ipxact:right expression="0">0</ipxact:right>
+            </ipxact:vector>
+          </ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName constrained="false">std_logic_vector</ipxact:typeName>
+              <ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+              <ipxact:viewRef>flat</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>sensor_column_size</ipxact:name>
+        <ipxact:wire allLogicalDirectionsAllowed="false">
+          <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors>
+            <ipxact:vector>
+              <ipxact:left expression="15">15</ipxact:left>
+              <ipxact:right expression="0">0</ipxact:right>
+            </ipxact:vector>
+          </ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName constrained="false">std_logic_vector</ipxact:typeName>
+              <ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+              <ipxact:viewRef>flat</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>sensor_row_mode</ipxact:name>
+        <ipxact:wire allLogicalDirectionsAllowed="false">
+          <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors>
+            <ipxact:vector>
+              <ipxact:left expression="15">15</ipxact:left>
+              <ipxact:right expression="0">0</ipxact:right>
+            </ipxact:vector>
+          </ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName constrained="false">std_logic_vector</ipxact:typeName>
+              <ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+              <ipxact:viewRef>flat</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>sensor_column_mode</ipxact:name>
+        <ipxact:wire allLogicalDirectionsAllowed="false">
+          <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors>
+            <ipxact:vector>
+              <ipxact:left expression="15">15</ipxact:left>
+              <ipxact:right expression="0">0</ipxact:right>
+            </ipxact:vector>
+          </ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName constrained="false">std_logic_vector</ipxact:typeName>
+              <ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+              <ipxact:viewRef>flat</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+    </ipxact:ports>
+  </ipxact:model>
+  <ipxact:fileSets>
+    <ipxact:fileSet>
+      <ipxact:name>base</ipxact:name>
+      <ipxact:file>
+        <ipxact:name>I2C_CCD_Config.v</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType>
+        <ipxact:isIncludeFile externalDeclarations="false">false</ipxact:isIncludeFile>
+        <ipxact:vendorExtensions xmlns:kactus2="http://funbase.cs.TUNI.fi/">
+          <kactus2:hash>ce7589a33658e47c54c9b6d5f4eae08853b65f28</kactus2:hash>
+        </ipxact:vendorExtensions>
+      </ipxact:file>
+      <ipxact:file>
+        <ipxact:name>I2C_Controller.v</ipxact:name>
+        <ipxact:fileType>verilogSource</ipxact:fileType>
+        <ipxact:isIncludeFile externalDeclarations="false">false</ipxact:isIncludeFile>
+      </ipxact:file>
+    </ipxact:fileSet>
+  </ipxact:fileSets>
+  <ipxact:parameters>
+    <ipxact:parameter parameterId="uuid_b95ad623_54c1_4036_b8dd_243c191e53d4" resolve="user">
+      <ipxact:name>CLK_Freq</ipxact:name>
+      <ipxact:description>50	MHz</ipxact:description>
+      <ipxact:value>75000000</ipxact:value>
+    </ipxact:parameter>
+    <ipxact:parameter parameterId="uuid_9a1e7ef6_67ac_46f5_9db2_3b23d3abf5fc">
+      <ipxact:name>I2C_Freq</ipxact:name>
+      <ipxact:description>20	KHz</ipxact:description>
+      <ipxact:value>20000</ipxact:value>
+    </ipxact:parameter>
+    <ipxact:parameter parameterId="uuid_41b09fef_bc43_4cc9_84ea_9942412cbf76">
+      <ipxact:name>LUT_SIZE</ipxact:name>
+      <ipxact:description>row black target</ipxact:description>
+      <ipxact:value>25</ipxact:value>
+    </ipxact:parameter>
+  </ipxact:parameters>
+  <ipxact:vendorExtensions xmlns:kactus2="http://funbase.cs.TUNI.fi/">
+    <kactus2:kts_attributes>
+      <kactus2:kts_productHier>Flat</kactus2:kts_productHier>
+      <kactus2:kts_implementation>HW</kactus2:kts_implementation>
+      <kactus2:kts_firmness>Mutable</kactus2:kts_firmness>
+    </kactus2:kts_attributes>
+    <kactus2:sourceDirectories>
+      <kactus2:sourceDirectory>.</kactus2:sourceDirectory>
+    </kactus2:sourceDirectories>
+    <kactus2:author>sjovallp</kactus2:author>
+    <kactus2:version>2,8,49,0</kactus2:version>
+  </ipxact:vendorExtensions>
+</ipxact:component>

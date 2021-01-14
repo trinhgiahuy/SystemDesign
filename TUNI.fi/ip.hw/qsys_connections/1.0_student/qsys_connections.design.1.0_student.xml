@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>TUNI.fi</ipxact:vendor>
+	<ipxact:library>ip.hw</ipxact:library>
+	<ipxact:name>qsys_connections.design</ipxact:name>
+	<ipxact:version>1.0_student</ipxact:version>
+	<ipxact:componentInstances>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>sad_result_low</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="ip.hwp.com" name="PIO" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{14438eff-f5af-440d-a072-3706a473e4e7}</kactus2:uuid>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="axi" x="-110" y="40"/>
+				</kactus2:portPositions>
+				<kactus2:adHocVisibilities>
+					<kactus2:adHocVisible portName="conduit" x="110" y="40"/>
+				</kactus2:adHocVisibilities>
+				<kactus2:position x="1330" y="60"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>sad_result_high</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="ip.hwp.com" name="PIO" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{584481e6-0927-45d3-a02b-56339c6b6eed}</kactus2:uuid>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="axi" x="-110" y="40"/>
+				</kactus2:portPositions>
+				<kactus2:adHocVisibilities>
+					<kactus2:adHocVisible portName="conduit" x="110" y="40"/>
+				</kactus2:adHocVisibilities>
+				<kactus2:position x="1330" y="150"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>acc_config</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="ip.hwp.mem" name="axi_to_channel" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{790ea1bc-b468-4e3e-9d43-3dc57d009d99}</kactus2:uuid>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="axi_slave" x="-110" y="50"/>
+					<kactus2:portPosition busRef="channel" x="110" y="50"/>
+				</kactus2:portPositions>
+				<kactus2:position x="1330" y="240"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>result_ready</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="ip.hwp.com" name="PIO" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{584481e6-0927-45d3-a02b-56339c6b6eed}</kactus2:uuid>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="axi" x="-110" y="40"/>
+				</kactus2:portPositions>
+				<kactus2:adHocVisibilities>
+					<kactus2:adHocVisible portName="conduit" x="110" y="40"/>
+				</kactus2:adHocVisibilities>
+				<kactus2:position x="1330" y="340"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>lcu_loaded</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="ip.hwp.com" name="PIO" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{584481e6-0927-45d3-a02b-56339c6b6eed}</kactus2:uuid>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="axi" x="-110" y="40"/>
+				</kactus2:portPositions>
+				<kactus2:adHocVisibilities>
+					<kactus2:adHocVisible portName="conduit" x="110" y="40"/>
+				</kactus2:adHocVisibilities>
+				<kactus2:position x="1330" y="430"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>lambda_loaded</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="ip.hwp.com" name="PIO" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{584481e6-0927-45d3-a02b-56339c6b6eed}</kactus2:uuid>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="axi" x="-110" y="40"/>
+				</kactus2:portPositions>
+				<kactus2:adHocVisibilities>
+					<kactus2:adHocVisible portName="conduit" x="110" y="40"/>
+				</kactus2:adHocVisibilities>
+				<kactus2:position x="1330" y="520"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>axi_dma_unfilt1</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="ip.hwp.mem" name="axi_dma_read" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{c9dfd33d-90d2-4a6e-850a-35af334c3b13}</kactus2:uuid>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="axi_master" x="110" y="50"/>
+					<kactus2:portPosition busRef="axi_slave" x="-110" y="50"/>
+					<kactus2:portPosition busRef="channel_out" x="110" y="80"/>
+				</kactus2:portPositions>
+				<kactus2:position x="1330" y="610"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>dma_yuv</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="ip.hwp.mem" name="axi_dma_write" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{6f8ec655-79c2-41e2-8cf6-8b13f81504d6}</kactus2:uuid>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="axi_master" x="110" y="40"/>
+					<kactus2:portPosition busRef="axi_slave" x="-110" y="40"/>
+					<kactus2:portPosition busRef="channel_in" x="110" y="70"/>
+				</kactus2:portPositions>
+				<kactus2:position x="1330" y="980"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>axi_dma_unfilt2</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="ip.hwp.mem" name="axi_dma_read" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{9fb0dd5a-cc88-4fe5-8c43-99debe887257}</kactus2:uuid>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="axi_master" x="110" y="40"/>
+					<kactus2:portPosition busRef="axi_slave" x="-110" y="40"/>
+					<kactus2:portPosition busRef="channel_out" x="110" y="70"/>
+				</kactus2:portPositions>
+				<kactus2:position x="1330" y="740"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>axi_dma_orig</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="ip.hwp.mem" name="axi_dma_read" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{926af2e8-5320-4fd8-8159-38d7b879d896}</kactus2:uuid>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="axi_master" x="110" y="40"/>
+					<kactus2:portPosition busRef="axi_slave" x="-110" y="40"/>
+					<kactus2:portPosition busRef="channel_out" x="110" y="70"/>
+				</kactus2:portPositions>
+				<kactus2:position x="1330" y="860"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>configure_camera</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="ip.hwp.com" name="PIO" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{584481e6-0927-45d3-a02b-56339c6b6eed}</kactus2:uuid>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="axi" x="-110" y="40"/>
+				</kactus2:portPositions>
+				<kactus2:adHocVisibilities>
+					<kactus2:adHocVisible portName="conduit" x="110" y="40"/>
+				</kactus2:adHocVisibilities>
+				<kactus2:position x="1330" y="1190"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>yuv_ctrl</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="ip.hwp.com" name="PIO" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{584481e6-0927-45d3-a02b-56339c6b6eed}</kactus2:uuid>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="axi" x="-110" y="40"/>
+				</kactus2:portPositions>
+				<kactus2:adHocVisibilities>
+					<kactus2:adHocVisible portName="conduit" x="110" y="40"/>
+				</kactus2:adHocVisibilities>
+				<kactus2:position x="1330" y="1280"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>HPS_0</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="soc" name="HPS" version="1.2_student"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{99761fb4-cb0f-4090-9e73-54fbc7c00387}</kactus2:uuid>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="F2H" x="-110" y="60"/>
+					<kactus2:portPosition busRef="FPGA2SDRAM" x="110" y="100"/>
+					<kactus2:portPosition busRef="H2F" x="110" y="40"/>
+					<kactus2:portPosition busRef="LWH2F" x="110" y="70"/>
+					<kactus2:portPosition busRef="mem_interface" x="-110" y="40"/>
+				</kactus2:portPositions>
+				<kactus2:position x="400" y="60"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>camera_control_oc</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="ip.hwp.mem" name="On-Chip_Memory_RAM" version="1.1"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{87a646d8-51c6-4878-83ed-4d081eeb6b1c}</kactus2:uuid>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="axi_slave" x="-110" y="40"/>
+				</kactus2:portPositions>
+				<kactus2:position x="1330" y="1100"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>Peripherals_bus</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="ip.hwp.com" name="HPS_peripherals_bus" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{a8dd8080-68e3-49fa-8363-18f02d08a04b}</kactus2:uuid>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="H2F_master" x="-110" y="40"/>
+					<kactus2:portPosition busRef="acc_config" x="110" y="230"/>
+					<kactus2:portPosition busRef="axi_dma_orig_block" x="110" y="840"/>
+					<kactus2:portPosition busRef="axi_dma_unfiltered1" x="110" y="600"/>
+					<kactus2:portPosition busRef="axi_dma_unfiltered2" x="110" y="720"/>
+					<kactus2:portPosition busRef="camera_contro_oc" x="110" y="1080"/>
+					<kactus2:portPosition busRef="configure_camera" x="110" y="1170"/>
+					<kactus2:portPosition busRef="dma_yuv" x="110" y="960"/>
+					<kactus2:portPosition busRef="lambda_loaded" x="110" y="500"/>
+					<kactus2:portPosition busRef="lcu_loaded" x="110" y="410"/>
+					<kactus2:portPosition busRef="result_ready" x="110" y="320"/>
+					<kactus2:portPosition busRef="sad_result_high" x="110" y="130"/>
+					<kactus2:portPosition busRef="sad_result_low" x="110" y="40"/>
+					<kactus2:portPosition busRef="yuv_ctrl" x="110" y="1260"/>
+					<kactus2:portPosition busRef="yuv_status" x="110" y="1350"/>
+				</kactus2:portPositions>
+				<kactus2:position x="720" y="60"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>instance_0</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="ip.hwp.com" name="HPS_memory_bus" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{b4e83042-a451-44be-ac2d-eea0bca0bc83}</kactus2:uuid>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="FPGA2SDRAM_master" x="110" y="40"/>
+					<kactus2:portPosition busRef="axi_dma_orig" x="-110" y="840"/>
+					<kactus2:portPosition busRef="axi_dma_unfilt1" x="-110" y="600"/>
+					<kactus2:portPosition busRef="axi_dma_unfilt2" x="-110" y="720"/>
+					<kactus2:portPosition busRef="dma_yuv" x="-110" y="960"/>
+				</kactus2:portPositions>
+				<kactus2:position x="1940" y="60"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>yuv_status</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="ip.hwp.com" name="PIO" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{584481e6-0927-45d3-a02b-56339c6b6eed}</kactus2:uuid>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="axi" x="-110" y="40"/>
+				</kactus2:portPositions>
+				<kactus2:adHocVisibilities>
+					<kactus2:adHocVisible portName="conduit" x="110" y="40"/>
+				</kactus2:adHocVisibilities>
+				<kactus2:position x="1330" y="1370"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+	</ipxact:componentInstances>
+	<ipxact:interconnections>
+		<ipxact:interconnection>
+			<ipxact:name>Peripherals_bus_sad_result_low_to_sad_result_low_axi</ipxact:name>
+			<ipxact:activeInterface componentRef="Peripherals_bus" busRef="sad_result_low"/>
+			<ipxact:activeInterface componentRef="sad_result_low" busRef="axi"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>Peripherals_bus_H2F_master_to_HPS_0_H2F</ipxact:name>
+			<ipxact:activeInterface componentRef="Peripherals_bus" busRef="H2F_master"/>
+			<ipxact:activeInterface componentRef="HPS_0" busRef="H2F"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>Peripherals_bus_sad_result_high_to_sad_result_high_axi</ipxact:name>
+			<ipxact:activeInterface componentRef="Peripherals_bus" busRef="sad_result_high"/>
+			<ipxact:activeInterface componentRef="sad_result_high" busRef="axi"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>acc_config_axi_slave_to_Peripherals_bus_acc_config</ipxact:name>
+			<ipxact:activeInterface componentRef="acc_config" busRef="axi_slave"/>
+			<ipxact:activeInterface componentRef="Peripherals_bus" busRef="acc_config"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>Peripherals_bus_result_ready_to_result_ready_axi</ipxact:name>
+			<ipxact:activeInterface componentRef="Peripherals_bus" busRef="result_ready"/>
+			<ipxact:activeInterface componentRef="result_ready" busRef="axi"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>lcu_loaded_axi_to_Peripherals_bus_lcu_loaded</ipxact:name>
+			<ipxact:activeInterface componentRef="lcu_loaded" busRef="axi"/>
+			<ipxact:activeInterface componentRef="Peripherals_bus" busRef="lcu_loaded"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>Peripherals_bus_axi_dma_unfiltered2_to_axi_dma_unfilt2_axi_slave</ipxact:name>
+			<ipxact:activeInterface componentRef="Peripherals_bus" busRef="axi_dma_unfiltered2"/>
+			<ipxact:activeInterface componentRef="axi_dma_unfilt2" busRef="axi_slave"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>axi_dma_orig_axi_slave_to_Peripherals_bus_axi_dma_orig_block</ipxact:name>
+			<ipxact:activeInterface componentRef="axi_dma_orig" busRef="axi_slave"/>
+			<ipxact:activeInterface componentRef="Peripherals_bus" busRef="axi_dma_orig_block"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>Peripherals_bus_dma_yuv_to_dma_yuv_axi_slave</ipxact:name>
+			<ipxact:activeInterface componentRef="Peripherals_bus" busRef="dma_yuv"/>
+			<ipxact:activeInterface componentRef="dma_yuv" busRef="axi_slave"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>camera_control_oc_axi_slave_to_Peripherals_bus_camera_contro_oc</ipxact:name>
+			<ipxact:activeInterface componentRef="camera_control_oc" busRef="axi_slave"/>
+			<ipxact:activeInterface componentRef="Peripherals_bus" busRef="camera_contro_oc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>Peripherals_bus_configure_camera_to_configure_camera_axi</ipxact:name>
+			<ipxact:activeInterface componentRef="Peripherals_bus" busRef="configure_camera"/>
+			<ipxact:activeInterface componentRef="configure_camera" busRef="axi"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>axi_dma_unfilt1_axi_master_to_instance_0_axi_dma_unfilt1</ipxact:name>
+			<ipxact:activeInterface componentRef="axi_dma_unfilt1" busRef="axi_master"/>
+			<ipxact:activeInterface componentRef="instance_0" busRef="axi_dma_unfilt1"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>lambda_loaded_axi_to_Peripherals_bus_lambda_loaded</ipxact:name>
+			<ipxact:activeInterface componentRef="lambda_loaded" busRef="axi"/>
+			<ipxact:activeInterface componentRef="Peripherals_bus" busRef="lambda_loaded"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>Peripherals_bus_axi_dma_unfiltered1_to_axi_dma_unfilt1_axi_slave</ipxact:name>
+			<ipxact:activeInterface componentRef="Peripherals_bus" busRef="axi_dma_unfiltered1"/>
+			<ipxact:activeInterface componentRef="axi_dma_unfilt1" busRef="axi_slave"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>instance_0_axi_dma_unfilt2_to_axi_dma_unfilt2_axi_master</ipxact:name>
+			<ipxact:activeInterface componentRef="instance_0" busRef="axi_dma_unfilt2"/>
+			<ipxact:activeInterface componentRef="axi_dma_unfilt2" busRef="axi_master"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>instance_0_axi_dma_orig_to_axi_dma_orig_axi_master</ipxact:name>
+			<ipxact:activeInterface componentRef="instance_0" busRef="axi_dma_orig"/>
+			<ipxact:activeInterface componentRef="axi_dma_orig" busRef="axi_master"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>instance_0_dma_yuv_to_dma_yuv_axi_master</ipxact:name>
+			<ipxact:activeInterface componentRef="instance_0" busRef="dma_yuv"/>
+			<ipxact:activeInterface componentRef="dma_yuv" busRef="axi_master"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>instance_0_FPGA2SDRAM_master_to_HPS_0_FPGA2SDRAM</ipxact:name>
+			<ipxact:activeInterface componentRef="instance_0" busRef="FPGA2SDRAM_master"/>
+			<ipxact:activeInterface componentRef="HPS_0" busRef="FPGA2SDRAM"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>Peripherals_bus_yuv_status_to_yuv_status_axi</ipxact:name>
+			<ipxact:activeInterface componentRef="Peripherals_bus" busRef="yuv_status"/>
+			<ipxact:activeInterface componentRef="yuv_status" busRef="axi"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>yuv_ctrl_axi_to_Peripherals_bus_yuv_ctrl</ipxact:name>
+			<ipxact:activeInterface componentRef="yuv_ctrl" busRef="axi"/>
+			<ipxact:activeInterface componentRef="Peripherals_bus" busRef="yuv_ctrl"/>
+		</ipxact:interconnection>
+	</ipxact:interconnections>
+	<ipxact:vendorExtensions>
+		<kactus2:version>3,5,0,0</kactus2:version>
+		<kactus2:kts_attributes>
+			<kactus2:kts_implementation>HW</kactus2:kts_implementation>
+		</kactus2:kts_attributes>
+		<kactus2:columnLayout>
+			<kactus2:column name="IO" contentType="0" allowedItems="1" minWidth="119" width="379" x="2100"/>
+			<kactus2:column name="Buses" contentType="1" allowedItems="12" minWidth="319" width="319" x="560"/>
+			<kactus2:column name="Components" contentType="2" allowedItems="2" minWidth="319" width="319" x="240"/>
+			<kactus2:column name="IO" contentType="0" allowedItems="1" minWidth="119" width="239" x="0"/>
+			<kactus2:column name="Components" contentType="2" allowedItems="2" minWidth="319" width="899" x="880"/>
+			<kactus2:column name="Buses" contentType="1" allowedItems="12" minWidth="319" width="319" x="1780"/>
+		</kactus2:columnLayout>
+		<kactus2:routes>
+			<kactus2:route kactus2:connRef="Peripherals_bus_sad_result_low_to_sad_result_low_axi" kactus2:offPage="false">
+				<kactus2:position x="830" y="100"/>
+				<kactus2:position x="1220" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="Peripherals_bus_H2F_master_to_HPS_0_H2F" kactus2:offPage="false">
+				<kactus2:position x="610" y="100"/>
+				<kactus2:position x="510" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="Peripherals_bus_sad_result_high_to_sad_result_high_axi" kactus2:offPage="false">
+				<kactus2:position x="830" y="190"/>
+				<kactus2:position x="1220" y="190"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="acc_config_axi_slave_to_Peripherals_bus_acc_config" kactus2:offPage="false">
+				<kactus2:position x="1220" y="290"/>
+				<kactus2:position x="830" y="290"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="Peripherals_bus_result_ready_to_result_ready_axi" kactus2:offPage="false">
+				<kactus2:position x="830" y="380"/>
+				<kactus2:position x="1220" y="380"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="lcu_loaded_axi_to_Peripherals_bus_lcu_loaded" kactus2:offPage="false">
+				<kactus2:position x="1220" y="470"/>
+				<kactus2:position x="830" y="470"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="Peripherals_bus_axi_dma_unfiltered2_to_axi_dma_unfilt2_axi_slave" kactus2:offPage="false">
+				<kactus2:position x="830" y="780"/>
+				<kactus2:position x="1220" y="780"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="axi_dma_orig_axi_slave_to_Peripherals_bus_axi_dma_orig_block" kactus2:offPage="false">
+				<kactus2:position x="1220" y="900"/>
+				<kactus2:position x="830" y="900"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="Peripherals_bus_dma_yuv_to_dma_yuv_axi_slave" kactus2:offPage="false">
+				<kactus2:position x="830" y="1020"/>
+				<kactus2:position x="1220" y="1020"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="camera_control_oc_axi_slave_to_Peripherals_bus_camera_contro_oc" kactus2:offPage="false">
+				<kactus2:position x="1220" y="1140"/>
+				<kactus2:position x="830" y="1140"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="Peripherals_bus_configure_camera_to_configure_camera_axi" kactus2:offPage="false">
+				<kactus2:position x="830" y="1230"/>
+				<kactus2:position x="1220" y="1230"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="axi_dma_unfilt1_axi_master_to_instance_0_axi_dma_unfilt1" kactus2:offPage="false">
+				<kactus2:position x="1440" y="660"/>
+				<kactus2:position x="1830" y="660"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="lambda_loaded_axi_to_Peripherals_bus_lambda_loaded" kactus2:offPage="false">
+				<kactus2:position x="1220" y="560"/>
+				<kactus2:position x="830" y="560"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="Peripherals_bus_axi_dma_unfiltered1_to_axi_dma_unfilt1_axi_slave" kactus2:offPage="false">
+				<kactus2:position x="830" y="660"/>
+				<kactus2:position x="1220" y="660"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="instance_0_axi_dma_unfilt2_to_axi_dma_unfilt2_axi_master" kactus2:offPage="false">
+				<kactus2:position x="1830" y="780"/>
+				<kactus2:position x="1440" y="780"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="instance_0_axi_dma_orig_to_axi_dma_orig_axi_master" kactus2:offPage="false">
+				<kactus2:position x="1830" y="900"/>
+				<kactus2:position x="1440" y="900"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="instance_0_dma_yuv_to_dma_yuv_axi_master" kactus2:offPage="false">
+				<kactus2:position x="1830" y="1020"/>
+				<kactus2:position x="1440" y="1020"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="instance_0_FPGA2SDRAM_master_to_HPS_0_FPGA2SDRAM" kactus2:offPage="false">
+				<kactus2:position x="2050" y="100"/>
+				<kactus2:position x="2070" y="100"/>
+				<kactus2:position x="2070" y="160"/>
+				<kactus2:position x="510" y="160"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="Peripherals_bus_yuv_status_to_yuv_status_axi" kactus2:offPage="false">
+				<kactus2:position x="830" y="1410"/>
+				<kactus2:position x="1220" y="1410"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="yuv_ctrl_axi_to_Peripherals_bus_yuv_ctrl" kactus2:offPage="false">
+				<kactus2:position x="1220" y="1320"/>
+				<kactus2:position x="830" y="1320"/>
+			</kactus2:route>
+		</kactus2:routes>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>orig_channel</kactus2:name>
+			<kactus2:position x="120" y="370"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>top_ref_channel</kactus2:name>
+			<kactus2:position x="120" y="350"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>left_ref_channel</kactus2:name>
+			<kactus2:position x="120" y="330"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>config_channel</kactus2:name>
+			<kactus2:position x="120" y="310"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>y_channel</kactus2:name>
+			<kactus2:position x="120" y="290"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>u_channel</kactus2:name>
+			<kactus2:position x="120" y="270"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>v_channel</kactus2:name>
+			<kactus2:position x="120" y="250"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>camera_config</kactus2:name>
+			<kactus2:position x="120" y="230"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>clock_75MHz</kactus2:name>
+			<kactus2:position x="120" y="210"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>HPS_connection</kactus2:name>
+			<kactus2:position x="120" y="190"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>clock_camera</kactus2:name>
+			<kactus2:position x="120" y="170"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>sad_result</kactus2:name>
+			<kactus2:position x="120" y="150"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>yuv_ctrl</kactus2:name>
+			<kactus2:position x="120" y="130"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>camera_start_config</kactus2:name>
+			<kactus2:position x="120" y="110"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>dip_switch</kactus2:name>
+			<kactus2:position x="120" y="90"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>push_buttons</kactus2:name>
+			<kactus2:position x="120" y="70"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:adHocVisibilities/>
+		<kactus2:note>
+			<kactus2:position x="380" y="240"/>
+			<kactus2:content>In QSYS:
+
+dma_yuv:
+should be connected to f2h_sdram_0_data
+
+axi_dma_unfilt2 &amp; axi_dma_orig: 
+should be connected to f2h_sdram_1_data
+
+axi_dma_unfilt1
+should be connected to f2h_sdram_2_data</kactus2:content>
+			<kactus2:associations>
+				<kactus2:position x="400" y="120"/>
+			</kactus2:associations>
+			<kactus2:timestamp>16.3.2018 14:59:18</kactus2:timestamp>
+		</kactus2:note>
+		<kactus2:note>
+			<kactus2:position x="2270" y="680"/>
+			<kactus2:content>Export:
+- external_connection</kactus2:content>
+			<kactus2:associations>
+				<kactus2:position x="1330" y="90"/>
+				<kactus2:position x="1330" y="180"/>
+				<kactus2:position x="1330" y="370"/>
+				<kactus2:position x="1330" y="460"/>
+				<kactus2:position x="1330" y="550"/>
+				<kactus2:position x="1330" y="1220"/>
+				<kactus2:position x="1330" y="1310"/>
+				<kactus2:position x="1330" y="1400"/>
+			</kactus2:associations>
+			<kactus2:timestamp>15.3.2018 12:19:50</kactus2:timestamp>
+		</kactus2:note>
+		<kactus2:note>
+			<kactus2:position x="850" y="680"/>
+			<kactus2:content>Export:
+- channel_lz
+- channel_vx
+- channel_data
+- clear_fifo</kactus2:content>
+			<kactus2:associations>
+				<kactus2:position x="1330" y="660"/>
+				<kactus2:position x="1330" y="785"/>
+				<kactus2:position x="1330" y="905"/>
+			</kactus2:associations>
+			<kactus2:timestamp>15.3.2018 12:20:01</kactus2:timestamp>
+		</kactus2:note>
+		<kactus2:note>
+			<kactus2:position x="860" y="920"/>
+			<kactus2:content>Export:
+- yuv_input
+- fifo_clk</kactus2:content>
+			<kactus2:associations>
+				<kactus2:position x="1330" y="1025"/>
+			</kactus2:associations>
+			<kactus2:timestamp>15.3.2018 12:20:15</kactus2:timestamp>
+		</kactus2:note>
+		<kactus2:note>
+			<kactus2:position x="860" y="1070"/>
+			<kactus2:content>Export:
+- s2</kactus2:content>
+			<kactus2:associations>
+				<kactus2:position x="1330" y="1130"/>
+			</kactus2:associations>
+			<kactus2:timestamp>15.3.2018 12:20:50</kactus2:timestamp>
+		</kactus2:note>
+		<kactus2:note>
+			<kactus2:position x="860" y="210"/>
+			<kactus2:content>Export:
+- channel</kactus2:content>
+			<kactus2:associations>
+				<kactus2:position x="1330" y="275"/>
+			</kactus2:associations>
+			<kactus2:timestamp>15.3.2018 12:21:12</kactus2:timestamp>
+		</kactus2:note>
+		<kactus2:note>
+			<kactus2:position x="860" y="490"/>
+			<kactus2:content>IRQs:
+result_ready =&gt; 0
+lcu_loaded =&gt; 1
+lambda_loaded =&gt; 2
+yuv_status =&gt; 5
+
+</kactus2:content>
+			<kactus2:associations>
+				<kactus2:position x="1330" y="370"/>
+				<kactus2:position x="1330" y="460"/>
+				<kactus2:position x="1330" y="550"/>
+				<kactus2:position x="1330" y="1400"/>
+			</kactus2:associations>
+			<kactus2:timestamp>16.3.2018 13:44:07</kactus2:timestamp>
+		</kactus2:note>
+	</ipxact:vendorExtensions>
+</ipxact:design>

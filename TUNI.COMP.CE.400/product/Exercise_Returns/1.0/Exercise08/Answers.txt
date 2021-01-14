@@ -1,0 +1,29 @@
+INCLUDE ANSWERS IN HERE
+
+1. What is the most significant change in the profiling picture compared to the previous exercises?
+
+2. Fill the below table with performance measurements, using the parameters of the corresponding row.
+
+# RESOLUTION   THREADS   QP   LATENCY (ms)   FPS
+##################################################
+# 800x480      2         24   
+# 800x480      1         24   
+# 800x480      2         37   
+# 800x480      1         37   
+# 400x240      2         24   
+# 400x240      1         24   
+# 400x240      2         37   
+# 400x240      1         37   
+##################################################
+
+3. Which parameters of the above table have the most significant impact on the performance of the system?
+   
+4. Did you complete the bonus task? If you did, what is the significant change in quality of the video?
+   Missing watermark is not the answer.
+
+5. What was hard? What was easy?
+
+6. Fill the used hours below, including answering questions and any downtime:
+
+    GROUP MEMBER 1:
+    GROUP MEMBER 2:
