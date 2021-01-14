@@ -1,0 +1,60 @@
+INCLUDE ANSWERS IN HERE
+
+1. What is the focus of the exercise project (=all exercises)? Why?
+Hint: Read the exercise project summary from Moodle
+Hint 2: Implementing a video encoder is NOT the focus of the exercises.
+
+*** PART ONE ***
+
+Some of the questions may involve examining the txt-files generated while encoding.
+
+2. How much time did the encoding take? Look at the "Total CPU time".
+
+	QP 50:
+	GROUP QP: 
+
+3. How many frames were encoded per second (FPS)?
+
+	QP 50:
+	GROUP QP:
+
+4. How did decreasing the quantization value affect perceived quality of the video output?
+
+5. How did decreasing the quantization value affect size of the video output file?
+
+7. What was average PSNR?
+
+	QP 50:
+	GROUP QP:
+
+8. What was the data compression ratio of encoding using your assigned quantization value?
+Data compression ratio is defined as (size of the video input file)/(size of the video output file).
+
+	QP 50:
+	GROUP QP:
+
+*** PART TWO ***
+
+9. What was average PSNR of the profiling run?
+
+10. What does parameter -pg do in GCC? How it affects the resulting executable and its execution?
+
+11. Which three (3) functions use most time in Kvazaar? Answer based on the time used by functions
+alone, not by the functions they call.
+
+12. Why it is better to look at percentages rather than absolute time like seconds or milliseconds while
+using a profiling tool (like gprof)?
+
+13. Which function would you choose for hardware acceleration? If there are multiple good candidates, choose one.
+
+14. What does that function do? Why do you think it's a good candidate for hardware acceleration?
+Mention at least two reasons.
+Hint: Look at the source code at Kactus2 location TUNI.fi->ip.sw->Kvazaar->0.7.2->src
+
+15. How are you feeling? What was hard? What was easy?
+
+16. Fill the used hours below, including answering questions and any downtime:
+ANSWER THE HOURS AS IF YOU WERE PAID FOR IT (we will not pay you, though)
+
+	GROUP MEMBER 1:
+	GROUP MEMBER 2:

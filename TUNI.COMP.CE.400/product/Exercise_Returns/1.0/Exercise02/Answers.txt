@@ -1,0 +1,39 @@
+INCLUDE ANSWERS IN HERE
+
+1. What is the purpose of SystemC?
+
+2. What does macro SC_MODULE do from user perspective?
+
+3. What does macro SC_CTOR do from user perspective?
+
+4. What is the difference between SC_THREAD, SC_METHOD, and SC_CTHREAD?
+
+5. Original model does not specify implementation for c1, c2, and v1.
+What was implementation of channels and the variable in this exercise?
+
+6. What does the file test_bench.cpp do?
+
+7. What is the purpose of the application GTKWave?
+	
+8. In this exercise, memory was merely used as an external storage. However, in practical computing
+the memory is likely used directly by CPU as in caches and DDR. Why speed of these is important?
+	
+9. In this exercise, we had the option of directly affecting the memory speed.
+Why this may be difficult on real platforms?
+
+10. What the was the final performance of your system? Answer this BEFORE the bonus section!
+
+11. What was hard? What was easy?
+
+12. Fill the used hours below, including answering questions and any downtime:
+
+	GROUP MEMBER 1:
+	GROUP MEMBER 2:
+	
+***BONUS SECTION ANSWERS***
+
+13. What components did you choose? What was the price? What was the performance?
+
+14. Following setup is used for streaming 4K video:
+4K monitor <- HDMI 1.3 <- PC <- 5 Mbps internet <- Content service
+What is wrong with the setup? Hint: Search answers from articles and specifications if you do not know.

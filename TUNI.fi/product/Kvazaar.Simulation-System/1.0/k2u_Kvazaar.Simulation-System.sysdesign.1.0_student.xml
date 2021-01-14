@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>TUNI.fi</ipxact:vendor>
+	<ipxact:library>product</ipxact:library>
+	<ipxact:name>Kvazaar.Simulation-System.sysdesign</ipxact:name>
+	<ipxact:version>1.0_student</ipxact:version>
+	<ipxact:componentInstances>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>x86_64_0</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="ip.hwp.cpu" name="x86-64" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{a76f2486-cf2e-4899-b5f8-399ccbeb8e33}</kactus2:uuid>
+				<kactus2:position x="190" y="60"/>
+				<kactus2:imported/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>Kvazaar_0</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="ip.sw" name="Kvazaar" version="0.7.2"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{ad094584-2be5-4121-a00b-8281e1df6b01}</kactus2:uuid>
+				<kactus2:mapping hwRef="{a76f2486-cf2e-4899-b5f8-399ccbeb8e33}"/>
+				<kactus2:position x="0" y="40"/>
+				<kactus2:fileSetRef>Simulation-System_Kvazaar_0_headers</kactus2:fileSetRef>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>Kvazaar_sim_support_0</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="ip.swp.stack" name="Kvazaar_sim_support" version="1.0_student"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{7d357207-1c17-4847-ae23-260001824a02}</kactus2:uuid>
+				<kactus2:mapping hwRef="{a76f2486-cf2e-4899-b5f8-399ccbeb8e33}"/>
+				<kactus2:position x="0" y="120"/>
+				<kactus2:fileSetRef>Simulation-System_Kvazaar_sim_support_0_headers</kactus2:fileSetRef>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+	</ipxact:componentInstances>
+	<ipxact:vendorExtensions>
+		<kactus2:version>2,7,1111,0</kactus2:version>
+		<kactus2:columnLayout>
+			<kactus2:column name="SW Components" contentType="2" allowedItems="2" minWidth="379" width="379" x="0"/>
+		</kactus2:columnLayout>
+		<kactus2:apiConnections>
+			<kactus2:apiConnection>
+				<ipxact:name>Kvazaar_sim_support_0_Sup2Main_to_Kvazaar_0_Main2Dep</ipxact:name>
+				<kactus2:activeApiInterface componentRef="Kvazaar_sim_support_0" apiRef="Sup2Main"/>
+				<kactus2:activeApiInterface componentRef="Kvazaar_0" apiRef="Main2Dep"/>
+			</kactus2:apiConnection>
+		</kactus2:apiConnections>
+	</ipxact:vendorExtensions>
+</ipxact:design>

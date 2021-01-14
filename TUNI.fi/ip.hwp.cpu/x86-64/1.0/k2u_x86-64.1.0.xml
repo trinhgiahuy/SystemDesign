@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014/ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>TUNI.fi</ipxact:vendor>
+	<ipxact:library>ip.hwp.cpu</ipxact:library>
+	<ipxact:name>x86-64</ipxact:name>
+	<ipxact:version>1.0</ipxact:version>
+	<ipxact:addressSpaces>
+		<ipxact:addressSpace>
+			<ipxact:name>default_interconnect</ipxact:name>
+			<ipxact:range>4294967295</ipxact:range>
+			<ipxact:width>32</ipxact:width>
+			<ipxact:addressUnitBits>8</ipxact:addressUnitBits>
+		</ipxact:addressSpace>
+	</ipxact:addressSpaces>
+	<ipxact:model>
+		<ipxact:views>
+			<ipxact:view>
+				<ipxact:name>flat</ipxact:name>
+				<ipxact:envIdentifier>::</ipxact:envIdentifier>
+				<ipxact:componentInstantiationRef>flat</ipxact:componentInstantiationRef>
+			</ipxact:view>
+			<ipxact:view>
+				<ipxact:name>gcc-tool-chain</ipxact:name>
+				<ipxact:componentInstantiationRef>gcc-tool-chain_sw_component_instantiation</ipxact:componentInstantiationRef>
+			</ipxact:view>
+			<ipxact:view>
+				<ipxact:name>gcc-tool-chain-debug</ipxact:name>
+				<ipxact:componentInstantiationRef>gcc-tool-chain-debug_sw_component_instantiation</ipxact:componentInstantiationRef>
+			</ipxact:view>
+			<ipxact:view>
+				<ipxact:name>g++-tool-chain</ipxact:name>
+				<ipxact:componentInstantiationRef>g++-tool-chain_sw_component_instantiation</ipxact:componentInstantiationRef>
+			</ipxact:view>
+			<ipxact:view>
+				<ipxact:name>g++-tool-chain-debug</ipxact:name>
+				<ipxact:componentInstantiationRef>g++-tool-chain-debug_sw_component_instantiation</ipxact:componentInstantiationRef>
+			</ipxact:view>
+		</ipxact:views>
+		<ipxact:instantiations>
+			<ipxact:componentInstantiation>
+				<ipxact:name>flat</ipxact:name>
+			</ipxact:componentInstantiation>
+			<ipxact:componentInstantiation>
+				<ipxact:name>gcc-tool-chain_sw_component_instantiation</ipxact:name>
+				<ipxact:defaultFileBuilder>
+					<ipxact:fileType>cSource</ipxact:fileType>
+					<ipxact:command>gcc</ipxact:command>
+					<ipxact:replaceDefaultFlags>false</ipxact:replaceDefaultFlags>
+				</ipxact:defaultFileBuilder>
+			</ipxact:componentInstantiation>
+			<ipxact:componentInstantiation>
+				<ipxact:name>gcc-tool-chain-debug_sw_component_instantiation</ipxact:name>
+				<ipxact:defaultFileBuilder>
+					<ipxact:fileType>cSource</ipxact:fileType>
+					<ipxact:command>gcc</ipxact:command>
+					<ipxact:flags>-DIP_DEBUG</ipxact:flags>
+					<ipxact:replaceDefaultFlags>false</ipxact:replaceDefaultFlags>
+				</ipxact:defaultFileBuilder>
+			</ipxact:componentInstantiation>
+			<ipxact:componentInstantiation>
+				<ipxact:name>g++-tool-chain_sw_component_instantiation</ipxact:name>
+				<ipxact:defaultFileBuilder>
+					<ipxact:fileType>cppSource</ipxact:fileType>
+					<ipxact:command>g++</ipxact:command>
+					<ipxact:replaceDefaultFlags>false</ipxact:replaceDefaultFlags>
+				</ipxact:defaultFileBuilder>
+			</ipxact:componentInstantiation>
+			<ipxact:componentInstantiation>
+				<ipxact:name>g++-tool-chain-debug_sw_component_instantiation</ipxact:name>
+				<ipxact:defaultFileBuilder>
+					<ipxact:fileType>cppSource</ipxact:fileType>
+					<ipxact:command>g++</ipxact:command>
+					<ipxact:flags>-DIP_DEBUG</ipxact:flags>
+					<ipxact:replaceDefaultFlags>false</ipxact:replaceDefaultFlags>
+				</ipxact:defaultFileBuilder>
+			</ipxact:componentInstantiation>
+		</ipxact:instantiations>
+	</ipxact:model>
+	<ipxact:cpus>
+		<ipxact:cpu>
+			<ipxact:name>cpu0</ipxact:name>
+			<ipxact:addressSpaceRef addressSpaceRef="default_interconnect"/>
+		</ipxact:cpu>
+		<ipxact:cpu>
+			<ipxact:name>cpu1</ipxact:name>
+			<ipxact:addressSpaceRef addressSpaceRef="default_interconnect"/>
+		</ipxact:cpu>
+	</ipxact:cpus>
+	<ipxact:description>A generic x86-64 processor commonly found PCs.
+
+This is NOT any specific model but used to represent an x86-64 processor in general!</ipxact:description>
+	<ipxact:vendorExtensions>
+		<kactus2:author>Janne Virtanen</kactus2:author>
+		<kactus2:kts_attributes>
+			<kactus2:kts_productHier>Chip</kactus2:kts_productHier>
+			<kactus2:kts_implementation>HW</kactus2:kts_implementation>
+			<kactus2:kts_firmness>Fixed</kactus2:kts_firmness>
+		</kactus2:kts_attributes>
+	</ipxact:vendorExtensions>
+</ipxact:component>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014/ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>TUNI.COMP.CE.400</ipxact:vendor>
+	<ipxact:library>product</ipxact:library>
+	<ipxact:name>CrypterSim</ipxact:name>
+	<ipxact:version>1.0_student</ipxact:version>
+	<ipxact:model>
+		<ipxact:views>
+			<ipxact:view>
+				<ipxact:name>flat</ipxact:name>
+				<ipxact:envIdentifier>::</ipxact:envIdentifier>
+				<ipxact:componentInstantiationRef>flat</ipxact:componentInstantiationRef>
+			</ipxact:view>
+			<ipxact:view>
+				<ipxact:name>SimHW</ipxact:name>
+				<ipxact:envIdentifier>::</ipxact:envIdentifier>
+				<ipxact:designConfigurationInstantiationRef>SimHW</ipxact:designConfigurationInstantiationRef>
+			</ipxact:view>
+		</ipxact:views>
+		<ipxact:instantiations>
+			<ipxact:componentInstantiation>
+				<ipxact:name>flat</ipxact:name>
+			</ipxact:componentInstantiation>
+			<ipxact:designConfigurationInstantiation>
+				<ipxact:name>SimHW</ipxact:name>
+				<ipxact:designConfigurationRef vendor="TUNI.COMP.CE.400" library="product" name="CrypterSim.SimHW.designcfg" version="1.0"/>
+			</ipxact:designConfigurationInstantiation>
+		</ipxact:instantiations>
+	</ipxact:model>
+	<ipxact:vendorExtensions>
+		<kactus2:systemViews>
+			<kactus2:systemView>
+				<ipxact:name>SimSystem</ipxact:name>
+				<kactus2:hierarchyRef vendor="TUNI.COMP.CE.400" library="product" name="CrypterSim.SimSystem.sysdesigncfg" version="1.0_student"/>
+				<kactus2:hwViewRef>SimHW</kactus2:hwViewRef>
+			</kactus2:systemView>
+		</kactus2:systemViews>
+		<kactus2:version>2,8,49,0</kactus2:version>
+		<kactus2:kts_attributes>
+			<kactus2:kts_productHier>Product</kactus2:kts_productHier>
+			<kactus2:kts_implementation>HW</kactus2:kts_implementation>
+			<kactus2:kts_firmness>Mutable</kactus2:kts_firmness>
+		</kactus2:kts_attributes>
+	</ipxact:vendorExtensions>
+</ipxact:component>

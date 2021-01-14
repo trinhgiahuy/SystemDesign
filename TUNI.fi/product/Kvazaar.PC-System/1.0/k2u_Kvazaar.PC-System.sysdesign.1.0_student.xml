@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014/ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>TUNI.fi</ipxact:vendor>
+	<ipxact:library>product</ipxact:library>
+	<ipxact:name>Kvazaar.PC-System.sysdesign</ipxact:name>
+	<ipxact:version>1.0_student</ipxact:version>
+	<ipxact:componentInstances>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>x86_64_0</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="ip.hwp.cpu" name="x86-64" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{a76f2486-cf2e-4899-b5f8-399ccbeb8e33}</kactus2:uuid>
+				<kactus2:position x="190" y="60"/>
+				<kactus2:imported/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+	</ipxact:componentInstances>
+	<ipxact:vendorExtensions>
+		<kactus2:version>2,7,1117,0</kactus2:version>
+		<kactus2:columnLayout>
+			<kactus2:column name="SW Components" contentType="2" allowedItems="2" minWidth="379" width="379" x="0"/>
+		</kactus2:columnLayout>
+		<kactus2:swInstances>
+			<kactus2:swInstance>
+				<kactus2:instanceName>Kvazaar_0</kactus2:instanceName>
+				<kactus2:componentRef vendor="TUNI.fi" library="ip.sw" name="Kvazaar" version="0.7.2"/>
+				<kactus2:fileSetRef>PC-System_Kvazaar_0_headers</kactus2:fileSetRef>
+				<kactus2:mapping hwRef="{a76f2486-cf2e-4899-b5f8-399ccbeb8e33}"/>
+				<kactus2:position x="0" y="40"/>
+			</kactus2:swInstance>
+		</kactus2:swInstances>
+	</ipxact:vendorExtensions>
+</ipxact:design>
