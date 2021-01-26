@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ipxact:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+<ipxact:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.tut.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 	<ipxact:vendor>TUNI.fi</ipxact:vendor>
 	<ipxact:library>product</ipxact:library>
 	<ipxact:name>Kvazaar</ipxact:name>
@@ -40,6 +40,22 @@
 			<ipxact:name>Simulation-System_Kvazaar_sim_support_0_headers</ipxact:name>
 			<ipxact:group>sourceFiles</ipxact:group>
 		</ipxact:fileSet>
+		<ipxact:fileSet>
+			<ipxact:name>PC-System_general_files</ipxact:name>
+			<ipxact:group>sourceFiles</ipxact:group>
+			<ipxact:file>
+				<ipxact:name>../../Kvazaar.PC-System/1.0/sw_PC-System/Makefile</ipxact:name>
+				<ipxact:fileType user="makefile">user</ipxact:fileType>
+			</ipxact:file>
+		</ipxact:fileSet>
+		<ipxact:fileSet>
+			<ipxact:name>PC-System_Kvazaar_0_headers</ipxact:name>
+			<ipxact:group>sourceFiles</ipxact:group>
+			<ipxact:file>
+				<ipxact:name>../../Kvazaar.PC-System/1.0/sw_PC-System/Kvazaar_0</ipxact:name>
+				<ipxact:fileType user="makefile">user</ipxact:fileType>
+			</ipxact:file>
+		</ipxact:fileSet>
 	</ipxact:fileSets>
 	<ipxact:vendorExtensions>
 		<kactus2:fileDependencies>
@@ -64,12 +80,6 @@
 				<ipxact:description></ipxact:description>
 			</kactus2:fileDependency>
 		</kactus2:fileDependencies>
-		<kactus2:version>3,0,27,0</kactus2:version>
-		<kactus2:kts_attributes>
-			<kactus2:kts_productHier>Product</kactus2:kts_productHier>
-			<kactus2:kts_implementation>HW</kactus2:kts_implementation>
-			<kactus2:kts_firmness>Mutable</kactus2:kts_firmness>
-		</kactus2:kts_attributes>
 		<kactus2:systemViews>
 			<kactus2:systemView>
 				<ipxact:name>Simulation-System</ipxact:name>
@@ -82,5 +92,11 @@
 				<kactus2:hwViewRef>PC-Hardware</kactus2:hwViewRef>
 			</kactus2:systemView>
 		</kactus2:systemViews>
+		<kactus2:version>3,0,27,0</kactus2:version>
+		<kactus2:kts_attributes>
+			<kactus2:kts_productHier>Product</kactus2:kts_productHier>
+			<kactus2:kts_implementation>HW</kactus2:kts_implementation>
+			<kactus2:kts_firmness>Mutable</kactus2:kts_firmness>
+		</kactus2:kts_attributes>
 	</ipxact:vendorExtensions>
 </ipxact:component>
