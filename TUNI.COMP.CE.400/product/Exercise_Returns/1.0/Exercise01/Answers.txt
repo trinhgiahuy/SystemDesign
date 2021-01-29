@@ -35,8 +35,7 @@ The size of output file increases drastically when using QP27. In fact, it is 73
 	QP 50: 30.4205 37.9561 37.1313
 	GROUP QP: 42.1405 44.5568 44.6784
 
-8. What was the data compression ratio of encoding using your assigned quantization value?
-Data compression ratio is defined as (size of the video input file)/(size of the video output file).
+8. What was the data compression ratio of encoding using your assigned quantization value? Data compression ratio is defined as (size of the video input file)/(size of the video output file).
 
 	QP 50: 364500 KiB/339 KiB ~ 1075.2
 	GROUP QP: 364500 KiB / 7361 KiB ~ 49.5
@@ -49,10 +48,10 @@ They are 42.1405 44.5568 44.6784. They should be similar to non-profiling run.
 
 10. What does parameter -pg do in GCC? How it affects the resulting executable and its execution?
 
-"-pg" flag in GCC generates instruments profiling and "gprof" can report detailed information". The profile option -p must be used when compiling the source file and used it when linking. The -g debug option allow to produce debugging information. Using the flag will produce instrumented executable file which contains additional instructions that record the timing for each function. 
+"-pg" flag in GCC generates instruments profiling and "gprof" can report detailed information". The profile option -p must be used when compiling the source file and used it when linking. The -g debug option allow to produce debugging information.
+Using the flag will produce instrumented executable file which contains additional instructions that record the timing for each function. 
 
-11. Which three (3) functions use most time in Kvazaar? Answer based on the time used by functions
-alone, not by the functions they call.
+11. Which three (3) functions use most time in Kvazaar? Answer based on the time used by functions alone, not by the functions they call.
 
 They are:
 - "kvz_angular_pred_generic" (43.66%)
@@ -68,8 +67,7 @@ Because using percentage gives small values which can be easily compared, while 
 
 I would choose those functions that encode things, such as "encoder_state-geometry".
 
-14. What does that function do? Why do you think it's a good candidate for hardware acceleration?
-Mention at least two reasons.
+14. What does that function do? Why do you think it's a good candidate for hardware acceleration? Mention at least two reasons.
 Hint: Look at the source code at Kactus2 location TUNI.fi->ip.sw->Kvazaar->0.7.2->src
 
 The function calculates geometry information from LCU. It is a good candidate for hardware acceleration because:
