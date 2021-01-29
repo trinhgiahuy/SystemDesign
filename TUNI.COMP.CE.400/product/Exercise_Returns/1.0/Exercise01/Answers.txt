@@ -1,8 +1,12 @@
 INCLUDE ANSWERS IN HERE
 
+*** GROUP QP = 27 ***
+
 1. What is the focus of the exercise project (=all exercises)? Why?
 Hint: Read the exercise project summary from Moodle
 Hint 2: Implementing a video encoder is NOT the focus of the exercises.
+
+The focus of the exercise project is to analyzing an existing system (a FPGA based HEVC video encoder) and implement its missing parts using some tools such as Kactus2 for design tool, camera and touchscreen.
 
 *** PART ONE ***
 
@@ -10,51 +14,73 @@ Some of the questions may involve examining the txt-files generated while encodi
 
 2. How much time did the encoding take? Look at the "Total CPU time".
 
-	QP 50:
-	GROUP QP: 
+	QP 50: 45.828s
+	GROUP QP: 112.114s
 
 3. How many frames were encoded per second (FPS)?
 
-	QP 50:
-	GROUP QP:
+	QP 50: 2.78
+	GROUP QP: 1.15
 
 4. How did decreasing the quantization value affect perceived quality of the video output?
 
+By decreasing the QP, the perceived quality of the video output will be decreased, as there are more levels of quantization to represent the data. In other words, using QP27 will create a deeper color space than QP50.
+
 5. How did decreasing the quantization value affect size of the video output file?
+
+The size of output file increases drastically when using QP27. In fact, it is 7361 KiB compared to 339 KiB when using QP50.
 
 7. What was average PSNR?
 
-	QP 50:
-	GROUP QP:
+	QP 50: 30.4205 37.9561 37.1313
+	GROUP QP: 42.1405 44.5568 44.6784
 
 8. What was the data compression ratio of encoding using your assigned quantization value?
 Data compression ratio is defined as (size of the video input file)/(size of the video output file).
 
-	QP 50:
-	GROUP QP:
+	QP 50: 364500 KiB/339 KiB ~ 1075.2
+	GROUP QP: 364500 KiB / 7361 KiB ~ 49.5
 
 *** PART TWO ***
 
 9. What was average PSNR of the profiling run?
 
+They are 42.1405 44.5568 44.6784. They should be similar to non-profiling run.
+
 10. What does parameter -pg do in GCC? How it affects the resulting executable and its execution?
+
+"-pg" flag in GCC generates instruments profiling and "gprof" can report detailed information". The profile option -p must be used when compiling the source file and used it when linking. The -g debug option allow to produce debugging information.
+Using the flag will produce instrumented executable file which contains additional instructions that record the timing for each function. 
 
 11. Which three (3) functions use most time in Kvazaar? Answer based on the time used by functions
 alone, not by the functions they call.
 
+They are:
+- "kvz_angular_pred_generic"
+- "partial_butterfly_32_generic"
+- "kvz_quant_generic"
+
 12. Why it is better to look at percentages rather than absolute time like seconds or milliseconds while
 using a profiling tool (like gprof)?
 
+Because using percentage gives small values which can be easily compared, while generating absolute time like seconds or miliseconds yields results with many digits which are not really readable.
+
 13. Which function would you choose for hardware acceleration? If there are multiple good candidates, choose one.
+
+I would choose those functions that encode things, such as "encoderstate".
 
 14. What does that function do? Why do you think it's a good candidate for hardware acceleration?
 Mention at least two reasons.
 Hint: Look at the source code at Kactus2 location TUNI.fi->ip.sw->Kvazaar->0.7.2->src
 
+
+
 15. How are you feeling? What was hard? What was easy?
+
+It was easy except the C code reading part. This is expected for first introductory exercise.
 
 16. Fill the used hours below, including answering questions and any downtime:
 ANSWER THE HOURS AS IF YOU WERE PAID FOR IT (we will not pay you, though)
 
-	GROUP MEMBER 1:
-	GROUP MEMBER 2:
+	Quang: <1:30>
+	Huy  : <2:30>
