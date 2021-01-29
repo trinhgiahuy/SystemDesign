@@ -122,6 +122,7 @@ POC    1 QP 50 (I-frame)      22488 bits PSNR: 30.5620 38.2787 37.3872
 POC    0 QP 50 (I-frame)      22096 bits PSNR: 30.5676 38.2091 37.3592
 POC    1 QP 50 (I-frame)      22344 bits PSNR: 30.5583 38.0424 37.4392
  Processed 120 frames,    2783536 bits AVG PSNR: 30.4205 37.9561 37.1313
+<<<<<<< HEAD
  Total CPU time: 56.038 s.
  Encoding time: 56.035 s.
  Encoding wall time: 59.232 s.
@@ -129,6 +130,15 @@ POC    1 QP 50 (I-frame)      22344 bits PSNR: 30.5583 38.0424 37.4392
  FPS: 2.03
 ENCODING STARTED AT: Tue Jan 26 11:00:17 EET 2021
 ENCODING FINISHED AT: Tue Jan 26 11:01:16 EET 2021
+=======
+ Total CPU time: 45.828 s.
+ Encoding time: 45.826 s.
+ Encoding wall time: 43.159 s.
+ Encoding CPU usage: 106.18%
+ FPS: 2.78
+ENCODING STARTED AT: Fri Jan 29 22:02:21 EET 2021
+ENCODING FINISHED AT: Fri Jan 29 22:03:04 EET 2021
+>>>>>>> ff44015... Log file for QP50
 USED QP 50
 SIZE OF THE INPUT FILE (KiB): 364500
 SIZE OF THE OUTPUT FILE (KiB): 339
