@@ -122,15 +122,6 @@ POC    1 QP 27 (I-frame)     489856 bits PSNR: 42.2321 44.6618 44.7180
 POC    0 QP 27 (I-frame)     488328 bits PSNR: 42.2275 44.6756 44.7560
 POC    1 QP 27 (I-frame)     487144 bits PSNR: 42.2269 44.6941 44.7502
  Processed 120 frames,   60304240 bits AVG PSNR: 42.1405 44.5568 44.6784
-<<<<<<< HEAD
- Total CPU time: 133.842 s.
- Encoding time: 133.836 s.
- Encoding wall time: 130.523 s.
- Encoding CPU usage: 102.54%
- FPS: 0.92
-ENCODING STARTED AT: Tue Jan 26 11:19:37 EET 2021
-ENCODING FINISHED AT: Tue Jan 26 11:21:47 EET 2021
-=======
  Total CPU time: 137.651 s.
  Encoding time: 137.648 s.
  Encoding wall time: 127.784 s.
@@ -138,7 +129,6 @@ ENCODING FINISHED AT: Tue Jan 26 11:21:47 EET 2021
  FPS: 0.94
 ENCODING STARTED AT: Fri Jan 29 22:14:37 EET 2021
 ENCODING FINISHED AT: Fri Jan 29 22:16:44 EET 2021
->>>>>>> 3dcb605... Log file for QP27 with profiling
 USED QP 27
 SIZE OF THE INPUT FILE (KiB): 364500
 SIZE OF THE OUTPUT FILE (KiB): 7361
