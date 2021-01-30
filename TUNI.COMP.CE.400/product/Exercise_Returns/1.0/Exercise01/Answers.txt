@@ -49,16 +49,15 @@ They are 42.1405 44.5568 44.6784. They should be similar to non-profiling run.
 
 10. What does parameter -pg do in GCC? How it affects the resulting executable and its execution?
 
-"-pg" flag in GCC generates instruments profiling and "gprof" can report detailed information". The profile option -p must be used when compiling the source file and used it when linking. The -g debug option allow to produce debugging information.
-Using the flag will produce instrumented executable file which contains additional instructions that record the timing for each function. 
+"-pg" flag in GCC generates instruments profiling and "gprof" can report detailed information". The profile option -p must be used when compiling the source file and used it when linking. The -g debug option allow to produce debugging information. Using the flag will produce instrumented executable file which contains additional instructions that record the timing for each function. 
 
 11. Which three (3) functions use most time in Kvazaar? Answer based on the time used by functions
 alone, not by the functions they call.
 
 They are:
-- "kvz_angular_pred_generic"
-- "partial_butterfly_32_generic"
-- "kvz_quant_generic"
+- "kvz_angular_pred_generic" (43.66%)
+- "partial_butterfly_32_generic" (11.85%)
+- "kvz_quant_generic" (7.04%)
 
 12. Why it is better to look at percentages rather than absolute time like seconds or milliseconds while
 using a profiling tool (like gprof)?
@@ -67,17 +66,19 @@ Because using percentage gives small values which can be easily compared, while 
 
 13. Which function would you choose for hardware acceleration? If there are multiple good candidates, choose one.
 
-I would choose those functions that encode things, such as "encoderstate".
+I would choose those functions that encode things, such as "encoder_state-geometry".
 
 14. What does that function do? Why do you think it's a good candidate for hardware acceleration?
 Mention at least two reasons.
 Hint: Look at the source code at Kactus2 location TUNI.fi->ip.sw->Kvazaar->0.7.2->src
 
-
+The function calculates geometry information from LCU. It is a good candidate for hardware acceleration because:
+- Geometry 2D can be better computed using FPGAs or ASICs.
+- GPUs are prioritized for 3D graphics processing or video streaming.
 
 15. How are you feeling? What was hard? What was easy?
 
-It was easy except the C code reading part. This is expected for first introductory exercise.
+It was somewhat easy. This is expected for first introductory exercise. However, there are lots of confusing parts such as C code reading and profiling.
 
 16. Fill the used hours below, including answering questions and any downtime:
 ANSWER THE HOURS AS IF YOU WERE PAID FOR IT (we will not pay you, though)
