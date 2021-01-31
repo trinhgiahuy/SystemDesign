@@ -36,6 +36,22 @@ SC_MODULE ( system_module )
 			wait();
 			
 			//TODO: Add the processing here
+			encrypted_value = in_value;
+		
+			//Permutate by switching last two and first two bytes.
+			encrypted_value = ( encrypted_value << 16 ) + (uint16_t)( encrypted_value >> 16 );
+
+			//"Crypt" with the key.
+			encrypted_value = encrypted_value ^ KEY;
+		
+			//Decrypt with the key.
+			decrypted_value = encrypted_value ^ KEY;
+		
+			//Undo the permutation.
+			decrypted_value = ( decrypted_value << 16 ) + (uint16_t)( decrypted_value >> 16 );
+
+			//Print the result.
+		        out_value = decrypted_value;
 			
 			//Signal to the user of the system so that it knows about new output.
 			//NOTICE: blocking operation, so it may take more than one cycle!
