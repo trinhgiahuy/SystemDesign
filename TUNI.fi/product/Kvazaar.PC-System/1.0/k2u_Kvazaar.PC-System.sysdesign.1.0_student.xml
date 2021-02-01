@@ -18,15 +18,6 @@
 			<ipxact:instanceName>Kvazaar_0</ipxact:instanceName>
 			<ipxact:componentRef vendor="TUNI.fi" library="ip.sw" name="Kvazaar" version="0.7.2"/>
 			<ipxact:vendorExtensions>
-<<<<<<< HEAD
-<<<<<<< HEAD
-				<kactus2:uuid>{28e30d63-5c6a-45b8-b212-7289615a8cfc}</kactus2:uuid>
-=======
-				<kactus2:uuid>{cfa9518f-4c3c-4dcf-b1a1-02d173fb3ed7}</kactus2:uuid>
->>>>>>> df9f63e... Modify the executed script files
-=======
-				<kactus2:uuid>{cfa9518f-4c3c-4dcf-b1a1-02d173fb3ed7}</kactus2:uuid>
->>>>>>> df9f63e... Modify the executed script files
 				<kactus2:fileSetRef>PC-System_Kvazaar_0_headers</kactus2:fileSetRef>
 				<kactus2:mapping hwRef="{a76f2486-cf2e-4899-b5f8-399ccbeb8e33}"/>
 				<kactus2:position x="0" y="40"/>

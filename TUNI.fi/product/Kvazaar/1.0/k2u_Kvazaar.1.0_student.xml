@@ -42,45 +42,19 @@
 		</ipxact:fileSet>
 		<ipxact:fileSet>
 			<ipxact:name>PC-System_general_files</ipxact:name>
-			<ipxact:group>sourceFiles</ipxact:group>
-			<ipxact:file>
-				<ipxact:name>../../Kvazaar.PC-System/1.0/sw_PC-System/Makefile</ipxact:name>
-				<ipxact:fileType user="makefile">user</ipxact:fileType>
-			</ipxact:file>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> df9f63e... Modify the executed script files
+			<ipxact:group>sourceFiles</ipxact:group>			
 			<ipxact:file>
 				<ipxact:name>../../Kvazaar.PC-System/1.0/sw_PC-System/Kvazaar_0/Makefile</ipxact:name>
 				<ipxact:fileType user="makefile">user</ipxact:fileType>
 			</ipxact:file>
-<<<<<<< HEAD
->>>>>>> df9f63e... Modify the executed script files
-=======
->>>>>>> df9f63e... Modify the executed script files
 		</ipxact:fileSet>
 		<ipxact:fileSet>
 			<ipxact:name>PC-System_Kvazaar_0_headers</ipxact:name>
-			<ipxact:group>sourceFiles</ipxact:group>
-			<ipxact:file>
-				<ipxact:name>../../Kvazaar.PC-System/1.0/sw_PC-System/Kvazaar_0</ipxact:name>
-				<ipxact:fileType user="makefile">user</ipxact:fileType>
-			</ipxact:file>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> df9f63e... Modify the executed script files
+			<ipxact:group>sourceFiles</ipxact:group>			
 			<ipxact:file>
 				<ipxact:name>../../Kvazaar.PC-System/1.0/sw_PC-System/Kvazaar_0/Kvazaar_0</ipxact:name>
 				<ipxact:fileType user="makefile">user</ipxact:fileType>
 			</ipxact:file>
-<<<<<<< HEAD
->>>>>>> df9f63e... Modify the executed script files
-=======
->>>>>>> df9f63e... Modify the executed script files
 		</ipxact:fileSet>
 	</ipxact:fileSets>
 	<ipxact:vendorExtensions>
