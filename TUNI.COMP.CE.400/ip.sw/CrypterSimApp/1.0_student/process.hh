@@ -39,7 +39,7 @@ SC_MODULE (process3)
 {
 	sc_in_clk	 clock; //Clock input
 	sc_in<bool>   reset; //Reset, active high
-	sc_fifo_in<sc_uint<32> > fifo; //Fifo where from the values are fed.
+	sc_fifo_out<sc_uint<32> > fifo; //Fifo where from the values are fed.
 	value1* memory; //The shared memory
 
 	void read_value ();
@@ -56,8 +56,8 @@ SC_MODULE (process4)
 {
 	sc_in_clk	 clock; //Clock input
 	sc_in<bool>   reset; //Reset, active high
-	sc_fifo_out<sc_uint<32> > fifo; //Fifo where the values are obtained.
-	sc_in<sc_uint<32> > out_value; //Value that is decrypted and output of the system.
+	sc_fifo_in<sc_uint<32> > fifo; //Fifo where the values are obtained.
+	sc_out<sc_uint<32> > out_value; //Value that is decrypted and output of the system.
 	
 	void decrypt ();
 
