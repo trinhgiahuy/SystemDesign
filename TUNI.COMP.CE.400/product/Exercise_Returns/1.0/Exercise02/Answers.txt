@@ -2,38 +2,86 @@ INCLUDE ANSWERS IN HERE
 
 1. What is the purpose of SystemC?
 
+-- SystemC is used to model HW by SW methodologies and tools. It can generate complex HW architectures, implement configurable tests and test automation, create different abstraction models and mix abstractions.
+
 2. What does macro SC_MODULE do from user perspective?
+
+-- The macro SC_MODULE is used to declare every SystemC module.
 
 3. What does macro SC_CTOR do from user perspective?
 
+-- The macro SC_CTOR is a valid SystemC constructor for every SystemC module.
+
 4. What is the difference between SC_THREAD, SC_METHOD, and SC_CTHREAD?
+
+-- Basically, all those are SystemC processes. However, there are differences between them.
+
+> SC_METHOD has a sensitivity list to which the SC_METHOD is triggered. Everytime any event on the sensitivity list of SC_METHOD is triggered, the SC_METHOD will be entirely executed. In other words, SC_METHOD does not have its own execution thread and calling "wait()" will stop the simulation.
+
+> SC_THREAD has its own execution thread. Its functionality is controlled with event management. When an event of its sensitivity list is triggered, the execution is resumed at the command right after the previously "wait()".
+
+> SC_CTHREAD is a clocked SC_THREAD.
+
+!!! SC_THREAD and SC_CTHREAD must be modeled inside an infinite loop to keep processing until the end of the simulation.
 
 5. Original model does not specify implementation for c1, c2, and v1.
 What was implementation of channels and the variable in this exercise?
 
+-- Channel C1 and C2 are implemented using two FIFOs ("fifo1_2" and "fifo3_4" inside "main.cpp"). The shared variable v1 is implemented as a class.
+
 6. What does the file test_bench.cpp do?
 
+-- The file "test_bench.cpp" implements the functionality of the SC_MODULE test_bench 's methods that is declared in the file "test_bench.hh".
+
+The methods are:
+
+> input_p()   : Read input data from user and feed them to DUT.
+> output_p()  : Read output value from DUT and check with golden reference.
+> sm_monitor(): Print out the current value of the shared variable.
+
 7. What is the purpose of the application GTKWave?
+
+-- GTK is an application to simulate the design and view the waveform of the simulated signals.
 	
-8. In this exercise, memory was merely used as an external storage. However, in practical computing
-the memory is likely used directly by CPU as in caches and DDR. Why speed of these is important?
+8. In this exercise, memory was merely used as an external storage. However, in practical computing the memory is likely used directly by CPU as in caches and DDR. Why speed of these is important?
+
+-- Caches or DDR memory provides very fast access to CPU. It is used to store program instructions or usually-used data that the CPU will likely need. The CPU can access those memories much quicker than its main memory. However, to be put very close to the CPU, those types of memories are relatively small and have small capacity.
 	
 9. In this exercise, we had the option of directly affecting the memory speed.
 Why this may be difficult on real platforms?
 
+-- In this exercise, we can adjust the memory speed by changing its delay. This is acceptable for an external "type" of memory, but in real platforms, the delay is fixed with the architecture and we can not do anything with HW. If possible, on for e.g. FPGA, we can do better routing to minimize the delay, but it can not change drastically like in the exercise.
+
 10. What the was the final performance of your system? Answer this BEFORE the bonus section!
+
+-- After changing the bus and swapping the processors, the final simulated time is 137 ns.
 
 11. What was hard? What was easy?
 
+-- It was a bit easy and straightforward.
+
 12. Fill the used hours below, including answering questions and any downtime:
 
-	GROUP MEMBER 1:
-	GROUP MEMBER 2:
+	GROUP MEMBER 1: Quang <2:00>
+	GROUP MEMBER 2: Huy   <3:00>
 	
 ***BONUS SECTION ANSWERS***
 
 13. What components did you choose? What was the price? What was the performance?
 
+--There are two feasible combinations:
+	P1		P4	      BUS	Cost	Performance
+1. RAUMAN_AVAIN   KERAVAN_NAATA    EXPRESSO	130	  152 ns
+2. RAUMAN_AVAIN   SUPER_DECRYPTER     AMBA	135	  137 ns
+
+The cheapest suitable combination is (1): RAUMAN_AVAIN, KERAVAN_NAATA and EXPRESSO BUS.
+
 14. Following setup is used for streaming 4K video:
 4K monitor <- HDMI 1.3 <- PC <- 5 Mbps internet <- Content service
 What is wrong with the setup? Hint: Search answers from articles and specifications if you do not know.
+
+-- 5 Mbps is not enough for 4K streaming. Amazon recommends AT LEAST 15 Mbps, while for Netflix it is 25 Mbps. And with other devices simutaneously using Internet, we will need more bandwidth.
+
+Furthermore, HDMI cables 1.3 rarely support 4K and mostly don't work with 4K streaming. We need at least HDMI cables 1.4 (very likely support 4K, but not guaranteed) or better HDMI High Speed Cable for fully 4K support guaranteed.
+
+In addition for 4K video streaming, we also need Video Camera, Audio Sources, Encoders and other live stream equipments or services.
