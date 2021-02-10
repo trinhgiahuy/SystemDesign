@@ -26,6 +26,6 @@ SC_MODULE (test_bench)
 		//Initialize processes as threads, with reset active high
 		SC_CTHREAD(input_p,clock.pos());
 		SC_CTHREAD(output_p,clock.pos());
-		SC_CTHREAD(sm_monitor,clock.pos());
+		//SC_CTHREAD(sm_monitor,clock.pos());
 	}
 }; 
