@@ -39,7 +39,7 @@ SC_MODULE ( system_module )
 			encrypted_value = in_value;
 		
 			//Permutate by switching last two and first two bytes.
-			encrypted_value = ( encrypted_value << 16 ) + (uint16_t)( encrypted_value >> 16 );
+			encrypted_value = ( encrypted_value << 16 ) + (sc_uint<16>)( encrypted_value >> 16 );
 
 			//"Crypt" with the key.
 			encrypted_value = encrypted_value ^ KEY;
@@ -48,7 +48,7 @@ SC_MODULE ( system_module )
 			decrypted_value = encrypted_value ^ KEY;
 		
 			//Undo the permutation.
-			decrypted_value = ( decrypted_value << 16 ) + (uint16_t)( decrypted_value >> 16 );
+			decrypted_value = ( decrypted_value << 16 ) + (sc_uint<16>)( decrypted_value >> 16 );
 
 			//Print the result.
 		        out_value = decrypted_value;
