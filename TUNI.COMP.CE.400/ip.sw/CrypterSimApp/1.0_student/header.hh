@@ -22,7 +22,7 @@ extern sc_event input_ready;
 extern sc_event output_valid;
 
 //How many nanoseconds it takes to access the shared memory
-#define MEMORY_DELAY 10
+#define MEMORY_DELAY 1
 
 //HOW MANY NANO SECONDS TAKES COMMUNICATION IN PROCESS1 -> PROCESS2
 #define P1_P2_DELAY LOAD /  I2C_SPEED
