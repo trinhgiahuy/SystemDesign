@@ -35,12 +35,24 @@
 				<ipxact:name>../../CrypterSim.SimSystem/1.0_student/sw_SimSystem/Makefile</ipxact:name>
 				<ipxact:fileType user="makefile">user</ipxact:fileType>
 			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>../../CrypterSim.SimSystem/1.0_student/sw_SimSystem/CrypterSimApp_w_TLM_0/Makefile</ipxact:name>
+				<ipxact:fileType user="makefile">user</ipxact:fileType>
+			</ipxact:file>
 		</ipxact:fileSet>
 		<ipxact:fileSet>
 			<ipxact:name>SimSystem_CrypterSimApp_0_headers</ipxact:name>
 			<ipxact:group>sourceFiles</ipxact:group>
 			<ipxact:file>
 				<ipxact:name>../../CrypterSim.SimSystem/1.0_student/sw_SimSystem/CrypterSimApp_0</ipxact:name>
+				<ipxact:fileType user="makefile">user</ipxact:fileType>
+			</ipxact:file>
+		</ipxact:fileSet>
+		<ipxact:fileSet>
+			<ipxact:name>SimSystem_CrypterSimApp_w_TLM_0_headers</ipxact:name>
+			<ipxact:group>sourceFiles</ipxact:group>
+			<ipxact:file>
+				<ipxact:name>../../CrypterSim.SimSystem/1.0_student/sw_SimSystem/CrypterSimApp_w_TLM_0/CrypterSimApp_w_TLM_0</ipxact:name>
 				<ipxact:fileType user="makefile">user</ipxact:fileType>
 			</ipxact:file>
 		</ipxact:fileSet>

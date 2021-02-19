@@ -15,13 +15,13 @@
 			</ipxact:vendorExtensions>
 		</ipxact:componentInstance>
 		<ipxact:componentInstance>
-			<ipxact:instanceName>CrypterSimApp_0</ipxact:instanceName>
-			<ipxact:componentRef vendor="TUNI.COMP.CE.400" library="ip.sw" name="CrypterSimApp" version="1.0_student"/>
+			<ipxact:instanceName>CrypterSimApp_w_TLM_0</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.COMP.CE.400" library="ip.sw" name="CrypterSimApp_w_TLM" version="1.0"/>
 			<ipxact:vendorExtensions>
-				<kactus2:uuid>{cc933afe-deb1-4ed3-ab3d-9b735def77d3}</kactus2:uuid>
+				<kactus2:uuid>{b101f677-27c7-4611-b7d1-37c1cd2503c8}</kactus2:uuid>
 				<kactus2:position x="190" y="100"/>
-				<kactus2:fileSetRef>SimSystem_CrypterSimApp_0_headers</kactus2:fileSetRef>
 				<kactus2:mapping hwRef="{2cb9fad4-ad3d-45c3-ab4a-4e9948acc0f2}"/>
+				<kactus2:fileSetRef>SimSystem_CrypterSimApp_w_TLM_0_headers</kactus2:fileSetRef>
 			</ipxact:vendorExtensions>
 		</ipxact:componentInstance>
 	</ipxact:componentInstances>
