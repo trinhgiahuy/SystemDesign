@@ -205,6 +205,14 @@ void kvazaar_ip_sub::b_transport( tlm::tlm_generic_payload& trans, sc_time& dela
 		sc_stop();
     }
 
+    wait( delay );
+
+    /* printf("Address %llx \n", adr & 0xf0000); */
+    /* if ( cmd == tlm::TLM_READ_COMMAND ) */
+    /*   printf("Read \n"); */
+    /* else if ( cmd == tlm::TLM_WRITE_COMMAND ) */
+    /*   printf("Write \n"); */
+    
 	// translate the address
     switch(adr & 0xf0000)
     {
@@ -223,10 +231,84 @@ void kvazaar_ip_sub::b_transport( tlm::tlm_generic_payload& trans, sc_time& dela
 			break;
 		}
 		// TODO
+		case LAMBDA_BASE:
+		{
+			CHECK_OVERFLOW(LAMBDA_BASE,LAMBDA_SIZE);
+			if ( cmd == tlm::TLM_READ_COMMAND )
+			{
+				memcpy(ptr, (char*)(&lambda_cost), len);
+			}
+			else if ( cmd == tlm::TLM_WRITE_COMMAND )
+			{
+				memcpy((char*)(&lambda_cost), ptr, len);
+			}
+			break;
+		}		
+	
+		case RESULT_BASE:
+		{
+			CHECK_OVERFLOW(RESULT_BASE,RESULT_SIZE);
+			if ( cmd == tlm::TLM_READ_COMMAND )
+			{
+				memcpy(ptr, (char*)(&result), len);
+				// irq->notify();
+			}
+			else if ( cmd == tlm::TLM_WRITE_COMMAND )
+			{
+				memcpy((char*)(&result), ptr, len);
+			}
+			break;
+		}
+		
+		case UNFILT1_BASE:
+		{
+			CHECK_OVERFLOW(UNFILT1_BASE,UNFILT_SIZE);
+			if ( cmd == tlm::TLM_READ_COMMAND )
+			{
+				memcpy(ptr, (char*)(&refs.ref.top[adr]), len);			
+			}
+			else if ( cmd == tlm::TLM_WRITE_COMMAND )
+			{
+				memcpy((char*)(&refs.ref.top[adr]), ptr, len);
+				refs.filtered_initialized = 0;
+				unfilt1_valid.notify();				
+			}
+			break;
+		}
+
+		case UNFILT2_BASE:
+		{
+			CHECK_OVERFLOW(UNFILT2_BASE,UNFILT_SIZE);
+			if ( cmd == tlm::TLM_READ_COMMAND )
+			{
+				memcpy(ptr, (char*)(&refs.ref.left[adr]), len);
+			}
+			else if ( cmd == tlm::TLM_WRITE_COMMAND )
+			{
+				memcpy((char*)(&refs.ref.left[adr]), ptr, len);
+				refs.filtered_initialized = 0;
+				unfilt2_valid.notify();
+			}	    
+			break;
+		}
+
+		case ORIG_BLOCK_BASE:
+		{
+			CHECK_OVERFLOW(ORIG_BLOCK_BASE,ORIG_BLOCK_SIZE);
+			if ( cmd == tlm::TLM_READ_COMMAND )
+			{
+				memcpy(ptr, (char*)(&orig[adr]), len);				
+			}
+			if ( cmd == tlm::TLM_WRITE_COMMAND )
+			{
+				memcpy((char*)(&orig[adr]), ptr, len);				
+			}
+			break;
+		}
 		
 		default:
 		{
-			printf("TLM-2 Error: Segmentation fault, %s, %s, %d",__FILE__,__func__,__LINE__);
+			printf("TLM-2 Error: Segmentation fault, %s, %s, %d",__FILE__,__func__,__LINE__);			
 			sc_stop();
 			break;
 		}
