@@ -3,6 +3,9 @@
 #include <systemc.h>
 
 // TODO TLM includes
+#include <tlm.h>
+#include <tlm_utils/simple_initiator_socket.h>
+#include <tlm_utils/simple_target_socket.h>
 
 #include "strategies-picture.h"
 #include "intra.h"
@@ -14,6 +17,7 @@ SC_MODULE (kvazaar_ip_sub)
 {
 	// TLM socket slave
 	// TODO
+    tlm_utils::simple_target_socket<kvazaar_ip_sub> socket;
 	
 	// Width, thread, uc_state, intra_pred0, intra_pred1, intra_pred2, x_pos, y_pos
     char config[12];
@@ -65,12 +69,14 @@ SC_MODULE (kvazaar_ip_sub)
 
 	// B_transport virtual function declaration
     // TODO
+    virtual void b_transport(tlm::tlm_generic_payload& trans, sc_time& delay);
 
 	// Constructor
-    SC_CTOR(kvazaar_ip_sub) // TODO
+    SC_CTOR(kvazaar_ip_sub) : socket("socket") // TODO
     {
 		// Assign the b_transport function declared and defined in this class to the socket
 		// TODO
+		socket.register_b_transport(this, &kvazaar_ip_sub::b_transport);
 		
 		SC_THREAD(intra_control);
 		SC_THREAD(intra_get_angular);
