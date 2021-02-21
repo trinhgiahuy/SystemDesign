@@ -34,7 +34,7 @@ void process1::encrypt ()
 		trans->set_response_status( tlm::TLM_INCOMPLETE_RESPONSE );
 		
 		// Call the b_transport
-		socket->b_transport( *trans, sc_time( SC_ZERO_TIME ) );
+		socket->b_transport( *trans, delay );
 
 		// Realize the delay
 		wait( delay );
