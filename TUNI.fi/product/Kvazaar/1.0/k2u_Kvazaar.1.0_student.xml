@@ -31,10 +31,18 @@
 		<ipxact:fileSet>
 			<ipxact:name>Simulation-System_general_files</ipxact:name>
 			<ipxact:group>sourceFiles</ipxact:group>
+			<ipxact:file>
+				<ipxact:name>../../Kvazaar.Simulation-System/1.0/sw_Simulation-System/Makefile</ipxact:name>
+				<ipxact:fileType user="makefile">user</ipxact:fileType>
+			</ipxact:file>
 		</ipxact:fileSet>
 		<ipxact:fileSet>
 			<ipxact:name>Simulation-System_Kvazaar_0_headers</ipxact:name>
 			<ipxact:group>sourceFiles</ipxact:group>
+			<ipxact:file>
+				<ipxact:name>../../Kvazaar.Simulation-System/1.0/sw_Simulation-System/Kvazaar_0</ipxact:name>
+				<ipxact:fileType user="makefile">user</ipxact:fileType>
+			</ipxact:file>
 		</ipxact:fileSet>
 		<ipxact:fileSet>
 			<ipxact:name>Simulation-System_Kvazaar_sim_support_0_headers</ipxact:name>
@@ -42,7 +50,7 @@
 		</ipxact:fileSet>
 		<ipxact:fileSet>
 			<ipxact:name>PC-System_general_files</ipxact:name>
-			<ipxact:group>sourceFiles</ipxact:group>			
+			<ipxact:group>sourceFiles</ipxact:group>
 			<ipxact:file>
 				<ipxact:name>../../Kvazaar.PC-System/1.0/sw_PC-System/Kvazaar_0/Makefile</ipxact:name>
 				<ipxact:fileType user="makefile">user</ipxact:fileType>
@@ -50,7 +58,7 @@
 		</ipxact:fileSet>
 		<ipxact:fileSet>
 			<ipxact:name>PC-System_Kvazaar_0_headers</ipxact:name>
-			<ipxact:group>sourceFiles</ipxact:group>			
+			<ipxact:group>sourceFiles</ipxact:group>
 			<ipxact:file>
 				<ipxact:name>../../Kvazaar.PC-System/1.0/sw_PC-System/Kvazaar_0/Kvazaar_0</ipxact:name>
 				<ipxact:fileType user="makefile">user</ipxact:fileType>
