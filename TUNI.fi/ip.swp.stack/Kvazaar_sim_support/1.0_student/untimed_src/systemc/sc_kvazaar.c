@@ -76,7 +76,24 @@ int kvazaar::read(int fd, void* buff,unsigned int len)
 	CHECK_FD(fd);
     unsigned int* values = (unsigned int*)buff;
 
-	// TODO read
+	// Realize the irq event
+	wait( *irq );
+
+	trans->set_command( tlm::TLM_READ_COMMAND );
+	trans->set_address( RESULT_BASE );
+	trans->set_data_ptr( (unsigned char*)(values) );
+	trans->set_data_length( len );
+	trans->set_streaming_width( len );
+	trans->set_byte_enable_ptr( 0 );
+	trans->set_dmi_allowed( false );
+	trans->set_response_status( tlm::TLM_INCOMPLETE_RESPONSE );
+	
+	// Call the b_transport
+	socket->b_transport( *trans, delay );
+	
+	// Check the response status
+	if (trans->is_response_error() )
+		SC_REPORT_ERROR("TLM-2", "Response error from b_transport");
 
     return len;
 }
@@ -90,6 +107,25 @@ int kvazaar::write(int fd, void* buff,unsigned int len)
 	CHECK_FD(fd);
 
 	// TODO write
+
+	trans->set_command( tlm::TLM_WRITE_COMMAND );
+	trans->set_address( mem_addr[location] );
+	trans->set_data_ptr( (unsigned char*)(buff) );
+	trans->set_data_length( len );
+	trans->set_streaming_width( len );
+	trans->set_byte_enable_ptr( 0 );
+	trans->set_dmi_allowed( false );
+	trans->set_response_status( tlm::TLM_INCOMPLETE_RESPONSE );
+	
+	// Call the b_transport
+	socket->b_transport( *trans, delay );
+
+	// Realize the delay
+	// wait( delay );
+	
+	// Check the response status
+	if (trans->is_response_error() )
+		SC_REPORT_ERROR("TLM-2", "Response error from b_transport");	
 	
     return len;
 }
