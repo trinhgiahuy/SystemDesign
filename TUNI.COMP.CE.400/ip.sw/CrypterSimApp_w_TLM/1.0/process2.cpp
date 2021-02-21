@@ -11,7 +11,7 @@ void process2::b_transport( tlm::tlm_generic_payload& trans, sc_time& delay )
 	unsigned int     wid = trans.get_streaming_width();
 	
 	// Check that the payload is compatible
-	if (adr >= sc_dt::uint64(SIZE) || byt != 0 || len > 4 || wid < len)
+	if (adr >= sc_dt::uint64(MAX_ADDR) || byt != 0 || len > 4 || wid < len)
     		SC_REPORT_ERROR("TLM-2", "Target does not support given generic payload transaction");
 
 	// Actual operation
