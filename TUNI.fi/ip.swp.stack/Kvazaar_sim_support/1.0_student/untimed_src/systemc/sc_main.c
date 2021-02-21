@@ -40,6 +40,7 @@ SC_MODULE(SYSTEM)
 
 		// Connect slave socket to master socket
 		// TODO bind
+		kvazaar0->socket.bind(kvazaar_ip_sub0->socket);
     }
 
 	// Destructor
