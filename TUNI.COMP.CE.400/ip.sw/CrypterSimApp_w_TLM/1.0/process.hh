@@ -33,7 +33,7 @@ SC_MODULE (process2)
 	sc_in_clk	 clock; //Clock input
 	sc_in<bool>   reset; //Reset, active high
 	value1* memory; //The shared memory	
-	sc_uint<32> values[MAX_ADDR]; //Local memory to store the incoming data
+	sc_dt::uint64 values[MAX_ADDR]; //Local memory to store the incoming data
 	sc_uint<6> values_available; //Available data at the moment
 	sc_dt::uint64 index; //Current address
 
