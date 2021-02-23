@@ -126,11 +126,11 @@ POC    1 QP 27 (I-frame)     489856 bits PSNR: 42.2321 44.6618 44.7180
 POC    0 QP 27 (I-frame)     488328 bits PSNR: 42.2275 44.6756 44.7560
 POC    1 QP 27 (I-frame)     487144 bits PSNR: 42.2269 44.6941 44.7502
  Processed 120 frames,   60304240 bits AVG PSNR: 42.1405 44.5568 44.6784
- Total CPU time: 172.301 s.
- Encoding time: 172.299 s.
- Encoding wall time: 161.195 s.
- Encoding CPU usage: 106.89%
- FPS: 0.74
+ Total CPU time: 184.584 s.
+ Encoding time: 184.581 s.
+ Encoding wall time: 172.651 s.
+ Encoding CPU usage: 106.91%
+ FPS: 0.70
 
 Simulation finished successfully!
                         #,
@@ -166,8 +166,8 @@ Simulation finished successfully!
        ######                         ######
           ###############################
 Info: /OSCI/SystemC: Simulation stopped by user.
-ENCODING STARTED AT: Sun Feb 21 19:39:44 EET 2021
-ENCODING FINISHED AT: Sun Feb 21 19:42:25 EET 2021
+ENCODING STARTED AT: Tue Feb 23 12:40:43 EET 2021
+ENCODING FINISHED AT: Tue Feb 23 12:43:36 EET 2021
 USED QP 27
 SIZE OF THE INPUT FILE (KiB): 364500
 SIZE OF THE OUTPUT FILE (KiB): 7361
