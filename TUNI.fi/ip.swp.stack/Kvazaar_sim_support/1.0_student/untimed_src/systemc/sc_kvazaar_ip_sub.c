@@ -100,7 +100,12 @@ void kvazaar_ip_sub::intra_control()
 		intra_get_dc_start.notify();
 
 		// wait for them to finish
-		wait(intra_get_angular_done & intra_get_planar_done & intra_get_dc_done);
+		wait(
+		intra_get_angular_1_done & 
+		intra_get_angular_2_done &
+		intra_get_angular_3_done &
+		intra_get_angular_4_done &
+		intra_get_planar_done & intra_get_dc_done);
 		
 		// select best mode
 		best_mode_index = select_best_mode_index(modes, costs, 35);
@@ -115,7 +120,7 @@ void kvazaar_ip_sub::intra_control()
 }
 
 // Angular prediction thread function
-void kvazaar_ip_sub::intra_get_angular()
+void kvazaar_ip_sub::intra_get_angular_1()
 {
     while(1)
     {
@@ -125,7 +130,7 @@ void kvazaar_ip_sub::intra_get_angular()
 		unsigned char pred[LCU_WIDTH * LCU_WIDTH + 1];
 		
 		// loop angular predictions
-		for(int a = 2; a <= 34;a++)
+		for(int a = 2; a <= 9;a++)
 		{
 			// do prediction
 			kvz_intra_predict(&refs, log2_width, a, COLOR_Y, pred);
@@ -137,10 +142,86 @@ void kvazaar_ip_sub::intra_get_angular()
 		}
 		
 		// notify that prediction is ready
-		intra_get_angular_done.notify();
+		intra_get_angular_1_done.notify();
     }
 }
 
+void kvazaar_ip_sub::intra_get_angular_2()
+{
+    while(1)
+    {
+		// wait for start
+		wait(intra_get_angular_start);
+
+		unsigned char pred[LCU_WIDTH * LCU_WIDTH + 1];
+		
+		// loop angular predictions
+		for(int a = 10; a <= 17;a++)
+		{
+			// do prediction
+			kvz_intra_predict(&refs, log2_width, a, COLOR_Y, pred);
+			
+			// calculate cost
+			costs[a] = sad_func(pred, orig_block);
+			modes[a] = a;
+			costs[a] += lambda_cost * kvz_luma_mode_bits(uc_state, a, intra_preds);
+		}
+		
+		// notify that prediction is ready
+		intra_get_angular_2_done.notify();
+    }
+}
+
+void kvazaar_ip_sub::intra_get_angular_3()
+{
+    while(1)
+    {
+		// wait for start
+		wait(intra_get_angular_start);
+
+		unsigned char pred[LCU_WIDTH * LCU_WIDTH + 1];
+		
+		// loop angular predictions
+		for(int a = 18; a <= 25;a++)
+		{
+			// do prediction
+			kvz_intra_predict(&refs, log2_width, a, COLOR_Y, pred);
+			
+			// calculate cost
+			costs[a] = sad_func(pred, orig_block);
+			modes[a] = a;
+			costs[a] += lambda_cost * kvz_luma_mode_bits(uc_state, a, intra_preds);
+		}
+		
+		// notify that prediction is ready
+		intra_get_angular_3_done.notify();
+    }
+}
+void kvazaar_ip_sub::intra_get_angular_4()
+{
+    while(1)
+    {
+		// wait for start
+		wait(intra_get_angular_start);
+
+		unsigned char pred[LCU_WIDTH * LCU_WIDTH + 1];
+		
+		// loop angular predictions
+		for(int a = 26; a <= 34;a++)
+		{
+			// do prediction
+			kvz_intra_predict(&refs, log2_width, a, COLOR_Y, pred);
+			
+			// calculate cost
+			costs[a] = sad_func(pred, orig_block);
+			modes[a] = a;
+			costs[a] += lambda_cost * kvz_luma_mode_bits(uc_state, a, intra_preds);
+		}
+		
+		// notify that prediction is ready
+		intra_get_angular_4_done.notify();
+    }
+}
 // Planar prediction thread function
 void kvazaar_ip_sub::intra_get_planar()
 {
