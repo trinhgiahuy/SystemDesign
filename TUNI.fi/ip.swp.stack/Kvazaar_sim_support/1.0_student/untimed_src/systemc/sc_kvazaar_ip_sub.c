@@ -130,7 +130,7 @@ void kvazaar_ip_sub::intra_get_angular_1()
 		unsigned char pred[LCU_WIDTH * LCU_WIDTH + 1];
 		
 		// loop angular predictions
-		for(int a = 2; a <= 9;a++)
+		for(int a = 2; a <= 10;a++)
 		{
 			// do prediction
 			kvz_intra_predict(&refs, log2_width, a, COLOR_Y, pred);
@@ -156,7 +156,7 @@ void kvazaar_ip_sub::intra_get_angular_2()
 		unsigned char pred[LCU_WIDTH * LCU_WIDTH + 1];
 		
 		// loop angular predictions
-		for(int a = 10; a <= 17;a++)
+		for(int a = 11; a <= 18;a++)
 		{
 			// do prediction
 			kvz_intra_predict(&refs, log2_width, a, COLOR_Y, pred);
@@ -182,7 +182,7 @@ void kvazaar_ip_sub::intra_get_angular_3()
 		unsigned char pred[LCU_WIDTH * LCU_WIDTH + 1];
 		
 		// loop angular predictions
-		for(int a = 18; a <= 25;a++)
+		for(int a = 19; a <= 26;a++)
 		{
 			// do prediction
 			kvz_intra_predict(&refs, log2_width, a, COLOR_Y, pred);
@@ -207,7 +207,7 @@ void kvazaar_ip_sub::intra_get_angular_4()
 		unsigned char pred[LCU_WIDTH * LCU_WIDTH + 1];
 		
 		// loop angular predictions
-		for(int a = 26; a <= 34;a++)
+		for(int a = 27; a <= 34;a++)
 		{
 			// do prediction
 			kvz_intra_predict(&refs, log2_width, a, COLOR_Y, pred);

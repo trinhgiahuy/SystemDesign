@@ -15,45 +15,45 @@
 
 SC_MODULE (kvazaar_ip_sub)
 {
-	// TLM socket slave
-	// TODO
+    // TLM socket slave
+    // TODO
     tlm_utils::simple_target_socket<kvazaar_ip_sub> socket;
 	
-	// Width, thread, uc_state, intra_pred0, intra_pred1, intra_pred2, x_pos, y_pos
+    // Width, thread, uc_state, intra_pred0, intra_pred1, intra_pred2, x_pos, y_pos
     char config[12];
     // Original 64x64 block (LCU)
     unsigned char orig[4096];
     // Unfiltered1 = top reference pixels
-	// Unfiltered2 = left reference pixels
-	kvz_intra_references refs;
+    // Unfiltered2 = left reference pixels
+    kvz_intra_references refs;
 
-	// Array for the corresponding original pixels for the CU in prediction
+    // Array for the corresponding original pixels for the CU in prediction
     unsigned char orig_block[1024];
 	
-	// Accelerator properties
-	unsigned int width;
-	unsigned int uc_state;
-	unsigned int lambda_cost;
+    // Accelerator properties
+    unsigned int width;
+    unsigned int uc_state;
+    unsigned int lambda_cost;
     signed char intra_preds[3];
     int log2_width;
     cost_pixel_nxn_func *sad_func;
 	 
-	// Result memory for ip accelerator
+    // Result memory for ip accelerator
     unsigned char modes[35];
     double costs[35];
 	
-	// Result variable for best mode and cost
-	unsigned int result;
+    // Result variable for best mode and cost
+    unsigned int result;
 
-	// All events used
+    // All events used
     sc_event intra_get_angular_start;
     sc_event intra_get_planar_start;
     sc_event intra_get_dc_start;
 
     sc_event intra_get_angular_1_done;
-sc_event intra_get_angular_2_done;
-sc_event intra_get_angular_3_done;
-sc_event intra_get_angular_4_done;
+    sc_event intra_get_angular_2_done;
+    sc_event intra_get_angular_3_done;
+    sc_event intra_get_angular_4_done;
     sc_event intra_get_planar_done;
     sc_event intra_get_dc_done;
 
@@ -61,10 +61,10 @@ sc_event intra_get_angular_4_done;
     sc_event unfilt2_valid;
     sc_event config_valid;
 
-	// Event used for indication that the accelerator is ready (irq = interrupt request)
+    // Event used for indication that the accelerator is ready (irq = interrupt request)
     sc_event *irq;
 
-	// Functions implementing the accelerator
+    // Functions implementing the accelerator
     void intra_control();
     void intra_get_angular_1();
     void intra_get_angular_2();
@@ -73,24 +73,24 @@ sc_event intra_get_angular_4_done;
     void intra_get_planar();
     void intra_get_dc();
 
-	// B_transport virtual function declaration
+    // B_transport virtual function declaration
     // TODO
     virtual void b_transport(tlm::tlm_generic_payload& trans, sc_time& delay);
 
 	// Constructor
     SC_CTOR(kvazaar_ip_sub) : socket("socket") // TODO
     {
-		// Assign the b_transport function declared and defined in this class to the socket
-		// TODO
-		socket.register_b_transport(this, &kvazaar_ip_sub::b_transport);
-		
-		SC_THREAD(intra_control);
-		SC_THREAD(intra_get_angular_1);
-SC_THREAD(intra_get_angular_2);
-SC_THREAD(intra_get_angular_3);
-SC_THREAD(intra_get_angular_4);
-		SC_THREAD(intra_get_planar);
-		SC_THREAD(intra_get_dc);
+	// Assign the b_transport function declared and defined in this class to the socket
+	// TODO
+	socket.register_b_transport(this, &kvazaar_ip_sub::b_transport);
+	
+	SC_THREAD(intra_control);
+	SC_THREAD(intra_get_angular_1);
+	SC_THREAD(intra_get_angular_2);
+	SC_THREAD(intra_get_angular_3);
+	SC_THREAD(intra_get_angular_4);
+	SC_THREAD(intra_get_planar);
+	SC_THREAD(intra_get_dc);
     }
 };
 
