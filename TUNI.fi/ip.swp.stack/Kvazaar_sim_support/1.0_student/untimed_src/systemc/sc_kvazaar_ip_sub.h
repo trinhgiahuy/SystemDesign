@@ -50,7 +50,10 @@ SC_MODULE (kvazaar_ip_sub)
     sc_event intra_get_planar_start;
     sc_event intra_get_dc_start;
 
-    sc_event intra_get_angular_done;
+    sc_event intra_get_angular_1_done;
+sc_event intra_get_angular_2_done;
+sc_event intra_get_angular_3_done;
+sc_event intra_get_angular_4_done;
     sc_event intra_get_planar_done;
     sc_event intra_get_dc_done;
 
@@ -63,7 +66,10 @@ SC_MODULE (kvazaar_ip_sub)
 
 	// Functions implementing the accelerator
     void intra_control();
-    void intra_get_angular();
+    void intra_get_angular_1();
+    void intra_get_angular_2();
+    void intra_get_angular_3();
+    void intra_get_angular_4();
     void intra_get_planar();
     void intra_get_dc();
 
@@ -79,7 +85,10 @@ SC_MODULE (kvazaar_ip_sub)
 		socket.register_b_transport(this, &kvazaar_ip_sub::b_transport);
 		
 		SC_THREAD(intra_control);
-		SC_THREAD(intra_get_angular);
+		SC_THREAD(intra_get_angular_1);
+SC_THREAD(intra_get_angular_2);
+SC_THREAD(intra_get_angular_3);
+SC_THREAD(intra_get_angular_4);
 		SC_THREAD(intra_get_planar);
 		SC_THREAD(intra_get_dc);
     }
