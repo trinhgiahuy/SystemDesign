@@ -1,4 +1,4 @@
-
+	
         SystemC 2.3.3-Accellera --- Jan 21 2020 10:34:02
         Copyright (c) 1996-2018 by all Contributors,
         ALL RIGHTS RESERVED
@@ -126,11 +126,11 @@ POC    1 QP 27 (I-frame)     489856 bits PSNR: 42.2321 44.6618 44.7180
 POC    0 QP 27 (I-frame)     488328 bits PSNR: 42.2275 44.6756 44.7560
 POC    1 QP 27 (I-frame)     487144 bits PSNR: 42.2269 44.6941 44.7502
  Processed 120 frames,   60304240 bits AVG PSNR: 42.1405 44.5568 44.6784
- Total CPU time: 200.810 s.
- Encoding time: 200.808 s.
- Encoding wall time: 195.105 s.
- Encoding CPU usage: 102.92%
- FPS: 0.62
+ Total CPU time: 194.602 s.
+ Encoding time: 194.597 s.
+ Encoding wall time: 189.240 s.
+ Encoding CPU usage: 102.83%
+ FPS: 0.63
 
 Simulation finished successfully!
                         #,
@@ -166,8 +166,8 @@ Simulation finished successfully!
        ######                         ######
           ###############################
 Info: /OSCI/SystemC: Simulation stopped by user.
-ENCODING STARTED AT: Thu Feb 25 23:54:04 EET 2021
-ENCODING FINISHED AT: Thu Feb 25 23:57:19 EET 2021
+ENCODING STARTED AT: Fri Feb 26 00:18:34 EET 2021
+ENCODING FINISHED AT: Fri Feb 26 00:21:43 EET 2021
 USED QP 27
 SIZE OF THE INPUT FILE (KiB): 364500
 SIZE OF THE OUTPUT FILE (KiB): 7361
