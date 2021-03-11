@@ -1,0 +1,64 @@
+Set these jumper and switch configurations, there is a picture of locations in the board file sets:
+
+J5 	open
+J6 	shorted
+J7 	shorted
+J9 	open
+J13 	shorted
+J16 	open
+J26 	left shorted
+J27 	right shorted
+J28 	left shorted
+J29 	right shorted
+J30 	left shorted
+J31 	open 
+
+SW1 	All OFF
+SW2 	All OFF
+SW3 	1:ON 2:ON 3:ON 4:ON 5:ON 6:ON
+SW4 	1:OFF 2:OFF 3:ON 4:ON 
+
+To remove kernel modules causing unwanted IO activity, remove them with following commands:
+
+cd /lib/modules/3.9.0/extra
+rm gpio_interrupt.ko
+cd /lib/modules/3.9.0/kernel/drivers/gpio
+rm gpio-altera.ko
+reboot
+
+To allow effective HPS<->FPGA communication, restrict the Linux to 768 MiB of memory,
+so that the rest is left for more or less direct access with minimal caching.
+
+Reboot the board, and then stop the autboot, and type following commands:
+
+editenv bootargs (ENTER)
+console=ttyS0,115200 mem=768M
+
+editenv mmcboot (ENTER)
+setenv bootargs console=tty20,115200 mem=768M root=${mmcroot} rw rootwait;bootz ${loadaddr} - ${fdtaddr}
+
+editenv qspiboot (ENTER)
+setenv bootargs console=tty20,115200 mem=768M root=${qspiroot} rw rootfstype=${qspirootfstype};bootz ${loadaddr} - ${fdtaddr}
+
+editenv ramboot (ENTER)
+setenv bootargs console=tty20,115200 mem=768M;bootz ${loadaddr} - ${fdtaddr}
+
+printenv
+saveenv
+boot
+
+To confirm the changes, use following command, row "MemTotal" should correspond the value:
+
+cat /proc/meminfo
+
+To set network interface correctly for the network adapter to PC, open file "/etc/network/interfaces" and set these to eth0:
+
+auto eth0
+iface eth0 inet static
+     address 192.168.0.2
+     network 192.168.0.0
+     netmask 255.255.255.0
+     broadcast 192.168.0.255
+     gateway 192.168.0.254
+	 
+Now the IP address of the HPS should be 192.168.0.2 and IP address of the PC should be 192.168.0.1.

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014/ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>TUNI.fi</ipxact:vendor>
+	<ipxact:library>product</ipxact:library>
+	<ipxact:name>Kvazaar.Veek-Hardware</ipxact:name>
+	<ipxact:version>1.0_student</ipxact:version>
+	<ipxact:model>
+		<ipxact:views>
+			<ipxact:view>
+				<ipxact:name>hierarchical</ipxact:name>
+				<ipxact:designConfigurationInstantiationRef>Kvazaar.Veek-Hardware.designcfg_1.0_student</ipxact:designConfigurationInstantiationRef>
+			</ipxact:view>
+		</ipxact:views>
+		<ipxact:instantiations>
+			<ipxact:designConfigurationInstantiation>
+				<ipxact:name>Kvazaar.Veek-Hardware.designcfg_1.0_student</ipxact:name>
+				<ipxact:designConfigurationRef vendor="TUNI.fi" library="product" name="Kvazaar.Veek-Hardware.designcfg" version="1.0_student"/>
+			</ipxact:designConfigurationInstantiation>
+		</ipxact:instantiations>
+	</ipxact:model>
+	<ipxact:vendorExtensions>
+		<kactus2:version>3,0,27,0</kactus2:version>
+		<kactus2:kts_attributes>
+			<kactus2:kts_productHier>Product</kactus2:kts_productHier>
+			<kactus2:kts_implementation>HW</kactus2:kts_implementation>
+			<kactus2:kts_firmness>Mutable</kactus2:kts_firmness>
+		</kactus2:kts_attributes>
+	</ipxact:vendorExtensions>
+</ipxact:component>

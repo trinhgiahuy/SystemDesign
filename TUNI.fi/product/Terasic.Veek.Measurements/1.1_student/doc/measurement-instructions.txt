@@ -1,0 +1,21 @@
+FPGA image (RBF and SOF) for memory benchmarking is located in TUNI.fi:product:Terasic.Veek.Measurements
+
+Benchmarking software+driver is located in SW component TUNI.fi:ip.sw:ARM_FPGA_memory_benchmarker
+
+SignalTapII file is located in TUNI.fi:product:Terasic.Veek.Measurements
+for more accurate speed for DMAs, otherwise benchmarker will print out results
+
+Now compile the network measurement executables, the components coming to HPS side, "TCPMeasTalker" and "UDPMeasTalker",
+are compiled same way as "ARMLinuxMeasRunner", except they will require flags "-pthread -lrt" for linking.
+
+You must also compile software for the PC. The needed project files should come with the repository. Open as a project with
+Visual Studio 2010 the files pointed in components "TCPMeasListener" and "UDPMeasListener". Build the projects.
+
+To measure TCP performance, run first "TCPMeasListener" and then "TCPMeasTalker". Both applications should print text if they are working,
+although text output will pause for duration of measurements. Then "TCPMeasTalker" will print the results.
+
+To measure UDP performance, run first "UDPPMeasListener" and then "UDPMeasTalker". Both applications should print text if they are working,
+although text output will pause for duration of measurements. Then "UDPMeasTalker" will print the results.
+
+To measure ping from HPS to PC, type  "ping 192.168.0.1 -c 16 -s 36" to command line of the PC
+To measure ping from PC to HPS, type "ping 192.168.0.1 -n 16" to commandline of the ARM.

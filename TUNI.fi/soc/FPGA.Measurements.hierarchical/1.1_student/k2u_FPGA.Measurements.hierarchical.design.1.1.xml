@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014/ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>TUNI.fi</ipxact:vendor>
+	<ipxact:library>soc</ipxact:library>
+	<ipxact:name>FPGA.Measurements.hierarchical.design</ipxact:name>
+	<ipxact:version>1.1_student</ipxact:version>
+	<ipxact:componentInstances>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>axi_dma_tester_0</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="ip.hw" name="axi_dma_tester" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{1f593d58-76e1-478c-aece-97f61bc63875}</kactus2:uuid>
+				<kactus2:position x="160" y="60"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="channel_in" x="110" y="820"/>
+					<kactus2:portPosition busRef="channel_out" x="110" y="930"/>
+					<kactus2:portPosition busRef="config" x="110" y="730"/>
+					<kactus2:portPosition busRef="ram_read" x="110" y="40"/>
+					<kactus2:portPosition busRef="ram_write" x="110" y="130"/>
+				</kactus2:portPositions>
+				<kactus2:adHocVisibilities>
+					<kactus2:adHocVisible portName="irq_read" x="110" y="640"/>
+					<kactus2:adHocVisible portName="irq_write" x="110" y="550"/>
+				</kactus2:adHocVisibilities>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>axi_dma_write_0</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="ip.hwp.mem" name="axi_dma_write" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{dc0939f3-1cfe-42fc-89de-456ca3c9957e}</kactus2:uuid>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="axi_master" x="110" y="60"/>
+					<kactus2:portPosition busRef="axi_slave" x="110" y="40"/>
+					<kactus2:portPosition busRef="channel_in" x="-110" y="40"/>
+				</kactus2:portPositions>
+				<kactus2:position x="480" y="950"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>axi_dma_read_1</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="ip.hwp.mem" name="axi_dma_read" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{93a839eb-e70a-447a-9c96-c60c6e45400b}</kactus2:uuid>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="axi_master" x="110" y="60"/>
+					<kactus2:portPosition busRef="axi_slave" x="110" y="40"/>
+					<kactus2:portPosition busRef="channel_out" x="-110" y="40"/>
+				</kactus2:portPositions>
+				<kactus2:position x="480" y="840"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>axi_to_channel_0</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="ip.hwp.mem" name="axi_to_channel" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{c3495c62-c3ed-4512-979a-45274c4998cf}</kactus2:uuid>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="axi_slave" x="110" y="40"/>
+					<kactus2:portPosition busRef="channel" x="-110" y="40"/>
+				</kactus2:portPositions>
+				<kactus2:position x="480" y="750"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>PIO_1</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="ip.hwp.com" name="PIO" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{0d7ce668-eeab-485d-a351-8e89adc927fa}</kactus2:uuid>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="avalon" x="110" y="40"/>
+				</kactus2:portPositions>
+				<kactus2:adHocVisibilities>
+					<kactus2:adHocVisible portName="conduit" x="-110" y="40"/>
+				</kactus2:adHocVisibilities>
+				<kactus2:position x="480" y="660"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>PIO_0</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="ip.hwp.com" name="PIO" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{303f2ae9-d2cd-4d19-bebc-9f7bf05fea3e}</kactus2:uuid>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="avalon" x="110" y="40"/>
+				</kactus2:portPositions>
+				<kactus2:adHocVisibilities>
+					<kactus2:adHocVisible portName="conduit" x="-110" y="40"/>
+				</kactus2:adHocVisibilities>
+				<kactus2:position x="480" y="570"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>Onchip_from_tester</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="ip.hwp.mem" name="On-Chip_Memory_RAM" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{eeda78d0-6de6-4b88-bcdf-aed8d8783942}</kactus2:uuid>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="read_conduit" x="110" y="40"/>
+					<kactus2:portPosition busRef="write_conduit" x="-110" y="40"/>
+				</kactus2:portPositions>
+				<kactus2:position x="480" y="150"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>Onchip_to_tester</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="ip.hwp.mem" name="On-Chip_Memory_RAM" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{4d7bff27-ca36-4abd-ac48-beea73b190ed}</kactus2:uuid>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="read_conduit" x="-110" y="40"/>
+					<kactus2:portPosition busRef="write_conduit" x="110" y="40"/>
+				</kactus2:portPositions>
+				<kactus2:position x="480" y="60"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>Onchip_8bit</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="ip.hwp.mem" name="On-Chip_Memory_RAM" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{538d7be2-b213-4e3c-88de-a513f9ae7120}</kactus2:uuid>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="read_conduit" x="110" y="60"/>
+					<kactus2:portPosition busRef="write_conduit" x="110" y="40"/>
+				</kactus2:portPositions>
+				<kactus2:position x="480" y="240"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>Onchip_16bit</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="ip.hwp.mem" name="On-Chip_Memory_RAM" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{176ef9ce-e911-4ac2-9406-2113f0264187}</kactus2:uuid>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="read_conduit" x="110" y="60"/>
+					<kactus2:portPosition busRef="write_conduit" x="110" y="40"/>
+				</kactus2:portPositions>
+				<kactus2:position x="480" y="350"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>Onchip_32bit</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="ip.hwp.mem" name="On-Chip_Memory_RAM" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{a7afe2b7-3a1b-43f4-a74b-64c5c85d0f1c}</kactus2:uuid>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="read_conduit" x="110" y="60"/>
+					<kactus2:portPosition busRef="write_conduit" x="110" y="40"/>
+				</kactus2:portPositions>
+				<kactus2:position x="480" y="460"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>Bus_connection</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="ip.hwp.com" name="AXIBus4Measurements" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{b1f63910-ea97-48c0-ae92-2aece4250b58}</kactus2:uuid>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="H2F" x="110" y="50"/>
+					<kactus2:portPosition busRef="LWH2F" x="110" y="60"/>
+					<kactus2:portPosition busRef="axi" x="-110" y="550"/>
+					<kactus2:portPosition busRef="axi_1" x="-110" y="570"/>
+					<kactus2:portPosition busRef="bus" x="-110" y="360"/>
+					<kactus2:portPosition busRef="bus_1" x="-110" y="380"/>
+					<kactus2:portPosition busRef="bus_2" x="-110" y="410"/>
+					<kactus2:portPosition busRef="bus_3" x="-110" y="440"/>
+					<kactus2:portPosition busRef="bus_4" x="110" y="40"/>
+					<kactus2:portPosition busRef="bus_5" x="110" y="100"/>
+					<kactus2:portPosition busRef="bus_6" x="110" y="100"/>
+					<kactus2:portPosition busRef="bus_7" x="110" y="100"/>
+					<kactus2:portPosition busRef="read_conduit" x="-110" y="70"/>
+					<kactus2:portPosition busRef="read_conduit_1" x="-110" y="250"/>
+					<kactus2:portPosition busRef="read_conduit_2" x="-110" y="330"/>
+					<kactus2:portPosition busRef="read_conduit_3" x="-110" y="460"/>
+					<kactus2:portPosition busRef="write_conduit" x="-110" y="40"/>
+					<kactus2:portPosition busRef="write_conduit_1" x="-110" y="220"/>
+					<kactus2:portPosition busRef="write_conduit_2" x="-110" y="350"/>
+					<kactus2:portPosition busRef="write_conduit_3" x="-110" y="440"/>
+				</kactus2:portPositions>
+				<kactus2:position x="800" y="60"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+	</ipxact:componentInstances>
+	<ipxact:interconnections>
+		<ipxact:interconnection>
+			<ipxact:name>axi_dma_tester_0_config_to_axi_to_channel_0_channel</ipxact:name>
+			<ipxact:activeInterface componentRef="axi_dma_tester_0" busRef="config"/>
+			<ipxact:activeInterface componentRef="axi_to_channel_0" busRef="channel"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>axi_dma_tester_0_ram_write_to_Onchip_from_tester_write_conduit</ipxact:name>
+			<ipxact:activeInterface componentRef="axi_dma_tester_0" busRef="ram_write"/>
+			<ipxact:activeInterface componentRef="Onchip_from_tester" busRef="write_conduit"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>axi_dma_tester_0_channel_in_to_axi_dma_read_1_channel_out</ipxact:name>
+			<ipxact:activeInterface componentRef="axi_dma_tester_0" busRef="channel_in"/>
+			<ipxact:activeInterface componentRef="axi_dma_read_1" busRef="channel_out"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>axi_dma_tester_0_channel_out_to_axi_dma_write_0_channel_in</ipxact:name>
+			<ipxact:activeInterface componentRef="axi_dma_tester_0" busRef="channel_out"/>
+			<ipxact:activeInterface componentRef="axi_dma_write_0" busRef="channel_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>axi_dma_tester_0_ram_read_to_Onchip_to_tester_read_conduit</ipxact:name>
+			<ipxact:activeInterface componentRef="axi_dma_tester_0" busRef="ram_read"/>
+			<ipxact:activeInterface componentRef="Onchip_to_tester" busRef="read_conduit"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>H2F1</ipxact:name>
+			<ipxact:activeInterface componentRef="axi_to_channel_0" busRef="axi_slave"/>
+			<ipxact:hierInterface busRef="H2F"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>H2F2</ipxact:name>
+			<ipxact:activeInterface componentRef="axi_dma_read_1" busRef="axi_slave"/>
+			<ipxact:hierInterface busRef="H2F"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>H2F3</ipxact:name>
+			<ipxact:activeInterface componentRef="axi_dma_write_0" busRef="axi_slave"/>
+			<ipxact:hierInterface busRef="H2F"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>FPGA2SDRAM0</ipxact:name>
+			<ipxact:activeInterface componentRef="axi_dma_read_1" busRef="axi_master"/>
+			<ipxact:hierInterface busRef="FPGA2SDRAM"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>FPGA2SDRAM1</ipxact:name>
+			<ipxact:activeInterface componentRef="axi_dma_write_0" busRef="axi_master"/>
+			<ipxact:hierInterface busRef="FPGA2SDRAM"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>Onchip_to_tester_write_conduit_to_Bus_connection_write_conduit</ipxact:name>
+			<ipxact:activeInterface componentRef="Onchip_to_tester" busRef="write_conduit"/>
+			<ipxact:activeInterface componentRef="Bus_connection" busRef="write_conduit"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>Bus_connection_read_conduit_to_Onchip_from_tester_read_conduit</ipxact:name>
+			<ipxact:activeInterface componentRef="Bus_connection" busRef="read_conduit"/>
+			<ipxact:activeInterface componentRef="Onchip_from_tester" busRef="read_conduit"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>Onchip_8bit_write_conduit_to_Bus_connection_write_conduit_1</ipxact:name>
+			<ipxact:activeInterface componentRef="Onchip_8bit" busRef="write_conduit"/>
+			<ipxact:activeInterface componentRef="Bus_connection" busRef="write_conduit_1"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>Bus_connection_read_conduit_1_to_Onchip_8bit_read_conduit</ipxact:name>
+			<ipxact:activeInterface componentRef="Bus_connection" busRef="read_conduit_1"/>
+			<ipxact:activeInterface componentRef="Onchip_8bit" busRef="read_conduit"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>Onchip_16bit_write_conduit_to_Bus_connection_read_conduit_2</ipxact:name>
+			<ipxact:activeInterface componentRef="Onchip_16bit" busRef="write_conduit"/>
+			<ipxact:activeInterface componentRef="Bus_connection" busRef="read_conduit_2"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>Bus_connection_write_conduit_2_to_Onchip_16bit_read_conduit</ipxact:name>
+			<ipxact:activeInterface componentRef="Bus_connection" busRef="write_conduit_2"/>
+			<ipxact:activeInterface componentRef="Onchip_16bit" busRef="read_conduit"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>PIO_0_axi_to_Bus_connection_axi</ipxact:name>
+			<ipxact:activeInterface componentRef="PIO_0" busRef="axi"/>
+			<ipxact:activeInterface componentRef="Bus_connection" busRef="axi"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>PIO_1_axi_to_Bus_connection_axi_1</ipxact:name>
+			<ipxact:activeInterface componentRef="PIO_1" busRef="axi"/>
+			<ipxact:activeInterface componentRef="Bus_connection" busRef="axi_1"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>Onchip_32bit_write_conduit_to_Bus_connection_write_conduit_3</ipxact:name>
+			<ipxact:activeInterface componentRef="Onchip_32bit" busRef="write_conduit"/>
+			<ipxact:activeInterface componentRef="Bus_connection" busRef="write_conduit_3"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>Bus_connection_read_conduit_3_to_Onchip_32bit_read_conduit</ipxact:name>
+			<ipxact:activeInterface componentRef="Bus_connection" busRef="read_conduit_3"/>
+			<ipxact:activeInterface componentRef="Onchip_32bit" busRef="read_conduit"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>Bus_connection_H2F_to_H2F</ipxact:name>
+			<ipxact:activeInterface componentRef="Bus_connection" busRef="H2F"/>
+			<ipxact:hierInterface busRef="H2F"/>
+		</ipxact:interconnection>
+	</ipxact:interconnections>
+	<ipxact:adHocConnections>
+		<ipxact:adHocConnection>
+			<ipxact:name>axi_dma_tester_0_irq_write_to_PIO_0_conduit</ipxact:name>
+			<ipxact:portReferences>
+				<ipxact:internalPortReference componentRef="PIO_0" portRef="conduit">
+					<ipxact:partSelect>
+						<ipxact:range>
+							<ipxact:left>0</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:range>
+					</ipxact:partSelect>
+				</ipxact:internalPortReference>
+				<ipxact:internalPortReference componentRef="axi_dma_tester_0" portRef="irq_write">
+					<ipxact:partSelect>
+						<ipxact:range>
+							<ipxact:left>0</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:range>
+					</ipxact:partSelect>
+				</ipxact:internalPortReference>
+			</ipxact:portReferences>
+		</ipxact:adHocConnection>
+		<ipxact:adHocConnection>
+			<ipxact:name>PIO_1_conduit_to_axi_dma_tester_0_irq_read</ipxact:name>
+			<ipxact:portReferences>
+				<ipxact:internalPortReference componentRef="axi_dma_tester_0" portRef="irq_read">
+					<ipxact:partSelect>
+						<ipxact:range>
+							<ipxact:left>0</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:range>
+					</ipxact:partSelect>
+				</ipxact:internalPortReference>
+				<ipxact:internalPortReference componentRef="PIO_1" portRef="conduit">
+					<ipxact:partSelect>
+						<ipxact:range>
+							<ipxact:left>0</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:range>
+					</ipxact:partSelect>
+				</ipxact:internalPortReference>
+			</ipxact:portReferences>
+		</ipxact:adHocConnection>
+	</ipxact:adHocConnections>
+	<ipxact:vendorExtensions>
+		<kactus2:columnLayout>
+			<kactus2:column name="IO" contentType="0" allowedItems="1" minWidth="119" width="119" x="960"/>
+			<kactus2:column name="Buses" contentType="2" allowedItems="2" minWidth="319" width="319" x="640"/>
+			<kactus2:column name="Components" contentType="2" allowedItems="2" minWidth="319" width="319" x="320"/>
+			<kactus2:column name="Component" contentType="2" allowedItems="2" minWidth="319" width="319" x="0"/>
+		</kactus2:columnLayout>
+		<kactus2:routes>
+			<kactus2:route kactus2:connRef="" kactus2:offPage="false">
+				<kactus2:position x="810" y="790"/>
+				<kactus2:position x="710" y="790"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="" kactus2:offPage="false">
+				<kactus2:position x="390" y="700"/>
+				<kactus2:position x="490" y="700"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="" kactus2:offPage="false">
+				<kactus2:position x="490" y="610"/>
+				<kactus2:position x="390" y="610"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="" kactus2:offPage="false">
+				<kactus2:position x="390" y="280"/>
+				<kactus2:position x="490" y="280"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="" kactus2:offPage="false">
+				<kactus2:position x="490" y="300"/>
+				<kactus2:position x="390" y="300"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="" kactus2:offPage="false">
+				<kactus2:position x="390" y="390"/>
+				<kactus2:position x="490" y="390"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="" kactus2:offPage="false">
+				<kactus2:position x="490" y="410"/>
+				<kactus2:position x="390" y="410"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="" kactus2:offPage="false">
+				<kactus2:position x="390" y="500"/>
+				<kactus2:position x="490" y="500"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="" kactus2:offPage="false">
+				<kactus2:position x="490" y="520"/>
+				<kactus2:position x="390" y="520"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="" kactus2:offPage="false">
+				<kactus2:position x="810" y="190"/>
+				<kactus2:position x="710" y="190"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="" kactus2:offPage="false">
+				<kactus2:position x="810" y="880"/>
+				<kactus2:position x="710" y="880"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="" kactus2:offPage="false">
+				<kactus2:position x="810" y="1000"/>
+				<kactus2:position x="710" y="1000"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="" kactus2:offPage="false">
+				<kactus2:position x="810" y="100"/>
+				<kactus2:position x="710" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="" kactus2:offPage="false">
+				<kactus2:position x="490" y="100"/>
+				<kactus2:position x="390" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="" kactus2:offPage="false">
+				<kactus2:position x="390" y="190"/>
+				<kactus2:position x="490" y="190"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="" kactus2:offPage="false">
+				<kactus2:position x="710" y="610"/>
+				<kactus2:position x="810" y="610"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="" kactus2:offPage="false">
+				<kactus2:position x="810" y="700"/>
+				<kactus2:position x="710" y="700"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="axi_dma_tester_0_config_to_axi_to_channel_0_channel" kactus2:offPage="false">
+				<kactus2:position x="270" y="790"/>
+				<kactus2:position x="370" y="790"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="axi_dma_tester_0_ram_write_to_Onchip_from_tester_write_conduit" kactus2:offPage="false">
+				<kactus2:position x="270" y="190"/>
+				<kactus2:position x="370" y="190"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="axi_dma_tester_0_channel_in_to_axi_dma_read_1_channel_out" kactus2:offPage="false">
+				<kactus2:position x="270" y="880"/>
+				<kactus2:position x="370" y="880"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="axi_dma_tester_0_channel_out_to_axi_dma_write_0_channel_in" kactus2:offPage="false">
+				<kactus2:position x="270" y="990"/>
+				<kactus2:position x="370" y="990"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="axi_dma_tester_0_ram_read_to_Onchip_to_tester_read_conduit" kactus2:offPage="false">
+				<kactus2:position x="270" y="100"/>
+				<kactus2:position x="370" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="H2F1" kactus2:offPage="true">
+				<kactus2:position x="620" y="790"/>
+				<kactus2:position x="990" y="130"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="H2F2" kactus2:offPage="true">
+				<kactus2:position x="620" y="880"/>
+				<kactus2:position x="990" y="130"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="H2F3" kactus2:offPage="true">
+				<kactus2:position x="620" y="990"/>
+				<kactus2:position x="990" y="130"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="FPGA2SDRAM0" kactus2:offPage="true">
+				<kactus2:position x="620" y="900"/>
+				<kactus2:position x="990" y="70"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="FPGA2SDRAM1" kactus2:offPage="true">
+				<kactus2:position x="620" y="1010"/>
+				<kactus2:position x="990" y="70"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="axi_dma_tester_0_irq_write_to_PIO_0_conduit" kactus2:offPage="false"/>
+			<kactus2:route kactus2:connRef="PIO_1_conduit_to_axi_dma_tester_0_irq_read" kactus2:offPage="false"/>
+			<kactus2:route kactus2:connRef="PIO_0_axi_to_instance_0_axi" kactus2:offPage="false">
+				<kactus2:position x="590" y="610"/>
+				<kactus2:position x="690" y="610"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="PIO_1_axi_to_instance_0_axi_1" kactus2:offPage="false">
+				<kactus2:position x="590" y="700"/>
+				<kactus2:position x="660" y="700"/>
+				<kactus2:position x="660" y="630"/>
+				<kactus2:position x="690" y="630"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="Onchip_16bit_write_conduit_to_instance_0_write_conduit_1" kactus2:offPage="false">
+				<kactus2:position x="590" y="390"/>
+				<kactus2:position x="670" y="390"/>
+				<kactus2:position x="670" y="420"/>
+				<kactus2:position x="690" y="420"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="Onchip_16bit_read_conduit_to_instance_0_read_conduit_1" kactus2:offPage="false">
+				<kactus2:position x="590" y="410"/>
+				<kactus2:position x="670" y="410"/>
+				<kactus2:position x="670" y="440"/>
+				<kactus2:position x="690" y="440"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="Onchip_32bit_write_conduit_to_instance_0_write_conduit_2" kactus2:offPage="false">
+				<kactus2:position x="590" y="500"/>
+				<kactus2:position x="670" y="500"/>
+				<kactus2:position x="670" y="490"/>
+				<kactus2:position x="690" y="490"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="Onchip_32bit_read_conduit_to_instance_0_read_conduit_2" kactus2:offPage="false">
+				<kactus2:position x="590" y="520"/>
+				<kactus2:position x="660" y="520"/>
+				<kactus2:position x="660" y="470"/>
+				<kactus2:position x="690" y="470"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="instance_0_FPGA2SDRAM_to_FPGA2SDRAM" kactus2:offPage="false">
+				<kactus2:position x="940" y="100"/>
+				<kactus2:position x="990" y="70"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="instance_0_LWH2F_to_LWH2F" kactus2:offPage="false">
+				<kactus2:position x="910" y="120"/>
+				<kactus2:position x="1000" y="120"/>
+				<kactus2:position x="1000" y="100"/>
+				<kactus2:position x="1020" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="instance_0_H2F_to_H2F" kactus2:offPage="false">
+				<kactus2:position x="940" y="150"/>
+				<kactus2:position x="990" y="130"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="Onchip_to_tester_write_conduit_to_instance_0_write_conduit" kactus2:offPage="false">
+				<kactus2:position x="590" y="100"/>
+				<kactus2:position x="670" y="100"/>
+				<kactus2:position x="670" y="110"/>
+				<kactus2:position x="690" y="110"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="Onchip_from_tester_read_conduit_to_instance_0_read_conduit" kactus2:offPage="false">
+				<kactus2:position x="590" y="190"/>
+				<kactus2:position x="670" y="190"/>
+				<kactus2:position x="670" y="160"/>
+				<kactus2:position x="690" y="160"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="Onchip_8bit_write_conduit_to_instance_0_write_conduit_3" kactus2:offPage="false">
+				<kactus2:position x="590" y="280"/>
+				<kactus2:position x="670" y="280"/>
+				<kactus2:position x="670" y="270"/>
+				<kactus2:position x="690" y="270"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="Onchip_8bit_read_conduit_to_instance_0_read_conduit_3" kactus2:offPage="false">
+				<kactus2:position x="590" y="300"/>
+				<kactus2:position x="690" y="300"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="Onchip_to_tester_write_conduit_to_Bus_connection_write_conduit" kactus2:offPage="false">
+				<kactus2:position x="590" y="100"/>
+				<kactus2:position x="690" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="Bus_connection_read_conduit_to_Onchip_from_tester_read_conduit" kactus2:offPage="false">
+				<kactus2:position x="690" y="130"/>
+				<kactus2:position x="610" y="130"/>
+				<kactus2:position x="610" y="190"/>
+				<kactus2:position x="590" y="190"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="Onchip_8bit_write_conduit_to_Bus_connection_write_conduit_1" kactus2:offPage="false">
+				<kactus2:position x="590" y="280"/>
+				<kactus2:position x="690" y="280"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="Bus_connection_read_conduit_1_to_Onchip_8bit_read_conduit" kactus2:offPage="false">
+				<kactus2:position x="690" y="310"/>
+				<kactus2:position x="610" y="310"/>
+				<kactus2:position x="610" y="300"/>
+				<kactus2:position x="590" y="300"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="Onchip_16bit_write_conduit_to_Bus_connection_read_conduit_2" kactus2:offPage="false">
+				<kactus2:position x="590" y="390"/>
+				<kactus2:position x="690" y="390"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="Bus_connection_write_conduit_2_to_Onchip_16bit_read_conduit" kactus2:offPage="false">
+				<kactus2:position x="690" y="410"/>
+				<kactus2:position x="590" y="410"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="PIO_0_axi_to_Bus_connection_axi" kactus2:offPage="false">
+				<kactus2:position x="590" y="610"/>
+				<kactus2:position x="690" y="610"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="PIO_1_axi_to_Bus_connection_axi_1" kactus2:offPage="false">
+				<kactus2:position x="590" y="700"/>
+				<kactus2:position x="670" y="700"/>
+				<kactus2:position x="670" y="630"/>
+				<kactus2:position x="690" y="630"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="Onchip_32bit_write_conduit_to_Bus_connection_write_conduit_3" kactus2:offPage="false">
+				<kactus2:position x="590" y="500"/>
+				<kactus2:position x="690" y="500"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="Bus_connection_read_conduit_3_to_Onchip_32bit_read_conduit" kactus2:offPage="false">
+				<kactus2:position x="690" y="520"/>
+				<kactus2:position x="590" y="520"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="Bus_connection_H2F_to_H2F" kactus2:offPage="false">
+				<kactus2:position x="940" y="110"/>
+				<kactus2:position x="990" y="130"/>
+			</kactus2:route>
+		</kactus2:routes>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>H2F</kactus2:name>
+			<kactus2:position x="1020" y="130"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>LWH2F</kactus2:name>
+			<kactus2:position x="1020" y="100"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>FPGA2SDRAM</kactus2:name>
+			<kactus2:position x="1020" y="70"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:note>
+			<kactus2:position x="330" y="280"/>
+			<kactus2:content>U&amp;K 4 end
+U&amp;K 14 start</kactus2:content>
+			<kactus2:associations/>
+			<kactus2:timestamp>3.5.2016 13:45:31</kactus2:timestamp>
+		</kactus2:note>
+		<kactus2:note>
+			<kactus2:position x="330" y="390"/>
+			<kactus2:content>U&amp;K 5 end
+U&amp;K 15 start</kactus2:content>
+			<kactus2:associations/>
+			<kactus2:timestamp>3.5.2016 13:46:42</kactus2:timestamp>
+		</kactus2:note>
+		<kactus2:note>
+			<kactus2:position x="330" y="500"/>
+			<kactus2:content>U&amp;K 6 end
+U&amp;K 16 start</kactus2:content>
+			<kactus2:associations/>
+			<kactus2:timestamp>3.5.2016 13:46:46</kactus2:timestamp>
+		</kactus2:note>
+		<kactus2:note>
+			<kactus2:position x="350" y="890"/>
+			<kactus2:content>K.20 end</kactus2:content>
+			<kactus2:associations>
+				<kactus2:position x="600" y="885"/>
+			</kactus2:associations>
+			<kactus2:timestamp>3.5.2016 13:47:47</kactus2:timestamp>
+		</kactus2:note>
+		<kactus2:note>
+			<kactus2:position x="350" y="1000"/>
+			<kactus2:content>K.10 start</kactus2:content>
+			<kactus2:associations>
+				<kactus2:position x="320" y="1030"/>
+			</kactus2:associations>
+			<kactus2:timestamp>3.5.2016 13:47:50</kactus2:timestamp>
+		</kactus2:note>
+	</ipxact:vendorExtensions>
+</ipxact:design>

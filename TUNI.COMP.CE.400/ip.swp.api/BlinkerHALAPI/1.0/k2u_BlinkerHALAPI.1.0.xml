@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<kactus2:apiDefinition xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd" xmlns:kactus2="http://funbase.cs.TUNI.fi/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ipxact:vendor xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014">TUNI.COMP.CE.400</ipxact:vendor>
+  <ipxact:library xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014">ip.swp.api</ipxact:library>
+  <ipxact:name xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014">BlinkerHALAPI</ipxact:name>
+  <ipxact:version xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014">1.0</ipxact:version>
+  <kactus2:comDefinitionRef vendor="" library="" name="" version="" />
+  <kactus2:dataTypes />
+  <kactus2:functions>
+    <kactus2:function name="init_HAL" description="Initializes the hall PRE REQUISITE FOR OTHER FUNCTIONS TO FUNCTION">
+      <kactus2:returnValue type="void" description="" />
+    </kactus2:function>
+    <kactus2:function name="read_btn" description="Reads all FPGA buttons, with LSB being button 0, the next one button 1, etc.">
+      <kactus2:returnValue type="uint8_t" description="" />
+    </kactus2:function>
+    <kactus2:function name="set_led" description="Sets all FPGA LEDs, with LSB being LED 0, the next one LED 1, etc.">
+      <kactus2:returnValue type="void" description="" />
+      <kactus2:functionParameter name="mask" type="uint8_t" transferType="" contentSource="" dependentParamIndex="-1" description="Bit mask for leds, with LSB being zero and so on." />
+    </kactus2:function>
+  </kactus2:functions>
+</kactus2:apiDefinition>

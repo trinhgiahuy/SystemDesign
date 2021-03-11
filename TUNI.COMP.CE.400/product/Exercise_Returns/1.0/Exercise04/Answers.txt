@@ -1,0 +1,25 @@
+INCLUDE ANSWERS IN HERE
+
+1. Obviously, the blinker application of the exercise is implementable with hardware.
+What are the pros and cons of implementing it with hardware? Mention at least two pros and one con.
+
+2. Are the LEDs active low or high? When you press a button, does it produce one or zero?
+
+3. You had to generate addresses for components in Qsys. Why?
+
+4. As you saw in the sources codes and the system designs in Kactus2,
+the application is separated from hardware with a HAL component. Why?
+
+5. The HAL layer maps a physical memory region to virtual memory before using it.
+Why it cannot use physical memory directly?
+
+6. When you tried to execute the second build of the application on PC, it failed. Why? Mention at least two reasons.
+
+7. Memory and connections were used for communication between hardware and software. How?
+
+8. What was hard? What was easy?
+
+9. Fill the used hours below, including answering questions and any downtime:
+
+	GROUP MEMBER 1:
+	GROUP MEMBER 2:

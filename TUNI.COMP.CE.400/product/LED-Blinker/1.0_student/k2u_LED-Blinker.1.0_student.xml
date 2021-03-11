@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014/ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>TUNI.COMP.CE.400</ipxact:vendor>
+	<ipxact:library>product</ipxact:library>
+	<ipxact:name>LED-Blinker</ipxact:name>
+	<ipxact:version>1.0_student</ipxact:version>
+	<ipxact:model>
+		<ipxact:views>
+			<ipxact:view>
+				<ipxact:name>flat</ipxact:name>
+				<ipxact:envIdentifier>::</ipxact:envIdentifier>
+				<ipxact:componentInstantiationRef>flat</ipxact:componentInstantiationRef>
+			</ipxact:view>
+			<ipxact:view>
+				<ipxact:name>PC-Hardware</ipxact:name>
+				<ipxact:envIdentifier>::</ipxact:envIdentifier>
+				<ipxact:designConfigurationInstantiationRef>PC-Hardware</ipxact:designConfigurationInstantiationRef>
+			</ipxact:view>
+			<ipxact:view>
+				<ipxact:name>Veek-Hardware</ipxact:name>
+				<ipxact:envIdentifier>::</ipxact:envIdentifier>
+				<ipxact:designConfigurationInstantiationRef>Veek-Hardware</ipxact:designConfigurationInstantiationRef>
+			</ipxact:view>
+		</ipxact:views>
+		<ipxact:instantiations>
+			<ipxact:componentInstantiation>
+				<ipxact:name>flat</ipxact:name>
+			</ipxact:componentInstantiation>
+			<ipxact:designConfigurationInstantiation>
+				<ipxact:name>PC-Hardware</ipxact:name>
+				<ipxact:designConfigurationRef vendor="TUNI.COMP.CE.400" library="product" name="LED-Blinker.PC-Hardware.designcfg" version="1.0"/>
+			</ipxact:designConfigurationInstantiation>
+			<ipxact:designConfigurationInstantiation>
+				<ipxact:name>Veek-Hardware</ipxact:name>
+				<ipxact:designConfigurationRef vendor="TUNI.COMP.CE.400" library="product" name="LED-Blinker.Veek-Hardware.designcfg" version="1.0"/>
+			</ipxact:designConfigurationInstantiation>
+		</ipxact:instantiations>
+	</ipxact:model>
+	<ipxact:fileSets>
+		<ipxact:fileSet>
+			<ipxact:name>syn</ipxact:name>
+			<ipxact:file>
+				<ipxact:name>syn/ds5/altera_avalon_pio_led.ds</ipxact:name>
+				<ipxact:fileType user="Unknown">user</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>syn/ip/edge_detect/altera_edge_detector.v</ipxact:name>
+				<ipxact:fileType>verilogSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>syn/create_ghrd_qsys.tcl</ipxact:name>
+				<ipxact:fileType>tclSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>syn/create_ghrd_quartus.tcl</ipxact:name>
+				<ipxact:fileType>tclSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>syn/cti_tapping.stp</ipxact:name>
+				<ipxact:fileType user="Unknown">user</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>syn/ip/debounce/debounce.v</ipxact:name>
+				<ipxact:fileType>verilogSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>syn/ghrd_reset.tcl</ipxact:name>
+				<ipxact:fileType>tclSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>syn/ghrd_sc_script.tcl</ipxact:name>
+				<ipxact:fileType>tclSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>syn/ghrd_top.v</ipxact:name>
+				<ipxact:fileType>verilogSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>syn/hps_clock_info.xml</ipxact:name>
+				<ipxact:fileType user="Unknown">user</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>syn/ip/altsource_probe/hps_reset_bb.v</ipxact:name>
+				<ipxact:fileType>verilogSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>syn/ip/altsource_probe/hps_reset.qip</ipxact:name>
+				<ipxact:fileType user="Unknown">user</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>syn/ip/altsource_probe/hps_reset.v</ipxact:name>
+				<ipxact:fileType>verilogSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>syn/ip/intr_capturer/intr_capturer_hw.tcl</ipxact:name>
+				<ipxact:fileType>tclSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>syn/ip/intr_capturer/intr_capturer.v</ipxact:name>
+				<ipxact:fileType>verilogSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>syn/soc_system_board_info.xml</ipxact:name>
+				<ipxact:fileType user="Unknown">user</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>syn/soc_system_timing.sdc</ipxact:name>
+				<ipxact:fileType>SDC</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>syn/soc_system.qpf</ipxact:name>
+				<ipxact:fileType user="Unknown">user</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>syn/soc_system.qsf</ipxact:name>
+				<ipxact:fileType user="quartusProjectFile">user</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>syn/soc_system.qsys</ipxact:name>
+				<ipxact:fileType user="Unknown">user</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+		</ipxact:fileSet>
+	</ipxact:fileSets>
+	<ipxact:vendorExtensions>
+		<kactus2:systemViews>
+			<kactus2:systemView>
+				<ipxact:name>PC-System</ipxact:name>
+				<kactus2:hierarchyRef vendor="TUNI.COMP.CE.400" library="product" name="LED-Blinker.PC-System.sysdesigncfg" version="1.0_student"/>
+				<kactus2:hwViewRef>PC-Hardware</kactus2:hwViewRef>
+			</kactus2:systemView>
+		</kactus2:systemViews>
+		<kactus2:version>3,0,29,0</kactus2:version>
+		<kactus2:kts_attributes>
+			<kactus2:kts_productHier>Flat</kactus2:kts_productHier>
+			<kactus2:kts_implementation>HW</kactus2:kts_implementation>
+			<kactus2:kts_firmness>Mutable</kactus2:kts_firmness>
+		</kactus2:kts_attributes>
+	</ipxact:vendorExtensions>
+</ipxact:component>

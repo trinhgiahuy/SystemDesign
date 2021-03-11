@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:busDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014/ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>TUNI.fi</ipxact:vendor>
+	<ipxact:library>ip.hwp.ifc</ipxact:library>
+	<ipxact:name>axi3_bus</ipxact:name>
+	<ipxact:version>1.0</ipxact:version>
+	<ipxact:directConnection>true</ipxact:directConnection>
+	<ipxact:isAddressable>true</ipxact:isAddressable>
+	<ipxact:description>AXI bus is used for communication between FPGA and other hard components.</ipxact:description>
+</ipxact:busDefinition>

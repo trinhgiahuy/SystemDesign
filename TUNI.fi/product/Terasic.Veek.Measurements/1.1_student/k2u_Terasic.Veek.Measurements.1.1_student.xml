@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014/ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>TUNI.fi</ipxact:vendor>
+	<ipxact:library>product</ipxact:library>
+	<ipxact:name>Terasic.Veek.Measurements</ipxact:name>
+	<ipxact:version>1.1_student</ipxact:version>
+	<ipxact:model>
+		<ipxact:views>
+			<ipxact:view>
+				<ipxact:name>hierarchial</ipxact:name>
+				<ipxact:envIdentifier>::</ipxact:envIdentifier>
+				<ipxact:designConfigurationInstantiationRef>hierarchial</ipxact:designConfigurationInstantiationRef>
+			</ipxact:view>
+		</ipxact:views>
+		<ipxact:instantiations>
+			<ipxact:designConfigurationInstantiation>
+				<ipxact:name>hierarchial</ipxact:name>
+				<ipxact:designConfigurationRef vendor="TUNI.fi" library="product" name="Terasic.Veek.Measurements.hierarchical.designcfg" version="1.1_student"/>
+			</ipxact:designConfigurationInstantiation>
+		</ipxact:instantiations>
+	</ipxact:model>
+	<ipxact:fileSets>
+		<ipxact:fileSet>
+			<ipxact:name>doc</ipxact:name>
+			<ipxact:file>
+				<ipxact:name>doc/measurement-instructions.txt</ipxact:name>
+				<ipxact:fileType user="textFile">user</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>a98939774294fb7a58000ed4c51e471e</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>doc/setup-instructions.txt</ipxact:name>
+				<ipxact:fileType user="textFile">user</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>91971443d7e552d9f7d4c762e5546da5</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+		</ipxact:fileSet>
+		<ipxact:fileSet>
+			<ipxact:name>quartus_files</ipxact:name>
+			<ipxact:file>
+				<ipxact:name>quartus_files/memory_benchmark_signal_tap.stp</ipxact:name>
+				<ipxact:fileType>unknown</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>2861563375613d732813cc19ce8b8ded</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>quartus_files/soc_system.rbf</ipxact:name>
+				<ipxact:fileType>unknown</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>5e21d55a24dd16b06989911d92d0dcfe</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+		</ipxact:fileSet>
+	</ipxact:fileSets>
+	<ipxact:description>This component holds designs used to benchmark a Terasic Veek SoC FPGA board. 
+
+The results are in the file set doc.
+
+Other filesets contain files needed for synthesis, with exception of the measurement module, which is associated with its own component within the design.</ipxact:description>
+	<ipxact:vendorExtensions>
+		<kactus2:systemViews>
+			<kactus2:systemView>
+				<ipxact:name>system</ipxact:name>
+				<kactus2:hierarchyRef vendor="TUNI.fi" library="product" name="Terasic.Veek.Measurements.system.sysdesigncfg" version="1.1"/>
+				<kactus2:hwViewRef>hierarchial</kactus2:hwViewRef>
+			</kactus2:systemView>
+		</kactus2:systemViews>
+		<kactus2:fileDependencies>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>syn/soc_system/synthesis/submodules/soc_system_mem_if_ddr3_emif_0_s0_software/sequencer.c</kactus2:fileRef1>
+				<kactus2:fileRef2>syn/soc_system/synthesis/submodules/soc_system_mem_if_ddr3_emif_0_s0_software/sequencer_defines.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>syn/soc_system/synthesis/submodules/soc_system_mem_if_ddr3_emif_0_s0_software/sequencer.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/alt_types.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>syn/soc_system/synthesis/submodules/soc_system_mem_if_ddr3_emif_0_s0_software/sequencer.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/system.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>syn/soc_system/synthesis/submodules/soc_system_mem_if_ddr3_emif_0_s0_software/sequencer.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/sdram_io.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>syn/soc_system/synthesis/submodules/soc_system_mem_if_ddr3_emif_0_s0_software/sequencer.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/sdram_io.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>syn/soc_system/synthesis/submodules/soc_system_mem_if_ddr3_emif_0_s0_software/sequencer.c</kactus2:fileRef1>
+				<kactus2:fileRef2>syn/soc_system/synthesis/submodules/soc_system_mem_if_ddr3_emif_0_s0_software/sequencer.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>syn/soc_system/synthesis/submodules/soc_system_mem_if_ddr3_emif_0_s0_software/sequencer.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/tclrpt.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>syn/soc_system/synthesis/submodules/soc_system_mem_if_ddr3_emif_0_s0_software/sequencer.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/sequencer_auto.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>syn/soc_system/synthesis/submodules/soc_system_mem_if_ddr3_emif_0_s0_software/sequencer.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/hps_controller.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>syn/soc_system/synthesis/submodules/soc_system_mem_if_ddr3_emif_0_s0_software/sequencer.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/stdio.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>syn/soc_system/synthesis/submodules/soc_system_mem_if_ddr3_emif_0_s0_software/sequencer.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/string.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>syn/soc_system/synthesis/submodules/soc_system_mem_if_ddr3_emif_0_s0_software/sequencer.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/sdram.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>syn/soc_system/synthesis/submodules/soc_system_mem_if_ddr3_emif_0_s0_software/sequencer.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/stdio.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+		</kactus2:fileDependencies>
+		<kactus2:version>2,8,49,0</kactus2:version>
+		<kactus2:kts_attributes>
+			<kactus2:kts_productHier>Product</kactus2:kts_productHier>
+			<kactus2:kts_implementation>HW</kactus2:kts_implementation>
+			<kactus2:kts_firmness>Mutable</kactus2:kts_firmness>
+		</kactus2:kts_attributes>
+	</ipxact:vendorExtensions>
+</ipxact:component>

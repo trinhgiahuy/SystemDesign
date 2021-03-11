@@ -1,0 +1,19 @@
+INCLUDE ANSWERS IN HERE
+
+1. How prints are made from the kernel module? How you get to read those prints?
+Give a short answer, from the perspective of a driver developer.
+
+2. How kernel module functions are connected to system calls?
+Give a short answer, from the perspective of a driver developer.
+
+3. What functions init_module() and cleanup_module() do? When they are called?
+
+4. When functions device_open() and device_release() are called?
+
+5. What was hard? What was easy?
+
+6. Fill the used hours below, including answering questions and any downtime:
+
+	GROUP MEMBER 1:
+	GROUP MEMBER 2:
+	GROUP MEMBER 3: 

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>TUNI.fi</ipxact:vendor>
+	<ipxact:library>ip.hwp.mem</ipxact:library>
+	<ipxact:name>controller.ddr_sdram.multiport</ipxact:name>
+	<ipxact:version>1.1</ipxact:version>
+	<ipxact:busInterfaces>
+		<ipxact:busInterface>
+			<ipxact:name>mem_controller_interface_l3</ipxact:name>
+			<ipxact:description>Interface used to access memory controller from cache.</ipxact:description>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="memory_controller_interface" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="memory_controller_interface.absDef" version="1.0"/>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:slave/>
+			<ipxact:connectionRequired>false</ipxact:connectionRequired>
+			<ipxact:bitsInLau>8</ipxact:bitsInLau>
+			<ipxact:endianness>little</ipxact:endianness>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>mem_controller_interface_l2</ipxact:name>
+			<ipxact:description>Interface used to access memory controller from cache.</ipxact:description>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="memory_controller_interface" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="memory_controller_interface.absDef" version="1.0"/>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:slave/>
+			<ipxact:connectionRequired>false</ipxact:connectionRequired>
+			<ipxact:bitsInLau>8</ipxact:bitsInLau>
+			<ipxact:endianness>little</ipxact:endianness>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>FPGA2SDRAM</ipxact:name>
+			<ipxact:description>Interface to access HPS DDR via HPS memory control.</ipxact:description>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="SDRAM_access" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="SDRAM_access.absDef" version="1.0"/>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:slave>
+				<ipxact:memoryMapRef memoryMapRef="RAM"/>
+			</ipxact:slave>
+			<ipxact:connectionRequired>false</ipxact:connectionRequired>
+			<ipxact:bitsInLau>8</ipxact:bitsInLau>
+			<ipxact:endianness>little</ipxact:endianness>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>mem_interface</ipxact:name>
+			<ipxact:description>Interface to access on-board DDR.</ipxact:description>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="memory_interface" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="memory_interface.absDef" version="1.0"/>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:master/>
+			<ipxact:connectionRequired>false</ipxact:connectionRequired>
+			<ipxact:bitsInLau>8</ipxact:bitsInLau>
+			<ipxact:endianness>little</ipxact:endianness>
+		</ipxact:busInterface>
+	</ipxact:busInterfaces>
+	<ipxact:memoryMaps>
+		<ipxact:memoryMap>
+			<ipxact:name>RAM</ipxact:name>
+			<ipxact:addressBlock>
+				<ipxact:name>Memory</ipxact:name>
+				<ipxact:baseAddress>'h0</ipxact:baseAddress>
+				<ipxact:range>'h3fffffff</ipxact:range>
+				<ipxact:width>64</ipxact:width>
+			</ipxact:addressBlock>
+			<ipxact:addressUnitBits>8</ipxact:addressUnitBits>
+		</ipxact:memoryMap>
+	</ipxact:memoryMaps>
+	<ipxact:model>
+		<ipxact:views>
+			<ipxact:view>
+				<ipxact:name>flat</ipxact:name>
+				<ipxact:envIdentifier>::</ipxact:envIdentifier>
+				<ipxact:componentInstantiationRef>flat</ipxact:componentInstantiationRef>
+			</ipxact:view>
+		</ipxact:views>
+		<ipxact:instantiations>
+			<ipxact:componentInstantiation>
+				<ipxact:name>flat</ipxact:name>
+			</ipxact:componentInstantiation>
+		</ipxact:instantiations>
+	</ipxact:model>
+	<ipxact:description>A memory contoller accessible via two memory controller interfaces and one Avalon bus. Accesses the memory component via memory interface.</ipxact:description>
+	<ipxact:vendorExtensions>
+		<kactus2:kts_attributes>
+			<kactus2:kts_productHier>IP</kactus2:kts_productHier>
+			<kactus2:kts_implementation>HW</kactus2:kts_implementation>
+			<kactus2:kts_firmness>Mutable</kactus2:kts_firmness>
+		</kactus2:kts_attributes>
+	</ipxact:vendorExtensions>
+</ipxact:component>

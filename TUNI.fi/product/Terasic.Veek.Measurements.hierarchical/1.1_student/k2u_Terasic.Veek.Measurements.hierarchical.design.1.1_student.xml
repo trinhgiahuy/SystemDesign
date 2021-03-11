@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014/ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>TUNI.fi</ipxact:vendor>
+	<ipxact:library>product</ipxact:library>
+	<ipxact:name>Terasic.Veek.Measurements.hierarchical.design</ipxact:name>
+	<ipxact:version>1.1_student</ipxact:version>
+	<ipxact:componentInstances>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>Terasic.Veek_0</ipxact:instanceName>
+			<ipxact:componentRef vendor="TUNI.fi" library="board" name="Terasic.Veek" version="1.2_student"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{14fa57b0-d9e7-46da-9e34-3bf77ad8a9e9}</kactus2:uuid>
+				<kactus2:portPositions/>
+				<kactus2:position x="160" y="60"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+	</ipxact:componentInstances>
+	<ipxact:vendorExtensions>
+		<kactus2:version>2,8,49,0</kactus2:version>
+		<kactus2:columnLayout>
+			<kactus2:column name="Components" contentType="2" allowedItems="2" minWidth="319" width="319" x="0"/>
+		</kactus2:columnLayout>
+		<kactus2:routes>
+			<kactus2:route kactus2:connRef="" kactus2:offPage="false">
+				<kactus2:position x="370" y="100"/>
+				<kactus2:position x="270" y="100"/>
+			</kactus2:route>
+		</kactus2:routes>
+	</ipxact:vendorExtensions>
+</ipxact:design>
