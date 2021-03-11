@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:designConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.tut.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>TUNI.COMP.CE.400</ipxact:vendor>
+	<ipxact:library>product</ipxact:library>
+	<ipxact:name>LED-Blinker.Veek-System.sysdesigncfg</ipxact:name>
+	<ipxact:version>1.0</ipxact:version>
+	<ipxact:designRef vendor="TUNI.COMP.CE.400" library="product" name="LED-Blinker.Veek-System.sysdesign" version="1.0"/>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>BlinkerApp_0</ipxact:instanceName>
+		<ipxact:view viewRef="default"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>BlinkerHAL_0</ipxact:instanceName>
+		<ipxact:view viewRef="default"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>FPGAHAL_0</ipxact:instanceName>
+		<ipxact:view viewRef="default"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>arm_cortex_a9_0</ipxact:instanceName>
+		<ipxact:view viewRef="gcc-tool-chain"/>
+	</ipxact:viewConfiguration>
+	<ipxact:vendorExtensions>
+		<kactus2:kts_attributes>
+			<kactus2:kts_implementation>SYS</kactus2:kts_implementation>
+		</kactus2:kts_attributes>
+		<kactus2:version>3,8,0,0</kactus2:version>
+	</ipxact:vendorExtensions>
+</ipxact:designConfiguration>
