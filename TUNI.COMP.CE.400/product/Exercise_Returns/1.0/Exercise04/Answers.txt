@@ -3,23 +3,49 @@ INCLUDE ANSWERS IN HERE
 1. Obviously, the blinker application of the exercise is implementable with hardware.
 What are the pros and cons of implementing it with hardware? Mention at least two pros and one con.
 
+-- Pros:
+   + Easier and faster implementation with HDLs.
+   + Do not need to manage memory.
+
+-- Con:
+   + Harder to integrate more complicated design.
+
 2. Are the LEDs active low or high? When you press a button, does it produce one or zero?
 
+-- When I press the button, it will produce one. Therefore, LEDs are active high.
+
 3. You had to generate addresses for components in Qsys. Why?
+
+-- Generated addresses in Qsys indicates the addresses of the components (here LEDs and Buttons).
+   Those are used to determine their physical addresses on the board.
 
 4. As you saw in the sources codes and the system designs in Kactus2,
 the application is separated from hardware with a HAL component. Why?
 
+-- "BlinkerHAL" stands in the middle between "BlinkerApp" application and "FPGAHAL".
+   It is used to map the component physical addresses to virtual addresses.
+
 5. The HAL layer maps a physical memory region to virtual memory before using it.
 Why it cannot use physical memory directly?
 
+-- Because physical memory is not directly accessible to software in the system.
+
 6. When you tried to execute the second build of the application on PC, it failed. Why? Mention at least two reasons.
+
+-- 
 
 7. Memory and connections were used for communication between hardware and software. How?
 
+-- Application (software) is connected to "BlinkerHAL" component with APP_API. 
+   FPGA (hardware) is connected to "BlinkerHAL" component with SWP_API.
+   Application accesses virtual memory addresses that were converted from physical addresses
+   by the "BlinkerHAL" component.
+
 8. What was hard? What was easy?
+
+-- It is quite straightforward, but still the memory allocation is complicated.
 
 9. Fill the used hours below, including answering questions and any downtime:
 
-	GROUP MEMBER 1:
-	GROUP MEMBER 2:
+	Quang: <04:00>
+	Huy  : <05:00>
