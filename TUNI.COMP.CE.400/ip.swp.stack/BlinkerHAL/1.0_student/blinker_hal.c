@@ -14,8 +14,8 @@
 #include "blinker_hal.h"
 
 //Base addresses for physical addresses of accessed FPGA components
-#define BUTTON_BASE <INSERT_ADDRESS_HERE>
-#define LED_BASE <INSERT_ADDRESS_HERE>
+#define BUTTON_BASE 0xff200020
+#define LED_BASE 0xff200000
 
 //Virtual addresses for mapped memories.
 uint8_t* btn_virt = NULL;
@@ -34,7 +34,7 @@ int init_our_mapping(uint8_t init, int fd)
 		printf("start our mem map\n");
 
 		//Mapping memory for button signals between HPS and FPGA.
-		btn_virt = (uint8_t*)map_phys_to_virt((uint32_t)<INSERT_ADDRESS_HERE>,1,&btn_vaddr,&btn_size,&fd);
+		btn_virt = (uint8_t*)map_phys_to_virt((uint32_t)(BUTTON_BASE),1,&btn_vaddr,&btn_size,&fd);
 		if(btn_virt == NULL)
 		{
 			printf("error mapping control register");
@@ -43,6 +43,12 @@ int init_our_mapping(uint8_t init, int fd)
 
 		//Mapping memory for led signals between HPS and FPGA.
 		//TODO: Make memory mapping for the LED PIO!
+		led_virt = (uint8_t*)map_phys_to_virt((uint32_t)(LED_BASE),1,&led_vaddr,&led_size,&fd);
+		if(led_virt == NULL)
+		{
+			printf("error mapping control register");
+			return 0;
+		}		
 
 		printf("our mem_map done\n");
 	}
