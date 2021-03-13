@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ipxact:design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014/ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+<ipxact:design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.tut.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 	<ipxact:vendor>TUNI.fi</ipxact:vendor>
 	<ipxact:library>soc</ipxact:library>
 	<ipxact:name>HPS.design</ipxact:name>
@@ -65,10 +65,10 @@
 			<ipxact:componentRef vendor="TUNI.fi" library="ip.hwp.com" name="peripherals.emac" version="1.0"/>
 			<ipxact:vendorExtensions>
 				<kactus2:uuid>{7e51ec2b-25ef-4efe-a2a5-98ede1ef86fd}</kactus2:uuid>
-				<kactus2:position x="280" y="460"/>
 				<kactus2:portPositions>
 					<kactus2:portPosition busRef="L3_interface" x="-110" y="40"/>
 				</kactus2:portPositions>
+				<kactus2:position x="280" y="460"/>
 			</ipxact:vendorExtensions>
 		</ipxact:componentInstance>
 		<ipxact:componentInstance>
@@ -245,8 +245,9 @@
 			<kactus2:position x="60" y="70"/>
 			<kactus2:direction x="1" y="0"/>
 		</kactus2:interfaceGraphics>
+		<kactus2:adHocVisibilities/>
 		<kactus2:note>
-			<kactus2:position x="0" y="80"/>
+			<kactus2:position x="590" y="370"/>
 			<kactus2:content>U.1 start
 U.7 start
 K.7 start</kactus2:content>
@@ -262,6 +263,39 @@ K.7 start</kactus2:content>
 				<kactus2:position x="600" y="90"/>
 			</kactus2:associations>
 			<kactus2:timestamp>16.2.2016 14:29:44</kactus2:timestamp>
+		</kactus2:note>
+		<kactus2:note>
+			<kactus2:position x="820" y="120"/>
+			<kactus2:content>U.2 end
+U.3 end
+U.11 start
+U.12 start
+U.13 start</kactus2:content>
+			<kactus2:associations>
+				<kactus2:position x="600" y="90"/>
+			</kactus2:associations>
+			<kactus2:timestamp>13.3.2021 16.14.00</kactus2:timestamp>
+		</kactus2:note>
+		<kactus2:note>
+			<kactus2:position x="590" y="450"/>
+			<kactus2:content>U.2 start
+U.3 start
+U.11 end
+U.12 end
+U.13 end</kactus2:content>
+			<kactus2:associations>
+				<kactus2:position x="280" y="110"/>
+			</kactus2:associations>
+			<kactus2:timestamp>13.3.2021 16.14.12</kactus2:timestamp>
+		</kactus2:note>
+		<kactus2:note>
+			<kactus2:position x="590" y="560"/>
+			<kactus2:content>U&amp;K 8,9 start
+U&amp;K 17,18,19 end</kactus2:content>
+			<kactus2:associations>
+				<kactus2:position x="280" y="110"/>
+			</kactus2:associations>
+			<kactus2:timestamp>13.3.2021 16.31.14</kactus2:timestamp>
 		</kactus2:note>
 	</ipxact:vendorExtensions>
 </ipxact:design>

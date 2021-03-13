@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ipxact:design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014/ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+<ipxact:design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.tut.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 	<ipxact:vendor>TUNI.fi</ipxact:vendor>
 	<ipxact:library>board</ipxact:library>
 	<ipxact:name>Terasic.Veek.design</ipxact:name>
@@ -48,6 +48,7 @@
 			</kactus2:route>
 			<kactus2:route kactus2:connRef="ram_ddr3_1_mem_interface_to_CycloneV_0_mem_interface_hps" kactus2:offPage="false"/>
 		</kactus2:routes>
+		<kactus2:adHocVisibilities/>
 		<kactus2:note>
 			<kactus2:position x="610" y="150"/>
 			<kactus2:content>U.7 end
@@ -56,6 +57,15 @@ K.7 end</kactus2:content>
 				<kactus2:position x="480" y="90"/>
 			</kactus2:associations>
 			<kactus2:timestamp>16.2.2016 14:29:32</kactus2:timestamp>
+		</kactus2:note>
+		<kactus2:note>
+			<kactus2:position x="460" y="230"/>
+			<kactus2:content>U&amp;K 8,9 end
+U&amp;K 17,18,19 start</kactus2:content>
+			<kactus2:associations>
+				<kactus2:position x="600" y="90"/>
+			</kactus2:associations>
+			<kactus2:timestamp>13.3.2021 16.32.46</kactus2:timestamp>
 		</kactus2:note>
 	</ipxact:vendorExtensions>
 </ipxact:design>
