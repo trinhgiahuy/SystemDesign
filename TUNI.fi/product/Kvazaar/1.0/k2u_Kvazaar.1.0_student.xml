@@ -89,6 +89,46 @@
 				<ipxact:fileType user="makefile">user</ipxact:fileType>
 			</ipxact:file>
 		</ipxact:fileSet>
+		<ipxact:fileSet>
+			<ipxact:name>SW-Timed-Simulation_general_files</ipxact:name>
+			<ipxact:group>sourceFiles</ipxact:group>
+			<ipxact:file>
+				<ipxact:name>../../Kvazaar.SW-Timed-Simulation/1.0/sw_SW-Timed-Simulation/Makefile</ipxact:name>
+				<ipxact:fileType user="makefile">user</ipxact:fileType>
+			</ipxact:file>
+		</ipxact:fileSet>
+		<ipxact:fileSet>
+			<ipxact:name>SW-Timed-Simulation_Kvazaar_0_headers</ipxact:name>
+			<ipxact:group>sourceFiles</ipxact:group>
+			<ipxact:file>
+				<ipxact:name>../../Kvazaar.SW-Timed-Simulation/1.0/sw_SW-Timed-Simulation/Kvazaar_0</ipxact:name>
+				<ipxact:fileType user="makefile">user</ipxact:fileType>
+			</ipxact:file>
+		</ipxact:fileSet>
+		<ipxact:fileSet>
+			<ipxact:name>SW-Timed-Simulation_Kvazaar_sim_support_0_headers</ipxact:name>
+			<ipxact:group>sourceFiles</ipxact:group>
+		</ipxact:fileSet>
+		<ipxact:fileSet>
+			<ipxact:name>HW-Timed-Simulation_general_files</ipxact:name>
+			<ipxact:group>sourceFiles</ipxact:group>
+			<ipxact:file>
+				<ipxact:name>../../Kvazaar.HW-Timed-Simulation/1.0/sw_HW-Timed-Simulation/Makefile</ipxact:name>
+				<ipxact:fileType user="makefile">user</ipxact:fileType>
+			</ipxact:file>
+		</ipxact:fileSet>
+		<ipxact:fileSet>
+			<ipxact:name>HW-Timed-Simulation_Kvazaar_0_headers</ipxact:name>
+			<ipxact:group>sourceFiles</ipxact:group>
+			<ipxact:file>
+				<ipxact:name>../../Kvazaar.HW-Timed-Simulation/1.0/sw_HW-Timed-Simulation/Kvazaar_0</ipxact:name>
+				<ipxact:fileType user="makefile">user</ipxact:fileType>
+			</ipxact:file>
+		</ipxact:fileSet>
+		<ipxact:fileSet>
+			<ipxact:name>HW-Timed-Simulation_Kvazaar_sim_support_0_headers</ipxact:name>
+			<ipxact:group>sourceFiles</ipxact:group>
+		</ipxact:fileSet>
 	</ipxact:fileSets>
 	<ipxact:vendorExtensions>
 		<kactus2:systemViews>
