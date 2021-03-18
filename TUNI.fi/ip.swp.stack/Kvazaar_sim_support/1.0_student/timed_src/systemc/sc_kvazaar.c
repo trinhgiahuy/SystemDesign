@@ -42,7 +42,7 @@ void wait_ns(int ns)
 // Delay function called from Kvazaar
 void kvazaar::delay_ns(int ns,int sel)
 {   
-    //wait_ns(ns);
+    // wait_ns(ns);
     if(sel == 0)
     {
 		rest_of_the_encoder_time += ns;
@@ -138,13 +138,13 @@ void kvazaar::sc_kvazaar_main()
 		printf("# %-22s : %10d Writes %10d Bytes #\n", "Orig data",data_transfers[ORIG],data_amount[ORIG]);
 		printf("# %-22s : %10d Reads  %10d Bytes #\n", "Lambda",data_transfers[LAMBDA],data_amount[LAMBDA]);
 		printf("# %-22s : %10d Reads  %10d Bytes #\n", "Results",data_transfers[RESULT],data_amount[RESULT]);
-		printf("# %-22s : %10.2lf %%                       #\n", "Transfers to/from HW",0.0/*TODO*/);
-		printf("# %-22s : %10.2lf %%                       #\n", "Intra rough search HW",0.0/*TODO*/);
+		printf("# %-22s : %10.2lf %%                       #\n", "Transfers to/from HW",t_time/(total_time)/*TODO*/);
+		printf("# %-22s : %10.2lf %%                       #\n", "Intra rough search HW",hw_time/(total_time)/*TODO*/);
 #endif
 #ifdef EXPLORATION_SW
-		printf("# %-22s : %10.2lf %%                       #\n","Intra rough search",0.0/*TODO*/);
+		printf("# %-22s : %10.2lf %%                       #\n","Intra rough search",irs_time/(total_time)/*TODO*/);
 #endif
-		printf("# %-22s : %10.2lf %%                       #\n","Rest of the encoder",0.0/*TODO*/);
+		printf("# %-22s : %10.2lf %%                       #\n","Rest of the encoder",rote_time/(total_time)/*TODO*/);
 		printf("###############################################################\n");
 	}
     sc_exit();
