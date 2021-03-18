@@ -223,6 +223,8 @@ void kvazaar_ip_sub::b_transport( tlm::tlm_generic_payload& trans, sc_time& dela
 				memcpy((char*)(&config[adr]), ptr, len);
 				config_valid = 1;
 			}
+			data_amount[CONFIG] += len;
+			data_transfers[CONFIG]++; 
 			break;
 		}
 		case UNFILT1_BASE:
@@ -239,6 +241,8 @@ void kvazaar_ip_sub::b_transport( tlm::tlm_generic_payload& trans, sc_time& dela
 				refs.filtered_initialized = 0;
 				unfilt1_valid = 1;
 			}
+			data_amount[UNFILT1] += len;
+			data_transfers[UNFILT1]++;
 			break;
 		}
 		case UNFILT2_BASE:
@@ -255,6 +259,8 @@ void kvazaar_ip_sub::b_transport( tlm::tlm_generic_payload& trans, sc_time& dela
 				refs.filtered_initialized = 0;
 				unfilt2_valid = 1;
 			}
+			data_amount[UNFILT2] += len;
+			data_transfers[UNFILT2]++;
 			break;
 		}
 		case ORIG_BLOCK_BASE:
@@ -270,6 +276,8 @@ void kvazaar_ip_sub::b_transport( tlm::tlm_generic_payload& trans, sc_time& dela
 				memcpy(&orig[adr], ptr, len);
 				orig_valid = 1;
 			}
+			data_amount[ORIG] += len;
+			data_transfers[ORIG]++;
 			break;
 		}
 		case LAMBDA_BASE:
@@ -286,6 +294,8 @@ void kvazaar_ip_sub::b_transport( tlm::tlm_generic_payload& trans, sc_time& dela
 				memcpy((char*)&lambda_cost, ptr, len);
 				lambda_valid = 1;
 			}
+			data_amount[LAMBDA] += len;
+			data_transfers[LAMBDA]++;
 			break;
 		}
 		case RESULT_BASE:
@@ -301,6 +311,8 @@ void kvazaar_ip_sub::b_transport( tlm::tlm_generic_payload& trans, sc_time& dela
 			{
 				memcpy((char*)&result, ptr, len);
 			}
+			data_amount[RESULT] += len;
+			data_transfers[RESULT]++;
 			break;
 		}
 		
