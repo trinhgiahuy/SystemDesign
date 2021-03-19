@@ -44,6 +44,10 @@ The delay is added through function "search_intra" in "search_intra.c" (line 683
 
 8. What percentages did you get for search_intra_rough/(HW-accelerator and transfers) and for the rest of the encoder, simulating Kvazaar on ARM and simulating the HW-accelerated version?
 
+# Transfers to/from HW   :       0.01 %                       #
+# Intra rough search HW  :       0.01 %                       #
+# Rest of the encoder    :       0.98 %                       #
+
 9. What does using wait() in delay_ns() cause?
 
 It increases the simulation time.
