@@ -23,8 +23,12 @@ The delay is added through function "search_intra_rough_delay" in "search_intra.
 The delay is added through function "search_intra" in "search_intra.c" (line 683). The added delay is cu_width*delay_c*rest_percentage_c = cu_width * 17000 * 0.4064. The function "search_intra" is also defined in "search_intra_supplement.c", where Kvazaar instance ip_acc_driver passes the delay to calculation via function "delay_ns" in "sc_kvazaar.c". This delay is accumulated in "rest_of_the_encoder" to give the simulation time. The HW simulation uses only this "rest_of_the_encoder" variable.
 
 5. Do you think the computation time/delay is calculated accurately enough?
+
+I think it is not enough, since we are just estimating the FPS with the constant delay_c.
 		
 6. How do we know the improvement we got with the HW accelerator is correct?
+
+I think it is because the FPS matches with real life (in previous exercises).
 
 7. How many data transfers happened and how much data was sent and read while simulating the HW-accelerated version?
 
@@ -50,9 +54,11 @@ The delay is added through function "search_intra" in "search_intra.c" (line 683
 
 9. What does using wait() in delay_ns() cause?
 
-It increases the simulation time.
+It increases the simulation time by making the simulation wait for each call of search intra function (both SW and HW).
 
 10. By looking at the two different waveforms, what kind of problems not using wait() causes?
+
+By not using wait(), the simulation time is shorter. (60 us vs. 3 ms), and the handshake signals have less time to communicate.
 
 11. What were your values for ARM_USED_CORES, arm_overclock_mhz_c, NUMBER_OF_ACCS and FPGA_FREQ_MHZ that achieved full HD real time encoding?
 
@@ -65,7 +71,9 @@ FPGA_FREQ_MHZ      : 287
 
 12. What was hard? What was easy?
 
+The theoretical part seems to be complicated, but the implementation is easy to understand.
+
 13. Fill the used hours below, including answering questions and any downtime:
 
-	Quang: 06:00
-	Huy  : 07:00
+	Quang: 07:00
+	Huy  : 08:00
