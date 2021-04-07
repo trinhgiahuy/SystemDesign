@@ -1,0 +1,718 @@
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CSXFC6D6F31C6
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_location_assignment PIN_D25 -to clk_osc1
+set_location_assignment PIN_F26 -to ddr3_hps_a[0]
+set_location_assignment PIN_G30 -to ddr3_hps_a[1]
+set_location_assignment PIN_F28 -to ddr3_hps_a[2]
+set_location_assignment PIN_F30 -to ddr3_hps_a[3]
+set_location_assignment PIN_J25 -to ddr3_hps_a[4]
+set_location_assignment PIN_J27 -to ddr3_hps_a[5]
+set_location_assignment PIN_F29 -to ddr3_hps_a[6]
+set_location_assignment PIN_E28 -to ddr3_hps_a[7]
+set_location_assignment PIN_H27 -to ddr3_hps_a[8]
+set_location_assignment PIN_G26 -to ddr3_hps_a[9]
+set_location_assignment PIN_D29 -to ddr3_hps_a[10]
+set_location_assignment PIN_C30 -to ddr3_hps_a[11]
+set_location_assignment PIN_B30 -to ddr3_hps_a[12]
+set_location_assignment PIN_C29 -to ddr3_hps_a[13]
+set_location_assignment PIN_H25 -to ddr3_hps_a[14]
+set_location_assignment PIN_E29 -to ddr3_hps_ba[0]
+set_location_assignment PIN_J24 -to ddr3_hps_ba[1]
+set_location_assignment PIN_J23 -to ddr3_hps_ba[2]
+set_location_assignment PIN_K28 -to ddr3_hps_dm[0]
+set_location_assignment PIN_M28 -to ddr3_hps_dm[1]
+set_location_assignment PIN_R28 -to ddr3_hps_dm[2]
+set_location_assignment PIN_W30 -to ddr3_hps_dm[3]
+set_location_assignment PIN_W27 -to ddr3_hps_dm[4]
+set_location_assignment PIN_K23 -to ddr3_hps_dq[0]
+set_location_assignment PIN_K22 -to ddr3_hps_dq[1]
+set_location_assignment PIN_H30 -to ddr3_hps_dq[2]
+set_location_assignment PIN_G28 -to ddr3_hps_dq[3]
+set_location_assignment PIN_L25 -to ddr3_hps_dq[4]
+set_location_assignment PIN_L24 -to ddr3_hps_dq[5]
+set_location_assignment PIN_J30 -to ddr3_hps_dq[6]
+set_location_assignment PIN_J29 -to ddr3_hps_dq[7]
+set_location_assignment PIN_K26 -to ddr3_hps_dq[8]
+set_location_assignment PIN_L26 -to ddr3_hps_dq[9]
+set_location_assignment PIN_K29 -to ddr3_hps_dq[10]
+set_location_assignment PIN_K27 -to ddr3_hps_dq[11]
+set_location_assignment PIN_M26 -to ddr3_hps_dq[12]
+set_location_assignment PIN_M27 -to ddr3_hps_dq[13]
+set_location_assignment PIN_L28 -to ddr3_hps_dq[14]
+set_location_assignment PIN_M30 -to ddr3_hps_dq[15]
+set_location_assignment PIN_U26 -to ddr3_hps_dq[16]
+set_location_assignment PIN_T26 -to ddr3_hps_dq[17]
+set_location_assignment PIN_N29 -to ddr3_hps_dq[18]
+set_location_assignment PIN_N28 -to ddr3_hps_dq[19]
+set_location_assignment PIN_P26 -to ddr3_hps_dq[20]
+set_location_assignment PIN_P27 -to ddr3_hps_dq[21]
+set_location_assignment PIN_N27 -to ddr3_hps_dq[22]
+set_location_assignment PIN_R29 -to ddr3_hps_dq[23]
+set_location_assignment PIN_P24 -to ddr3_hps_dq[24]
+set_location_assignment PIN_P25 -to ddr3_hps_dq[25]
+set_location_assignment PIN_T29 -to ddr3_hps_dq[26]
+set_location_assignment PIN_T28 -to ddr3_hps_dq[27]
+set_location_assignment PIN_R27 -to ddr3_hps_dq[28]
+set_location_assignment PIN_R26 -to ddr3_hps_dq[29]
+set_location_assignment PIN_V30 -to ddr3_hps_dq[30]
+set_location_assignment PIN_W29 -to ddr3_hps_dq[31]
+set_location_assignment PIN_W26 -to ddr3_hps_dq[32]
+set_location_assignment PIN_R24 -to ddr3_hps_dq[33]
+set_location_assignment PIN_U27 -to ddr3_hps_dq[34]
+set_location_assignment PIN_V28 -to ddr3_hps_dq[35]
+set_location_assignment PIN_T25 -to ddr3_hps_dq[36]
+set_location_assignment PIN_U25 -to ddr3_hps_dq[37]
+set_location_assignment PIN_V27 -to ddr3_hps_dq[38]
+set_location_assignment PIN_Y29 -to ddr3_hps_dq[39]
+set_location_assignment PIN_M19 -to ddr3_hps_dqs_n[0]
+set_location_assignment PIN_N24 -to ddr3_hps_dqs_n[1]
+set_location_assignment PIN_R18 -to ddr3_hps_dqs_n[2]
+set_location_assignment PIN_R21 -to ddr3_hps_dqs_n[3]
+set_location_assignment PIN_T23 -to ddr3_hps_dqs_n[4]
+set_location_assignment PIN_N18 -to ddr3_hps_dqs_p[0]
+set_location_assignment PIN_N25 -to ddr3_hps_dqs_p[1]
+set_location_assignment PIN_R19 -to ddr3_hps_dqs_p[2]
+set_location_assignment PIN_R22 -to ddr3_hps_dqs_p[3]
+set_location_assignment PIN_T24 -to ddr3_hps_dqs_p[4]
+set_location_assignment PIN_E27 -to ddr3_hps_casn
+set_location_assignment PIN_L29 -to ddr3_hps_cke
+set_location_assignment PIN_L23 -to ddr3_hps_clk_n
+set_location_assignment PIN_M23 -to ddr3_hps_clk_p
+set_location_assignment PIN_H24 -to ddr3_hps_csn
+set_location_assignment PIN_H28 -to ddr3_hps_odt
+set_location_assignment PIN_D30 -to ddr3_hps_rasn
+set_location_assignment PIN_P30 -to ddr3_hps_resetn
+set_location_assignment PIN_C28 -to ddr3_hps_wen
+set_location_assignment PIN_D27 -to ddr3_hps_rzq
+set_location_assignment PIN_F25 -to clk_osc2
+set_location_assignment PIN_C27 -to mictor_rstn
+set_location_assignment PIN_F23 -to hps_resetn
+set_location_assignment PIN_N30 -to user_dipsw_hps[0]
+set_location_assignment PIN_P29 -to user_dipsw_hps[1]
+set_location_assignment PIN_P22 -to user_dipsw_hps[2]
+set_location_assignment PIN_V20 -to user_dipsw_hps[3]
+set_location_assignment PIN_E17 -to user_led_hps[0]
+set_location_assignment PIN_E18 -to user_led_hps[1]
+set_location_assignment PIN_G17 -to user_led_hps[2]
+set_location_assignment PIN_C18 -to user_led_hps[3]
+set_location_assignment PIN_T30 -to user_pb_hps[0]
+set_location_assignment PIN_U28 -to user_pb_hps[1]
+set_location_assignment PIN_T21 -to user_pb_hps[2]
+set_location_assignment PIN_U20 -to user_pb_hps[3]
+set_location_assignment PIN_E24 -to uart_rx
+set_location_assignment PIN_D24 -to uart_tx
+set_location_assignment PIN_D22 -to i2c_scl_hps
+set_location_assignment PIN_C23 -to i2c_sda_hps
+set_location_assignment PIN_H20 -to spi_csn
+set_location_assignment PIN_B23 -to spi_miso
+set_location_assignment PIN_C22 -to spi_mosi
+set_location_assignment PIN_A23 -to spi_sck
+set_location_assignment PIN_D19 -to qspi_clk
+set_location_assignment PIN_C20 -to qspi_io[0]
+set_location_assignment PIN_H18 -to qspi_io[1]
+set_location_assignment PIN_A19 -to qspi_io[2]
+set_location_assignment PIN_E19 -to qspi_io[3]
+set_location_assignment PIN_A18 -to qspi_ss0
+set_location_assignment PIN_B16 -to sd_dat[3]
+set_location_assignment PIN_A16 -to sd_clk
+set_location_assignment PIN_F18 -to sd_cmd
+set_location_assignment PIN_G18 -to sd_dat[0]
+set_location_assignment PIN_C17 -to sd_dat[1]
+set_location_assignment PIN_D17 -to sd_dat[2]
+set_location_assignment PIN_B17 -to sd_pwren
+set_location_assignment PIN_N16 -to usb_clk
+set_location_assignment PIN_E16 -to usb_data[0]
+set_location_assignment PIN_G16 -to usb_data[1]
+set_location_assignment PIN_D16 -to usb_data[2]
+set_location_assignment PIN_D14 -to usb_data[3]
+set_location_assignment PIN_A15 -to usb_data[4]
+set_location_assignment PIN_C14 -to usb_data[5]
+set_location_assignment PIN_D15 -to usb_data[6]
+set_location_assignment PIN_M17 -to usb_data[7]
+set_location_assignment PIN_A14 -to usb_nxt
+set_location_assignment PIN_E14 -to usb_dir
+set_location_assignment PIN_C15 -to usb_stp
+set_location_assignment PIN_H19 -to enet_hps_gtx_clk
+set_location_assignment PIN_B21 -to enet_hps_mdc
+set_location_assignment PIN_E21 -to enet_hps_mdio
+set_location_assignment PIN_G20 -to enet_hps_rx_clk
+set_location_assignment PIN_K17 -to enet_hps_rx_dv
+set_location_assignment PIN_A21 -to enet_hps_rxd[0]
+set_location_assignment PIN_B20 -to enet_hps_rxd[1]
+set_location_assignment PIN_B18 -to enet_hps_rxd[2]
+set_location_assignment PIN_D21 -to enet_hps_rxd[3]
+set_location_assignment PIN_A20 -to enet_hps_tx_en
+set_location_assignment PIN_F20 -to enet_hps_txd[0]
+set_location_assignment PIN_J19 -to enet_hps_txd[1]
+set_location_assignment PIN_F21 -to enet_hps_txd[2]
+set_location_assignment PIN_F19 -to enet_hps_txd[3]
+set_location_assignment PIN_C19 -to enet_hps_intn
+set_location_assignment PIN_B22 -to can_0_rx
+set_location_assignment PIN_G22 -to can_0_tx
+set_location_assignment PIN_B26 -to trace_clk_mic
+set_location_assignment PIN_B25 -to trace_data[0]
+set_location_assignment PIN_C25 -to trace_data[1]
+set_location_assignment PIN_A25 -to trace_data[2]
+set_location_assignment PIN_H23 -to trace_data[3]
+set_location_assignment PIN_A24 -to trace_data[4]
+set_location_assignment PIN_G21 -to trace_data[5]
+set_location_assignment PIN_C24 -to trace_data[6]
+set_location_assignment PIN_E23 -to trace_data[7]
+set_location_assignment PIN_AB27 -to clk_100m_fpga
+set_location_assignment PIN_AC18 -to clk_50m_fpga
+set_location_assignment PIN_AF14 -to clk_bot1
+set_location_assignment PIN_Y26 -to clk_enet_fpga_p
+set_location_assignment PIN_AA26 -to clk_top1
+set_location_assignment PIN_AJ14 -to ddr3_fpga_a[0]
+set_location_assignment PIN_AK14 -to ddr3_fpga_a[1]
+set_location_assignment PIN_AH12 -to ddr3_fpga_a[2]
+set_location_assignment PIN_AJ12 -to ddr3_fpga_a[3]
+set_location_assignment PIN_AG15 -to ddr3_fpga_a[4]
+set_location_assignment PIN_AH15 -to ddr3_fpga_a[5]
+set_location_assignment PIN_AK12 -to ddr3_fpga_a[6]
+set_location_assignment PIN_AK13 -to ddr3_fpga_a[7]
+set_location_assignment PIN_AH13 -to ddr3_fpga_a[8]
+set_location_assignment PIN_AH14 -to ddr3_fpga_a[9]
+set_location_assignment PIN_AJ9 -to ddr3_fpga_a[10]
+set_location_assignment PIN_AK9 -to ddr3_fpga_a[11]
+set_location_assignment PIN_AK7 -to ddr3_fpga_a[12]
+set_location_assignment PIN_AK8 -to ddr3_fpga_a[13]
+set_location_assignment PIN_AG12 -to ddr3_fpga_a[14]
+set_location_assignment PIN_AH10 -to ddr3_fpga_ba[0]
+set_location_assignment PIN_AJ11 -to ddr3_fpga_ba[1]
+set_location_assignment PIN_AK11 -to ddr3_fpga_ba[2]
+set_location_assignment PIN_AH7 -to ddr3_fpga_casn
+set_location_assignment PIN_AJ21 -to ddr3_fpga_cke
+set_location_assignment PIN_AA15 -to ddr3_fpga_clk_n
+set_location_assignment PIN_AA14 -to ddr3_fpga_clk_p
+set_location_assignment PIN_AB15 -to ddr3_fpga_csn
+set_location_assignment PIN_AH17 -to ddr3_fpga_dm[0]
+set_location_assignment PIN_AG23 -to ddr3_fpga_dm[1]
+set_location_assignment PIN_AK23 -to ddr3_fpga_dm[2]
+set_location_assignment PIN_AJ27 -to ddr3_fpga_dm[3]
+set_location_assignment PIN_AF18 -to ddr3_fpga_dq[0]
+set_location_assignment PIN_AE17 -to ddr3_fpga_dq[1]
+set_location_assignment PIN_AG16 -to ddr3_fpga_dq[2]
+set_location_assignment PIN_AF16 -to ddr3_fpga_dq[3]
+set_location_assignment PIN_AH20 -to ddr3_fpga_dq[4]
+set_location_assignment PIN_AG21 -to ddr3_fpga_dq[5]
+set_location_assignment PIN_AJ16 -to ddr3_fpga_dq[6]
+set_location_assignment PIN_AH18 -to ddr3_fpga_dq[7]
+set_location_assignment PIN_AK18 -to ddr3_fpga_dq[8]
+set_location_assignment PIN_AJ17 -to ddr3_fpga_dq[9]
+set_location_assignment PIN_AG18 -to ddr3_fpga_dq[10]
+set_location_assignment PIN_AK19 -to ddr3_fpga_dq[11]
+set_location_assignment PIN_AG20 -to ddr3_fpga_dq[12]
+set_location_assignment PIN_AF19 -to ddr3_fpga_dq[13]
+set_location_assignment PIN_AJ20 -to ddr3_fpga_dq[14]
+set_location_assignment PIN_AH24 -to ddr3_fpga_dq[15]
+set_location_assignment PIN_AE19 -to ddr3_fpga_dq[16]
+set_location_assignment PIN_AE18 -to ddr3_fpga_dq[17]
+set_location_assignment PIN_AG22 -to ddr3_fpga_dq[18]
+set_location_assignment PIN_AK22 -to ddr3_fpga_dq[19]
+set_location_assignment PIN_AF21 -to ddr3_fpga_dq[20]
+set_location_assignment PIN_AF20 -to ddr3_fpga_dq[21]
+set_location_assignment PIN_AH23 -to ddr3_fpga_dq[22]
+set_location_assignment PIN_AK24 -to ddr3_fpga_dq[23]
+set_location_assignment PIN_AF24 -to ddr3_fpga_dq[24]
+set_location_assignment PIN_AF23 -to ddr3_fpga_dq[25]
+set_location_assignment PIN_AJ24 -to ddr3_fpga_dq[26]
+set_location_assignment PIN_AK26 -to ddr3_fpga_dq[27]
+set_location_assignment PIN_AE23 -to ddr3_fpga_dq[28]
+set_location_assignment PIN_AE22 -to ddr3_fpga_dq[29]
+set_location_assignment PIN_AG25 -to ddr3_fpga_dq[30]
+set_location_assignment PIN_AK27 -to ddr3_fpga_dq[31]
+set_location_assignment PIN_W16 -to ddr3_fpga_dqs_n[0]
+set_location_assignment PIN_W17 -to ddr3_fpga_dqs_n[1]
+set_location_assignment PIN_AA18 -to ddr3_fpga_dqs_n[2]
+set_location_assignment PIN_AD19 -to ddr3_fpga_dqs_n[3]
+set_location_assignment PIN_V16 -to ddr3_fpga_dqs_p[0]
+set_location_assignment PIN_V17 -to ddr3_fpga_dqs_p[1]
+set_location_assignment PIN_Y17 -to ddr3_fpga_dqs_p[2]
+set_location_assignment PIN_AC20 -to ddr3_fpga_dqs_p[3]
+set_location_assignment PIN_AE16 -to ddr3_fpga_odt
+set_location_assignment PIN_AH8 -to ddr3_fpga_rasn
+set_location_assignment PIN_AK21 -to ddr3_fpga_resetn
+set_location_assignment PIN_AJ6 -to ddr3_fpga_wen
+set_location_assignment PIN_AB22 -to enet1_tx_en
+set_location_assignment PIN_AB26 -to enet1_tx_d[3]
+set_location_assignment PIN_AA25 -to enet1_tx_d[2]
+set_location_assignment PIN_Y21 -to enet1_tx_d[1]
+set_location_assignment PIN_W20 -to enet1_tx_d[0]
+set_location_assignment PIN_W25 -to enet1_tx_clk_fb
+set_location_assignment PIN_AE28 -to enet1_rx_error
+set_location_assignment PIN_Y23 -to enet1_rx_dv
+set_location_assignment PIN_AE27 -to enet1_rx_d[3]
+set_location_assignment PIN_AB25 -to enet1_rx_d[2]
+set_location_assignment PIN_AA24 -to enet1_rx_d[1]
+set_location_assignment PIN_AB23 -to enet1_rx_d[0]
+set_location_assignment PIN_Y24 -to enet1_rx_clk
+set_location_assignment PIN_W24 -to enet2_tx_en
+set_location_assignment PIN_V23 -to enet2_tx_d[3]
+set_location_assignment PIN_AF28 -to enet2_tx_d[2]
+set_location_assignment PIN_AG28 -to enet2_tx_d[1]
+set_location_assignment PIN_AG27 -to enet2_tx_d[0]
+set_location_assignment PIN_AG30 -to enet2_tx_clk_fb
+set_location_assignment PIN_V25 -to enet2_rx_error
+set_location_assignment PIN_AC28 -to enet2_rx_dv
+set_location_assignment PIN_AC27 -to enet2_rx_d[3]
+set_location_assignment PIN_AD26 -to enet2_rx_d[2]
+set_location_assignment PIN_AF30 -to enet2_rx_d[1]
+set_location_assignment PIN_AF29 -to enet2_rx_d[0]
+set_location_assignment PIN_AH30 -to enet2_rx_clk
+set_location_assignment PIN_AC29 -to sdi_tx_sd_hdn
+set_location_assignment PIN_AA30 -to sdi_tx_en
+set_location_assignment PIN_AA28 -to sdi_rx_en
+set_location_assignment PIN_AB28 -to sdi_rx_bypass
+set_location_assignment PIN_AB30 -to sdi_rsti
+set_location_assignment PIN_AD30 -to sdi_fault
+set_location_assignment PIN_AB12 -to sdi_clk148_up
+set_location_assignment PIN_AF6 -to sdi_clk148_dn
+set_location_assignment PIN_AG10 -to user_dipsw_fpga[0]
+set_location_assignment PIN_AH9 -to user_dipsw_fpga[1]
+set_location_assignment PIN_AF11 -to user_dipsw_fpga[2]
+set_location_assignment PIN_AG11 -to user_dipsw_fpga[3]
+set_location_assignment PIN_AK2 -to user_led_fpga[0]
+set_location_assignment PIN_Y16 -to user_led_fpga[1]
+set_location_assignment PIN_W15 -to user_led_fpga[2]
+set_location_assignment PIN_AB17 -to user_led_fpga[3]
+set_location_assignment PIN_AA13 -to user_pb_fpga[0]
+set_location_assignment PIN_AB13 -to user_pb_fpga[1]
+set_location_assignment PIN_AG17 -to ddr3_fpga_rzq
+set_location_assignment PIN_W21 -to pcie_perstn_in
+set_location_assignment PIN_AG6 -to pcie_perstn_out
+set_location_assignment PIN_W7 -to pcie_refclk_n
+set_location_assignment PIN_W8 -to pcie_refclk_p
+set_location_assignment PIN_AE1 -to pcie_rx_n[0]
+set_location_assignment PIN_AC1 -to pcie_rx_n[1]
+set_location_assignment PIN_AA1 -to pcie_rx_n[2]
+set_location_assignment PIN_W1 -to pcie_rx_n[3]
+set_location_assignment PIN_AE2 -to pcie_rx_p[0]
+set_location_assignment PIN_AC2 -to pcie_rx_p[1]
+set_location_assignment PIN_AA2 -to pcie_rx_p[2]
+set_location_assignment PIN_W2 -to pcie_rx_p[3]
+set_location_assignment PIN_AD3 -to pcie_tx_n[0]
+set_location_assignment PIN_AB3 -to pcie_tx_n[1]
+set_location_assignment PIN_Y3 -to pcie_tx_n[2]
+set_location_assignment PIN_V3 -to pcie_tx_n[3]
+set_location_assignment PIN_AD4 -to pcie_tx_p[0]
+set_location_assignment PIN_AB4 -to pcie_tx_p[1]
+set_location_assignment PIN_Y4 -to pcie_tx_p[2]
+set_location_assignment PIN_V4 -to pcie_tx_p[3]
+set_location_assignment PIN_AF13 -to usb_b2_clk
+set_location_assignment PIN_AK28 -to usb_b2_data[0]
+set_location_assignment PIN_AD20 -to usb_b2_data[1]
+set_location_assignment PIN_AD21 -to usb_b2_data[2]
+set_location_assignment PIN_Y19 -to usb_b2_data[3]
+set_location_assignment PIN_AA20 -to usb_b2_data[4]
+set_location_assignment PIN_AH27 -to usb_b2_data[5]
+set_location_assignment PIN_AF25 -to usb_b2_data[6]
+set_location_assignment PIN_AC22 -to usb_b2_data[7]
+set_location_assignment PIN_AD27 -to cpu_resetn
+set_location_assignment PIN_AG5 -to enet1_tx_error
+set_location_assignment PIN_AH5 -to enet2_tx_error
+set_location_assignment PIN_AJ1 -to enet_dual_resetn
+set_location_assignment PIN_T9 -to clk_148_p
+set_location_assignment PIN_G7 -to i2c_scl_fpga
+set_location_assignment PIN_F6 -to i2c_sda_fpga
+set_location_assignment PIN_AJ4 -to usb_empty
+set_location_assignment PIN_AK3 -to usb_full
+set_location_assignment PIN_AE14 -to usb_oen
+set_location_assignment PIN_AJ5 -to usb_rdn
+set_location_assignment PIN_AD14 -to usb_resetn
+set_location_assignment PIN_AK4 -to usb_scl
+set_location_assignment PIN_AE13 -to usb_sda
+set_location_assignment PIN_AK6 -to usb_wrn
+set_location_assignment PIN_H12 -to enet_fpga_mdc
+set_location_assignment PIN_H13 -to enet_fpga_mdio
+set_location_assignment PIN_T8 -to clk_148_n
+set_location_assignment PIN_Y27 -to clk_enet_fpga_n
+set_location_assignment PIN_U1 -to gxb_rx_l4_n
+set_location_assignment PIN_U2 -to gxb_rx_l4_p
+set_location_assignment PIN_T3 -to gxb_tx_l4_n
+set_location_assignment PIN_T4 -to gxb_tx_l4_p
+set_location_assignment PIN_P8 -to refclk_ql2_n
+set_location_assignment PIN_P9 -to refclk_ql2_p
+set_location_assignment PIN_AE29 -to pcie_smbclk
+set_location_assignment PIN_J14 -to pcie_smbdat
+set_location_assignment PIN_W22 -to pcie_waken
+set_location_assignment PIN_AD25 -to max_fpga_miso
+set_location_assignment PIN_AE26 -to max_fpga_mosi
+set_location_assignment PIN_AJ29 -to max_fpga_sck
+set_location_assignment PIN_AC25 -to max_fpga_ssel
+set_location_assignment PIN_AD29 -to pcie_prsnt2_x1
+set_location_assignment PIN_A11 -to pcie_prsnt2_x4
+set_location_assignment PIN_AA16 -to clk_25m_fpga
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_rzq -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[0] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[1] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[2] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[3] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[4] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[5] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[6] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[7] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[8] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[9] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[10] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[11] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[12] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[13] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[14] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[15] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[16] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[17] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[18] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[19] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[20] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[21] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[22] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[23] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[24] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[25] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[26] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[27] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[28] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[29] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[30] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[31] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[32] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[33] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[34] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[35] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[36] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[37] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[38] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dq[39] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3_hps_dqs_p[0] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3_hps_dqs_p[1] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3_hps_dqs_p[2] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3_hps_dqs_p[3] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3_hps_dqs_p[4] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3_hps_dqs_n[0] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3_hps_dqs_n[1] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3_hps_dqs_n[2] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3_hps_dqs_n[3] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3_hps_dqs_n[4] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3_hps_clk_p -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3_hps_clk_n -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_a[0] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_hps_a[0] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_a[10] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_hps_a[10] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_a[11] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_hps_a[11] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_a[12] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_hps_a[12] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_a[13] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_hps_a[13] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_a[14] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_hps_a[14] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_a[1] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_hps_a[1] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_a[2] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_hps_a[2] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_a[3] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_hps_a[3] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_a[4] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_hps_a[4] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_a[5] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_hps_a[5] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_a[6] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_hps_a[6] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_a[7] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_hps_a[7] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_a[8] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_hps_a[8] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_a[9] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_hps_a[9] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_ba[0] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_hps_ba[0] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_ba[1] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_hps_ba[1] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_ba[2] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_hps_ba[2] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_casn -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_hps_casn -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_cke -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_hps_cke -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_csn -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_hps_csn -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_odt -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_hps_odt -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_rasn -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_hps_rasn -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_wen -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_hps_wen -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_resetn -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_hps_resetn -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dm[0] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dm[1] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dm[2] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dm[3] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_hps_dm[4] -tag __hps_sdram_p0
+set_global_assignment -name SMART_RECOMPILE ON
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_location_assignment PIN_AJ2 -to CAMERA_XCLKIN
+set_location_assignment PIN_H7 -to CAMERA_D[11]
+set_location_assignment PIN_J7 -to CAMERA_D[10]
+set_location_assignment PIN_G11 -to CAMERA_D[9]
+set_location_assignment PIN_G12 -to CAMERA_D[8]
+set_location_assignment PIN_K8 -to CAMERA_D[7]
+set_location_assignment PIN_K7 -to CAMERA_D[6]
+set_location_assignment PIN_J9 -to CAMERA_D[5]
+set_location_assignment PIN_J10 -to CAMERA_D[4]
+set_location_assignment PIN_J12 -to CAMERA_D[3]
+set_location_assignment PIN_K12 -to CAMERA_D[2]
+set_location_assignment PIN_G13 -to CAMERA_D[1]
+set_location_assignment PIN_H14 -to CAMERA_D[0]
+set_location_assignment PIN_E8 -to CAMERA_FVAL
+set_location_assignment PIN_D7 -to CAMERA_LVAL
+set_location_assignment PIN_AG2 -to CAMERA_PIXCLK
+set_location_assignment PIN_E4 -to CAMERA_RESET_n
+set_location_assignment PIN_AF9 -to CAMERA_SCLK
+set_location_assignment PIN_AG7 -to CAMERA_SDATA
+set_location_assignment PIN_D6 -to CAMERA_STROBE
+set_location_assignment PIN_C5 -to CAMERA_TRIGGER
+set_location_assignment PIN_E1 -to GSENSOR_ALT_ADDR
+set_location_assignment PIN_D4 -to GSENSOR_CS_n
+set_location_assignment PIN_E3 -to GSENSOR_INT1
+set_location_assignment PIN_E2 -to GSENSOR_INT2
+set_location_assignment PIN_D2 -to GSENSOR_SCL_SCLK
+set_location_assignment PIN_D1 -to GSENSOR_SDA_SDI_SDIO
+set_location_assignment PIN_F9 -to LCD_B[7]
+set_location_assignment PIN_F8 -to LCD_B[6]
+set_location_assignment PIN_F11 -to LCD_B[5]
+set_location_assignment PIN_E11 -to LCD_B[4]
+set_location_assignment PIN_A4 -to LCD_B[3]
+set_location_assignment PIN_A3 -to LCD_B[2]
+set_location_assignment PIN_D5 -to LCD_B[1]
+set_location_assignment PIN_C4 -to LCD_B[0]
+set_location_assignment PIN_E6 -to LCD_DCLK
+set_location_assignment PIN_C3 -to LCD_DE
+set_location_assignment PIN_F13 -to LCD_DIM
+set_location_assignment PIN_H8 -to LCD_DITH
+set_location_assignment PIN_B6 -to LCD_G[7]
+set_location_assignment PIN_B5 -to LCD_G[6]
+set_location_assignment PIN_E9 -to LCD_G[5]
+set_location_assignment PIN_D9 -to LCD_G[4]
+set_location_assignment PIN_D11 -to LCD_G[3]
+set_location_assignment PIN_D10 -to LCD_G[2]
+set_location_assignment PIN_E12 -to LCD_G[1]
+set_location_assignment PIN_D12 -to LCD_G[0]
+set_location_assignment PIN_C12 -to LCD_HSD
+set_location_assignment PIN_G8 -to LCD_MODE
+set_location_assignment PIN_G10 -to LCD_POWER_CTL
+set_location_assignment PIN_A9 -to LCD_R[7]
+set_location_assignment PIN_A8 -to LCD_R[6]
+set_location_assignment PIN_C8 -to LCD_R[5]
+set_location_assignment PIN_B8 -to LCD_R[4]
+set_location_assignment PIN_C10 -to LCD_R[3]
+set_location_assignment PIN_C9 -to LCD_R[2]
+set_location_assignment PIN_B13 -to LCD_R[1]
+set_location_assignment PIN_A13 -to LCD_R[0]
+set_location_assignment PIN_B1 -to LCD_RSTB
+set_location_assignment PIN_B3 -to LCD_SHLR
+set_location_assignment PIN_B2 -to LCD_UPDN
+set_location_assignment PIN_B11 -to LCD_VSD
+set_location_assignment PIN_A6 -to LSENSOR_ADDR_SEL
+set_location_assignment PIN_B7 -to LSENSOR_INT
+set_location_assignment PIN_A5 -to LSENSOR_SCL
+set_location_assignment PIN_C7 -to LSENSOR_SDA
+set_location_assignment PIN_F14 -to TOUCH_I2C_SCL
+set_location_assignment PIN_F15 -to TOUCH_I2C_SDA
+set_location_assignment PIN_B12 -to TOUCH_INT_n
+set_instance_assignment -name IO_STANDARD "1.5 V" -to clk_25m_fpga
+set_instance_assignment -name IO_STANDARD "1.5 V" -to clk_50m_fpga
+set_instance_assignment -name IO_STANDARD "2.5 V" -to clk_100m_fpga
+set_instance_assignment -name IO_STANDARD "1.5 V" -to clk_bot1
+set_instance_assignment -name IO_STANDARD "2.5 V" -to clk_top1
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_a[14]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_fpga_a[14]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_a[13]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_fpga_a[13]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_a[12]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_fpga_a[12]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_a[11]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_fpga_a[11]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_a[10]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_fpga_a[10]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_a[9]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_fpga_a[9]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_a[8]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_fpga_a[8]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_a[7]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_fpga_a[7]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_a[6]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_fpga_a[6]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_a[5]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_fpga_a[5]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_a[4]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_fpga_a[4]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_a[3]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_fpga_a[3]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_a[2]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_fpga_a[2]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_a[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_fpga_a[1]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_a[0]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_fpga_a[0]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_ba[2]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_fpga_ba[2]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_ba[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_fpga_ba[1]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_ba[0]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_fpga_ba[0]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_casn
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_fpga_casn
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_cke
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_fpga_cke
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3_fpga_clk_n
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3_fpga_clk_p
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_csn
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_fpga_csn
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_dm[3]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_dm[2]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_dm[1]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_dm[0]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_dq[31]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_dq[30]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_dq[29]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_dq[28]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_dq[27]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_dq[26]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_dq[25]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_dq[24]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_dq[23]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_dq[22]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_dq[21]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_dq[20]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_dq[19]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_dq[18]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_dq[17]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_dq[16]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_dq[15]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_dq[14]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_dq[13]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_dq[12]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_dq[11]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_dq[10]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_dq[9]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_dq[8]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_dq[7]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_dq[6]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_dq[5]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_dq[4]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_dq[3]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_dq[2]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_dq[1]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_dq[0]
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3_fpga_dqs_n[3]
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3_fpga_dqs_n[2]
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3_fpga_dqs_n[1]
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3_fpga_dqs_n[0]
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3_fpga_dqs_p[3]
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3_fpga_dqs_p[2]
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3_fpga_dqs_p[1]
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to ddr3_fpga_dqs_p[0]
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_odt
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_fpga_odt
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_rasn
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_fpga_rasn
+set_instance_assignment -name IO_STANDARD "1.5 V" -to ddr3_fpga_resetn
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_fpga_resetn
+set_instance_assignment -name IO_STANDARD "SSTL-15" -to ddr3_fpga_rzq
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to ddr3_fpga_wen
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr3_fpga_wen
+set_instance_assignment -name IO_STANDARD "1.5 V" -to user_dipsw_fpga[3]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to user_dipsw_fpga[2]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to user_dipsw_fpga[1]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to user_dipsw_fpga[0]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to user_led_fpga[3]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to user_led_fpga[2]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to user_led_fpga[1]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to user_led_fpga[0]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to user_pb_fpga[1]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to user_pb_fpga[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to clk_osc1
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to "ddr3_hps_dqs_n[0](n)"
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to "ddr3_hps_dqs_n[1](n)"
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to "ddr3_hps_dqs_n[2](n)"
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to "ddr3_hps_dqs_n[3](n)"
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to "ddr3_hps_dqs_n[4](n)"
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to "ddr3_hps_dqs_p[0](n)"
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to "ddr3_hps_dqs_p[1](n)"
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to "ddr3_hps_dqs_p[2](n)"
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to "ddr3_hps_dqs_p[3](n)"
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to "ddr3_hps_dqs_p[4](n)"
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to clk_osc2
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to mictor_rstn
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to hps_resetn
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to uart_rx
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to uart_tx
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to i2c_scl_hps
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to i2c_sda_hps
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to spi_csn
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to spi_miso
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to spi_mosi
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to spi_sck
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to qspi_clk
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to qspi_ss0
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sd_clk
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sd_cmd
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sd_pwren
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to usb_clk
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to usb_nxt
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to usb_dir
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to usb_stp
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to enet_hps_gtx_clk
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to enet_hps_mdc
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to enet_hps_mdio
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to enet_hps_rx_clk
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to enet_hps_rx_dv
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to enet_hps_tx_en
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to enet_hps_intn
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to can_0_rx
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to can_0_tx
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to trace_clk_mic
+set_instance_assignment -name IO_STANDARD LVDS -to clk_enet_fpga_p
+set_instance_assignment -name IO_STANDARD LVDS -to pcie_refclk_n
+set_instance_assignment -name IO_STANDARD LVDS -to pcie_refclk_p
+set_instance_assignment -name IO_STANDARD "1.5 V" -to usb_b2_clk
+set_instance_assignment -name IO_STANDARD LVDS -to clk_148_p
+set_instance_assignment -name IO_STANDARD LVDS -to clk_148_n
+set_instance_assignment -name IO_STANDARD LVDS -to clk_enet_fpga_n
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to gxb_rx_l4_n
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to gxb_rx_l4_p
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to gxb_tx_l4_n
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to gxb_tx_l4_p
+set_instance_assignment -name IO_STANDARD LVDS -to refclk_ql2_n
+set_instance_assignment -name IO_STANDARD LVDS -to refclk_ql2_p
+set_instance_assignment -name IO_STANDARD "1.5 V" -to user_dipsw_hps
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to user_led_hps
+set_instance_assignment -name IO_STANDARD "1.5 V" -to user_pb_hps
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to qspi_io
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sd_dat
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to usb_data
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to enet_hps_rxd
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to enet_hps_txd
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to trace_data
+set_instance_assignment -name IO_STANDARD "1.5 V" -to usb_b2_data
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to pcie_tx_p
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to "pcie_tx_p(n)"
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to pcie_rx_p
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to "pcie_rx_p(n)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to gpio09
+set_location_assignment PIN_B15 -to gpio09
+set_global_assignment -name OPTIMIZATION_TECHNIQUE SPEED
+set_global_assignment -name OPTIMIZATION_MODE "HIGH PERFORMANCE EFFORT"
+set_global_assignment -name SYNTH_TIMING_DRIVEN_SYNTHESIS ON
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name OPTIMIZE_HOLD_TIMING "ALL PATHS"
+set_global_assignment -name FITTER_EFFORT "STANDARD FIT"

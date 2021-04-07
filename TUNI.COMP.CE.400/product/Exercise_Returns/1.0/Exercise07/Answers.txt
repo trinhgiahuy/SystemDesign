@@ -1,0 +1,16 @@
+INCLUDE ANSWERS IN HERE
+
+1. What was your frame rate when running Kvazaar with the IP accelerator? 
+
+2. In exercise 5, you made some prediction about accelerated frame rate. It probably did not match the results of this exercise. Why?
+
+3. On the other hand, the estimation done in exercise 6 was probably much closer. Why?
+
+4. What problem does running the camera user application in continuous mode seem to cause in the captured video?
+HINT: The watermark is not caused by the continuous mode.
+
+5. What was hard? What was easy?
+
+6. How many hours did the exercise take per person, including answering questions and any downtime?
+   GROUP MEMBER 1:
+   GROUP MEMBER 2:

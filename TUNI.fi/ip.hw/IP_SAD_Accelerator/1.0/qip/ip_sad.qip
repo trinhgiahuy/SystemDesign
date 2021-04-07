@@ -1,0 +1,8 @@
+set_global_assignment -name VQM_FILE [file join $::quartus(qip_path) "../vqm_src/main_ip_get_dc.vqm"]
+set_global_assignment -name VQM_FILE [file join $::quartus(qip_path) "../vqm_src/main_ip_get_ang_zero.vqm"]
+set_global_assignment -name VQM_FILE [file join $::quartus(qip_path) "../vqm_src/main_ip_get_ang_pos.vqm"]
+set_global_assignment -name VQM_FILE [file join $::quartus(qip_path) "../vqm_src/main_ip_get_ang_neg.vqm"]
+set_global_assignment -name VQM_FILE [file join $::quartus(qip_path) "../vqm_src/main_ip_ctrl.vqm"]
+set_global_assignment -name VQM_FILE [file join $::quartus(qip_path) "../vqm_src/main_ip_get_planar.vqm"]
+set_global_assignment -name VQM_FILE [file join $::quartus(qip_path) "../vqm_src/main_sad_parallel.vqm"]
+set_global_assignment -name VQM_FILE [file join $::quartus(qip_path) "../vqm_src/main_ip_config.vqm"]

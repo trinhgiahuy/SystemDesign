@@ -1,0 +1,1186 @@
+//
+// Verilog description for cell main_ip_config, 
+// 11/13/15 11:29:51
+//
+// Precision RTL Plus , 2014b.10_6h4-bit//
+
+
+module main_ip_config ( config_rsc_z, config_rsc_vz, config_rsc_lz, 
+                        ctrl_config_rsc_z, ctrl_config_rsc_vz, 
+                        ctrl_config_rsc_lz, sad_config_rsc_z, sad_config_rsc_vz, 
+                        sad_config_rsc_lz, clk, arst_n ) ;
+
+    input [31:0]config_rsc_z ;
+    input config_rsc_vz ;
+    output config_rsc_lz ;
+    output [31:0]ctrl_config_rsc_z ;
+    input ctrl_config_rsc_vz ;
+    output ctrl_config_rsc_lz ;
+    output [31:0]sad_config_rsc_z ;
+    input sad_config_rsc_vz ;
+    output sad_config_rsc_lz ;
+    input clk ;
+    input arst_n ;
+
+    wire [31:25]ctrl_config_rsc_z_dup_0h;
+    wire [31:0]sad_config_rsc_z_dup_0h;
+    wire main_ip_config_core_inst_core_wten;
+    wire [3:1]main_ip_config_core_inst_fsm_output;
+    wire [1:0]main_ip_config_core_inst_reg_temp_1h_sva_tmp;
+    wire main_ip_config_core_inst_reg_sad_config_rsci_ld_core_psct_cse, 
+         main_ip_config_core_inst_reg_ctrl_config_rsci_ld_core_psct_cse, 
+         main_ip_config_core_inst_reg_config_rsci_ld_core_psct_cse, 
+         main_ip_config_core_inst_main_ip_config_core_core_fsm_inst_fsm_output_4h_, 
+         main_ip_config_core_inst_main_ip_config_core_ctrl_config_rsci_inst_main_ip_config_core_ctrl_config_rsci_ctrl_config_wait_dp_inst_ctrl_config_rsci_bcwt, 
+         main_ip_config_core_inst_main_ip_config_core_ctrl_config_rsci_inst_main_ip_config_core_ctrl_config_rsci_ctrl_config_wait_ctrl_inst_ctrl_config_rsci_icwt, 
+         main_ip_config_core_inst_main_ip_config_core_sad_config_rsci_inst_main_ip_config_core_sad_config_rsci_sad_config_wait_dp_inst_sad_config_rsci_bcwt, 
+         main_ip_config_core_inst_main_ip_config_core_sad_config_rsci_inst_main_ip_config_core_sad_config_rsci_sad_config_wait_ctrl_inst_sad_config_rsci_icwt, 
+         main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_ctrl_inst_config_rsci_icwt, 
+         main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+         ;
+    wire [31:0]
+         main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt
+         ;
+    wire [31:0]config_rsc_z_int;
+    wire config_rsc_vz_int, ctrl_config_rsc_vz_int, sad_config_rsc_vz_int, 
+         clk_int, arst_n_int, config_rsc_lz_dup_0h, ctrl_config_rsc_lz_dup_0h, 
+         sad_config_rsc_lz_dup_0h, main_ip_config_core_inst_core_wen, 
+         main_ip_config_core_inst_config_rsci_d_mxwt_3h1_, 
+         main_ip_config_core_inst_config_rsci_d_mxwt_3h0_, 
+         main_ip_config_core_inst_or_dcpl, 
+         main_ip_config_core_inst_reg_sad_config_rsci_ld_core_psct_cse_5hn1s1, 
+         nx27497z1, 
+         NOT_main_ip_config_core_inst_main_ip_config_core_ctrl_config_rsci_inst_ctrl_config_rsci_biwt, 
+         main_ip_config_core_inst_main_ip_config_core_ctrl_config_rsci_inst_main_ip_config_core_ctrl_config_rsci_ctrl_config_wait_dp_inst_ctrl_config_rsci_bcwt_2hn1s1, 
+         main_ip_config_core_inst_main_ip_config_core_ctrl_config_rsci_inst_main_ip_config_core_ctrl_config_rsci_ctrl_config_wait_ctrl_inst_ctrl_config_rsci_icwt_2hn1s1, 
+         NOT_main_ip_config_core_inst_main_ip_config_core_sad_config_rsci_inst_sad_config_rsci_biwt, 
+         main_ip_config_core_inst_main_ip_config_core_sad_config_rsci_inst_main_ip_config_core_sad_config_rsci_sad_config_wait_dp_inst_sad_config_rsci_bcwt_2hn1s1, 
+         main_ip_config_core_inst_main_ip_config_core_sad_config_rsci_inst_main_ip_config_core_sad_config_rsci_sad_config_wait_ctrl_inst_sad_config_rsci_icwt_2hn1s1, 
+         NOT_main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_config_rsci_biwt, 
+         main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_ctrl_inst_config_rsci_icwt_2hn1s1, 
+         main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt_2hn1s1, 
+         main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_not_config_rsci_bcwt, 
+         nx36410z1, nx37407z1, nx38404z1, nx39401z1, nx40398z1, nx41395z1, 
+         nx4128z1, nx5125z1, nx6122z1, nx7119z1, nx8116z1, nx9113z1, nx10110z1, 
+         nx11107z1, nx12104z1, nx13101z1, nx15097z1, nx16094z1, nx17091z1, 
+         nx18088z1, nx19085z1, nx20082z1, nx21079z1, nx22076z1, nx23073z1, 
+         nx24070z1, nx49506z1, nx50503z1, nx51500z1, nx52497z1, nx22167z1, 
+         nx23164z1, nx26500z2, nx8448z1, nx24356z1, nx29949z1, nx63613z1, 
+         nx30462z1, nx40538z1, nx52070z1, nx36410z2, nx8448z3, nx8448z4, 
+         nx29949z2, nx26500z1, nx8448z2, nx59990z1, nx27497z2, 
+         NOT_ctrl_config_rsc_z_dup_0h_6h_, nx55050z1;
+    wire [3380:0] xmplr_dummy ;
+
+
+
+
+    assign ctrl_config_rsc_z_dup_0h[31] = 1'b0 ;
+    assign 
+    main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_not_config_rsci_bcwt
+     = ~
+    main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+     ;
+    cyclonev_io_ibuf config_rsc_z_ibuf_3h1_ (.o (config_rsc_z_int[31]), .i (
+                     config_rsc_z[31])) ;
+    cyclonev_io_ibuf config_rsc_z_ibuf_3h0_ (.o (config_rsc_z_int[30]), .i (
+                     config_rsc_z[30])) ;
+    cyclonev_io_ibuf config_rsc_z_ibuf_2h9_ (.o (config_rsc_z_int[29]), .i (
+                     config_rsc_z[29])) ;
+    cyclonev_io_ibuf config_rsc_z_ibuf_2h8_ (.o (config_rsc_z_int[28]), .i (
+                     config_rsc_z[28])) ;
+    cyclonev_io_ibuf config_rsc_z_ibuf_2h7_ (.o (config_rsc_z_int[27]), .i (
+                     config_rsc_z[27])) ;
+    cyclonev_io_ibuf config_rsc_z_ibuf_2h6_ (.o (config_rsc_z_int[26]), .i (
+                     config_rsc_z[26])) ;
+    cyclonev_io_ibuf config_rsc_z_ibuf_2h5_ (.o (config_rsc_z_int[25]), .i (
+                     config_rsc_z[25])) ;
+    cyclonev_io_ibuf config_rsc_z_ibuf_2h4_ (.o (config_rsc_z_int[24]), .i (
+                     config_rsc_z[24])) ;
+    cyclonev_io_ibuf config_rsc_z_ibuf_2h3_ (.o (config_rsc_z_int[23]), .i (
+                     config_rsc_z[23])) ;
+    cyclonev_io_ibuf config_rsc_z_ibuf_2h2_ (.o (config_rsc_z_int[22]), .i (
+                     config_rsc_z[22])) ;
+    cyclonev_io_ibuf config_rsc_z_ibuf_2h1_ (.o (config_rsc_z_int[21]), .i (
+                     config_rsc_z[21])) ;
+    cyclonev_io_ibuf config_rsc_z_ibuf_2h0_ (.o (config_rsc_z_int[20]), .i (
+                     config_rsc_z[20])) ;
+    cyclonev_io_ibuf config_rsc_z_ibuf_1h9_ (.o (config_rsc_z_int[19]), .i (
+                     config_rsc_z[19])) ;
+    cyclonev_io_ibuf config_rsc_z_ibuf_1h8_ (.o (config_rsc_z_int[18]), .i (
+                     config_rsc_z[18])) ;
+    cyclonev_io_ibuf config_rsc_z_ibuf_1h7_ (.o (config_rsc_z_int[17]), .i (
+                     config_rsc_z[17])) ;
+    cyclonev_io_ibuf config_rsc_z_ibuf_1h6_ (.o (config_rsc_z_int[16]), .i (
+                     config_rsc_z[16])) ;
+    cyclonev_io_ibuf config_rsc_z_ibuf_1h5_ (.o (config_rsc_z_int[15]), .i (
+                     config_rsc_z[15])) ;
+    cyclonev_io_ibuf config_rsc_z_ibuf_1h4_ (.o (config_rsc_z_int[14]), .i (
+                     config_rsc_z[14])) ;
+    cyclonev_io_ibuf config_rsc_z_ibuf_1h3_ (.o (config_rsc_z_int[13]), .i (
+                     config_rsc_z[13])) ;
+    cyclonev_io_ibuf config_rsc_z_ibuf_1h2_ (.o (config_rsc_z_int[12]), .i (
+                     config_rsc_z[12])) ;
+    cyclonev_io_ibuf config_rsc_z_ibuf_1h1_ (.o (config_rsc_z_int[11]), .i (
+                     config_rsc_z[11])) ;
+    cyclonev_io_ibuf config_rsc_z_ibuf_1h0_ (.o (config_rsc_z_int[10]), .i (
+                     config_rsc_z[10])) ;
+    cyclonev_io_ibuf config_rsc_z_ibuf_9h_ (.o (config_rsc_z_int[9]), .i (
+                     config_rsc_z[9])) ;
+    cyclonev_io_ibuf config_rsc_z_ibuf_8h_ (.o (config_rsc_z_int[8]), .i (
+                     config_rsc_z[8])) ;
+    cyclonev_io_ibuf config_rsc_z_ibuf_7h_ (.o (config_rsc_z_int[7]), .i (
+                     config_rsc_z[7])) ;
+    cyclonev_io_ibuf config_rsc_z_ibuf_6h_ (.o (config_rsc_z_int[6]), .i (
+                     config_rsc_z[6])) ;
+    cyclonev_io_ibuf config_rsc_z_ibuf_5h_ (.o (config_rsc_z_int[5]), .i (
+                     config_rsc_z[5])) ;
+    cyclonev_io_ibuf config_rsc_z_ibuf_4h_ (.o (config_rsc_z_int[4]), .i (
+                     config_rsc_z[4])) ;
+    cyclonev_io_ibuf config_rsc_z_ibuf_3h_ (.o (config_rsc_z_int[3]), .i (
+                     config_rsc_z[3])) ;
+    cyclonev_io_ibuf config_rsc_z_ibuf_2h_ (.o (config_rsc_z_int[2]), .i (
+                     config_rsc_z[2])) ;
+    cyclonev_io_ibuf config_rsc_z_ibuf_1h_ (.o (config_rsc_z_int[1]), .i (
+                     config_rsc_z[1])) ;
+    cyclonev_io_ibuf config_rsc_z_ibuf_0h_ (.o (config_rsc_z_int[0]), .i (
+                     config_rsc_z[0])) ;
+    cyclonev_io_ibuf config_rsc_vz_ibuf (.o (config_rsc_vz_int), .i (
+                     config_rsc_vz)) ;
+    cyclonev_io_ibuf ctrl_config_rsc_vz_ibuf (.o (ctrl_config_rsc_vz_int), .i (
+                     ctrl_config_rsc_vz)) ;
+    cyclonev_io_ibuf sad_config_rsc_vz_ibuf (.o (sad_config_rsc_vz_int), .i (
+                     sad_config_rsc_vz)) ;
+    cyclonev_io_ibuf clk_ibuf (.o (clk_int), .i (clk)) ;
+    cyclonev_io_ibuf arst_n_ibuf (.o (arst_n_int), .i (arst_n)) ;
+    cyclonev_io_obuf config_rsc_lz_obuf (.o (config_rsc_lz), .i (
+                     config_rsc_lz_dup_0h)) ;
+    cyclonev_io_obuf ctrl_config_rsc_z_obuf_3h1_ (.o (ctrl_config_rsc_z[31]), .i (
+                     ctrl_config_rsc_z_dup_0h[31])) ;
+    cyclonev_io_obuf ctrl_config_rsc_z_obuf_3h0_ (.o (ctrl_config_rsc_z[30]), .i (
+                     ctrl_config_rsc_z_dup_0h[31])) ;
+    cyclonev_io_obuf ctrl_config_rsc_z_obuf_2h9_ (.o (ctrl_config_rsc_z[29]), .i (
+                     ctrl_config_rsc_z_dup_0h[31])) ;
+    cyclonev_io_obuf ctrl_config_rsc_z_obuf_2h8_ (.o (ctrl_config_rsc_z[28]), .i (
+                     ctrl_config_rsc_z_dup_0h[31])) ;
+    cyclonev_io_obuf ctrl_config_rsc_z_obuf_2h7_ (.o (ctrl_config_rsc_z[27]), .i (
+                     ctrl_config_rsc_z_dup_0h[31])) ;
+    cyclonev_io_obuf ctrl_config_rsc_z_obuf_2h6_ (.o (ctrl_config_rsc_z[26]), .i (
+                     ctrl_config_rsc_z_dup_0h[31])) ;
+    cyclonev_io_obuf ctrl_config_rsc_z_obuf_2h5_ (.o (ctrl_config_rsc_z[25]), .i (
+                     ctrl_config_rsc_z_dup_0h[31])) ;
+    cyclonev_io_obuf ctrl_config_rsc_z_obuf_2h4_ (.o (ctrl_config_rsc_z[24]), .i (
+                     ctrl_config_rsc_z_dup_0h[31])) ;
+    cyclonev_io_obuf ctrl_config_rsc_z_obuf_2h3_ (.o (ctrl_config_rsc_z[23]), .i (
+                     ctrl_config_rsc_z_dup_0h[31])) ;
+    cyclonev_io_obuf ctrl_config_rsc_z_obuf_2h2_ (.o (ctrl_config_rsc_z[22]), .i (
+                     ctrl_config_rsc_z_dup_0h[31])) ;
+    cyclonev_io_obuf ctrl_config_rsc_z_obuf_2h1_ (.o (ctrl_config_rsc_z[21]), .i (
+                     ctrl_config_rsc_z_dup_0h[31])) ;
+    cyclonev_io_obuf ctrl_config_rsc_z_obuf_2h0_ (.o (ctrl_config_rsc_z[20]), .i (
+                     ctrl_config_rsc_z_dup_0h[31])) ;
+    cyclonev_io_obuf ctrl_config_rsc_z_obuf_1h9_ (.o (ctrl_config_rsc_z[19]), .i (
+                     ctrl_config_rsc_z_dup_0h[31])) ;
+    cyclonev_io_obuf ctrl_config_rsc_z_obuf_1h8_ (.o (ctrl_config_rsc_z[18]), .i (
+                     ctrl_config_rsc_z_dup_0h[31])) ;
+    cyclonev_io_obuf ctrl_config_rsc_z_obuf_1h7_ (.o (ctrl_config_rsc_z[17]), .i (
+                     ctrl_config_rsc_z_dup_0h[31])) ;
+    cyclonev_io_obuf ctrl_config_rsc_z_obuf_1h6_ (.o (ctrl_config_rsc_z[16]), .i (
+                     ctrl_config_rsc_z_dup_0h[31])) ;
+    cyclonev_io_obuf ctrl_config_rsc_z_obuf_1h5_ (.o (ctrl_config_rsc_z[15]), .i (
+                     ctrl_config_rsc_z_dup_0h[31])) ;
+    cyclonev_io_obuf ctrl_config_rsc_z_obuf_1h4_ (.o (ctrl_config_rsc_z[14]), .i (
+                     ctrl_config_rsc_z_dup_0h[31])) ;
+    cyclonev_io_obuf ctrl_config_rsc_z_obuf_1h3_ (.o (ctrl_config_rsc_z[13]), .i (
+                     ctrl_config_rsc_z_dup_0h[31])) ;
+    cyclonev_io_obuf ctrl_config_rsc_z_obuf_1h2_ (.o (ctrl_config_rsc_z[12]), .i (
+                     ctrl_config_rsc_z_dup_0h[31])) ;
+    cyclonev_io_obuf ctrl_config_rsc_z_obuf_1h1_ (.o (ctrl_config_rsc_z[11]), .i (
+                     ctrl_config_rsc_z_dup_0h[31])) ;
+    cyclonev_io_obuf ctrl_config_rsc_z_obuf_1h0_ (.o (ctrl_config_rsc_z[10]), .i (
+                     ctrl_config_rsc_z_dup_0h[31])) ;
+    cyclonev_io_obuf ctrl_config_rsc_z_obuf_9h_ (.o (ctrl_config_rsc_z[9]), .i (
+                     ctrl_config_rsc_z_dup_0h[31])) ;
+    cyclonev_io_obuf ctrl_config_rsc_z_obuf_8h_ (.o (ctrl_config_rsc_z[8]), .i (
+                     ctrl_config_rsc_z_dup_0h[31])) ;
+    cyclonev_io_obuf ctrl_config_rsc_z_obuf_7h_ (.o (ctrl_config_rsc_z[7]), .i (
+                     ctrl_config_rsc_z_dup_0h[31])) ;
+    cyclonev_io_obuf ctrl_config_rsc_z_obuf_6h_ (.o (ctrl_config_rsc_z[6]), .i (
+                     ctrl_config_rsc_z_dup_0h[31])) ;
+    cyclonev_io_obuf ctrl_config_rsc_z_obuf_5h_ (.o (ctrl_config_rsc_z[5]), .i (
+                     ctrl_config_rsc_z_dup_0h[30])) ;
+    cyclonev_io_obuf ctrl_config_rsc_z_obuf_4h_ (.o (ctrl_config_rsc_z[4]), .i (
+                     ctrl_config_rsc_z_dup_0h[29])) ;
+    cyclonev_io_obuf ctrl_config_rsc_z_obuf_3h_ (.o (ctrl_config_rsc_z[3]), .i (
+                     ctrl_config_rsc_z_dup_0h[28])) ;
+    cyclonev_io_obuf ctrl_config_rsc_z_obuf_2h_ (.o (ctrl_config_rsc_z[2]), .i (
+                     ctrl_config_rsc_z_dup_0h[27])) ;
+    cyclonev_io_obuf ctrl_config_rsc_z_obuf_1h_ (.o (ctrl_config_rsc_z[1]), .i (
+                     ctrl_config_rsc_z_dup_0h[26])) ;
+    cyclonev_io_obuf ctrl_config_rsc_z_obuf_0h_ (.o (ctrl_config_rsc_z[0]), .i (
+                     ctrl_config_rsc_z_dup_0h[25])) ;
+    cyclonev_io_obuf ctrl_config_rsc_lz_obuf (.o (ctrl_config_rsc_lz), .i (
+                     ctrl_config_rsc_lz_dup_0h)) ;
+    cyclonev_io_obuf sad_config_rsc_z_obuf_3h1_ (.o (sad_config_rsc_z[31]), .i (
+                     sad_config_rsc_z_dup_0h[31])) ;
+    cyclonev_io_obuf sad_config_rsc_z_obuf_3h0_ (.o (sad_config_rsc_z[30]), .i (
+                     sad_config_rsc_z_dup_0h[30])) ;
+    cyclonev_io_obuf sad_config_rsc_z_obuf_2h9_ (.o (sad_config_rsc_z[29]), .i (
+                     sad_config_rsc_z_dup_0h[29])) ;
+    cyclonev_io_obuf sad_config_rsc_z_obuf_2h8_ (.o (sad_config_rsc_z[28]), .i (
+                     sad_config_rsc_z_dup_0h[28])) ;
+    cyclonev_io_obuf sad_config_rsc_z_obuf_2h7_ (.o (sad_config_rsc_z[27]), .i (
+                     sad_config_rsc_z_dup_0h[27])) ;
+    cyclonev_io_obuf sad_config_rsc_z_obuf_2h6_ (.o (sad_config_rsc_z[26]), .i (
+                     sad_config_rsc_z_dup_0h[26])) ;
+    cyclonev_io_obuf sad_config_rsc_z_obuf_2h5_ (.o (sad_config_rsc_z[25]), .i (
+                     sad_config_rsc_z_dup_0h[25])) ;
+    cyclonev_io_obuf sad_config_rsc_z_obuf_2h4_ (.o (sad_config_rsc_z[24]), .i (
+                     sad_config_rsc_z_dup_0h[24])) ;
+    cyclonev_io_obuf sad_config_rsc_z_obuf_2h3_ (.o (sad_config_rsc_z[23]), .i (
+                     sad_config_rsc_z_dup_0h[23])) ;
+    cyclonev_io_obuf sad_config_rsc_z_obuf_2h2_ (.o (sad_config_rsc_z[22]), .i (
+                     sad_config_rsc_z_dup_0h[22])) ;
+    cyclonev_io_obuf sad_config_rsc_z_obuf_2h1_ (.o (sad_config_rsc_z[21]), .i (
+                     sad_config_rsc_z_dup_0h[21])) ;
+    cyclonev_io_obuf sad_config_rsc_z_obuf_2h0_ (.o (sad_config_rsc_z[20]), .i (
+                     sad_config_rsc_z_dup_0h[20])) ;
+    cyclonev_io_obuf sad_config_rsc_z_obuf_1h9_ (.o (sad_config_rsc_z[19]), .i (
+                     sad_config_rsc_z_dup_0h[19])) ;
+    cyclonev_io_obuf sad_config_rsc_z_obuf_1h8_ (.o (sad_config_rsc_z[18]), .i (
+                     sad_config_rsc_z_dup_0h[18])) ;
+    cyclonev_io_obuf sad_config_rsc_z_obuf_1h7_ (.o (sad_config_rsc_z[17]), .i (
+                     sad_config_rsc_z_dup_0h[17])) ;
+    cyclonev_io_obuf sad_config_rsc_z_obuf_1h6_ (.o (sad_config_rsc_z[16]), .i (
+                     sad_config_rsc_z_dup_0h[16])) ;
+    cyclonev_io_obuf sad_config_rsc_z_obuf_1h5_ (.o (sad_config_rsc_z[15]), .i (
+                     sad_config_rsc_z_dup_0h[15])) ;
+    cyclonev_io_obuf sad_config_rsc_z_obuf_1h4_ (.o (sad_config_rsc_z[14]), .i (
+                     sad_config_rsc_z_dup_0h[14])) ;
+    cyclonev_io_obuf sad_config_rsc_z_obuf_1h3_ (.o (sad_config_rsc_z[13]), .i (
+                     sad_config_rsc_z_dup_0h[13])) ;
+    cyclonev_io_obuf sad_config_rsc_z_obuf_1h2_ (.o (sad_config_rsc_z[12]), .i (
+                     sad_config_rsc_z_dup_0h[12])) ;
+    cyclonev_io_obuf sad_config_rsc_z_obuf_1h1_ (.o (sad_config_rsc_z[11]), .i (
+                     sad_config_rsc_z_dup_0h[11])) ;
+    cyclonev_io_obuf sad_config_rsc_z_obuf_1h0_ (.o (sad_config_rsc_z[10]), .i (
+                     sad_config_rsc_z_dup_0h[10])) ;
+    cyclonev_io_obuf sad_config_rsc_z_obuf_9h_ (.o (sad_config_rsc_z[9]), .i (
+                     sad_config_rsc_z_dup_0h[9])) ;
+    cyclonev_io_obuf sad_config_rsc_z_obuf_8h_ (.o (sad_config_rsc_z[8]), .i (
+                     sad_config_rsc_z_dup_0h[8])) ;
+    cyclonev_io_obuf sad_config_rsc_z_obuf_7h_ (.o (sad_config_rsc_z[7]), .i (
+                     sad_config_rsc_z_dup_0h[7])) ;
+    cyclonev_io_obuf sad_config_rsc_z_obuf_6h_ (.o (sad_config_rsc_z[6]), .i (
+                     sad_config_rsc_z_dup_0h[6])) ;
+    cyclonev_io_obuf sad_config_rsc_z_obuf_5h_ (.o (sad_config_rsc_z[5]), .i (
+                     sad_config_rsc_z_dup_0h[5])) ;
+    cyclonev_io_obuf sad_config_rsc_z_obuf_4h_ (.o (sad_config_rsc_z[4]), .i (
+                     sad_config_rsc_z_dup_0h[4])) ;
+    cyclonev_io_obuf sad_config_rsc_z_obuf_3h_ (.o (sad_config_rsc_z[3]), .i (
+                     sad_config_rsc_z_dup_0h[3])) ;
+    cyclonev_io_obuf sad_config_rsc_z_obuf_2h_ (.o (sad_config_rsc_z[2]), .i (
+                     sad_config_rsc_z_dup_0h[2])) ;
+    cyclonev_io_obuf sad_config_rsc_z_obuf_1h_ (.o (sad_config_rsc_z[1]), .i (
+                     sad_config_rsc_z_dup_0h[1])) ;
+    cyclonev_io_obuf sad_config_rsc_z_obuf_0h_ (.o (sad_config_rsc_z[0]), .i (
+                     sad_config_rsc_z_dup_0h[0])) ;
+    cyclonev_io_obuf sad_config_rsc_lz_obuf (.o (sad_config_rsc_lz), .i (
+                     sad_config_rsc_lz_dup_0h)) ;
+    assign NOT_ctrl_config_rsc_z_dup_0h_6h_ = ~ctrl_config_rsc_z_dup_0h[31] ;
+    assign nx55050z1 = 1'b1 ;
+    dffeas main_ip_config_core_inst_reg_reg_temp_1h_sva_tmp_1h_ (.q (
+           main_ip_config_core_inst_reg_temp_1h_sva_tmp[1]), .d (nx22167z1), .clk (
+           clk_int), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_reg_temp_1h_sva_tmp_0h_ (.q (
+           main_ip_config_core_inst_reg_temp_1h_sva_tmp[0]), .d (nx23164z1), .clk (
+           clk_int), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_reg_sad_config_rsci_ld_core_psct_cse (.q (
+           main_ip_config_core_inst_reg_sad_config_rsci_ld_core_psct_cse), .d (
+           nx29949z1), .clk (clk_int), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_reg_sad_config_rsci_d_tmp_1h_9h_ (.q (
+           sad_config_rsc_z_dup_0h[9]), .d (nx49506z1), .clk (clk_int), .ena (
+           nx52070z1), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_reg_sad_config_rsci_d_tmp_1h_8h_ (.q (
+           sad_config_rsc_z_dup_0h[8]), .d (nx50503z1), .clk (clk_int), .ena (
+           nx52070z1), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_reg_sad_config_rsci_d_tmp_1h_7h_ (.q (
+           sad_config_rsc_z_dup_0h[7]), .d (nx51500z1), .clk (clk_int), .ena (
+           nx52070z1), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_reg_sad_config_rsci_d_tmp_1h_6h_ (.q (
+           sad_config_rsc_z_dup_0h[6]), .d (nx52497z1), .clk (clk_int), .ena (
+           nx52070z1), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_reg_sad_config_rsci_d_tmp_1h_5h_ (.q (
+           sad_config_rsc_z_dup_0h[5]), .d (nx36410z1), .clk (clk_int), .ena (
+           nx52070z1), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_reg_sad_config_rsci_d_tmp_1h_4h_ (.q (
+           sad_config_rsc_z_dup_0h[4]), .d (nx37407z1), .clk (clk_int), .ena (
+           nx52070z1), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_reg_sad_config_rsci_d_tmp_1h_3h_ (.q (
+           sad_config_rsc_z_dup_0h[3]), .d (nx38404z1), .clk (clk_int), .ena (
+           nx52070z1), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_reg_sad_config_rsci_d_tmp_1h_2h9_ (.q (
+           sad_config_rsc_z_dup_0h[29]), .d (nx4128z1), .clk (clk_int), .ena (
+           nx52070z1), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_reg_sad_config_rsci_d_tmp_1h_2h8_ (.q (
+           sad_config_rsc_z_dup_0h[28]), .d (nx5125z1), .clk (clk_int), .ena (
+           nx52070z1), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_reg_sad_config_rsci_d_tmp_1h_2h7_ (.q (
+           sad_config_rsc_z_dup_0h[27]), .d (nx6122z1), .clk (clk_int), .ena (
+           nx52070z1), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_reg_sad_config_rsci_d_tmp_1h_2h6_ (.q (
+           sad_config_rsc_z_dup_0h[26]), .d (nx7119z1), .clk (clk_int), .ena (
+           nx52070z1), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_reg_sad_config_rsci_d_tmp_1h_2h5_ (.q (
+           sad_config_rsc_z_dup_0h[25]), .d (nx8116z1), .clk (clk_int), .ena (
+           nx52070z1), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_reg_sad_config_rsci_d_tmp_1h_2h4_ (.q (
+           sad_config_rsc_z_dup_0h[24]), .d (nx9113z1), .clk (clk_int), .ena (
+           nx52070z1), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_reg_sad_config_rsci_d_tmp_1h_2h3_ (.q (
+           sad_config_rsc_z_dup_0h[23]), .d (nx10110z1), .clk (clk_int), .ena (
+           nx52070z1), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_reg_sad_config_rsci_d_tmp_1h_2h2_ (.q (
+           sad_config_rsc_z_dup_0h[22]), .d (nx11107z1), .clk (clk_int), .ena (
+           nx52070z1), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_reg_sad_config_rsci_d_tmp_1h_2h1_ (.q (
+           sad_config_rsc_z_dup_0h[21]), .d (nx12104z1), .clk (clk_int), .ena (
+           nx52070z1), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_reg_sad_config_rsci_d_tmp_1h_2h0_ (.q (
+           sad_config_rsc_z_dup_0h[20]), .d (nx13101z1), .clk (clk_int), .ena (
+           nx52070z1), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_reg_sad_config_rsci_d_tmp_1h_2h_ (.q (
+           sad_config_rsc_z_dup_0h[2]), .d (nx39401z1), .clk (clk_int), .ena (
+           nx52070z1), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_reg_sad_config_rsci_d_tmp_1h_1h9_ (.q (
+           sad_config_rsc_z_dup_0h[19]), .d (nx15097z1), .clk (clk_int), .ena (
+           nx52070z1), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_reg_sad_config_rsci_d_tmp_1h_1h8_ (.q (
+           sad_config_rsc_z_dup_0h[18]), .d (nx16094z1), .clk (clk_int), .ena (
+           nx52070z1), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_reg_sad_config_rsci_d_tmp_1h_1h7_ (.q (
+           sad_config_rsc_z_dup_0h[17]), .d (nx17091z1), .clk (clk_int), .ena (
+           nx52070z1), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_reg_sad_config_rsci_d_tmp_1h_1h6_ (.q (
+           sad_config_rsc_z_dup_0h[16]), .d (nx18088z1), .clk (clk_int), .ena (
+           nx52070z1), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_reg_sad_config_rsci_d_tmp_1h_1h5_ (.q (
+           sad_config_rsc_z_dup_0h[15]), .d (nx19085z1), .clk (clk_int), .ena (
+           nx52070z1), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_reg_sad_config_rsci_d_tmp_1h_1h4_ (.q (
+           sad_config_rsc_z_dup_0h[14]), .d (nx20082z1), .clk (clk_int), .ena (
+           nx52070z1), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_reg_sad_config_rsci_d_tmp_1h_1h3_ (.q (
+           sad_config_rsc_z_dup_0h[13]), .d (nx21079z1), .clk (clk_int), .ena (
+           nx52070z1), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_reg_sad_config_rsci_d_tmp_1h_1h2_ (.q (
+           sad_config_rsc_z_dup_0h[12]), .d (nx22076z1), .clk (clk_int), .ena (
+           nx52070z1), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_reg_sad_config_rsci_d_tmp_1h_1h1_ (.q (
+           sad_config_rsc_z_dup_0h[11]), .d (nx23073z1), .clk (clk_int), .ena (
+           nx52070z1), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_reg_sad_config_rsci_d_tmp_1h_1h0_ (.q (
+           sad_config_rsc_z_dup_0h[10]), .d (nx24070z1), .clk (clk_int), .ena (
+           nx52070z1), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_reg_sad_config_rsci_d_tmp_1h_1h_ (.q (
+           sad_config_rsc_z_dup_0h[1]), .d (nx40398z1), .clk (clk_int), .ena (
+           nx52070z1), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_reg_sad_config_rsci_d_tmp_1h_0h_ (.q (
+           sad_config_rsc_z_dup_0h[0]), .d (nx41395z1), .clk (clk_int), .ena (
+           nx52070z1), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_reg_sad_config_rsci_d_tmp_1h_ (.q (
+           sad_config_rsc_z_dup_0h[31]), .d (
+           main_ip_config_core_inst_config_rsci_d_mxwt_3h1_), .clk (clk_int), .ena (
+           nx52070z1), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_reg_sad_config_rsci_d_tmp_0h_ (.q (
+           sad_config_rsc_z_dup_0h[30]), .d (
+           main_ip_config_core_inst_config_rsci_d_mxwt_3h0_), .clk (clk_int), .ena (
+           nx52070z1), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_reg_ctrl_config_rsci_ld_core_psct_cse (.q (
+           main_ip_config_core_inst_reg_ctrl_config_rsci_ld_core_psct_cse), .d (
+           nx24356z1), .clk (clk_int), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_reg_config_rsci_ld_core_psct_cse (.q (
+           main_ip_config_core_inst_reg_config_rsci_ld_core_psct_cse), .d (
+           nx8448z1), .clk (clk_int), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_ctrl_config_rsci_d_1h_5h_ (.q (
+           ctrl_config_rsc_z_dup_0h[30]), .d (nx36410z1), .clk (clk_int), .ena (
+           nx36410z2), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_ctrl_config_rsci_d_1h_4h_ (.q (
+           ctrl_config_rsc_z_dup_0h[29]), .d (nx37407z1), .clk (clk_int), .ena (
+           nx36410z2), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_ctrl_config_rsci_d_1h_3h_ (.q (
+           ctrl_config_rsc_z_dup_0h[28]), .d (nx38404z1), .clk (clk_int), .ena (
+           nx36410z2), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_ctrl_config_rsci_d_1h_2h_ (.q (
+           ctrl_config_rsc_z_dup_0h[27]), .d (nx39401z1), .clk (clk_int), .ena (
+           nx36410z2), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_ctrl_config_rsci_d_1h_1h_ (.q (
+           ctrl_config_rsc_z_dup_0h[26]), .d (nx40398z1), .clk (clk_int), .ena (
+           nx36410z2), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas main_ip_config_core_inst_reg_ctrl_config_rsci_d_1h_0h_ (.q (
+           ctrl_config_rsc_z_dup_0h[25]), .d (nx41395z1), .clk (clk_int), .ena (
+           nx36410z2), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_staller_inst_reg_core_wten
+            (.q (main_ip_config_core_inst_core_wten), .d (nx63613z1), .clk (
+           clk_int), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_sad_config_rsci_inst_main_ip_config_core_sad_config_rsci_sad_config_wait_dp_inst_reg_sad_config_rsci_bcwt
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_sad_config_rsci_inst_main_ip_config_core_sad_config_rsci_sad_config_wait_dp_inst_sad_config_rsci_bcwt
+           ), .d (
+           main_ip_config_core_inst_main_ip_config_core_sad_config_rsci_inst_main_ip_config_core_sad_config_rsci_sad_config_wait_dp_inst_sad_config_rsci_bcwt_2hn1s1
+           ), .clk (clk_int), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_sad_config_rsci_inst_main_ip_config_core_sad_config_rsci_sad_config_wait_ctrl_inst_reg_sad_config_rsci_icwt
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_sad_config_rsci_inst_main_ip_config_core_sad_config_rsci_sad_config_wait_ctrl_inst_sad_config_rsci_icwt
+           ), .d (
+           main_ip_config_core_inst_main_ip_config_core_sad_config_rsci_inst_main_ip_config_core_sad_config_rsci_sad_config_wait_ctrl_inst_sad_config_rsci_icwt_2hn1s1
+           ), .clk (clk_int), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_ctrl_config_rsci_inst_main_ip_config_core_ctrl_config_rsci_ctrl_config_wait_dp_inst_reg_ctrl_config_rsci_bcwt
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_ctrl_config_rsci_inst_main_ip_config_core_ctrl_config_rsci_ctrl_config_wait_dp_inst_ctrl_config_rsci_bcwt
+           ), .d (
+           main_ip_config_core_inst_main_ip_config_core_ctrl_config_rsci_inst_main_ip_config_core_ctrl_config_rsci_ctrl_config_wait_dp_inst_ctrl_config_rsci_bcwt_2hn1s1
+           ), .clk (clk_int), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_ctrl_config_rsci_inst_main_ip_config_core_ctrl_config_rsci_ctrl_config_wait_ctrl_inst_reg_ctrl_config_rsci_icwt
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_ctrl_config_rsci_inst_main_ip_config_core_ctrl_config_rsci_ctrl_config_wait_ctrl_inst_ctrl_config_rsci_icwt
+           ), .d (
+           main_ip_config_core_inst_main_ip_config_core_ctrl_config_rsci_inst_main_ip_config_core_ctrl_config_rsci_ctrl_config_wait_ctrl_inst_ctrl_config_rsci_icwt_2hn1s1
+           ), .clk (clk_int), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_core_fsm_inst_reg_state_var_4h_
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_core_fsm_inst_fsm_output_4h_
+           ), .d (main_ip_config_core_inst_fsm_output[3]), .clk (clk_int), .ena (
+           main_ip_config_core_inst_core_wen), .clrn (arst_n_int), .prn (
+           nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_core_fsm_inst_reg_state_var_3h_
+            (.q (main_ip_config_core_inst_fsm_output[3]), .d (
+           main_ip_config_core_inst_fsm_output[2]), .clk (clk_int), .ena (
+           main_ip_config_core_inst_core_wen), .clrn (arst_n_int), .prn (
+           nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_core_fsm_inst_reg_state_var_2h_
+            (.q (main_ip_config_core_inst_fsm_output[2]), .d (
+           main_ip_config_core_inst_fsm_output[1]), .clk (clk_int), .ena (
+           main_ip_config_core_inst_core_wen), .clrn (arst_n_int), .prn (
+           nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_core_fsm_inst_reg_state_var_1h_
+            (.q (main_ip_config_core_inst_fsm_output[1]), .d (nx27497z1), .clk (
+           clk_int), .ena (main_ip_config_core_inst_core_wen), .clrn (arst_n_int
+           ), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_core_fsm_inst_reg_state_var_0h_
+            (.q (nx27497z2), .d (NOT_ctrl_config_rsc_z_dup_0h_6h_), .clk (clk_int)
+           , .ena (main_ip_config_core_inst_core_wen), .clrn (arst_n_int), .prn (
+           nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_reg_config_rsci_d_bfwt_9h_
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[9]
+           ), .d (config_rsc_z_int[9]), .clk (clk_int), .ena (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_not_config_rsci_bcwt
+           ), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_reg_config_rsci_d_bfwt_8h_
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[8]
+           ), .d (config_rsc_z_int[8]), .clk (clk_int), .ena (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_not_config_rsci_bcwt
+           ), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_reg_config_rsci_d_bfwt_7h_
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[7]
+           ), .d (config_rsc_z_int[7]), .clk (clk_int), .ena (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_not_config_rsci_bcwt
+           ), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_reg_config_rsci_d_bfwt_6h_
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[6]
+           ), .d (config_rsc_z_int[6]), .clk (clk_int), .ena (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_not_config_rsci_bcwt
+           ), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_reg_config_rsci_d_bfwt_5h_
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[5]
+           ), .d (config_rsc_z_int[5]), .clk (clk_int), .ena (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_not_config_rsci_bcwt
+           ), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_reg_config_rsci_d_bfwt_4h_
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[4]
+           ), .d (config_rsc_z_int[4]), .clk (clk_int), .ena (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_not_config_rsci_bcwt
+           ), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_reg_config_rsci_d_bfwt_3h1_
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[31]
+           ), .d (config_rsc_z_int[31]), .clk (clk_int), .ena (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_not_config_rsci_bcwt
+           ), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_reg_config_rsci_d_bfwt_3h0_
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[30]
+           ), .d (config_rsc_z_int[30]), .clk (clk_int), .ena (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_not_config_rsci_bcwt
+           ), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_reg_config_rsci_d_bfwt_3h_
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[3]
+           ), .d (config_rsc_z_int[3]), .clk (clk_int), .ena (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_not_config_rsci_bcwt
+           ), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_reg_config_rsci_d_bfwt_2h9_
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[29]
+           ), .d (config_rsc_z_int[29]), .clk (clk_int), .ena (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_not_config_rsci_bcwt
+           ), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_reg_config_rsci_d_bfwt_2h8_
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[28]
+           ), .d (config_rsc_z_int[28]), .clk (clk_int), .ena (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_not_config_rsci_bcwt
+           ), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_reg_config_rsci_d_bfwt_2h7_
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[27]
+           ), .d (config_rsc_z_int[27]), .clk (clk_int), .ena (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_not_config_rsci_bcwt
+           ), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_reg_config_rsci_d_bfwt_2h6_
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[26]
+           ), .d (config_rsc_z_int[26]), .clk (clk_int), .ena (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_not_config_rsci_bcwt
+           ), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_reg_config_rsci_d_bfwt_2h5_
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[25]
+           ), .d (config_rsc_z_int[25]), .clk (clk_int), .ena (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_not_config_rsci_bcwt
+           ), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_reg_config_rsci_d_bfwt_2h4_
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[24]
+           ), .d (config_rsc_z_int[24]), .clk (clk_int), .ena (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_not_config_rsci_bcwt
+           ), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_reg_config_rsci_d_bfwt_2h3_
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[23]
+           ), .d (config_rsc_z_int[23]), .clk (clk_int), .ena (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_not_config_rsci_bcwt
+           ), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_reg_config_rsci_d_bfwt_2h2_
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[22]
+           ), .d (config_rsc_z_int[22]), .clk (clk_int), .ena (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_not_config_rsci_bcwt
+           ), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_reg_config_rsci_d_bfwt_2h1_
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[21]
+           ), .d (config_rsc_z_int[21]), .clk (clk_int), .ena (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_not_config_rsci_bcwt
+           ), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_reg_config_rsci_d_bfwt_2h0_
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[20]
+           ), .d (config_rsc_z_int[20]), .clk (clk_int), .ena (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_not_config_rsci_bcwt
+           ), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_reg_config_rsci_d_bfwt_2h_
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[2]
+           ), .d (config_rsc_z_int[2]), .clk (clk_int), .ena (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_not_config_rsci_bcwt
+           ), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_reg_config_rsci_d_bfwt_1h9_
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[19]
+           ), .d (config_rsc_z_int[19]), .clk (clk_int), .ena (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_not_config_rsci_bcwt
+           ), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_reg_config_rsci_d_bfwt_1h8_
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[18]
+           ), .d (config_rsc_z_int[18]), .clk (clk_int), .ena (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_not_config_rsci_bcwt
+           ), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_reg_config_rsci_d_bfwt_1h7_
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[17]
+           ), .d (config_rsc_z_int[17]), .clk (clk_int), .ena (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_not_config_rsci_bcwt
+           ), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_reg_config_rsci_d_bfwt_1h6_
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[16]
+           ), .d (config_rsc_z_int[16]), .clk (clk_int), .ena (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_not_config_rsci_bcwt
+           ), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_reg_config_rsci_d_bfwt_1h5_
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[15]
+           ), .d (config_rsc_z_int[15]), .clk (clk_int), .ena (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_not_config_rsci_bcwt
+           ), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_reg_config_rsci_d_bfwt_1h4_
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[14]
+           ), .d (config_rsc_z_int[14]), .clk (clk_int), .ena (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_not_config_rsci_bcwt
+           ), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_reg_config_rsci_d_bfwt_1h3_
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[13]
+           ), .d (config_rsc_z_int[13]), .clk (clk_int), .ena (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_not_config_rsci_bcwt
+           ), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_reg_config_rsci_d_bfwt_1h2_
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[12]
+           ), .d (config_rsc_z_int[12]), .clk (clk_int), .ena (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_not_config_rsci_bcwt
+           ), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_reg_config_rsci_d_bfwt_1h1_
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[11]
+           ), .d (config_rsc_z_int[11]), .clk (clk_int), .ena (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_not_config_rsci_bcwt
+           ), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_reg_config_rsci_d_bfwt_1h0_
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[10]
+           ), .d (config_rsc_z_int[10]), .clk (clk_int), .ena (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_not_config_rsci_bcwt
+           ), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_reg_config_rsci_d_bfwt_1h_
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[1]
+           ), .d (config_rsc_z_int[1]), .clk (clk_int), .ena (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_not_config_rsci_bcwt
+           ), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_reg_config_rsci_d_bfwt_0h_
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[0]
+           ), .d (config_rsc_z_int[0]), .clk (clk_int), .ena (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_not_config_rsci_bcwt
+           ), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_reg_config_rsci_bcwt
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+           ), .d (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt_2hn1s1
+           ), .clk (clk_int), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    dffeas 
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_ctrl_inst_reg_config_rsci_icwt
+            (.q (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_ctrl_inst_config_rsci_icwt
+           ), .d (
+           main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_ctrl_inst_config_rsci_icwt_2hn1s1
+           ), .clk (clk_int), .clrn (arst_n_int), .prn (nx55050z1)) ;
+    cyclonev_lcell_comb ix59990z62808 (.combout (nx59990z1), .datad (
+                        ctrl_config_rsc_vz_int), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_ctrl_config_rsci_inst_main_ip_config_core_ctrl_config_rsci_ctrl_config_wait_ctrl_inst_ctrl_config_rsci_icwt
+                        ), .dataf (main_ip_config_core_inst_core_wten)) ;
+                        defparam ix59990z62808.lut_mask = 64'hff000000ff00ff00;
+    cyclonev_lcell_comb ix8448z62808 (.combout (nx8448z2), .datab (
+                        config_rsc_vz_int), .datac (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+                        ), .datad (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_ctrl_inst_config_rsci_icwt
+                        ), .datae (
+                        main_ip_config_core_inst_reg_config_rsci_ld_core_psct_cse
+                        ), .dataf (main_ip_config_core_inst_core_wten)) ;
+                        defparam ix8448z62808.lut_mask = 64'h030f000003030000;
+    cyclonev_lcell_comb ix26500z62809 (.combout (nx26500z1), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_sad_config_rsci_inst_main_ip_config_core_sad_config_rsci_sad_config_wait_ctrl_inst_sad_config_rsci_icwt
+                        ), .dataf (main_ip_config_core_inst_core_wten)) ;
+                        defparam ix26500z62809.lut_mask = 64'h0000ffff00000000;
+    cyclonev_lcell_comb ix29949z62808 (.combout (nx29949z2), .datab (
+                        sad_config_rsc_vz_int), .datac (
+                        main_ip_config_core_inst_main_ip_config_core_sad_config_rsci_inst_main_ip_config_core_sad_config_rsci_sad_config_wait_ctrl_inst_sad_config_rsci_icwt
+                        ), .datad (
+                        main_ip_config_core_inst_main_ip_config_core_sad_config_rsci_inst_main_ip_config_core_sad_config_rsci_sad_config_wait_dp_inst_sad_config_rsci_bcwt
+                        ), .datae (
+                        main_ip_config_core_inst_reg_sad_config_rsci_ld_core_psct_cse
+                        ), .dataf (main_ip_config_core_inst_core_wten)) ;
+                        defparam ix29949z62808.lut_mask = 64'h003f000000330000;
+    cyclonev_lcell_comb ix8448z62810 (.combout (nx8448z4), .datac (
+                        main_ip_config_core_inst_reg_temp_1h_sva_tmp[0]), .datad (
+                        main_ip_config_core_inst_reg_temp_1h_sva_tmp[1]), .datae (
+                        main_ip_config_core_inst_fsm_output[2]), .dataf (
+                        main_ip_config_core_inst_fsm_output[3])) ;
+                        defparam ix8448z62810.lut_mask = 64'hfffffffffff00000;
+    cyclonev_lcell_comb ix8448z62809 (.combout (nx8448z3), .dataa (
+                        config_rsc_z_int[30]), .datab (config_rsc_z_int[31]), .datac (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[30]
+                        ), .datad (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[31]
+                        ), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+                        ), .dataf (main_ip_config_core_inst_fsm_output[1])) ;
+                        defparam ix8448z62809.lut_mask = 64'hfff0eeee00000000;
+    cyclonev_lcell_comb ix36410z62808 (.combout (nx36410z2), .datab (
+                        main_ip_config_core_inst_fsm_output[1]), .datac (
+                        nx8448z2), .datad (nx29949z2), .datae (
+                        main_ip_config_core_inst_or_dcpl), .dataf (nx26500z2)) ;
+                        defparam ix36410z62808.lut_mask = 64'h0000000c00000000;
+    cyclonev_lcell_comb ix52070z62807 (.combout (nx52070z1), .datac (nx8448z2), 
+                        .datad (nx29949z2), .datae (
+                        main_ip_config_core_inst_reg_sad_config_rsci_ld_core_psct_cse_5hn1s1
+                        ), .dataf (nx26500z2)) ;
+                        defparam ix52070z62807.lut_mask = 64'h000f000000000000;
+    cyclonev_lcell_comb ix40538z62808 (.combout (nx40538z1), .datad (
+                        config_rsc_vz_int), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_ctrl_inst_config_rsci_icwt
+                        ), .dataf (main_ip_config_core_inst_core_wten)) ;
+                        defparam ix40538z62808.lut_mask = 64'h00ffffff00ff00ff;
+    cyclonev_lcell_comb ix30462z62808 (.combout (nx30462z1), .datad (
+                        sad_config_rsc_vz_int), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_sad_config_rsci_inst_main_ip_config_core_sad_config_rsci_sad_config_wait_ctrl_inst_sad_config_rsci_icwt
+                        ), .dataf (main_ip_config_core_inst_core_wten)) ;
+                        defparam ix30462z62808.lut_mask = 64'h00ffffff00ff00ff;
+    cyclonev_lcell_comb ix63613z62807 (.combout (nx63613z1), .dataa (
+                        sad_config_rsc_vz_int), .datab (
+                        main_ip_config_core_inst_main_ip_config_core_sad_config_rsci_inst_main_ip_config_core_sad_config_rsci_sad_config_wait_dp_inst_sad_config_rsci_bcwt
+                        ), .datac (
+                        main_ip_config_core_inst_reg_sad_config_rsci_ld_core_psct_cse
+                        ), .datad (nx26500z1), .datae (nx8448z2), .dataf (
+                        nx26500z2)) ;
+                        defparam ix63613z62807.lut_mask = 64'hffff3010ffffffff;
+    cyclonev_lcell_comb ix29949z62807 (.combout (nx29949z1), .datab (
+                        main_ip_config_core_inst_reg_sad_config_rsci_ld_core_psct_cse
+                        ), .datac (nx8448z2), .datad (nx29949z2), .datae (
+                        main_ip_config_core_inst_reg_sad_config_rsci_ld_core_psct_cse_5hn1s1
+                        ), .dataf (nx26500z2)) ;
+                        defparam ix29949z62807.lut_mask = 64'hcccfccc0cccccccc;
+    cyclonev_lcell_comb ix24356z62807 (.combout (nx24356z1), .dataa (
+                        main_ip_config_core_inst_reg_ctrl_config_rsci_ld_core_psct_cse
+                        ), .datab (main_ip_config_core_inst_fsm_output[1]), .datac (
+                        nx8448z2), .datad (nx29949z2), .datae (
+                        main_ip_config_core_inst_or_dcpl), .dataf (nx26500z2)) ;
+                        defparam ix24356z62807.lut_mask = 64'haaa0aaacaaaaaaaa;
+    cyclonev_lcell_comb ix8448z62807 (.combout (nx8448z1), .dataa (
+                        main_ip_config_core_inst_reg_config_rsci_ld_core_psct_cse
+                        ), .datab (nx8448z2), .datac (nx29949z2), .datad (
+                        nx8448z3), .datae (nx26500z2), .dataf (nx8448z4)) ;
+                        defparam ix8448z62807.lut_mask = 64'ha8a8aaaaa8abaaaa;
+    cyclonev_lcell_comb ix26500z62810 (.combout (nx26500z2), .datab (
+                        ctrl_config_rsc_vz_int), .datac (
+                        main_ip_config_core_inst_main_ip_config_core_ctrl_config_rsci_inst_main_ip_config_core_ctrl_config_rsci_ctrl_config_wait_ctrl_inst_ctrl_config_rsci_icwt
+                        ), .datad (
+                        main_ip_config_core_inst_main_ip_config_core_ctrl_config_rsci_inst_main_ip_config_core_ctrl_config_rsci_ctrl_config_wait_dp_inst_ctrl_config_rsci_bcwt
+                        ), .datae (
+                        main_ip_config_core_inst_reg_ctrl_config_rsci_ld_core_psct_cse
+                        ), .dataf (main_ip_config_core_inst_core_wten)) ;
+                        defparam ix26500z62810.lut_mask = 64'hffc0ffffffccffff;
+    cyclonev_lcell_comb ix23164z62807 (.combout (nx23164z1), .dataa (
+                        main_ip_config_core_inst_reg_temp_1h_sva_tmp[0]), .datab (
+                        main_ip_config_core_inst_fsm_output[1]), .datac (
+                        main_ip_config_core_inst_config_rsci_d_mxwt_3h0_), .datad (
+                        nx8448z2), .datae (nx29949z2), .dataf (nx26500z2)) ;
+                        defparam ix23164z62807.lut_mask = 64'haaaaaae2aaaaaaaa;
+    cyclonev_lcell_comb ix22167z62807 (.combout (nx22167z1), .dataa (
+                        main_ip_config_core_inst_reg_temp_1h_sva_tmp[1]), .datab (
+                        main_ip_config_core_inst_fsm_output[1]), .datac (
+                        main_ip_config_core_inst_config_rsci_d_mxwt_3h1_), .datad (
+                        nx8448z2), .datae (nx29949z2), .dataf (nx26500z2)) ;
+                        defparam ix22167z62807.lut_mask = 64'haaaaaae2aaaaaaaa;
+    cyclonev_lcell_comb ix52497z62807 (.combout (nx52497z1), .datad (
+                        config_rsc_z_int[6]), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[6]
+                        ), .dataf (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+                        )) ;
+                        defparam ix52497z62807.lut_mask = 64'hffff0000ff00ff00;
+    cyclonev_lcell_comb ix51500z62807 (.combout (nx51500z1), .datad (
+                        config_rsc_z_int[7]), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[7]
+                        ), .dataf (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+                        )) ;
+                        defparam ix51500z62807.lut_mask = 64'hffff0000ff00ff00;
+    cyclonev_lcell_comb ix50503z62807 (.combout (nx50503z1), .datad (
+                        config_rsc_z_int[8]), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[8]
+                        ), .dataf (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+                        )) ;
+                        defparam ix50503z62807.lut_mask = 64'hffff0000ff00ff00;
+    cyclonev_lcell_comb ix49506z62807 (.combout (nx49506z1), .datad (
+                        config_rsc_z_int[9]), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[9]
+                        ), .dataf (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+                        )) ;
+                        defparam ix49506z62807.lut_mask = 64'hffff0000ff00ff00;
+    cyclonev_lcell_comb ix24070z62807 (.combout (nx24070z1), .datad (
+                        config_rsc_z_int[10]), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[10]
+                        ), .dataf (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+                        )) ;
+                        defparam ix24070z62807.lut_mask = 64'hffff0000ff00ff00;
+    cyclonev_lcell_comb ix23073z62807 (.combout (nx23073z1), .datad (
+                        config_rsc_z_int[11]), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[11]
+                        ), .dataf (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+                        )) ;
+                        defparam ix23073z62807.lut_mask = 64'hffff0000ff00ff00;
+    cyclonev_lcell_comb ix22076z62807 (.combout (nx22076z1), .datad (
+                        config_rsc_z_int[12]), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[12]
+                        ), .dataf (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+                        )) ;
+                        defparam ix22076z62807.lut_mask = 64'hffff0000ff00ff00;
+    cyclonev_lcell_comb ix21079z62807 (.combout (nx21079z1), .datad (
+                        config_rsc_z_int[13]), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[13]
+                        ), .dataf (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+                        )) ;
+                        defparam ix21079z62807.lut_mask = 64'hffff0000ff00ff00;
+    cyclonev_lcell_comb ix20082z62807 (.combout (nx20082z1), .datad (
+                        config_rsc_z_int[14]), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[14]
+                        ), .dataf (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+                        )) ;
+                        defparam ix20082z62807.lut_mask = 64'hffff0000ff00ff00;
+    cyclonev_lcell_comb ix19085z62807 (.combout (nx19085z1), .datad (
+                        config_rsc_z_int[15]), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[15]
+                        ), .dataf (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+                        )) ;
+                        defparam ix19085z62807.lut_mask = 64'hffff0000ff00ff00;
+    cyclonev_lcell_comb ix18088z62807 (.combout (nx18088z1), .datad (
+                        config_rsc_z_int[16]), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[16]
+                        ), .dataf (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+                        )) ;
+                        defparam ix18088z62807.lut_mask = 64'hffff0000ff00ff00;
+    cyclonev_lcell_comb ix17091z62807 (.combout (nx17091z1), .datad (
+                        config_rsc_z_int[17]), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[17]
+                        ), .dataf (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+                        )) ;
+                        defparam ix17091z62807.lut_mask = 64'hffff0000ff00ff00;
+    cyclonev_lcell_comb ix16094z62807 (.combout (nx16094z1), .datad (
+                        config_rsc_z_int[18]), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[18]
+                        ), .dataf (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+                        )) ;
+                        defparam ix16094z62807.lut_mask = 64'hffff0000ff00ff00;
+    cyclonev_lcell_comb ix15097z62807 (.combout (nx15097z1), .datad (
+                        config_rsc_z_int[19]), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[19]
+                        ), .dataf (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+                        )) ;
+                        defparam ix15097z62807.lut_mask = 64'hffff0000ff00ff00;
+    cyclonev_lcell_comb ix13101z62807 (.combout (nx13101z1), .datad (
+                        config_rsc_z_int[20]), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[20]
+                        ), .dataf (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+                        )) ;
+                        defparam ix13101z62807.lut_mask = 64'hffff0000ff00ff00;
+    cyclonev_lcell_comb ix12104z62807 (.combout (nx12104z1), .datad (
+                        config_rsc_z_int[21]), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[21]
+                        ), .dataf (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+                        )) ;
+                        defparam ix12104z62807.lut_mask = 64'hffff0000ff00ff00;
+    cyclonev_lcell_comb ix11107z62807 (.combout (nx11107z1), .datad (
+                        config_rsc_z_int[22]), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[22]
+                        ), .dataf (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+                        )) ;
+                        defparam ix11107z62807.lut_mask = 64'hffff0000ff00ff00;
+    cyclonev_lcell_comb ix10110z62807 (.combout (nx10110z1), .datad (
+                        config_rsc_z_int[23]), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[23]
+                        ), .dataf (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+                        )) ;
+                        defparam ix10110z62807.lut_mask = 64'hffff0000ff00ff00;
+    cyclonev_lcell_comb ix9113z62807 (.combout (nx9113z1), .datad (
+                        config_rsc_z_int[24]), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[24]
+                        ), .dataf (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+                        )) ;
+                        defparam ix9113z62807.lut_mask = 64'hffff0000ff00ff00;
+    cyclonev_lcell_comb ix8116z62807 (.combout (nx8116z1), .datad (
+                        config_rsc_z_int[25]), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[25]
+                        ), .dataf (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+                        )) ;
+                        defparam ix8116z62807.lut_mask = 64'hffff0000ff00ff00;
+    cyclonev_lcell_comb ix7119z62807 (.combout (nx7119z1), .datad (
+                        config_rsc_z_int[26]), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[26]
+                        ), .dataf (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+                        )) ;
+                        defparam ix7119z62807.lut_mask = 64'hffff0000ff00ff00;
+    cyclonev_lcell_comb ix6122z62807 (.combout (nx6122z1), .datad (
+                        config_rsc_z_int[27]), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[27]
+                        ), .dataf (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+                        )) ;
+                        defparam ix6122z62807.lut_mask = 64'hffff0000ff00ff00;
+    cyclonev_lcell_comb ix5125z62807 (.combout (nx5125z1), .datad (
+                        config_rsc_z_int[28]), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[28]
+                        ), .dataf (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+                        )) ;
+                        defparam ix5125z62807.lut_mask = 64'hffff0000ff00ff00;
+    cyclonev_lcell_comb ix4128z62807 (.combout (nx4128z1), .datad (
+                        config_rsc_z_int[29]), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[29]
+                        ), .dataf (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+                        )) ;
+                        defparam ix4128z62807.lut_mask = 64'hffff0000ff00ff00;
+    cyclonev_lcell_comb ix41395z62807 (.combout (nx41395z1), .datad (
+                        config_rsc_z_int[0]), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[0]
+                        ), .dataf (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+                        )) ;
+                        defparam ix41395z62807.lut_mask = 64'hffff0000ff00ff00;
+    cyclonev_lcell_comb ix40398z62807 (.combout (nx40398z1), .datad (
+                        config_rsc_z_int[1]), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[1]
+                        ), .dataf (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+                        )) ;
+                        defparam ix40398z62807.lut_mask = 64'hffff0000ff00ff00;
+    cyclonev_lcell_comb ix39401z62807 (.combout (nx39401z1), .datad (
+                        config_rsc_z_int[2]), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[2]
+                        ), .dataf (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+                        )) ;
+                        defparam ix39401z62807.lut_mask = 64'hffff0000ff00ff00;
+    cyclonev_lcell_comb ix38404z62807 (.combout (nx38404z1), .datad (
+                        config_rsc_z_int[3]), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[3]
+                        ), .dataf (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+                        )) ;
+                        defparam ix38404z62807.lut_mask = 64'hffff0000ff00ff00;
+    cyclonev_lcell_comb ix37407z62807 (.combout (nx37407z1), .datad (
+                        config_rsc_z_int[4]), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[4]
+                        ), .dataf (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+                        )) ;
+                        defparam ix37407z62807.lut_mask = 64'hffff0000ff00ff00;
+    cyclonev_lcell_comb ix36410z62807 (.combout (nx36410z1), .datad (
+                        config_rsc_z_int[5]), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[5]
+                        ), .dataf (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+                        )) ;
+                        defparam ix36410z62807.lut_mask = 64'hffff0000ff00ff00;
+    cyclonev_lcell_comb ix40538z62807 (.combout (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt_2hn1s1
+                        ), .dataa (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+                        ), .datab (
+                        main_ip_config_core_inst_reg_config_rsci_ld_core_psct_cse
+                        ), .datac (nx40538z1), .datad (nx29949z2), .datae (
+                        NOT_main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_config_rsci_biwt
+                        ), .dataf (nx26500z2)) ;
+                        defparam ix40538z62807.lut_mask = 64'haa2655d9aaaa5555;
+    cyclonev_lcell_comb ix53302z62807 (.combout (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_ctrl_inst_config_rsci_icwt_2hn1s1
+                        ), .datac (config_rsc_vz_int), .datad (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_ctrl_inst_config_rsci_icwt
+                        ), .datae (
+                        main_ip_config_core_inst_reg_config_rsci_ld_core_psct_cse
+                        ), .dataf (main_ip_config_core_inst_core_wten)) ;
+                        defparam ix53302z62807.lut_mask = 64'h0f000f00f00f0f00;
+    cyclonev_lcell_comb ix40538z62809 (.combout (
+                        NOT_main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_config_rsci_biwt
+                        ), .datac (config_rsc_vz_int), .datad (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_ctrl_inst_config_rsci_icwt
+                        ), .datae (
+                        main_ip_config_core_inst_reg_config_rsci_ld_core_psct_cse
+                        ), .dataf (main_ip_config_core_inst_core_wten)) ;
+                        defparam ix40538z62809.lut_mask = 64'h0fff0fff0f0f0fff;
+    cyclonev_lcell_comb ix55050z62807 (.combout (
+                        main_ip_config_core_inst_main_ip_config_core_sad_config_rsci_inst_main_ip_config_core_sad_config_rsci_sad_config_wait_ctrl_inst_sad_config_rsci_icwt_2hn1s1
+                        ), .datac (sad_config_rsc_vz_int), .datad (
+                        main_ip_config_core_inst_main_ip_config_core_sad_config_rsci_inst_main_ip_config_core_sad_config_rsci_sad_config_wait_ctrl_inst_sad_config_rsci_icwt
+                        ), .datae (
+                        main_ip_config_core_inst_reg_sad_config_rsci_ld_core_psct_cse
+                        ), .dataf (main_ip_config_core_inst_core_wten)) ;
+                        defparam ix55050z62807.lut_mask = 64'h0f000f00f00f0f00;
+    cyclonev_lcell_comb ix30462z62807 (.combout (
+                        main_ip_config_core_inst_main_ip_config_core_sad_config_rsci_inst_main_ip_config_core_sad_config_rsci_sad_config_wait_dp_inst_sad_config_rsci_bcwt_2hn1s1
+                        ), .dataa (
+                        main_ip_config_core_inst_main_ip_config_core_sad_config_rsci_inst_main_ip_config_core_sad_config_rsci_sad_config_wait_dp_inst_sad_config_rsci_bcwt
+                        ), .datab (
+                        main_ip_config_core_inst_reg_sad_config_rsci_ld_core_psct_cse
+                        ), .datac (nx30462z1), .datad (nx8448z2), .datae (
+                        NOT_main_ip_config_core_inst_main_ip_config_core_sad_config_rsci_inst_sad_config_rsci_biwt
+                        ), .dataf (nx26500z2)) ;
+                        defparam ix30462z62807.lut_mask = 64'haa2655d9aaaa5555;
+    cyclonev_lcell_comb ix30462z62809 (.combout (
+                        NOT_main_ip_config_core_inst_main_ip_config_core_sad_config_rsci_inst_sad_config_rsci_biwt
+                        ), .datac (sad_config_rsc_vz_int), .datad (
+                        main_ip_config_core_inst_main_ip_config_core_sad_config_rsci_inst_main_ip_config_core_sad_config_rsci_sad_config_wait_ctrl_inst_sad_config_rsci_icwt
+                        ), .datae (
+                        main_ip_config_core_inst_reg_sad_config_rsci_ld_core_psct_cse
+                        ), .dataf (main_ip_config_core_inst_core_wten)) ;
+                        defparam ix30462z62809.lut_mask = 64'h0fff0fff0f0f0fff;
+    cyclonev_lcell_comb ix53182z62807 (.combout (
+                        main_ip_config_core_inst_main_ip_config_core_ctrl_config_rsci_inst_main_ip_config_core_ctrl_config_rsci_ctrl_config_wait_ctrl_inst_ctrl_config_rsci_icwt_2hn1s1
+                        ), .datac (ctrl_config_rsc_vz_int), .datad (
+                        main_ip_config_core_inst_main_ip_config_core_ctrl_config_rsci_inst_main_ip_config_core_ctrl_config_rsci_ctrl_config_wait_ctrl_inst_ctrl_config_rsci_icwt
+                        ), .datae (
+                        main_ip_config_core_inst_reg_ctrl_config_rsci_ld_core_psct_cse
+                        ), .dataf (main_ip_config_core_inst_core_wten)) ;
+                        defparam ix53182z62807.lut_mask = 64'h0f000f00f00f0f00;
+    cyclonev_lcell_comb ix59990z62807 (.combout (
+                        main_ip_config_core_inst_main_ip_config_core_ctrl_config_rsci_inst_main_ip_config_core_ctrl_config_rsci_ctrl_config_wait_dp_inst_ctrl_config_rsci_bcwt_2hn1s1
+                        ), .dataa (
+                        main_ip_config_core_inst_main_ip_config_core_ctrl_config_rsci_inst_main_ip_config_core_ctrl_config_rsci_ctrl_config_wait_dp_inst_ctrl_config_rsci_bcwt
+                        ), .datab (
+                        main_ip_config_core_inst_reg_ctrl_config_rsci_ld_core_psct_cse
+                        ), .datac (nx59990z1), .datad (nx8448z2), .datae (
+                        nx29949z2), .dataf (
+                        NOT_main_ip_config_core_inst_main_ip_config_core_ctrl_config_rsci_inst_ctrl_config_rsci_biwt
+                        )) ;
+                        defparam ix59990z62807.lut_mask = 64'haaaaaa625555559d;
+    cyclonev_lcell_comb ix59990z62809 (.combout (
+                        NOT_main_ip_config_core_inst_main_ip_config_core_ctrl_config_rsci_inst_ctrl_config_rsci_biwt
+                        ), .datac (ctrl_config_rsc_vz_int), .datad (
+                        main_ip_config_core_inst_main_ip_config_core_ctrl_config_rsci_inst_main_ip_config_core_ctrl_config_rsci_ctrl_config_wait_ctrl_inst_ctrl_config_rsci_icwt
+                        ), .datae (
+                        main_ip_config_core_inst_reg_ctrl_config_rsci_ld_core_psct_cse
+                        ), .dataf (main_ip_config_core_inst_core_wten)) ;
+                        defparam ix59990z62809.lut_mask = 64'h0fff0fff0f0f0fff;
+    cyclonev_lcell_comb ix27497z62807 (.combout (nx27497z1), .datae (nx27497z2)
+                        , .dataf (
+                        main_ip_config_core_inst_main_ip_config_core_core_fsm_inst_fsm_output_4h_
+                        )) ;
+                        defparam ix27497z62807.lut_mask = 64'hffffffff0000ffff;
+    cyclonev_lcell_comb ix29949z62809 (.combout (
+                        main_ip_config_core_inst_reg_sad_config_rsci_ld_core_psct_cse_5hn1s1
+                        ), .datab (
+                        main_ip_config_core_inst_reg_temp_1h_sva_tmp[0]), .datac (
+                        main_ip_config_core_inst_reg_temp_1h_sva_tmp[1]), .datad (
+                        main_ip_config_core_inst_fsm_output[1]), .datae (
+                        main_ip_config_core_inst_fsm_output[2]), .dataf (
+                        main_ip_config_core_inst_fsm_output[3])) ;
+                        defparam ix29949z62809.lut_mask = 64'hff03ff03ff03ff00;
+    cyclonev_lcell_comb ix24356z62808 (.combout (
+                        main_ip_config_core_inst_or_dcpl), .datab (
+                        config_rsc_z_int[30]), .datac (config_rsc_z_int[31]), .datad (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[30]
+                        ), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[31]
+                        ), .dataf (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+                        )) ;
+                        defparam ix24356z62808.lut_mask = 64'hffffff00fcfcfcfc;
+    cyclonev_lcell_comb ix23164z62808 (.combout (
+                        main_ip_config_core_inst_config_rsci_d_mxwt_3h0_), .datad (
+                        config_rsc_z_int[30]), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[30]
+                        ), .dataf (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+                        )) ;
+                        defparam ix23164z62808.lut_mask = 64'hffff0000ff00ff00;
+    cyclonev_lcell_comb ix22167z62808 (.combout (
+                        main_ip_config_core_inst_config_rsci_d_mxwt_3h1_), .datad (
+                        config_rsc_z_int[31]), .datae (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_d_bfwt[31]
+                        ), .dataf (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_dp_inst_config_rsci_bcwt
+                        )) ;
+                        defparam ix22167z62808.lut_mask = 64'hffff0000ff00ff00;
+    cyclonev_lcell_comb ix26500z62808 (.combout (
+                        main_ip_config_core_inst_core_wen), .dataa (
+                        sad_config_rsc_vz_int), .datab (
+                        main_ip_config_core_inst_main_ip_config_core_sad_config_rsci_inst_main_ip_config_core_sad_config_rsci_sad_config_wait_dp_inst_sad_config_rsci_bcwt
+                        ), .datac (
+                        main_ip_config_core_inst_reg_sad_config_rsci_ld_core_psct_cse
+                        ), .datad (nx26500z1), .datae (nx8448z2), .dataf (
+                        nx26500z2)) ;
+                        defparam ix26500z62808.lut_mask = 64'h0000cfef00000000;
+    cyclonev_lcell_comb ix32924z62807 (.combout (sad_config_rsc_lz_dup_0h), .datad (
+                        main_ip_config_core_inst_main_ip_config_core_sad_config_rsci_inst_main_ip_config_core_sad_config_rsci_sad_config_wait_ctrl_inst_sad_config_rsci_icwt
+                        ), .datae (
+                        main_ip_config_core_inst_reg_sad_config_rsci_ld_core_psct_cse
+                        ), .dataf (main_ip_config_core_inst_core_wten)) ;
+                        defparam ix32924z62807.lut_mask = 64'hff000000ffff0000;
+    cyclonev_lcell_comb ix52259z62807 (.combout (ctrl_config_rsc_lz_dup_0h), .datad (
+                        main_ip_config_core_inst_main_ip_config_core_ctrl_config_rsci_inst_main_ip_config_core_ctrl_config_rsci_ctrl_config_wait_ctrl_inst_ctrl_config_rsci_icwt
+                        ), .datae (
+                        main_ip_config_core_inst_reg_ctrl_config_rsci_ld_core_psct_cse
+                        ), .dataf (main_ip_config_core_inst_core_wten)) ;
+                        defparam ix52259z62807.lut_mask = 64'hff000000ffff0000;
+    cyclonev_lcell_comb ix51721z62807 (.combout (config_rsc_lz_dup_0h), .datad (
+                        main_ip_config_core_inst_main_ip_config_core_config_rsci_inst_main_ip_config_core_config_rsci_config_wait_ctrl_inst_config_rsci_icwt
+                        ), .datae (
+                        main_ip_config_core_inst_reg_config_rsci_ld_core_psct_cse
+                        ), .dataf (main_ip_config_core_inst_core_wten)) ;
+                        defparam ix51721z62807.lut_mask = 64'hff000000ffff0000;
+endmodule
+

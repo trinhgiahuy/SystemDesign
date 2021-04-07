@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>TUNI.fi</ipxact:vendor>
+	<ipxact:library>ip.hwp.com</ipxact:library>
+	<ipxact:name>HPS_peripherals_bus</ipxact:name>
+	<ipxact:version>1.0</ipxact:version>
+	<ipxact:busInterfaces>
+		<ipxact:busInterface>
+			<ipxact:name>H2F_master</ipxact:name>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="axi3_bus" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="axi3_bus.absDef" version="1.0"/>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:mirroredMaster/>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>sad_result_low</ipxact:name>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="axi3_bus" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="axi3_bus.absDef" version="1.0"/>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:mirroredSlave>
+				<ipxact:baseAddresses>
+					<ipxact:remapAddress>0</ipxact:remapAddress>
+					<ipxact:range>'h10</ipxact:range>
+				</ipxact:baseAddresses>
+			</ipxact:mirroredSlave>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>sad_result_high</ipxact:name>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="axi3_bus" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="axi3_bus.absDef" version="1.0"/>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:mirroredSlave>
+				<ipxact:baseAddresses>
+					<ipxact:remapAddress>'h10</ipxact:remapAddress>
+					<ipxact:range>'h10</ipxact:range>
+				</ipxact:baseAddresses>
+			</ipxact:mirroredSlave>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>acc_config</ipxact:name>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="axi3_bus" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="axi3_bus.absDef" version="1.0"/>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:mirroredSlave>
+				<ipxact:baseAddresses>
+					<ipxact:remapAddress>'h400</ipxact:remapAddress>
+					<ipxact:range>'h100</ipxact:range>
+				</ipxact:baseAddresses>
+			</ipxact:mirroredSlave>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>result_ready</ipxact:name>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="axi3_bus" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="axi3_bus.absDef" version="1.0"/>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:mirroredSlave>
+				<ipxact:baseAddresses>
+					<ipxact:remapAddress>'h20</ipxact:remapAddress>
+					<ipxact:range>'h10</ipxact:range>
+				</ipxact:baseAddresses>
+			</ipxact:mirroredSlave>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>lcu_loaded</ipxact:name>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="axi3_bus" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="axi3_bus.absDef" version="1.0"/>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:mirroredSlave>
+				<ipxact:baseAddresses>
+					<ipxact:remapAddress>'h30</ipxact:remapAddress>
+					<ipxact:range>'h10</ipxact:range>
+				</ipxact:baseAddresses>
+			</ipxact:mirroredSlave>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>lambda_loaded</ipxact:name>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="axi3_bus" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="axi3_bus.absDef" version="1.0"/>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:mirroredSlave>
+				<ipxact:baseAddresses>
+					<ipxact:remapAddress>'h40</ipxact:remapAddress>
+					<ipxact:range>'h10</ipxact:range>
+				</ipxact:baseAddresses>
+			</ipxact:mirroredSlave>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>axi_dma_unfiltered1</ipxact:name>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="axi3_bus" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="axi3_bus.absDef" version="1.0"/>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:mirroredSlave>
+				<ipxact:baseAddresses>
+					<ipxact:remapAddress>'h100</ipxact:remapAddress>
+					<ipxact:range>'h100</ipxact:range>
+				</ipxact:baseAddresses>
+			</ipxact:mirroredSlave>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>axi_dma_unfiltered2</ipxact:name>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="axi3_bus" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="axi3_bus.absDef" version="1.0"/>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:mirroredSlave>
+				<ipxact:baseAddresses>
+					<ipxact:remapAddress>'h200</ipxact:remapAddress>
+					<ipxact:range>'h100</ipxact:range>
+				</ipxact:baseAddresses>
+			</ipxact:mirroredSlave>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>axi_dma_orig_block</ipxact:name>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="axi3_bus" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="axi3_bus.absDef" version="1.0"/>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:mirroredSlave>
+				<ipxact:baseAddresses>
+					<ipxact:remapAddress>'h300</ipxact:remapAddress>
+					<ipxact:range>'h100</ipxact:range>
+				</ipxact:baseAddresses>
+			</ipxact:mirroredSlave>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>dma_yuv</ipxact:name>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="axi3_bus" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="axi3_bus.absDef" version="1.0"/>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:mirroredSlave>
+				<ipxact:baseAddresses>
+					<ipxact:remapAddress>'h1100</ipxact:remapAddress>
+					<ipxact:range>'h100</ipxact:range>
+				</ipxact:baseAddresses>
+			</ipxact:mirroredSlave>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>camera_contro_oc</ipxact:name>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="axi3_bus" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="axi3_bus.absDef" version="1.0"/>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:mirroredSlave>
+				<ipxact:baseAddresses>
+					<ipxact:remapAddress>'h2000</ipxact:remapAddress>
+					<ipxact:range>'h80</ipxact:range>
+				</ipxact:baseAddresses>
+			</ipxact:mirroredSlave>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>configure_camera</ipxact:name>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="axi3_bus" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="axi3_bus.absDef" version="1.0"/>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:mirroredSlave>
+				<ipxact:baseAddresses>
+					<ipxact:remapAddress>'h2100</ipxact:remapAddress>
+					<ipxact:range>'h10</ipxact:range>
+				</ipxact:baseAddresses>
+			</ipxact:mirroredSlave>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>yuv_ctrl</ipxact:name>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="axi3_bus" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="axi3_bus.absDef" version="1.0"/>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:mirroredSlave>
+				<ipxact:baseAddresses>
+					<ipxact:remapAddress>'h2200</ipxact:remapAddress>
+					<ipxact:range>'h10</ipxact:range>
+				</ipxact:baseAddresses>
+			</ipxact:mirroredSlave>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>yuv_status</ipxact:name>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="axi3_bus" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="axi3_bus.absDef" version="1.0"/>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:mirroredSlave>
+				<ipxact:baseAddresses>
+					<ipxact:remapAddress>'h2300</ipxact:remapAddress>
+					<ipxact:range>'h10</ipxact:range>
+				</ipxact:baseAddresses>
+			</ipxact:mirroredSlave>
+		</ipxact:busInterface>
+	</ipxact:busInterfaces>
+	<ipxact:channels>
+		<ipxact:channel>
+			<ipxact:name>master_channel</ipxact:name>
+			<ipxact:busInterfaceRef>
+				<ipxact:localName>H2F_master</ipxact:localName>
+			</ipxact:busInterfaceRef>
+			<ipxact:busInterfaceRef>
+				<ipxact:localName>sad_result_low</ipxact:localName>
+			</ipxact:busInterfaceRef>
+			<ipxact:busInterfaceRef>
+				<ipxact:localName>sad_result_high</ipxact:localName>
+			</ipxact:busInterfaceRef>
+			<ipxact:busInterfaceRef>
+				<ipxact:localName>acc_config</ipxact:localName>
+			</ipxact:busInterfaceRef>
+			<ipxact:busInterfaceRef>
+				<ipxact:localName>result_ready</ipxact:localName>
+			</ipxact:busInterfaceRef>
+			<ipxact:busInterfaceRef>
+				<ipxact:localName>lcu_loaded</ipxact:localName>
+			</ipxact:busInterfaceRef>
+			<ipxact:busInterfaceRef>
+				<ipxact:localName>lambda_loaded</ipxact:localName>
+			</ipxact:busInterfaceRef>
+			<ipxact:busInterfaceRef>
+				<ipxact:localName>axi_dma_unfiltered1</ipxact:localName>
+			</ipxact:busInterfaceRef>
+			<ipxact:busInterfaceRef>
+				<ipxact:localName>axi_dma_unfiltered2</ipxact:localName>
+			</ipxact:busInterfaceRef>
+			<ipxact:busInterfaceRef>
+				<ipxact:localName>axi_dma_orig_block</ipxact:localName>
+			</ipxact:busInterfaceRef>
+			<ipxact:busInterfaceRef>
+				<ipxact:localName>dma_yuv</ipxact:localName>
+			</ipxact:busInterfaceRef>
+			<ipxact:busInterfaceRef>
+				<ipxact:localName>camera_contro_oc</ipxact:localName>
+			</ipxact:busInterfaceRef>
+			<ipxact:busInterfaceRef>
+				<ipxact:localName>configure_camera</ipxact:localName>
+			</ipxact:busInterfaceRef>
+			<ipxact:busInterfaceRef>
+				<ipxact:localName>yuv_ctrl</ipxact:localName>
+			</ipxact:busInterfaceRef>
+			<ipxact:busInterfaceRef>
+				<ipxact:localName>yuv_status</ipxact:localName>
+			</ipxact:busInterfaceRef>
+		</ipxact:channel>
+	</ipxact:channels>
+	<ipxact:vendorExtensions>
+		<kactus2:kts_attributes>
+			<kactus2:kts_productHier>Flat</kactus2:kts_productHier>
+			<kactus2:kts_implementation>HW</kactus2:kts_implementation>
+			<kactus2:kts_firmness>Mutable</kactus2:kts_firmness>
+		</kactus2:kts_attributes>
+	</ipxact:vendorExtensions>
+</ipxact:component>
