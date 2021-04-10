@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ipxact:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+<ipxact:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.tut.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 	<ipxact:vendor>TUNI.fi</ipxact:vendor>
 	<ipxact:library>product</ipxact:library>
 	<ipxact:name>Kvazaar_IP_acc_Camera</ipxact:name>
@@ -232,6 +232,309 @@
 				</ipxact:abstractionType>
 			</ipxact:abstractionTypes>
 			<ipxact:master/>
+			<ipxact:connectionRequired>false</ipxact:connectionRequired>
+			<ipxact:bitsInLau>8</ipxact:bitsInLau>
+			<ipxact:endianness>little</ipxact:endianness>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>CCD_data</ipxact:name>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="ccd_data" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="ccd_data.absDef" version="1.0"/>
+					<ipxact:portMaps>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>ILVAL</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>0</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>CAMERA_LVAL</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>0</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>IFVAL</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>0</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>CAMERA_FVAL</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>0</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>IDATA</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>11</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>CAMERA_D</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>11</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+					</ipxact:portMaps>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:master/>
+			<ipxact:connectionRequired>false</ipxact:connectionRequired>
+			<ipxact:bitsInLau>8</ipxact:bitsInLau>
+			<ipxact:endianness>little</ipxact:endianness>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>i2c_data</ipxact:name>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="i2c_data" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="i2c_data.absDef" version="1.0"/>
+					<ipxact:portMaps>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CAMERA_SCLK</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>0</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>CAMERA_SCLK</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>0</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CAMERA_SDATA</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>0</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>CAMERA_SDATA</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>0</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+					</ipxact:portMaps>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:master/>
+			<ipxact:connectionRequired>false</ipxact:connectionRequired>
+			<ipxact:bitsInLau>8</ipxact:bitsInLau>
+			<ipxact:endianness>little</ipxact:endianness>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>clock_25MHz</ipxact:name>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="clock_reset" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="clock_reset.absDef" version="1.0"/>
+					<ipxact:portMaps>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>RST_N</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>0</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>CAMERA_RESET_n</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>0</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CLK</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>0</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>CAMERA_XCLKIN</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>0</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+					</ipxact:portMaps>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:master/>
+			<ipxact:connectionRequired>false</ipxact:connectionRequired>
+			<ipxact:bitsInLau>8</ipxact:bitsInLau>
+			<ipxact:endianness>little</ipxact:endianness>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>clock_50MHz</ipxact:name>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="clock_reset" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="clock_reset.absDef" version="1.0"/>
+					<ipxact:portMaps>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CLK</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>0</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>clk_50m_fpga</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>0</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+					</ipxact:portMaps>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:slave/>
+			<ipxact:connectionRequired>false</ipxact:connectionRequired>
+			<ipxact:bitsInLau>8</ipxact:bitsInLau>
+			<ipxact:endianness>little</ipxact:endianness>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>clock_camera</ipxact:name>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="clock_reset" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="clock_reset.absDef" version="1.0"/>
+					<ipxact:portMaps>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CLK</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>0</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>CAMERA_PIXCLK</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>0</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+					</ipxact:portMaps>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:slave/>
+			<ipxact:connectionRequired>false</ipxact:connectionRequired>
+			<ipxact:bitsInLau>8</ipxact:bitsInLau>
+			<ipxact:endianness>little</ipxact:endianness>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>push_buttons</ipxact:name>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="push_button" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="push_button.absDef" version="1.0"/>
+					<ipxact:portMaps>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>USER_PB_FPGA</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>1</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>user_pb_fpga</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>1</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+					</ipxact:portMaps>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:slave/>
+			<ipxact:connectionRequired>false</ipxact:connectionRequired>
+			<ipxact:bitsInLau>8</ipxact:bitsInLau>
+			<ipxact:endianness>little</ipxact:endianness>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>dip_switch</ipxact:name>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="dip_switch" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="dip_switch.absDef" version="1.0"/>
+					<ipxact:portMaps>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>USER_DIPSW_FPGA</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>3</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>user_dipsw_fpga</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>3</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+					</ipxact:portMaps>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:slave/>
 			<ipxact:connectionRequired>false</ipxact:connectionRequired>
 			<ipxact:bitsInLau>8</ipxact:bitsInLau>
 			<ipxact:endianness>little</ipxact:endianness>
@@ -1673,309 +1976,6 @@
 			<ipxact:bitsInLau>8</ipxact:bitsInLau>
 			<ipxact:endianness>little</ipxact:endianness>
 		</ipxact:busInterface>
-		<ipxact:busInterface>
-			<ipxact:name>dip_switch</ipxact:name>
-			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="dip_switch" version="1.0"/>
-			<ipxact:abstractionTypes>
-				<ipxact:abstractionType>
-					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="dip_switch.absDef" version="1.0"/>
-					<ipxact:portMaps>
-						<ipxact:portMap>
-							<ipxact:logicalPort>
-								<ipxact:name>USER_DIPSW_FPGA</ipxact:name>
-								<ipxact:range>
-									<ipxact:left>3</ipxact:left>
-									<ipxact:right>0</ipxact:right>
-								</ipxact:range>
-							</ipxact:logicalPort>
-							<ipxact:physicalPort>
-								<ipxact:name>user_dipsw_fpga</ipxact:name>
-								<ipxact:partSelect>
-									<ipxact:range>
-										<ipxact:left>3</ipxact:left>
-										<ipxact:right>0</ipxact:right>
-									</ipxact:range>
-								</ipxact:partSelect>
-							</ipxact:physicalPort>
-						</ipxact:portMap>
-					</ipxact:portMaps>
-				</ipxact:abstractionType>
-			</ipxact:abstractionTypes>
-			<ipxact:slave/>
-			<ipxact:connectionRequired>false</ipxact:connectionRequired>
-			<ipxact:bitsInLau>8</ipxact:bitsInLau>
-			<ipxact:endianness>little</ipxact:endianness>
-		</ipxact:busInterface>
-		<ipxact:busInterface>
-			<ipxact:name>push_buttons</ipxact:name>
-			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="push_button" version="1.0"/>
-			<ipxact:abstractionTypes>
-				<ipxact:abstractionType>
-					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="push_button.absDef" version="1.0"/>
-					<ipxact:portMaps>
-						<ipxact:portMap>
-							<ipxact:logicalPort>
-								<ipxact:name>USER_PB_FPGA</ipxact:name>
-								<ipxact:range>
-									<ipxact:left>1</ipxact:left>
-									<ipxact:right>0</ipxact:right>
-								</ipxact:range>
-							</ipxact:logicalPort>
-							<ipxact:physicalPort>
-								<ipxact:name>user_pb_fpga</ipxact:name>
-								<ipxact:partSelect>
-									<ipxact:range>
-										<ipxact:left>1</ipxact:left>
-										<ipxact:right>0</ipxact:right>
-									</ipxact:range>
-								</ipxact:partSelect>
-							</ipxact:physicalPort>
-						</ipxact:portMap>
-					</ipxact:portMaps>
-				</ipxact:abstractionType>
-			</ipxact:abstractionTypes>
-			<ipxact:slave/>
-			<ipxact:connectionRequired>false</ipxact:connectionRequired>
-			<ipxact:bitsInLau>8</ipxact:bitsInLau>
-			<ipxact:endianness>little</ipxact:endianness>
-		</ipxact:busInterface>
-		<ipxact:busInterface>
-			<ipxact:name>clock_camera</ipxact:name>
-			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="clock_reset" version="1.0"/>
-			<ipxact:abstractionTypes>
-				<ipxact:abstractionType>
-					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="clock_reset.absDef" version="1.0"/>
-					<ipxact:portMaps>
-						<ipxact:portMap>
-							<ipxact:logicalPort>
-								<ipxact:name>CLK</ipxact:name>
-								<ipxact:range>
-									<ipxact:left>0</ipxact:left>
-									<ipxact:right>0</ipxact:right>
-								</ipxact:range>
-							</ipxact:logicalPort>
-							<ipxact:physicalPort>
-								<ipxact:name>CAMERA_PIXCLK</ipxact:name>
-								<ipxact:partSelect>
-									<ipxact:range>
-										<ipxact:left>0</ipxact:left>
-										<ipxact:right>0</ipxact:right>
-									</ipxact:range>
-								</ipxact:partSelect>
-							</ipxact:physicalPort>
-						</ipxact:portMap>
-					</ipxact:portMaps>
-				</ipxact:abstractionType>
-			</ipxact:abstractionTypes>
-			<ipxact:slave/>
-			<ipxact:connectionRequired>false</ipxact:connectionRequired>
-			<ipxact:bitsInLau>8</ipxact:bitsInLau>
-			<ipxact:endianness>little</ipxact:endianness>
-		</ipxact:busInterface>
-		<ipxact:busInterface>
-			<ipxact:name>clock_50MHz</ipxact:name>
-			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="clock_reset" version="1.0"/>
-			<ipxact:abstractionTypes>
-				<ipxact:abstractionType>
-					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="clock_reset.absDef" version="1.0"/>
-					<ipxact:portMaps>
-						<ipxact:portMap>
-							<ipxact:logicalPort>
-								<ipxact:name>CLK</ipxact:name>
-								<ipxact:range>
-									<ipxact:left>0</ipxact:left>
-									<ipxact:right>0</ipxact:right>
-								</ipxact:range>
-							</ipxact:logicalPort>
-							<ipxact:physicalPort>
-								<ipxact:name>clk_50m_fpga</ipxact:name>
-								<ipxact:partSelect>
-									<ipxact:range>
-										<ipxact:left>0</ipxact:left>
-										<ipxact:right>0</ipxact:right>
-									</ipxact:range>
-								</ipxact:partSelect>
-							</ipxact:physicalPort>
-						</ipxact:portMap>
-					</ipxact:portMaps>
-				</ipxact:abstractionType>
-			</ipxact:abstractionTypes>
-			<ipxact:slave/>
-			<ipxact:connectionRequired>false</ipxact:connectionRequired>
-			<ipxact:bitsInLau>8</ipxact:bitsInLau>
-			<ipxact:endianness>little</ipxact:endianness>
-		</ipxact:busInterface>
-		<ipxact:busInterface>
-			<ipxact:name>clock_25MHz</ipxact:name>
-			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="clock_reset" version="1.0"/>
-			<ipxact:abstractionTypes>
-				<ipxact:abstractionType>
-					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="clock_reset.absDef" version="1.0"/>
-					<ipxact:portMaps>
-						<ipxact:portMap>
-							<ipxact:logicalPort>
-								<ipxact:name>RST_N</ipxact:name>
-								<ipxact:range>
-									<ipxact:left>0</ipxact:left>
-									<ipxact:right>0</ipxact:right>
-								</ipxact:range>
-							</ipxact:logicalPort>
-							<ipxact:physicalPort>
-								<ipxact:name>CAMERA_RESET_n</ipxact:name>
-								<ipxact:partSelect>
-									<ipxact:range>
-										<ipxact:left>0</ipxact:left>
-										<ipxact:right>0</ipxact:right>
-									</ipxact:range>
-								</ipxact:partSelect>
-							</ipxact:physicalPort>
-						</ipxact:portMap>
-						<ipxact:portMap>
-							<ipxact:logicalPort>
-								<ipxact:name>CLK</ipxact:name>
-								<ipxact:range>
-									<ipxact:left>0</ipxact:left>
-									<ipxact:right>0</ipxact:right>
-								</ipxact:range>
-							</ipxact:logicalPort>
-							<ipxact:physicalPort>
-								<ipxact:name>CAMERA_XCLKIN</ipxact:name>
-								<ipxact:partSelect>
-									<ipxact:range>
-										<ipxact:left>0</ipxact:left>
-										<ipxact:right>0</ipxact:right>
-									</ipxact:range>
-								</ipxact:partSelect>
-							</ipxact:physicalPort>
-						</ipxact:portMap>
-					</ipxact:portMaps>
-				</ipxact:abstractionType>
-			</ipxact:abstractionTypes>
-			<ipxact:master/>
-			<ipxact:connectionRequired>false</ipxact:connectionRequired>
-			<ipxact:bitsInLau>8</ipxact:bitsInLau>
-			<ipxact:endianness>little</ipxact:endianness>
-		</ipxact:busInterface>
-		<ipxact:busInterface>
-			<ipxact:name>i2c_data</ipxact:name>
-			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="i2c_data" version="1.0"/>
-			<ipxact:abstractionTypes>
-				<ipxact:abstractionType>
-					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="i2c_data.absDef" version="1.0"/>
-					<ipxact:portMaps>
-						<ipxact:portMap>
-							<ipxact:logicalPort>
-								<ipxact:name>CAMERA_SCLK</ipxact:name>
-								<ipxact:range>
-									<ipxact:left>0</ipxact:left>
-									<ipxact:right>0</ipxact:right>
-								</ipxact:range>
-							</ipxact:logicalPort>
-							<ipxact:physicalPort>
-								<ipxact:name>CAMERA_SCLK</ipxact:name>
-								<ipxact:partSelect>
-									<ipxact:range>
-										<ipxact:left>0</ipxact:left>
-										<ipxact:right>0</ipxact:right>
-									</ipxact:range>
-								</ipxact:partSelect>
-							</ipxact:physicalPort>
-						</ipxact:portMap>
-						<ipxact:portMap>
-							<ipxact:logicalPort>
-								<ipxact:name>CAMERA_SDATA</ipxact:name>
-								<ipxact:range>
-									<ipxact:left>0</ipxact:left>
-									<ipxact:right>0</ipxact:right>
-								</ipxact:range>
-							</ipxact:logicalPort>
-							<ipxact:physicalPort>
-								<ipxact:name>CAMERA_SDATA</ipxact:name>
-								<ipxact:partSelect>
-									<ipxact:range>
-										<ipxact:left>0</ipxact:left>
-										<ipxact:right>0</ipxact:right>
-									</ipxact:range>
-								</ipxact:partSelect>
-							</ipxact:physicalPort>
-						</ipxact:portMap>
-					</ipxact:portMaps>
-				</ipxact:abstractionType>
-			</ipxact:abstractionTypes>
-			<ipxact:master/>
-			<ipxact:connectionRequired>false</ipxact:connectionRequired>
-			<ipxact:bitsInLau>8</ipxact:bitsInLau>
-			<ipxact:endianness>little</ipxact:endianness>
-		</ipxact:busInterface>
-		<ipxact:busInterface>
-			<ipxact:name>CCD_data</ipxact:name>
-			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="ccd_data" version="1.0"/>
-			<ipxact:abstractionTypes>
-				<ipxact:abstractionType>
-					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="ccd_data.absDef" version="1.0"/>
-					<ipxact:portMaps>
-						<ipxact:portMap>
-							<ipxact:logicalPort>
-								<ipxact:name>ILVAL</ipxact:name>
-								<ipxact:range>
-									<ipxact:left>0</ipxact:left>
-									<ipxact:right>0</ipxact:right>
-								</ipxact:range>
-							</ipxact:logicalPort>
-							<ipxact:physicalPort>
-								<ipxact:name>CAMERA_LVAL</ipxact:name>
-								<ipxact:partSelect>
-									<ipxact:range>
-										<ipxact:left>0</ipxact:left>
-										<ipxact:right>0</ipxact:right>
-									</ipxact:range>
-								</ipxact:partSelect>
-							</ipxact:physicalPort>
-						</ipxact:portMap>
-						<ipxact:portMap>
-							<ipxact:logicalPort>
-								<ipxact:name>IFVAL</ipxact:name>
-								<ipxact:range>
-									<ipxact:left>0</ipxact:left>
-									<ipxact:right>0</ipxact:right>
-								</ipxact:range>
-							</ipxact:logicalPort>
-							<ipxact:physicalPort>
-								<ipxact:name>CAMERA_FVAL</ipxact:name>
-								<ipxact:partSelect>
-									<ipxact:range>
-										<ipxact:left>0</ipxact:left>
-										<ipxact:right>0</ipxact:right>
-									</ipxact:range>
-								</ipxact:partSelect>
-							</ipxact:physicalPort>
-						</ipxact:portMap>
-						<ipxact:portMap>
-							<ipxact:logicalPort>
-								<ipxact:name>IDATA</ipxact:name>
-								<ipxact:range>
-									<ipxact:left>11</ipxact:left>
-									<ipxact:right>0</ipxact:right>
-								</ipxact:range>
-							</ipxact:logicalPort>
-							<ipxact:physicalPort>
-								<ipxact:name>CAMERA_D</ipxact:name>
-								<ipxact:partSelect>
-									<ipxact:range>
-										<ipxact:left>11</ipxact:left>
-										<ipxact:right>0</ipxact:right>
-									</ipxact:range>
-								</ipxact:partSelect>
-							</ipxact:physicalPort>
-						</ipxact:portMap>
-					</ipxact:portMaps>
-				</ipxact:abstractionType>
-			</ipxact:abstractionTypes>
-			<ipxact:master/>
-			<ipxact:connectionRequired>false</ipxact:connectionRequired>
-			<ipxact:bitsInLau>8</ipxact:bitsInLau>
-			<ipxact:endianness>little</ipxact:endianness>
-		</ipxact:busInterface>
 	</ipxact:busInterfaces>
 	<ipxact:model>
 		<ipxact:views>
@@ -2636,7 +2636,7 @@
 				<ipxact:fileType user="csv">user</ipxact:fileType>
 				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
 				<ipxact:vendorExtensions>
-					<kactus2:hash>de246fb8b2e4ce7b309e3efe61f82a61</kactus2:hash>
+					<kactus2:hash>bc3c43f0e6a7f5d819dd5b600b8250a2</kactus2:hash>
 				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
@@ -2657,6 +2657,254 @@
 		</ipxact:fileSet>
 		<ipxact:fileSet>
 			<ipxact:name>verilogSource</ipxact:name>
+			<ipxact:group>generatedFiles</ipxact:group>
+			<ipxact:file>
+				<ipxact:name>Kvazaar_IP_acc_Camera.v</ipxact:name>
+				<ipxact:fileType>verilogSource</ipxact:fileType>
+				<ipxact:description>Generated at 17:00:29 on 10.04.2021 by Kactus2. </ipxact:description>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>quartus_project/Kvazaar_IP_acc_Camera.v</ipxact:name>
+				<ipxact:fileType>verilogSource</ipxact:fileType>
+				<ipxact:description>Generated at 17:01:20 on 10.04.2021 by Kactus2. </ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>8ad982d1bfbc03bcc942dc8782b382016337eedd</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+		</ipxact:fileSet>
+		<ipxact:fileSet>
+			<ipxact:name>Documentation</ipxact:name>
+			<ipxact:group>documentation</ipxact:group>
+			<ipxact:group>generatedFiles</ipxact:group>
+			<ipxact:file>
+				<ipxact:name>doc/doc_ip_acc_camera_quartus.html</ipxact:name>
+				<ipxact:fileType user="htmlFile">user</ipxact:fileType>
+				<ipxact:description>Html file that contains the documentation for this component and subcomponents</ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>09aff4be1e1904f6ee70820eca04ed50</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>doc/TUNI.fi.ip.hw.CCD_Capture.1.0.png</ipxact:name>
+				<ipxact:fileType user="picture">user</ipxact:fileType>
+				<ipxact:description>Preview picture needed by the html document.</ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>72b33465b2c35e8da402c296a28ddcd0</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>doc/TUNI.fi.ip.hw.CCD_Configer_I2C.1.0.png</ipxact:name>
+				<ipxact:fileType user="picture">user</ipxact:fileType>
+				<ipxact:description>Preview picture needed by the html document.</ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>d315b845308f1eb2d1497f5f9c5ccb38</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>doc/TUNI.fi.ip.hw.CCD_Configer.1.0.png</ipxact:name>
+				<ipxact:fileType user="picture">user</ipxact:fileType>
+				<ipxact:description>Preview picture needed by the html document.</ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>326be80035256f929b1608bce47d1e6f</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>doc/TUNI.fi.ip.hw.Clock_Reset.1.0.png</ipxact:name>
+				<ipxact:fileType user="picture">user</ipxact:fileType>
+				<ipxact:description>Preview picture needed by the html document.</ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>2561344ced024da00f10309f9778fe50</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>doc/TUNI.fi.ip.hw.IP_SAD_Accelerator.1.0.png</ipxact:name>
+				<ipxact:fileType user="picture">user</ipxact:fileType>
+				<ipxact:description>Preview picture needed by the html document.</ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>ff42633d3c0d061e21441d430a148a93</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>doc/TUNI.fi.ip.hw.Kvazaar_QSYS.1.0_student.hierarchical.png</ipxact:name>
+				<ipxact:fileType user="picture">user</ipxact:fileType>
+				<ipxact:description>Preview picture needed by the html document.</ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>8616030bf803f0569fd55eb9cb3b820b</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>doc/TUNI.fi.ip.hw.Kvazaar_QSYS.1.0_student.png</ipxact:name>
+				<ipxact:fileType user="picture">user</ipxact:fileType>
+				<ipxact:description>Preview picture needed by the html document.</ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>cde78e8b2b6fb909deed4e42fae0ee3c</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>doc/TUNI.fi.ip.hw.LTP_Controller.1.0.png</ipxact:name>
+				<ipxact:fileType user="picture">user</ipxact:fileType>
+				<ipxact:description>Preview picture needed by the html document.</ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>8390c34cf4221679737a9b83cabed91b</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>doc/TUNI.fi.ip.hw.RAW_to_RGB.1.0.png</ipxact:name>
+				<ipxact:fileType user="picture">user</ipxact:fileType>
+				<ipxact:description>Preview picture needed by the html document.</ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>9e9ffa7539879b57d2f0eb04fb135f59</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>doc/TUNI.fi.ip.hw.RGB_to_YUV.1.0.png</ipxact:name>
+				<ipxact:fileType user="picture">user</ipxact:fileType>
+				<ipxact:description>Preview picture needed by the html document.</ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>754b6baffe1581141b893695a0a0fdfc</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>doc/TUNI.fi.ip.hwp.com.HPS_memory_bus.1.0.png</ipxact:name>
+				<ipxact:fileType user="picture">user</ipxact:fileType>
+				<ipxact:description>Preview picture needed by the html document.</ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>77ca7c6f86ad683d602ad57360a94c15</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>doc/TUNI.fi.ip.hwp.com.HPS_peripherals_bus.1.0.png</ipxact:name>
+				<ipxact:fileType user="picture">user</ipxact:fileType>
+				<ipxact:description>Preview picture needed by the html document.</ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>203fab66331964eb431455b4b31d1b89</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>doc/TUNI.fi.ip.hwp.com.peripherals.emac.1.0.png</ipxact:name>
+				<ipxact:fileType user="picture">user</ipxact:fileType>
+				<ipxact:description>Preview picture needed by the html document.</ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>0505b36edb6f69ed9e5e09dbbc541fb5</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>doc/TUNI.fi.ip.hwp.com.peripherals.generic.1.0.png</ipxact:name>
+				<ipxact:fileType user="picture">user</ipxact:fileType>
+				<ipxact:description>Preview picture needed by the html document.</ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>dfc2b0296eb932ca3ce6df6e627862f4</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>doc/TUNI.fi.ip.hwp.com.PIO.1.0.png</ipxact:name>
+				<ipxact:fileType user="picture">user</ipxact:fileType>
+				<ipxact:description>Preview picture needed by the html document.</ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>694e308a04bc3310a454909200c769b1</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>doc/TUNI.fi.ip.hwp.cpu.arm.cortex_a9.1.0.png</ipxact:name>
+				<ipxact:fileType user="picture">user</ipxact:fileType>
+				<ipxact:description>Preview picture needed by the html document.</ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>47af6fae4b59640c43a957a07d6b4b9d</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>doc/TUNI.fi.ip.hwp.mem.axi_dma_read.1.0.png</ipxact:name>
+				<ipxact:fileType user="picture">user</ipxact:fileType>
+				<ipxact:description>Preview picture needed by the html document.</ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>5830995db923aff21d888256824f8854</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>doc/TUNI.fi.ip.hwp.mem.axi_dma_write.1.0.png</ipxact:name>
+				<ipxact:fileType user="picture">user</ipxact:fileType>
+				<ipxact:description>Preview picture needed by the html document.</ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>90eb8706b1c5c4cee1a45765ab02d609</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>doc/TUNI.fi.ip.hwp.mem.axi_to_channel.1.0.png</ipxact:name>
+				<ipxact:fileType user="picture">user</ipxact:fileType>
+				<ipxact:description>Preview picture needed by the html document.</ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>d3cfc0ddef7827e6a7926345271df3c6</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>doc/TUNI.fi.ip.hwp.mem.cache.L2.1.0.png</ipxact:name>
+				<ipxact:fileType user="picture">user</ipxact:fileType>
+				<ipxact:description>Preview picture needed by the html document.</ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>7310e2d54f2215d1350b60ba636d8855</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>doc/TUNI.fi.ip.hwp.mem.cache.L3.1.0.png</ipxact:name>
+				<ipxact:fileType user="picture">user</ipxact:fileType>
+				<ipxact:description>Preview picture needed by the html document.</ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>b69842d480b4f1eeb7a88da3d1df1e9d</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>doc/TUNI.fi.ip.hwp.mem.controller.ddr_sdram.multiport.1.1.png</ipxact:name>
+				<ipxact:fileType user="picture">user</ipxact:fileType>
+				<ipxact:description>Preview picture needed by the html document.</ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>2e4dddaa5d4739e8258a07e88b3d43c0</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>doc/TUNI.fi.ip.hwp.mem.On-Chip_Memory_RAM.1.1.png</ipxact:name>
+				<ipxact:fileType user="picture">user</ipxact:fileType>
+				<ipxact:description>Preview picture needed by the html document.</ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>b20273d34a9f5d4081ff3804b38c58a1</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>doc/TUNI.fi.product.Kvazaar_IP_acc_Camera.1.0_student.hierarchical.png</ipxact:name>
+				<ipxact:fileType user="picture">user</ipxact:fileType>
+				<ipxact:description>Preview picture needed by the html document.</ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>be18b8e5ee125f034f077286e3f4adf2</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>doc/TUNI.fi.product.Kvazaar_IP_acc_Camera.1.0_student.png</ipxact:name>
+				<ipxact:fileType user="picture">user</ipxact:fileType>
+				<ipxact:description>Preview picture needed by the html document.</ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>1d1ca5dbc74958923d68221fa9c0174a</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>doc/TUNI.fi.soc.HPS.1.2_student.hierarchial.png</ipxact:name>
+				<ipxact:fileType user="picture">user</ipxact:fileType>
+				<ipxact:description>Preview picture needed by the html document.</ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>bbf7bd90572b95762bb02416a2f5b567</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>doc/TUNI.fi.soc.HPS.1.2_student.png</ipxact:name>
+				<ipxact:fileType user="picture">user</ipxact:fileType>
+				<ipxact:description>Preview picture needed by the html document.</ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>beb03b6816d7b0beb2db046abf1ce243</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>quartus_project/Kvazaar_IP_acc_Camera.v</ipxact:name>
+				<ipxact:fileType>verilogSource</ipxact:fileType>
+				<ipxact:description>Generated at 17:22:14 on 10.04.2021 by Kactus2. </ipxact:description>
+			</ipxact:file>
 		</ipxact:fileSet>
 	</ipxact:fileSets>
 	<ipxact:vendorExtensions>

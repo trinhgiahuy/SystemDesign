@@ -1,0 +1,33 @@
+set_global_assignment -entity "Kvazaar_QSYS" -library "Kvazaar_QSYS" -name IP_TOOL_NAME "Qsys"
+set_global_assignment -entity "Kvazaar_QSYS" -library "Kvazaar_QSYS" -name IP_TOOL_VERSION "16.0"
+set_global_assignment -entity "Kvazaar_QSYS" -library "Kvazaar_QSYS" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -library "Kvazaar_QSYS" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../../../../../ip.hw/Kvazaar_QSYS/1.0_student/Kvazaar_QSYS.sopcinfo"]
+set_global_assignment -entity "Kvazaar_QSYS" -library "Kvazaar_QSYS" -name SLD_INFO "QSYS_NAME Kvazaar_QSYS HAS_SOPCINFO 1 GENERATION_ID 1618064002"
+set_global_assignment -library "Kvazaar_QSYS" -name MISC_FILE [file join $::quartus(qip_path) "../Kvazaar_QSYS.cmp"]
+set_global_assignment -library "Kvazaar_QSYS" -name SLD_FILE [file join $::quartus(qip_path) "Kvazaar_QSYS.regmap"]
+set_global_assignment -library "Kvazaar_QSYS" -name MISC_FILE [file join $::quartus(qip_path) "../../P"]
+set_global_assignment -library "Kvazaar_QSYS" -name MISC_FILE [file join $::quartus(qip_path) "Kvazaar_QSYS_hps_0_hps.svd"]
+set_global_assignment -library "Kvazaar_QSYS" -name SLD_FILE [file join $::quartus(qip_path) "Kvazaar_QSYS.debuginfo"]
+set_global_assignment -entity "Kvazaar_QSYS" -library "Kvazaar_QSYS" -name IP_TARGETED_DEVICE_FAMILY "Cyclone V"
+set_global_assignment -entity "Kvazaar_QSYS" -library "Kvazaar_QSYS" -name IP_GENERATED_DEVICE_FAMILY "{Cyclone V}"
+set_global_assignment -entity "Kvazaar_QSYS" -library "Kvazaar_QSYS" -name IP_QSYS_MODE "SYSTEM"
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "Kvazaar_QSYS" -name MISC_FILE [file join $::quartus(qip_path) "../../../../../../ip.hw/Kvazaar_QSYS/1.0_student/Kvazaar_QSYS.qsys"]
+set_global_assignment -entity "Kvazaar_QSYS" -library "Kvazaar_QSYS" -name IP_COMPONENT_NAME "S3ZhemFhcl9RU1lT"
+set_global_assignment -entity "Kvazaar_QSYS" -library "Kvazaar_QSYS" -name IP_COMPONENT_DISPLAY_NAME "S3ZhemFhcl9RU1lT"
+set_global_assignment -entity "Kvazaar_QSYS" -library "Kvazaar_QSYS" -name IP_COMPONENT_REPORT_HIERARCHY "On"
+set_global_assignment -entity "Kvazaar_QSYS" -library "Kvazaar_QSYS" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "Kvazaar_QSYS" -library "Kvazaar_QSYS" -name IP_COMPONENT_VERSION "MS4w"
+set_global_assignment -entity "Kvazaar_QSYS" -library "Kvazaar_QSYS" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTYxODA2NDAwMg==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "Kvazaar_QSYS" -library "Kvazaar_QSYS" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSBW::QXV0byBERVZJQ0VfRkFNSUxZ"
+set_global_assignment -entity "Kvazaar_QSYS" -library "Kvazaar_QSYS" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::NUNTWEZDNkQ2RjMxQzY=::QXV0byBERVZJQ0U="
+set_global_assignment -entity "Kvazaar_QSYS" -library "Kvazaar_QSYS" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Nl9INg==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
+set_global_assignment -entity "Kvazaar_QSYS" -library "Kvazaar_QSYS" -name IP_COMPONENT_PARAMETER "QVVUT19DTEtfQ0xPQ0tfUkFURQ==::LTE=::QXV0byBDTE9DS19SQVRF"
+set_global_assignment -entity "Kvazaar_QSYS" -library "Kvazaar_QSYS" -name IP_COMPONENT_PARAMETER "QVVUT19DTEtfQ0xPQ0tfRE9NQUlO::LTE=::QXV0byBDTE9DS19ET01BSU4="
+set_global_assignment -entity "Kvazaar_QSYS" -library "Kvazaar_QSYS" -name IP_COMPONENT_PARAMETER "QVVUT19DTEtfUkVTRVRfRE9NQUlO::LTE=::QXV0byBSRVNFVF9ET01BSU4="
+set_global_assignment -entity "Kvazaar_QSYS" -library "Kvazaar_QSYS" -name IP_COMPONENT_PARAMETER "QVVUT19ETUFfWVVWX0ZJRk9fQ0xLX0NMT0NLX1JBVEU=::LTE=::QXV0byBDTE9DS19SQVRF"
+set_global_assignment -entity "Kvazaar_QSYS" -library "Kvazaar_QSYS" -name IP_COMPONENT_PARAMETER "QVVUT19ETUFfWVVWX0ZJRk9fQ0xLX0NMT0NLX0RPTUFJTg==::LTE=::QXV0byBDTE9DS19ET01BSU4="
+set_global_assignment -entity "Kvazaar_QSYS" -library "Kvazaar_QSYS" -name IP_COMPONENT_PARAMETER "QVVUT19ETUFfWVVWX0ZJRk9fQ0xLX1JFU0VUX0RPTUFJTg==::LTE=::QXV0byBSRVNFVF9ET01BSU4="
+set_global_assignment -entity "Kvazaar_QSYS" -library "Kvazaar_QSYS" -name IP_COMPONENT_PARAMETER "QVVUT19IUFNfMF9GMkhfU0RSQU0wX0NMT0NLX0NMT0NLX1JBVEU=::LTE=::QXV0byBDTE9DS19SQVRF"
+set_global_assignment -entity "Kvazaar_QSYS" -library "Kvazaar_QSYS" -name IP_COMPONENT_PARAMETER "QVVUT19IUFNfMF9GMkhfU0RSQU0wX0NMT0NLX0NMT0NLX0RPTUFJTg==::LTE=::QXV0byBDTE9DS19ET01BSU4="
+set_global_assignment -entity "Kvazaar_QSYS" -library "Kvazaar_QSYS" -name IP_COMPONENT_PARAMETER "QVVUT19IUFNfMF9GMkhfU0RSQU0wX0NMT0NLX1JFU0VUX0RPTUFJTg==::LTE=::QXV0byBSRVNFVF9ET01BSU4="

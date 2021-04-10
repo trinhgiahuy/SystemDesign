@@ -1,0 +1,755 @@
+Analysis & Synthesis report for Kvazaar_IP_acc_Camera
+Sat Apr 10 17:28:09 2021
+Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++-----------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status ; Failed - Sat Apr 10 17:28:09 2021               ;
+; Quartus Prime Version       ; 16.0.0 Build 211 04/27/2016 SJ Standard Edition ;
+; Revision Name               ; Kvazaar_IP_acc_Camera                           ;
+; Top-level Entity Name       ; Kvazaar_IP_acc_Camera                           ;
+; Family                      ; Cyclone V                                       ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                       ;
+; Total registers             ; N/A until Partition Merge                       ;
+; Total pins                  ; N/A until Partition Merge                       ;
+; Total virtual pins          ; N/A until Partition Merge                       ;
+; Total block memory bits     ; N/A until Partition Merge                       ;
+; Total PLLs                  ; N/A until Partition Merge                       ;
+; Total DLLs                  ; N/A until Partition Merge                       ;
++-----------------------------+-------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                                   ;
++---------------------------------------------------------------------------------+-----------------------+-----------------------+
+; Option                                                                          ; Setting               ; Default Value         ;
++---------------------------------------------------------------------------------+-----------------------+-----------------------+
+; Device                                                                          ; 5CSXFC6D6F31C6        ;                       ;
+; Top-level entity name                                                           ; Kvazaar_IP_acc_Camera ; Kvazaar_IP_acc_Camera ;
+; Family name                                                                     ; Cyclone V             ; Cyclone V             ;
+; Optimization Technique                                                          ; Speed                 ; Balanced              ;
+; Use smart compilation                                                           ; Off                   ; Off                   ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                    ; On                    ;
+; Enable compact report table                                                     ; Off                   ; Off                   ;
+; Restructure Multiplexers                                                        ; Auto                  ; Auto                  ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                   ; Off                   ;
+; Create Debugging Nodes for IP Cores                                             ; Off                   ; Off                   ;
+; Preserve fewer node names                                                       ; On                    ; On                    ;
+; Disable OpenCore Plus hardware evaluation                                       ; Off                   ; Off                   ;
+; Verilog Version                                                                 ; Verilog_2001          ; Verilog_2001          ;
+; VHDL Version                                                                    ; VHDL_1993             ; VHDL_1993             ;
+; State Machine Processing                                                        ; Auto                  ; Auto                  ;
+; Safe State Machine                                                              ; Off                   ; Off                   ;
+; Extract Verilog State Machines                                                  ; On                    ; On                    ;
+; Extract VHDL State Machines                                                     ; On                    ; On                    ;
+; Ignore Verilog initial constructs                                               ; Off                   ; Off                   ;
+; Iteration limit for constant Verilog loops                                      ; 5000                  ; 5000                  ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                   ; 250                   ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                    ; On                    ;
+; Infer RAMs from Raw Logic                                                       ; On                    ; On                    ;
+; Parallel Synthesis                                                              ; On                    ; On                    ;
+; DSP Block Balancing                                                             ; Auto                  ; Auto                  ;
+; NOT Gate Push-Back                                                              ; On                    ; On                    ;
+; Power-Up Don't Care                                                             ; On                    ; On                    ;
+; Remove Redundant Logic Cells                                                    ; Off                   ; Off                   ;
+; Remove Duplicate Registers                                                      ; On                    ; On                    ;
+; Ignore CARRY Buffers                                                            ; Off                   ; Off                   ;
+; Ignore CASCADE Buffers                                                          ; Off                   ; Off                   ;
+; Ignore GLOBAL Buffers                                                           ; Off                   ; Off                   ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                   ; Off                   ;
+; Ignore LCELL Buffers                                                            ; Off                   ; Off                   ;
+; Ignore SOFT Buffers                                                             ; On                    ; On                    ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                   ; Off                   ;
+; Carry Chain Length                                                              ; 70                    ; 70                    ;
+; Auto Carry Chains                                                               ; On                    ; On                    ;
+; Auto Open-Drain Pins                                                            ; On                    ; On                    ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                   ; Off                   ;
+; Auto ROM Replacement                                                            ; On                    ; On                    ;
+; Auto RAM Replacement                                                            ; On                    ; On                    ;
+; Auto DSP Block Replacement                                                      ; On                    ; On                    ;
+; Auto Shift Register Replacement                                                 ; Auto                  ; Auto                  ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto                  ; Auto                  ;
+; Auto Clock Enable Replacement                                                   ; On                    ; On                    ;
+; Strict RAM Replacement                                                          ; Off                   ; Off                   ;
+; Allow Synchronous Control Signals                                               ; On                    ; On                    ;
+; Force Use of Synchronous Clear Signals                                          ; Off                   ; Off                   ;
+; Auto Resource Sharing                                                           ; Off                   ; Off                   ;
+; Allow Any RAM Size For Recognition                                              ; Off                   ; Off                   ;
+; Allow Any ROM Size For Recognition                                              ; Off                   ; Off                   ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                   ; Off                   ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                    ; On                    ;
+; Ignore translate_off and synthesis_off directives                               ; Off                   ; Off                   ;
+; Timing-Driven Synthesis                                                         ; On                    ; On                    ;
+; Report Parameter Settings                                                       ; On                    ; On                    ;
+; Report Source Assignments                                                       ; On                    ; On                    ;
+; Report Connectivity Checks                                                      ; On                    ; On                    ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                   ; Off                   ;
+; Synchronization Register Chain Length                                           ; 3                     ; 3                     ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation    ; Normal compilation    ;
+; HDL message level                                                               ; Level2                ; Level2                ;
+; Suppress Register Optimization Related Messages                                 ; Off                   ; Off                   ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000                  ; 5000                  ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000                  ; 5000                  ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                   ; 100                   ;
+; Clock MUX Protection                                                            ; On                    ; On                    ;
+; Auto Gated Clock Conversion                                                     ; Off                   ; Off                   ;
+; Block Design Naming                                                             ; Auto                  ; Auto                  ;
+; SDC constraint protection                                                       ; Off                   ; Off                   ;
+; Synthesis Effort                                                                ; Auto                  ; Auto                  ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                    ; On                    ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                   ; Off                   ;
+; Analysis & Synthesis Message Level                                              ; Medium                ; Medium                ;
+; Disable Register Merging Across Hierarchies                                     ; Auto                  ; Auto                  ;
+; Resource Aware Inference For Block RAM                                          ; On                    ; On                    ;
+; Synthesis Seed                                                                  ; 1                     ; 1                     ;
+; Automatic Parallel Synthesis                                                    ; On                    ; On                    ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                   ; Off                   ;
++---------------------------------------------------------------------------------+-----------------------+-----------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
+    Info: Processing started: Sat Apr 10 17:27:44 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Kvazaar_IP_acc_Camera -c Kvazaar_IP_acc_Camera
+Info (16303): High Performance Effort optimization mode selected -- timing performance will be prioritized at the potential cost of increased compilation time
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /shared_p/5/tuni.fi/ip.hw/clock_reset/1.0/alterapll_module.v
+    Info (12023): Found entity 1: alterapll_module File: P:/shared_p/5/TUNI.fi/ip.hw/Clock_Reset/1.0/alterapll_module.v Line: 2
+Info (12021): Found 2 design units, including 1 entities, in source file /shared_p/5/tuni.fi/ip.hw/clock_reset/1.0/alterapll.vhd
+    Info (12022): Found design unit 1: Clock_Reset-rtl File: P:/shared_p/5/TUNI.fi/ip.hw/Clock_Reset/1.0/alterapll.vhd Line: 28
+    Info (12023): Found entity 1: Clock_Reset File: P:/shared_p/5/TUNI.fi/ip.hw/Clock_Reset/1.0/alterapll.vhd Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file kvazaar_qsys/synthesis/kvazaar_qsys.v
+    Info (12023): Found entity 1: Kvazaar_QSYS File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_QSYS/synthesis/Kvazaar_QSYS.v Line: 6
+Info (12021): Found 6 design units, including 6 entities, in source file /shared_p/5/tuni.fi/ip.hw/ip_sad_accelerator/1.0/vqm_src/main_ip_get_dc.vqm
+    Info (12023): Found entity 1: main_ip_get_dc File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_dc.vqm Line: 8
+    Info (12023): Found entity 2: modgen_adderblock_3e_1e File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_dc.vqm Line: 4380
+    Info (12023): Found entity 3: modgen_adderblock_3e_0e File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_dc.vqm Line: 4450
+    Info (12023): Found entity 4: ram_dq_8e_2e File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_dc.vqm Line: 4520
+    Info (12023): Found entity 5: ram_dq_8e_1e File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_dc.vqm Line: 4842
+    Info (12023): Found entity 6: ram_dq_8e_0e File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_dc.vqm Line: 5164
+Info (12021): Found 3 design units, including 3 entities, in source file /shared_p/5/tuni.fi/ip.hw/ip_sad_accelerator/1.0/vqm_src/main_ip_get_ang_zero.vqm
+    Info (12023): Found entity 1: main_ip_get_ang_zero File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_ang_zero.vqm Line: 8
+    Info (12023): Found entity 2: ram_dq_8d_1d File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_ang_zero.vqm Line: 1990
+    Info (12023): Found entity 3: ram_dq_8d_0d File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_ang_zero.vqm Line: 2189
+Info (12021): Found 5 design units, including 5 entities, in source file /shared_p/5/tuni.fi/ip.hw/ip_sad_accelerator/1.0/vqm_src/main_ip_get_ang_pos.vqm
+    Info (12023): Found entity 1: main_ip_get_ang_pos File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_ang_pos.vqm Line: 8
+    Info (12023): Found entity 2: ram_dq_8c_3c File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_ang_pos.vqm Line: 4357
+    Info (12023): Found entity 3: ram_dq_8c_2c File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_ang_pos.vqm Line: 4661
+    Info (12023): Found entity 4: ram_dq_8c_1c File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_ang_pos.vqm Line: 4964
+    Info (12023): Found entity 5: ram_dq_8c_0c File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_ang_pos.vqm Line: 5268
+Info (12021): Found 7 design units, including 7 entities, in source file /shared_p/5/tuni.fi/ip.hw/ip_sad_accelerator/1.0/vqm_src/main_ip_get_ang_neg.vqm
+    Info (12023): Found entity 1: main_ip_get_ang_neg File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_ang_neg.vqm Line: 8
+    Info (12023): Found entity 2: ram_dq_8b_5b File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_ang_neg.vqm Line: 4051
+    Info (12023): Found entity 3: ram_dq_8b_4b File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_ang_neg.vqm Line: 4279
+    Info (12023): Found entity 4: ram_dq_8b_3b File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_ang_neg.vqm Line: 4503
+    Info (12023): Found entity 5: ram_dq_8b_2b File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_ang_neg.vqm Line: 4731
+    Info (12023): Found entity 6: ram_dq_8b_1b File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_ang_neg.vqm Line: 4955
+    Info (12023): Found entity 7: ram_dq_8b_0b File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_ang_neg.vqm Line: 5182
+Info (12021): Found 5 design units, including 5 entities, in source file /shared_p/5/tuni.fi/ip.hw/ip_sad_accelerator/1.0/vqm_src/main_ip_ctrl.vqm
+    Info (12023): Found entity 1: main_ip_ctrl File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_ctrl.vqm Line: 8
+    Info (12023): Found entity 2: modgen_adderblock_3a_3a File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_ctrl.vqm Line: 11510
+    Info (12023): Found entity 3: modgen_adderblock_3a_2a File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_ctrl.vqm Line: 11580
+    Info (12023): Found entity 4: modgen_adderblock_3a_1a File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_ctrl.vqm Line: 11650
+    Info (12023): Found entity 5: modgen_adderblock_3a_0a File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_ctrl.vqm Line: 11720
+Info (12021): Found 3 design units, including 3 entities, in source file /shared_p/5/tuni.fi/ip.hw/ip_sad_accelerator/1.0/vqm_src/main_ip_get_planar.vqm
+    Info (12023): Found entity 1: main_ip_get_planar File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_planar.vqm Line: 8
+    Info (12023): Found entity 2: ram_dq_8f_1f File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_planar.vqm Line: 4948
+    Info (12023): Found entity 3: ram_dq_8f_0f File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_planar.vqm Line: 5152
+Info (12021): Found 39 design units, including 39 entities, in source file /shared_p/5/tuni.fi/ip.hw/ip_sad_accelerator/1.0/vqm_src/main_sad_parallel.vqm
+    Info (12023): Found entity 1: main_sad_parallel File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 8
+    Info (12023): Found entity 2: modgen_adderblock_3g_3g2 File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 71700
+    Info (12023): Found entity 3: modgen_adderblock_3g_3g1 File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 71812
+    Info (12023): Found entity 4: modgen_adderblock_3g_3g0 File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 71924
+    Info (12023): Found entity 5: modgen_adderblock_3g_2g9 File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 72036
+    Info (12023): Found entity 6: modgen_adderblock_3g_2g8 File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 72148
+    Info (12023): Found entity 7: modgen_adderblock_3g_2g7 File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 72260
+    Info (12023): Found entity 8: modgen_adderblock_3g_2g6 File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 72372
+    Info (12023): Found entity 9: modgen_adderblock_3g_2g5 File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 72484
+    Info (12023): Found entity 10: modgen_adderblock_3g_2g4 File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 72596
+    Info (12023): Found entity 11: modgen_adderblock_3g_2g3 File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 72708
+    Info (12023): Found entity 12: modgen_adderblock_3g_2g2 File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 72820
+    Info (12023): Found entity 13: modgen_adderblock_3g_2g1 File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 72932
+    Info (12023): Found entity 14: modgen_adderblock_3g_2g0 File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 73044
+    Info (12023): Found entity 15: modgen_adderblock_3g_1g9 File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 73156
+    Info (12023): Found entity 16: modgen_adderblock_3g_1g8 File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 73268
+    Info (12023): Found entity 17: modgen_adderblock_3g_1g7 File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 73380
+    Info (12023): Found entity 18: modgen_adderblock_3g_1g6 File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 73492
+    Info (12023): Found entity 19: modgen_adderblock_3g_1g5 File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 73604
+    Info (12023): Found entity 20: modgen_adderblock_3g_1g4 File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 73716
+    Info (12023): Found entity 21: modgen_adderblock_3g_1g3 File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 73828
+    Info (12023): Found entity 22: modgen_adderblock_3g_1g2 File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 73940
+    Info (12023): Found entity 23: modgen_adderblock_3g_1g1 File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 74052
+    Info (12023): Found entity 24: modgen_adderblock_3g_1g0 File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 74164
+    Info (12023): Found entity 25: modgen_adderblock_3g_9g File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 74276
+    Info (12023): Found entity 26: modgen_adderblock_3g_8g File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 74388
+    Info (12023): Found entity 27: modgen_adderblock_3g_7g File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 74500
+    Info (12023): Found entity 28: modgen_adderblock_3g_6g File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 74612
+    Info (12023): Found entity 29: modgen_adderblock_3g_5g File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 74724
+    Info (12023): Found entity 30: modgen_adderblock_3g_4g File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 74836
+    Info (12023): Found entity 31: modgen_adderblock_3g_3g File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 74948
+    Info (12023): Found entity 32: modgen_adderblock_3g_2g File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 75060
+    Info (12023): Found entity 33: modgen_adderblock_3g_1g File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 75172
+    Info (12023): Found entity 34: modgen_adderblock_3g_0g File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 75284
+    Info (12023): Found entity 35: ram_dq_8g_2g File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 75396
+    Info (12023): Found entity 36: ram_dq_8g_1g File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 75446
+    Info (12023): Found entity 37: ram_dq_8g_0g File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 75496
+    Info (12023): Found entity 38: ram_dq_3g2_1g File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 75546
+    Info (12023): Found entity 39: ram_dq_3g2_0g File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 75901
+Info (12021): Found 1 design units, including 1 entities, in source file /shared_p/5/tuni.fi/ip.hw/ip_sad_accelerator/1.0/vqm_src/main_ip_config.vqm
+    Info (12023): Found entity 1: main_ip_config File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_config.vqm Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file /shared_p/5/tuni.fi/ip.hw/ip_sad_accelerator/1.0/top_level/ip_sad.vhd
+    Info (12022): Found design unit 1: IP_SAD_Accelerator-hierarchy File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/top_level/ip_sad.vhd Line: 40
+    Info (12023): Found entity 1: IP_SAD_Accelerator File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/top_level/ip_sad.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /shared_p/5/tuni.fi/ip.hw/ccd_configer/1.0/ccd_configer.vhd
+    Info (12022): Found design unit 1: CCD_Configer-rtl File: P:/shared_p/5/TUNI.fi/ip.hw/CCD_Configer/1.0/CCD_Configer.vhd Line: 38
+    Info (12023): Found entity 1: CCD_Configer File: P:/shared_p/5/TUNI.fi/ip.hw/CCD_Configer/1.0/CCD_Configer.vhd Line: 6
+Warning (10090): Verilog HDL syntax warning at I2C_CCD_Config.v(110): extra block comment delimiter characters /* within block comment File: P:/shared_p/5/TUNI.fi/ip.hw/CCD_Configer.I2C/1.0/I2C_CCD_Config.v Line: 110
+Info (12021): Found 1 design units, including 1 entities, in source file /shared_p/5/tuni.fi/ip.hw/ccd_configer.i2c/1.0/i2c_ccd_config.v
+    Info (12023): Found entity 1: CCD_Configer_I2C File: P:/shared_p/5/TUNI.fi/ip.hw/CCD_Configer.I2C/1.0/I2C_CCD_Config.v Line: 44
+Info (12021): Found 1 design units, including 1 entities, in source file /shared_p/5/tuni.fi/ip.hw/ccd_configer.i2c/1.0/i2c_controller.v
+    Info (12023): Found entity 1: I2C_Controller File: P:/shared_p/5/TUNI.fi/ip.hw/CCD_Configer.I2C/1.0/I2C_Controller.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file /shared_p/5/tuni.fi/ip.hw/ccd_capture/1.0/ccd_capture.v
+    Info (12023): Found entity 1: CCD_Capture File: P:/shared_p/5/TUNI.fi/ip.hw/CCD_Capture/1.0/CCD_Capture.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file /shared_p/5/tuni.fi/ip.hw/raw_to_rgb/1.0/line_buffer.v
+    Info (12023): Found entity 1: Line_Buffer File: P:/shared_p/5/TUNI.fi/ip.hw/RAW_to_RGB/1.0/Line_Buffer.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file /shared_p/5/tuni.fi/ip.hw/raw_to_rgb/1.0/raw2rgb.v
+    Info (12023): Found entity 1: RAW_to_RGB File: P:/shared_p/5/TUNI.fi/ip.hw/RAW_to_RGB/1.0/RAW2RGB.v Line: 43
+Info (12021): Found 12 design units, including 12 entities, in source file /shared_p/5/tuni.fi/ip.hw/rgb_to_yuv/1.0/rgb_to_yuv.vqm
+    Info (12023): Found entity 1: rgb2yuv File: P:/shared_p/5/TUNI.fi/ip.hw/RGB_to_YUV/1.0/rgb_to_yuv.vqm Line: 8
+    Info (12023): Found entity 2: modgen_adderblock_3k_1k0 File: P:/shared_p/5/TUNI.fi/ip.hw/RGB_to_YUV/1.0/rgb_to_yuv.vqm Line: 4192
+    Info (12023): Found entity 3: modgen_adderblock_3k_9k File: P:/shared_p/5/TUNI.fi/ip.hw/RGB_to_YUV/1.0/rgb_to_yuv.vqm Line: 4272
+    Info (12023): Found entity 4: modgen_adderblock_3k_8k File: P:/shared_p/5/TUNI.fi/ip.hw/RGB_to_YUV/1.0/rgb_to_yuv.vqm Line: 4337
+    Info (12023): Found entity 5: modgen_adderblock_3k_7k File: P:/shared_p/5/TUNI.fi/ip.hw/RGB_to_YUV/1.0/rgb_to_yuv.vqm Line: 4410
+    Info (12023): Found entity 6: modgen_adderblock_3k_6k File: P:/shared_p/5/TUNI.fi/ip.hw/RGB_to_YUV/1.0/rgb_to_yuv.vqm Line: 4479
+    Info (12023): Found entity 7: modgen_adderblock_3k_5k File: P:/shared_p/5/TUNI.fi/ip.hw/RGB_to_YUV/1.0/rgb_to_yuv.vqm Line: 4555
+    Info (12023): Found entity 8: modgen_adderblock_3k_4k File: P:/shared_p/5/TUNI.fi/ip.hw/RGB_to_YUV/1.0/rgb_to_yuv.vqm Line: 4609
+    Info (12023): Found entity 9: modgen_adderblock_3k_3k File: P:/shared_p/5/TUNI.fi/ip.hw/RGB_to_YUV/1.0/rgb_to_yuv.vqm Line: 4672
+    Info (12023): Found entity 10: modgen_adderblock_3k_2k File: P:/shared_p/5/TUNI.fi/ip.hw/RGB_to_YUV/1.0/rgb_to_yuv.vqm Line: 4735
+    Info (12023): Found entity 11: modgen_adderblock_3k_1k File: P:/shared_p/5/TUNI.fi/ip.hw/RGB_to_YUV/1.0/rgb_to_yuv.vqm Line: 4817
+    Info (12023): Found entity 12: modgen_adderblock_3k_0k File: P:/shared_p/5/TUNI.fi/ip.hw/RGB_to_YUV/1.0/rgb_to_yuv.vqm Line: 4885
+Info (12021): Found 2 design units, including 1 entities, in source file /shared_p/5/tuni.fi/ip.hw/rgb_to_yuv/1.0/rgb_to_yuv_top.vhd
+    Info (12022): Found design unit 1: RGB_to_YUV-rtl File: P:/shared_p/5/TUNI.fi/ip.hw/RGB_to_YUV/1.0/rgb_to_yuv_top.vhd Line: 33
+    Info (12023): Found entity 1: RGB_to_YUV File: P:/shared_p/5/TUNI.fi/ip.hw/RGB_to_YUV/1.0/rgb_to_yuv_top.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file /shared_p/5/tuni.fi/ip.hw/ltp_controller/1.0/sync_mode_ltp_controller.vhd
+    Info (12022): Found design unit 1: LTP_Controller-rtl File: P:/shared_p/5/TUNI.fi/ip.hw/LTP_Controller/1.0/sync_mode_ltp_controller.vhd Line: 34
+    Info (12023): Found entity 1: LTP_Controller File: P:/shared_p/5/TUNI.fi/ip.hw/LTP_Controller/1.0/sync_mode_ltp_controller.vhd Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file kvazaar_ip_acc_camera.v
+    Info (12023): Found entity 1: Kvazaar_IP_acc_Camera File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_IP_acc_Camera.v Line: 13
+Info (12127): Elaborating entity "Kvazaar_IP_acc_Camera" for the top level hierarchy
+Info (12128): Elaborating entity "CCD_Capture" for hierarchy "CCD_Capture:CCD_Capture_0" File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_IP_acc_Camera.v Line: 825
+Warning (10036): Verilog HDL or VHDL warning at CCD_Capture.v(166): object "ifval_fedge" assigned a value but never read File: P:/shared_p/5/TUNI.fi/ip.hw/CCD_Capture/1.0/CCD_Capture.v Line: 166
+Warning (10036): Verilog HDL or VHDL warning at CCD_Capture.v(167): object "y_cnt_d" assigned a value but never read File: P:/shared_p/5/TUNI.fi/ip.hw/CCD_Capture/1.0/CCD_Capture.v Line: 167
+Warning (10230): Verilog HDL assignment warning at CCD_Capture.v(127): truncated value with size 32 to match size of target (16) File: P:/shared_p/5/TUNI.fi/ip.hw/CCD_Capture/1.0/CCD_Capture.v Line: 127
+Warning (10230): Verilog HDL assignment warning at CCD_Capture.v(131): truncated value with size 32 to match size of target (16) File: P:/shared_p/5/TUNI.fi/ip.hw/CCD_Capture/1.0/CCD_Capture.v Line: 131
+Warning (10230): Verilog HDL assignment warning at CCD_Capture.v(187): truncated value with size 32 to match size of target (1) File: P:/shared_p/5/TUNI.fi/ip.hw/CCD_Capture/1.0/CCD_Capture.v Line: 187
+Info (12128): Elaborating entity "CCD_Configer" for hierarchy "CCD_Configer:CCD_Configer_0" File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_IP_acc_Camera.v Line: 852
+Info (12128): Elaborating entity "CCD_Configer_I2C" for hierarchy "CCD_Configer_I2C:CCD_Configer_I2C_0" File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_IP_acc_Camera.v Line: 878
+Warning (10230): Verilog HDL assignment warning at I2C_CCD_Config.v(131): truncated value with size 32 to match size of target (16) File: P:/shared_p/5/TUNI.fi/ip.hw/CCD_Configer.I2C/1.0/I2C_CCD_Config.v Line: 131
+Warning (10230): Verilog HDL assignment warning at I2C_CCD_Config.v(181): truncated value with size 32 to match size of target (6) File: P:/shared_p/5/TUNI.fi/ip.hw/CCD_Configer.I2C/1.0/I2C_CCD_Config.v Line: 181
+Info (12128): Elaborating entity "I2C_Controller" for hierarchy "CCD_Configer_I2C:CCD_Configer_I2C_0|I2C_Controller:u0" File: P:/shared_p/5/TUNI.fi/ip.hw/CCD_Configer.I2C/1.0/I2C_CCD_Config.v Line: 148
+Warning (10230): Verilog HDL assignment warning at I2C_Controller.v(70): truncated value with size 32 to match size of target (1) File: P:/shared_p/5/TUNI.fi/ip.hw/CCD_Configer.I2C/1.0/I2C_Controller.v Line: 70
+Warning (10230): Verilog HDL assignment warning at I2C_Controller.v(69): truncated value with size 32 to match size of target (1) File: P:/shared_p/5/TUNI.fi/ip.hw/CCD_Configer.I2C/1.0/I2C_Controller.v Line: 69
+Warning (10230): Verilog HDL assignment warning at I2C_Controller.v(82): truncated value with size 32 to match size of target (7) File: P:/shared_p/5/TUNI.fi/ip.hw/CCD_Configer.I2C/1.0/I2C_Controller.v Line: 82
+Info (12128): Elaborating entity "Clock_Reset" for hierarchy "Clock_Reset:Clock_Reset_0" File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_IP_acc_Camera.v Line: 900
+Info (12128): Elaborating entity "alterapll_module" for hierarchy "Clock_Reset:Clock_Reset_0|alterapll_module:alterapll2_inst" File: P:/shared_p/5/TUNI.fi/ip.hw/Clock_Reset/1.0/alterapll.vhd Line: 55
+Info (12128): Elaborating entity "altera_pll" for hierarchy "Clock_Reset:Clock_Reset_0|alterapll_module:alterapll2_inst|altera_pll:altera_pll_i" File: P:/shared_p/5/TUNI.fi/ip.hw/Clock_Reset/1.0/alterapll_module.v Line: 91
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
+Info (12130): Elaborated megafunction instantiation "Clock_Reset:Clock_Reset_0|alterapll_module:alterapll2_inst|altera_pll:altera_pll_i" File: P:/shared_p/5/TUNI.fi/ip.hw/Clock_Reset/1.0/alterapll_module.v Line: 91
+Info (12133): Instantiated megafunction "Clock_Reset:Clock_Reset_0|alterapll_module:alterapll2_inst|altera_pll:altera_pll_i" with the following parameter: File: P:/shared_p/5/TUNI.fi/ip.hw/Clock_Reset/1.0/alterapll_module.v Line: 91
+    Info (12134): Parameter "fractional_vco_multiplier" = "false"
+    Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
+    Info (12134): Parameter "operation_mode" = "direct"
+    Info (12134): Parameter "number_of_clocks" = "3"
+    Info (12134): Parameter "output_clock_frequency0" = "25.000000 MHz"
+    Info (12134): Parameter "phase_shift0" = "0 ps"
+    Info (12134): Parameter "duty_cycle0" = "50"
+    Info (12134): Parameter "output_clock_frequency1" = "75.000000 MHz"
+    Info (12134): Parameter "phase_shift1" = "0 ps"
+    Info (12134): Parameter "duty_cycle1" = "50"
+    Info (12134): Parameter "output_clock_frequency2" = "33.000000 MHz"
+    Info (12134): Parameter "phase_shift2" = "0 ps"
+    Info (12134): Parameter "duty_cycle2" = "50"
+    Info (12134): Parameter "output_clock_frequency3" = "0 MHz"
+    Info (12134): Parameter "phase_shift3" = "0 ps"
+    Info (12134): Parameter "duty_cycle3" = "50"
+    Info (12134): Parameter "output_clock_frequency4" = "0 MHz"
+    Info (12134): Parameter "phase_shift4" = "0 ps"
+    Info (12134): Parameter "duty_cycle4" = "50"
+    Info (12134): Parameter "output_clock_frequency5" = "0 MHz"
+    Info (12134): Parameter "phase_shift5" = "0 ps"
+    Info (12134): Parameter "duty_cycle5" = "50"
+    Info (12134): Parameter "output_clock_frequency6" = "0 MHz"
+    Info (12134): Parameter "phase_shift6" = "0 ps"
+    Info (12134): Parameter "duty_cycle6" = "50"
+    Info (12134): Parameter "output_clock_frequency7" = "0 MHz"
+    Info (12134): Parameter "phase_shift7" = "0 ps"
+    Info (12134): Parameter "duty_cycle7" = "50"
+    Info (12134): Parameter "output_clock_frequency8" = "0 MHz"
+    Info (12134): Parameter "phase_shift8" = "0 ps"
+    Info (12134): Parameter "duty_cycle8" = "50"
+    Info (12134): Parameter "output_clock_frequency9" = "0 MHz"
+    Info (12134): Parameter "phase_shift9" = "0 ps"
+    Info (12134): Parameter "duty_cycle9" = "50"
+    Info (12134): Parameter "output_clock_frequency10" = "0 MHz"
+    Info (12134): Parameter "phase_shift10" = "0 ps"
+    Info (12134): Parameter "duty_cycle10" = "50"
+    Info (12134): Parameter "output_clock_frequency11" = "0 MHz"
+    Info (12134): Parameter "phase_shift11" = "0 ps"
+    Info (12134): Parameter "duty_cycle11" = "50"
+    Info (12134): Parameter "output_clock_frequency12" = "0 MHz"
+    Info (12134): Parameter "phase_shift12" = "0 ps"
+    Info (12134): Parameter "duty_cycle12" = "50"
+    Info (12134): Parameter "output_clock_frequency13" = "0 MHz"
+    Info (12134): Parameter "phase_shift13" = "0 ps"
+    Info (12134): Parameter "duty_cycle13" = "50"
+    Info (12134): Parameter "output_clock_frequency14" = "0 MHz"
+    Info (12134): Parameter "phase_shift14" = "0 ps"
+    Info (12134): Parameter "duty_cycle14" = "50"
+    Info (12134): Parameter "output_clock_frequency15" = "0 MHz"
+    Info (12134): Parameter "phase_shift15" = "0 ps"
+    Info (12134): Parameter "duty_cycle15" = "50"
+    Info (12134): Parameter "output_clock_frequency16" = "0 MHz"
+    Info (12134): Parameter "phase_shift16" = "0 ps"
+    Info (12134): Parameter "duty_cycle16" = "50"
+    Info (12134): Parameter "output_clock_frequency17" = "0 MHz"
+    Info (12134): Parameter "phase_shift17" = "0 ps"
+    Info (12134): Parameter "duty_cycle17" = "50"
+    Info (12134): Parameter "pll_type" = "General"
+    Info (12134): Parameter "pll_subtype" = "General"
+Info (12128): Elaborating entity "IP_SAD_Accelerator" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0" File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_IP_acc_Camera.v Line: 931
+Warning (10873): Using initial value X (don't care) for net "ctrl_config_z[32]" at ip_sad.vhd(547) File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/top_level/ip_sad.vhd Line: 547
+Info (12128): Elaborating entity "main_ip_config" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_ip_config:ip_config" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/top_level/ip_sad.vhd Line: 563
+Info (12128): Elaborating entity "main_ip_ctrl" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_ip_ctrl:ip_control" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/top_level/ip_sad.vhd Line: 578
+Info (12128): Elaborating entity "modgen_adderblock_3a_0a" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_ip_ctrl:ip_control|modgen_adderblock_3a_0a:main_ip_ctrl_core_inst_modgen_adderblock" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_ctrl.vqm Line: 647
+Info (12128): Elaborating entity "modgen_adderblock_3a_1a" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_ip_ctrl:ip_control|modgen_adderblock_3a_1a:main_ip_ctrl_core_inst_modgen_adderblock_dup_0a" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_ctrl.vqm Line: 683
+Info (12128): Elaborating entity "modgen_adderblock_3a_2a" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_ip_ctrl:ip_control|modgen_adderblock_3a_2a:main_ip_ctrl_core_inst_modgen_adderblock_dup_1a" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_ctrl.vqm Line: 719
+Info (12128): Elaborating entity "modgen_adderblock_3a_3a" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_ip_ctrl:ip_control|modgen_adderblock_3a_3a:main_ip_ctrl_core_inst_modgen_adderblock_dup_2a" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_ctrl.vqm Line: 755
+Info (12128): Elaborating entity "main_ip_get_planar" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_ip_get_planar:ip_get_planar" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/top_level/ip_sad.vhd Line: 676
+Info (12128): Elaborating entity "ram_dq_8f_0f" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_ip_get_planar:ip_get_planar|ram_dq_8f_0f:mem" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_planar.vqm Line: 313
+Info (12128): Elaborating entity "ram_dq_8f_1f" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_ip_get_planar:ip_get_planar|ram_dq_8f_1f:mem_0f" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_planar.vqm Line: 342
+Info (12128): Elaborating entity "main_ip_get_dc" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_ip_get_dc:ip_get_dc" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/top_level/ip_sad.vhd Line: 687
+Info (12128): Elaborating entity "ram_dq_8e_0e" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_ip_get_dc:ip_get_dc|ram_dq_8e_0e:mem" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_dc.vqm Line: 266
+Info (12128): Elaborating entity "ram_dq_8e_1e" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_ip_get_dc:ip_get_dc|ram_dq_8e_1e:mem_0e" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_dc.vqm Line: 298
+Info (12128): Elaborating entity "ram_dq_8e_2e" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_ip_get_dc:ip_get_dc|ram_dq_8e_2e:mem_1e" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_dc.vqm Line: 329
+Info (12128): Elaborating entity "modgen_adderblock_3e_0e" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_ip_get_dc:ip_get_dc|modgen_adderblock_3e_0e:main_ip_get_dc_core_inst_modgen_adderblock" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_dc.vqm Line: 356
+Info (12128): Elaborating entity "modgen_adderblock_3e_1e" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_ip_get_dc:ip_get_dc|modgen_adderblock_3e_1e:main_ip_get_dc_core_inst_modgen_adderblock_dup_0e" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_dc.vqm Line: 392
+Info (12128): Elaborating entity "main_ip_get_ang_pos" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_ip_get_ang_pos:ip_get_ang3" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/top_level/ip_sad.vhd Line: 701
+Info (12128): Elaborating entity "ram_dq_8c_0c" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_ip_get_ang_pos:ip_get_ang3|ram_dq_8c_0c:mem" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_ang_pos.vqm Line: 289
+Info (12128): Elaborating entity "ram_dq_8c_1c" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_ip_get_ang_pos:ip_get_ang3|ram_dq_8c_1c:mem_0c" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_ang_pos.vqm Line: 345
+Info (12128): Elaborating entity "ram_dq_8c_2c" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_ip_get_ang_pos:ip_get_ang3|ram_dq_8c_2c:mem_1c" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_ang_pos.vqm Line: 386
+Info (12128): Elaborating entity "ram_dq_8c_3c" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_ip_get_ang_pos:ip_get_ang3|ram_dq_8c_3c:mem_2c" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_ang_pos.vqm Line: 428
+Info (12128): Elaborating entity "main_ip_get_ang_zero" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_ip_get_ang_zero:ip_get_ang11" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/top_level/ip_sad.vhd Line: 833
+Info (12128): Elaborating entity "ram_dq_8d_0d" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_ip_get_ang_zero:ip_get_ang11|ram_dq_8d_0d:mem" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_ang_zero.vqm Line: 179
+Info (12128): Elaborating entity "ram_dq_8d_1d" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_ip_get_ang_zero:ip_get_ang11|ram_dq_8d_1d:mem_0d" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_ang_zero.vqm Line: 207
+Info (12128): Elaborating entity "main_ip_get_ang_neg" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_ip_get_ang_neg:ip_get_ang12" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/top_level/ip_sad.vhd Line: 846
+Info (12128): Elaborating entity "ram_dq_8b_0b" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_ip_get_ang_neg:ip_get_ang12|ram_dq_8b_0b:mem" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_ang_neg.vqm Line: 254
+Info (12128): Elaborating entity "ram_dq_8b_1b" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_ip_get_ang_neg:ip_get_ang12|ram_dq_8b_1b:mem_0b" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_ang_neg.vqm Line: 288
+Info (12128): Elaborating entity "ram_dq_8b_2b" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_ip_get_ang_neg:ip_get_ang12|ram_dq_8b_2b:mem_1b" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_ang_neg.vqm Line: 319
+Info (12128): Elaborating entity "ram_dq_8b_3b" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_ip_get_ang_neg:ip_get_ang12|ram_dq_8b_3b:mem_2b" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_ang_neg.vqm Line: 353
+Info (12128): Elaborating entity "ram_dq_8b_4b" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_ip_get_ang_neg:ip_get_ang12|ram_dq_8b_4b:mem_3b" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_ang_neg.vqm Line: 384
+Info (12128): Elaborating entity "ram_dq_8b_5b" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_ip_get_ang_neg:ip_get_ang12|ram_dq_8b_5b:mem_4b" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_ip_get_ang_neg.vqm Line: 418
+Info (12128): Elaborating entity "main_sad_parallel" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/top_level/ip_sad.vhd Line: 1055
+Info (12128): Elaborating entity "ram_dq_3g2_0g" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|ram_dq_3g2_0g:mem" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 3280
+Info (12128): Elaborating entity "ram_dq_3g2_1g" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|ram_dq_3g2_1g:mem_0g" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 3320
+Info (12128): Elaborating entity "ram_dq_8g_0g" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|ram_dq_8g_0g:mem_1g" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 3332
+Info (12128): Elaborating entity "ram_dq_8g_1g" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|ram_dq_8g_1g:mem_2g" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 3344
+Info (12128): Elaborating entity "ram_dq_8g_2g" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|ram_dq_8g_2g:mem_3g" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 3357
+Info (12128): Elaborating entity "modgen_adderblock_3g_0g" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|modgen_adderblock_3g_0g:main_sad_parallel_core_inst_modgen_adderblock" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 3433
+Info (12128): Elaborating entity "modgen_adderblock_3g_1g" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|modgen_adderblock_3g_1g:main_sad_parallel_core_inst_modgen_adderblock_dup_0g" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 3510
+Info (12128): Elaborating entity "modgen_adderblock_3g_2g" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|modgen_adderblock_3g_2g:main_sad_parallel_core_inst_modgen_adderblock_dup_1g" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 3587
+Info (12128): Elaborating entity "modgen_adderblock_3g_3g" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|modgen_adderblock_3g_3g:main_sad_parallel_core_inst_modgen_adderblock_dup_2g" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 3664
+Info (12128): Elaborating entity "modgen_adderblock_3g_4g" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|modgen_adderblock_3g_4g:main_sad_parallel_core_inst_modgen_adderblock_dup_3g" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 3741
+Info (12128): Elaborating entity "modgen_adderblock_3g_5g" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|modgen_adderblock_3g_5g:main_sad_parallel_core_inst_modgen_adderblock_dup_4g" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 3818
+Info (12128): Elaborating entity "modgen_adderblock_3g_6g" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|modgen_adderblock_3g_6g:main_sad_parallel_core_inst_modgen_adderblock_dup_5g" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 3897
+Info (12128): Elaborating entity "modgen_adderblock_3g_7g" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|modgen_adderblock_3g_7g:main_sad_parallel_core_inst_modgen_adderblock_dup_6g" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 3976
+Info (12128): Elaborating entity "modgen_adderblock_3g_8g" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|modgen_adderblock_3g_8g:main_sad_parallel_core_inst_modgen_adderblock_dup_7g" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 4055
+Info (12128): Elaborating entity "modgen_adderblock_3g_9g" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|modgen_adderblock_3g_9g:main_sad_parallel_core_inst_modgen_adderblock_dup_8g" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 4134
+Info (12128): Elaborating entity "modgen_adderblock_3g_1g0" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|modgen_adderblock_3g_1g0:main_sad_parallel_core_inst_modgen_adderblock_dup_9g" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 4215
+Info (12128): Elaborating entity "modgen_adderblock_3g_1g1" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|modgen_adderblock_3g_1g1:main_sad_parallel_core_inst_modgen_adderblock_dup_1g0" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 4296
+Info (12128): Elaborating entity "modgen_adderblock_3g_1g2" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|modgen_adderblock_3g_1g2:main_sad_parallel_core_inst_modgen_adderblock_dup_1g1" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 4377
+Info (12128): Elaborating entity "modgen_adderblock_3g_1g3" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|modgen_adderblock_3g_1g3:main_sad_parallel_core_inst_modgen_adderblock_dup_1g2" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 4458
+Info (12128): Elaborating entity "modgen_adderblock_3g_1g4" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|modgen_adderblock_3g_1g4:main_sad_parallel_core_inst_modgen_adderblock_dup_1g3" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 4539
+Info (12128): Elaborating entity "modgen_adderblock_3g_1g5" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|modgen_adderblock_3g_1g5:main_sad_parallel_core_inst_modgen_adderblock_dup_1g4" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 4620
+Info (12128): Elaborating entity "modgen_adderblock_3g_1g6" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|modgen_adderblock_3g_1g6:main_sad_parallel_core_inst_modgen_adderblock_dup_1g5" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 4699
+Info (12128): Elaborating entity "modgen_adderblock_3g_1g7" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|modgen_adderblock_3g_1g7:main_sad_parallel_core_inst_modgen_adderblock_dup_1g6" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 4778
+Info (12128): Elaborating entity "modgen_adderblock_3g_1g8" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|modgen_adderblock_3g_1g8:main_sad_parallel_core_inst_modgen_adderblock_dup_1g7" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 4857
+Info (12128): Elaborating entity "modgen_adderblock_3g_1g9" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|modgen_adderblock_3g_1g9:main_sad_parallel_core_inst_modgen_adderblock_dup_1g8" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 4936
+Info (12128): Elaborating entity "modgen_adderblock_3g_2g0" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|modgen_adderblock_3g_2g0:main_sad_parallel_core_inst_modgen_adderblock_dup_1g9" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 5015
+Info (12128): Elaborating entity "modgen_adderblock_3g_2g1" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|modgen_adderblock_3g_2g1:main_sad_parallel_core_inst_modgen_adderblock_dup_2g0" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 5094
+Info (12128): Elaborating entity "modgen_adderblock_3g_2g2" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|modgen_adderblock_3g_2g2:main_sad_parallel_core_inst_modgen_adderblock_dup_2g1" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 5175
+Info (12128): Elaborating entity "modgen_adderblock_3g_2g3" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|modgen_adderblock_3g_2g3:main_sad_parallel_core_inst_modgen_adderblock_dup_2g2" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 5256
+Info (12128): Elaborating entity "modgen_adderblock_3g_2g4" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|modgen_adderblock_3g_2g4:main_sad_parallel_core_inst_modgen_adderblock_dup_2g3" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 5337
+Info (12128): Elaborating entity "modgen_adderblock_3g_2g5" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|modgen_adderblock_3g_2g5:main_sad_parallel_core_inst_modgen_adderblock_dup_2g4" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 5418
+Info (12128): Elaborating entity "modgen_adderblock_3g_2g6" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|modgen_adderblock_3g_2g6:main_sad_parallel_core_inst_modgen_adderblock_dup_2g5" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 5499
+Info (12128): Elaborating entity "modgen_adderblock_3g_2g7" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|modgen_adderblock_3g_2g7:main_sad_parallel_core_inst_modgen_adderblock_dup_2g6" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 5578
+Info (12128): Elaborating entity "modgen_adderblock_3g_2g8" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|modgen_adderblock_3g_2g8:main_sad_parallel_core_inst_modgen_adderblock_dup_2g7" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 5657
+Info (12128): Elaborating entity "modgen_adderblock_3g_2g9" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|modgen_adderblock_3g_2g9:main_sad_parallel_core_inst_modgen_adderblock_dup_2g8" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 5738
+Info (12128): Elaborating entity "modgen_adderblock_3g_3g0" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|modgen_adderblock_3g_3g0:main_sad_parallel_core_inst_modgen_adderblock_dup_2g9" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 5819
+Info (12128): Elaborating entity "modgen_adderblock_3g_3g1" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|modgen_adderblock_3g_3g1:main_sad_parallel_core_inst_modgen_adderblock_dup_3g0" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 5900
+Info (12128): Elaborating entity "modgen_adderblock_3g_3g2" for hierarchy "IP_SAD_Accelerator:IP_SAD_Accelerator_0|main_sad_parallel:sad_parallel|modgen_adderblock_3g_3g2:main_sad_parallel_core_inst_modgen_adderblock_dup_3g1" File: P:/shared_p/5/TUNI.fi/ip.hw/IP_SAD_Accelerator/1.0/vqm_src/main_sad_parallel.vqm Line: 5981
+Info (12128): Elaborating entity "Kvazaar_QSYS" for hierarchy "Kvazaar_QSYS:Kvazaar_QSYS_0" File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_IP_acc_Camera.v Line: 1076
+Info (12128): Elaborating entity "LTP_Controller" for hierarchy "LTP_Controller:LTP_Controller_0" File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_IP_acc_Camera.v Line: 1104
+Info (12128): Elaborating entity "dcfifo" for hierarchy "LTP_Controller:LTP_Controller_0|dcfifo:dcfifo_component" File: P:/shared_p/5/TUNI.fi/ip.hw/LTP_Controller/1.0/sync_mode_ltp_controller.vhd Line: 118
+Info (12130): Elaborated megafunction instantiation "LTP_Controller:LTP_Controller_0|dcfifo:dcfifo_component" File: P:/shared_p/5/TUNI.fi/ip.hw/LTP_Controller/1.0/sync_mode_ltp_controller.vhd Line: 118
+Info (12133): Instantiated megafunction "LTP_Controller:LTP_Controller_0|dcfifo:dcfifo_component" with the following parameter: File: P:/shared_p/5/TUNI.fi/ip.hw/LTP_Controller/1.0/sync_mode_ltp_controller.vhd Line: 118
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_numwords" = "12288"
+    Info (12134): Parameter "lpm_showahead" = "ON"
+    Info (12134): Parameter "lpm_type" = "dcfifo"
+    Info (12134): Parameter "lpm_width" = "24"
+    Info (12134): Parameter "lpm_widthu" = "14"
+    Info (12134): Parameter "overflow_checking" = "ON"
+    Info (12134): Parameter "rdsync_delaypipe" = "5"
+    Info (12134): Parameter "underflow_checking" = "ON"
+    Info (12134): Parameter "use_eab" = "ON"
+    Info (12134): Parameter "wrsync_delaypipe" = "5"
+    Info (12134): Parameter "read_aclr_synch" = "ON"
+    Info (12134): Parameter "write_aclr_synch" = "ON"
+Info (12021): Found 1 design units, including 1 entities, in source file db/dcfifo_2ep1.tdf
+    Info (12023): Found entity 1: dcfifo_2ep1 File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/dcfifo_2ep1.tdf Line: 47
+Info (12128): Elaborating entity "dcfifo_2ep1" for hierarchy "LTP_Controller:LTP_Controller_0|dcfifo:dcfifo_component|dcfifo_2ep1:auto_generated" File: c:/apps/altera/quartus/16.0/quartus/libraries/megafunctions/dcfifo.tdf Line: 191
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_gray2bin_tab.tdf
+    Info (12023): Found entity 1: a_gray2bin_tab File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/a_gray2bin_tab.tdf Line: 23
+Info (12128): Elaborating entity "a_gray2bin_tab" for hierarchy "LTP_Controller:LTP_Controller_0|dcfifo:dcfifo_component|dcfifo_2ep1:auto_generated|a_gray2bin_tab:rdptr_g_gray2bin" File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/dcfifo_2ep1.tdf Line: 59
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_graycounter_sv6.tdf
+    Info (12023): Found entity 1: a_graycounter_sv6 File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/a_graycounter_sv6.tdf Line: 25
+Info (12128): Elaborating entity "a_graycounter_sv6" for hierarchy "LTP_Controller:LTP_Controller_0|dcfifo:dcfifo_component|dcfifo_2ep1:auto_generated|a_graycounter_sv6:rdptr_g1p" File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/dcfifo_2ep1.tdf Line: 61
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_graycounter_odc.tdf
+    Info (12023): Found entity 1: a_graycounter_odc File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/a_graycounter_odc.tdf Line: 25
+Info (12128): Elaborating entity "a_graycounter_odc" for hierarchy "LTP_Controller:LTP_Controller_0|dcfifo:dcfifo_component|dcfifo_2ep1:auto_generated|a_graycounter_odc:wrptr_g1p" File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/dcfifo_2ep1.tdf Line: 62
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_l1b1.tdf
+    Info (12023): Found entity 1: altsyncram_l1b1 File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/altsyncram_l1b1.tdf Line: 34
+Info (12128): Elaborating entity "altsyncram_l1b1" for hierarchy "LTP_Controller:LTP_Controller_0|dcfifo:dcfifo_component|dcfifo_2ep1:auto_generated|altsyncram_l1b1:fifo_ram" File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/dcfifo_2ep1.tdf Line: 63
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_s07.tdf
+    Info (12023): Found entity 1: decode_s07 File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/decode_s07.tdf Line: 23
+Info (12128): Elaborating entity "decode_s07" for hierarchy "LTP_Controller:LTP_Controller_0|dcfifo:dcfifo_component|dcfifo_2ep1:auto_generated|altsyncram_l1b1:fifo_ram|decode_s07:decode12" File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/altsyncram_l1b1.tdf Line: 50
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_lc6.tdf
+    Info (12023): Found entity 1: decode_lc6 File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/decode_lc6.tdf Line: 23
+Info (12128): Elaborating entity "decode_lc6" for hierarchy "LTP_Controller:LTP_Controller_0|dcfifo:dcfifo_component|dcfifo_2ep1:auto_generated|altsyncram_l1b1:fifo_ram|decode_lc6:rden_decode_b" File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/altsyncram_l1b1.tdf Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_qs7.tdf
+    Info (12023): Found entity 1: mux_qs7 File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/mux_qs7.tdf Line: 23
+Info (12128): Elaborating entity "mux_qs7" for hierarchy "LTP_Controller:LTP_Controller_0|dcfifo:dcfifo_component|dcfifo_2ep1:auto_generated|altsyncram_l1b1:fifo_ram|mux_qs7:mux13" File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/altsyncram_l1b1.tdf Line: 53
+Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_3dc.tdf
+    Info (12023): Found entity 1: dffpipe_3dc File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/dffpipe_3dc.tdf Line: 25
+Info (12128): Elaborating entity "dffpipe_3dc" for hierarchy "LTP_Controller:LTP_Controller_0|dcfifo:dcfifo_component|dcfifo_2ep1:auto_generated|dffpipe_3dc:rdaclr" File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/dcfifo_2ep1.tdf Line: 82
+Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_te9.tdf
+    Info (12023): Found entity 1: dffpipe_te9 File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/dffpipe_te9.tdf Line: 25
+Info (12128): Elaborating entity "dffpipe_te9" for hierarchy "LTP_Controller:LTP_Controller_0|dcfifo:dcfifo_component|dcfifo_2ep1:auto_generated|dffpipe_te9:rs_brp" File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/dcfifo_2ep1.tdf Line: 83
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_synch_pipe_dpl.tdf
+    Info (12023): Found entity 1: alt_synch_pipe_dpl File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/alt_synch_pipe_dpl.tdf Line: 27
+Info (12128): Elaborating entity "alt_synch_pipe_dpl" for hierarchy "LTP_Controller:LTP_Controller_0|dcfifo:dcfifo_component|dcfifo_2ep1:auto_generated|alt_synch_pipe_dpl:rs_dgwp" File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/dcfifo_2ep1.tdf Line: 85
+Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_ue9.tdf
+    Info (12023): Found entity 1: dffpipe_ue9 File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/dffpipe_ue9.tdf Line: 25
+Info (12128): Elaborating entity "dffpipe_ue9" for hierarchy "LTP_Controller:LTP_Controller_0|dcfifo:dcfifo_component|dcfifo_2ep1:auto_generated|alt_synch_pipe_dpl:rs_dgwp|dffpipe_ue9:dffpipe17" File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/alt_synch_pipe_dpl.tdf Line: 35
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_synch_pipe_epl.tdf
+    Info (12023): Found entity 1: alt_synch_pipe_epl File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/alt_synch_pipe_epl.tdf Line: 27
+Info (12128): Elaborating entity "alt_synch_pipe_epl" for hierarchy "LTP_Controller:LTP_Controller_0|dcfifo:dcfifo_component|dcfifo_2ep1:auto_generated|alt_synch_pipe_epl:ws_dgrp" File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/dcfifo_2ep1.tdf Line: 87
+Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_ve9.tdf
+    Info (12023): Found entity 1: dffpipe_ve9 File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/dffpipe_ve9.tdf Line: 25
+Info (12128): Elaborating entity "dffpipe_ve9" for hierarchy "LTP_Controller:LTP_Controller_0|dcfifo:dcfifo_component|dcfifo_2ep1:auto_generated|alt_synch_pipe_epl:ws_dgrp|dffpipe_ve9:dffpipe20" File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/alt_synch_pipe_epl.tdf Line: 35
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_0v5.tdf
+    Info (12023): Found entity 1: cmpr_0v5 File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/cmpr_0v5.tdf Line: 23
+Info (12128): Elaborating entity "cmpr_0v5" for hierarchy "LTP_Controller:LTP_Controller_0|dcfifo:dcfifo_component|dcfifo_2ep1:auto_generated|cmpr_0v5:rdempty_eq_comp1_lsb" File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/dcfifo_2ep1.tdf Line: 91
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_vu5.tdf
+    Info (12023): Found entity 1: cmpr_vu5 File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/cmpr_vu5.tdf Line: 23
+Info (12128): Elaborating entity "cmpr_vu5" for hierarchy "LTP_Controller:LTP_Controller_0|dcfifo:dcfifo_component|dcfifo_2ep1:auto_generated|cmpr_vu5:rdempty_eq_comp1_msb" File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/dcfifo_2ep1.tdf Line: 92
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_5r7.tdf
+    Info (12023): Found entity 1: mux_5r7 File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/mux_5r7.tdf Line: 23
+Info (12128): Elaborating entity "mux_5r7" for hierarchy "LTP_Controller:LTP_Controller_0|dcfifo:dcfifo_component|dcfifo_2ep1:auto_generated|mux_5r7:rdemp_eq_comp_lsb_mux" File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/dcfifo_2ep1.tdf Line: 99
+Info (12128): Elaborating entity "RAW_to_RGB" for hierarchy "RAW_to_RGB:RAW_to_RGB_0" File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_IP_acc_Camera.v Line: 1124
+Info (12128): Elaborating entity "Line_Buffer" for hierarchy "RAW_to_RGB:RAW_to_RGB_0|Line_Buffer:L1" File: P:/shared_p/5/TUNI.fi/ip.hw/RAW_to_RGB/1.0/RAW2RGB.v Line: 102
+Info (12128): Elaborating entity "altshift_taps" for hierarchy "RAW_to_RGB:RAW_to_RGB_0|Line_Buffer:L1|altshift_taps:ALTSHIFT_TAPS_component" File: P:/shared_p/5/TUNI.fi/ip.hw/RAW_to_RGB/1.0/Line_Buffer.v Line: 67
+Info (12130): Elaborated megafunction instantiation "RAW_to_RGB:RAW_to_RGB_0|Line_Buffer:L1|altshift_taps:ALTSHIFT_TAPS_component" File: P:/shared_p/5/TUNI.fi/ip.hw/RAW_to_RGB/1.0/Line_Buffer.v Line: 67
+Info (12133): Instantiated megafunction "RAW_to_RGB:RAW_to_RGB_0|Line_Buffer:L1|altshift_taps:ALTSHIFT_TAPS_component" with the following parameter: File: P:/shared_p/5/TUNI.fi/ip.hw/RAW_to_RGB/1.0/Line_Buffer.v Line: 67
+    Info (12134): Parameter "lpm_hint" = "RAM_BLOCK_TYPE=M4K"
+    Info (12134): Parameter "lpm_type" = "altshift_taps"
+    Info (12134): Parameter "number_of_taps" = "2"
+    Info (12134): Parameter "power_up_state" = "CLEARED"
+    Info (12134): Parameter "tap_distance" = "800"
+    Info (12134): Parameter "width" = "12"
+Warning (287001): Assertion warning: Device family Cyclone V does not have M4K blocks -- using available memory blocks File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/shift_taps_bt41.tdf Line: 50
+Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_bt41.tdf
+    Info (12023): Found entity 1: shift_taps_bt41 File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/shift_taps_bt41.tdf Line: 27
+Info (12128): Elaborating entity "shift_taps_bt41" for hierarchy "RAW_to_RGB:RAW_to_RGB_0|Line_Buffer:L1|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_bt41:auto_generated" File: c:/apps/altera/quartus/16.0/quartus/libraries/megafunctions/altshift_taps.tdf Line: 104
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_gqg1.tdf
+    Info (12023): Found entity 1: altsyncram_gqg1 File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/altsyncram_gqg1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_gqg1" for hierarchy "RAW_to_RGB:RAW_to_RGB_0|Line_Buffer:L1|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_bt41:auto_generated|altsyncram_gqg1:altsyncram2" File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/shift_taps_bt41.tdf Line: 36
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_smf.tdf
+    Info (12023): Found entity 1: cntr_smf File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/cntr_smf.tdf Line: 28
+Info (12128): Elaborating entity "cntr_smf" for hierarchy "RAW_to_RGB:RAW_to_RGB_0|Line_Buffer:L1|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_bt41:auto_generated|cntr_smf:cntr1" File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/shift_taps_bt41.tdf Line: 37
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_pac.tdf
+    Info (12023): Found entity 1: cmpr_pac File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/cmpr_pac.tdf Line: 23
+Info (12128): Elaborating entity "cmpr_pac" for hierarchy "RAW_to_RGB:RAW_to_RGB_0|Line_Buffer:L1|altshift_taps:ALTSHIFT_TAPS_component|shift_taps_bt41:auto_generated|cntr_smf:cntr1|cmpr_pac:cmpr4" File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/cntr_smf.tdf Line: 36
+Info (12128): Elaborating entity "RGB_to_YUV" for hierarchy "RGB_to_YUV:RGB_to_YUV_0" File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_IP_acc_Camera.v Line: 1155
+Info (12128): Elaborating entity "altsyncram" for hierarchy "RGB_to_YUV:RGB_to_YUV_0|altsyncram:r_data" File: P:/shared_p/5/TUNI.fi/ip.hw/RGB_to_YUV/1.0/rgb_to_yuv_top.vhd Line: 83
+Info (12130): Elaborated megafunction instantiation "RGB_to_YUV:RGB_to_YUV_0|altsyncram:r_data" File: P:/shared_p/5/TUNI.fi/ip.hw/RGB_to_YUV/1.0/rgb_to_yuv_top.vhd Line: 83
+Info (12133): Instantiated megafunction "RGB_to_YUV:RGB_to_YUV_0|altsyncram:r_data" with the following parameter: File: P:/shared_p/5/TUNI.fi/ip.hw/RGB_to_YUV/1.0/rgb_to_yuv_top.vhd Line: 83
+    Info (12134): Parameter "address_aclr_a" = "UNUSED"
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "address_reg_b" = "CLOCK1"
+    Info (12134): Parameter "byte_size" = "8"
+    Info (12134): Parameter "byteena_aclr_a" = "UNUSED"
+    Info (12134): Parameter "byteena_aclr_b" = "NONE"
+    Info (12134): Parameter "byteena_reg_b" = "CLOCK1"
+    Info (12134): Parameter "clock_enable_core_a" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_core_b" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_input_b" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_b" = "NORMAL"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "ecc_pipeline_stage_enabled" = "FALSE"
+    Info (12134): Parameter "enable_ecc" = "FALSE"
+    Info (12134): Parameter "implement_in_les" = "OFF"
+    Info (12134): Parameter "indata_aclr_a" = "UNUSED"
+    Info (12134): Parameter "indata_aclr_b" = "NONE"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK1"
+    Info (12134): Parameter "init_file" = "R.hex"
+    Info (12134): Parameter "init_file_layout" = "PORT_A"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "numwords_a" = "52000"
+    Info (12134): Parameter "numwords_b" = "0"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "rdcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK1"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "read_during_write_mode_port_b" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "stratixiv_m144k_allow_dual_clocks" = "ON"
+    Info (12134): Parameter "width_a" = "8"
+    Info (12134): Parameter "width_b" = "1"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_byteena_b" = "1"
+    Info (12134): Parameter "width_eccstatus" = "3"
+    Info (12134): Parameter "widthad_a" = "16"
+    Info (12134): Parameter "widthad_b" = "1"
+    Info (12134): Parameter "wrcontrol_aclr_a" = "UNUSED"
+    Info (12134): Parameter "wrcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_si04.tdf
+    Info (12023): Found entity 1: altsyncram_si04 File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/altsyncram_si04.tdf Line: 34
+Info (12128): Elaborating entity "altsyncram_si04" for hierarchy "RGB_to_YUV:RGB_to_YUV_0|altsyncram:r_data|altsyncram_si04:auto_generated" File: c:/apps/altera/quartus/16.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_cla.tdf
+    Info (12023): Found entity 1: decode_cla File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/decode_cla.tdf Line: 23
+Info (12128): Elaborating entity "decode_cla" for hierarchy "RGB_to_YUV:RGB_to_YUV_0|altsyncram:r_data|altsyncram_si04:auto_generated|decode_cla:decode3" File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/altsyncram_si04.tdf Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_51a.tdf
+    Info (12023): Found entity 1: decode_51a File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/decode_51a.tdf Line: 23
+Info (12128): Elaborating entity "decode_51a" for hierarchy "RGB_to_YUV:RGB_to_YUV_0|altsyncram:r_data|altsyncram_si04:auto_generated|decode_51a:rden_decode" File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/altsyncram_si04.tdf Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_sfb.tdf
+    Info (12023): Found entity 1: mux_sfb File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/mux_sfb.tdf Line: 23
+Info (12128): Elaborating entity "mux_sfb" for hierarchy "RGB_to_YUV:RGB_to_YUV_0|altsyncram:r_data|altsyncram_si04:auto_generated|mux_sfb:mux2" File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/altsyncram_si04.tdf Line: 44
+Info (12128): Elaborating entity "altsyncram" for hierarchy "RGB_to_YUV:RGB_to_YUV_0|altsyncram:g_data" File: P:/shared_p/5/TUNI.fi/ip.hw/RGB_to_YUV/1.0/rgb_to_yuv_top.vhd Line: 107
+Info (12130): Elaborated megafunction instantiation "RGB_to_YUV:RGB_to_YUV_0|altsyncram:g_data" File: P:/shared_p/5/TUNI.fi/ip.hw/RGB_to_YUV/1.0/rgb_to_yuv_top.vhd Line: 107
+Info (12133): Instantiated megafunction "RGB_to_YUV:RGB_to_YUV_0|altsyncram:g_data" with the following parameter: File: P:/shared_p/5/TUNI.fi/ip.hw/RGB_to_YUV/1.0/rgb_to_yuv_top.vhd Line: 107
+    Info (12134): Parameter "address_aclr_a" = "UNUSED"
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "address_reg_b" = "CLOCK1"
+    Info (12134): Parameter "byte_size" = "8"
+    Info (12134): Parameter "byteena_aclr_a" = "UNUSED"
+    Info (12134): Parameter "byteena_aclr_b" = "NONE"
+    Info (12134): Parameter "byteena_reg_b" = "CLOCK1"
+    Info (12134): Parameter "clock_enable_core_a" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_core_b" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_input_b" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_b" = "NORMAL"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "ecc_pipeline_stage_enabled" = "FALSE"
+    Info (12134): Parameter "enable_ecc" = "FALSE"
+    Info (12134): Parameter "implement_in_les" = "OFF"
+    Info (12134): Parameter "indata_aclr_a" = "UNUSED"
+    Info (12134): Parameter "indata_aclr_b" = "NONE"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK1"
+    Info (12134): Parameter "init_file" = "G.hex"
+    Info (12134): Parameter "init_file_layout" = "PORT_A"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "numwords_a" = "52000"
+    Info (12134): Parameter "numwords_b" = "0"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "rdcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK1"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "read_during_write_mode_port_b" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "stratixiv_m144k_allow_dual_clocks" = "ON"
+    Info (12134): Parameter "width_a" = "8"
+    Info (12134): Parameter "width_b" = "1"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_byteena_b" = "1"
+    Info (12134): Parameter "width_eccstatus" = "3"
+    Info (12134): Parameter "widthad_a" = "16"
+    Info (12134): Parameter "widthad_b" = "1"
+    Info (12134): Parameter "wrcontrol_aclr_a" = "UNUSED"
+    Info (12134): Parameter "wrcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_hi04.tdf
+    Info (12023): Found entity 1: altsyncram_hi04 File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/altsyncram_hi04.tdf Line: 34
+Info (12128): Elaborating entity "altsyncram_hi04" for hierarchy "RGB_to_YUV:RGB_to_YUV_0|altsyncram:g_data|altsyncram_hi04:auto_generated" File: c:/apps/altera/quartus/16.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "altsyncram" for hierarchy "RGB_to_YUV:RGB_to_YUV_0|altsyncram:b_data" File: P:/shared_p/5/TUNI.fi/ip.hw/RGB_to_YUV/1.0/rgb_to_yuv_top.vhd Line: 131
+Info (12130): Elaborated megafunction instantiation "RGB_to_YUV:RGB_to_YUV_0|altsyncram:b_data" File: P:/shared_p/5/TUNI.fi/ip.hw/RGB_to_YUV/1.0/rgb_to_yuv_top.vhd Line: 131
+Info (12133): Instantiated megafunction "RGB_to_YUV:RGB_to_YUV_0|altsyncram:b_data" with the following parameter: File: P:/shared_p/5/TUNI.fi/ip.hw/RGB_to_YUV/1.0/rgb_to_yuv_top.vhd Line: 131
+    Info (12134): Parameter "address_aclr_a" = "UNUSED"
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "address_reg_b" = "CLOCK1"
+    Info (12134): Parameter "byte_size" = "8"
+    Info (12134): Parameter "byteena_aclr_a" = "UNUSED"
+    Info (12134): Parameter "byteena_aclr_b" = "NONE"
+    Info (12134): Parameter "byteena_reg_b" = "CLOCK1"
+    Info (12134): Parameter "clock_enable_core_a" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_core_b" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_input_b" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_b" = "NORMAL"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "ecc_pipeline_stage_enabled" = "FALSE"
+    Info (12134): Parameter "enable_ecc" = "FALSE"
+    Info (12134): Parameter "implement_in_les" = "OFF"
+    Info (12134): Parameter "indata_aclr_a" = "UNUSED"
+    Info (12134): Parameter "indata_aclr_b" = "NONE"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK1"
+    Info (12134): Parameter "init_file" = "B.hex"
+    Info (12134): Parameter "init_file_layout" = "PORT_A"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "numwords_a" = "52000"
+    Info (12134): Parameter "numwords_b" = "0"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "rdcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK1"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "read_during_write_mode_port_b" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "stratixiv_m144k_allow_dual_clocks" = "ON"
+    Info (12134): Parameter "width_a" = "8"
+    Info (12134): Parameter "width_b" = "1"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_byteena_b" = "1"
+    Info (12134): Parameter "width_eccstatus" = "3"
+    Info (12134): Parameter "widthad_a" = "16"
+    Info (12134): Parameter "widthad_b" = "1"
+    Info (12134): Parameter "wrcontrol_aclr_a" = "UNUSED"
+    Info (12134): Parameter "wrcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ci04.tdf
+    Info (12023): Found entity 1: altsyncram_ci04 File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/db/altsyncram_ci04.tdf Line: 34
+Info (12128): Elaborating entity "altsyncram_ci04" for hierarchy "RGB_to_YUV:RGB_to_YUV_0|altsyncram:b_data|altsyncram_ci04:auto_generated" File: c:/apps/altera/quartus/16.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "rgb2yuv" for hierarchy "RGB_to_YUV:RGB_to_YUV_0|rgb2yuv:rgb_to_yuv_inst" File: P:/shared_p/5/TUNI.fi/ip.hw/RGB_to_YUV/1.0/rgb_to_yuv_top.vhd Line: 155
+Info (12128): Elaborating entity "modgen_adderblock_3k_0k" for hierarchy "RGB_to_YUV:RGB_to_YUV_0|rgb2yuv:rgb_to_yuv_inst|modgen_adderblock_3k_0k:rgb_to_yuv_4k00_2k40_core_inst_modgen_adderblock" File: P:/shared_p/5/TUNI.fi/ip.hw/RGB_to_YUV/1.0/rgb_to_yuv.vqm Line: 295
+Info (12128): Elaborating entity "modgen_adderblock_3k_1k" for hierarchy "RGB_to_YUV:RGB_to_YUV_0|rgb2yuv:rgb_to_yuv_inst|modgen_adderblock_3k_1k:rgb_to_yuv_4k00_2k40_core_inst_modgen_adderblock_dup_0k" File: P:/shared_p/5/TUNI.fi/ip.hw/RGB_to_YUV/1.0/rgb_to_yuv.vqm Line: 319
+Info (12128): Elaborating entity "modgen_adderblock_3k_2k" for hierarchy "RGB_to_YUV:RGB_to_YUV_0|rgb2yuv:rgb_to_yuv_inst|modgen_adderblock_3k_2k:rgb_to_yuv_4k00_2k40_core_inst_modgen_adderblock_dup_1k" File: P:/shared_p/5/TUNI.fi/ip.hw/RGB_to_YUV/1.0/rgb_to_yuv.vqm Line: 370
+Info (12128): Elaborating entity "modgen_adderblock_3k_3k" for hierarchy "RGB_to_YUV:RGB_to_YUV_0|rgb2yuv:rgb_to_yuv_inst|modgen_adderblock_3k_3k:rgb_to_yuv_4k00_2k40_core_inst_modgen_adderblock_dup_2k" File: P:/shared_p/5/TUNI.fi/ip.hw/RGB_to_YUV/1.0/rgb_to_yuv.vqm Line: 404
+Info (12128): Elaborating entity "modgen_adderblock_3k_4k" for hierarchy "RGB_to_YUV:RGB_to_YUV_0|rgb2yuv:rgb_to_yuv_inst|modgen_adderblock_3k_4k:rgb_to_yuv_4k00_2k40_core_inst_modgen_adderblock_dup_3k" File: P:/shared_p/5/TUNI.fi/ip.hw/RGB_to_YUV/1.0/rgb_to_yuv.vqm Line: 445
+Info (12128): Elaborating entity "modgen_adderblock_3k_5k" for hierarchy "RGB_to_YUV:RGB_to_YUV_0|rgb2yuv:rgb_to_yuv_inst|modgen_adderblock_3k_5k:rgb_to_yuv_4k00_2k40_core_inst_modgen_adderblock_dup_4k" File: P:/shared_p/5/TUNI.fi/ip.hw/RGB_to_YUV/1.0/rgb_to_yuv.vqm Line: 469
+Info (12128): Elaborating entity "modgen_adderblock_3k_6k" for hierarchy "RGB_to_YUV:RGB_to_YUV_0|rgb2yuv:rgb_to_yuv_inst|modgen_adderblock_3k_6k:rgb_to_yuv_4k00_2k40_core_inst_modgen_adderblock_dup_5k" File: P:/shared_p/5/TUNI.fi/ip.hw/RGB_to_YUV/1.0/rgb_to_yuv.vqm Line: 511
+Info (12128): Elaborating entity "modgen_adderblock_3k_7k" for hierarchy "RGB_to_YUV:RGB_to_YUV_0|rgb2yuv:rgb_to_yuv_inst|modgen_adderblock_3k_7k:rgb_to_yuv_4k00_2k40_core_inst_modgen_adderblock_dup_6k" File: P:/shared_p/5/TUNI.fi/ip.hw/RGB_to_YUV/1.0/rgb_to_yuv.vqm Line: 549
+Info (12128): Elaborating entity "modgen_adderblock_3k_8k" for hierarchy "RGB_to_YUV:RGB_to_YUV_0|rgb2yuv:rgb_to_yuv_inst|modgen_adderblock_3k_8k:rgb_to_yuv_4k00_2k40_core_inst_modgen_adderblock_dup_7k" File: P:/shared_p/5/TUNI.fi/ip.hw/RGB_to_YUV/1.0/rgb_to_yuv.vqm Line: 591
+Info (12128): Elaborating entity "modgen_adderblock_3k_9k" for hierarchy "RGB_to_YUV:RGB_to_YUV_0|rgb2yuv:rgb_to_yuv_inst|modgen_adderblock_3k_9k:rgb_to_yuv_4k00_2k40_core_inst_modgen_adderblock_dup_8k" File: P:/shared_p/5/TUNI.fi/ip.hw/RGB_to_YUV/1.0/rgb_to_yuv.vqm Line: 618
+Info (12128): Elaborating entity "modgen_adderblock_3k_1k0" for hierarchy "RGB_to_YUV:RGB_to_YUV_0|rgb2yuv:rgb_to_yuv_inst|modgen_adderblock_3k_1k0:rgb_to_yuv_4k00_2k40_core_inst_modgen_adderblock_dup_9k" File: P:/shared_p/5/TUNI.fi/ip.hw/RGB_to_YUV/1.0/rgb_to_yuv.vqm Line: 675
+Error (12006): Node instance "acc_config" instantiates undefined entity "axi3_to_channel". Make sure that the required user library paths are specified correctly. If the project contains EDIF Input Files (.edf), make sure that you specified the EDA synthesis tool settings correctly. Otherwise, define the specified entity or change the calling entity. The Altera Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_QSYS/synthesis/Kvazaar_QSYS.v Line: 671
+Error (12006): Node instance "axi_dma_orig_block" instantiates undefined entity "axi3_dma_read". Make sure that the required user library paths are specified correctly. If the project contains EDIF Input Files (.edf), make sure that you specified the EDA synthesis tool settings correctly. Otherwise, define the specified entity or change the calling entity. The Altera Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_QSYS/synthesis/Kvazaar_QSYS.v Line: 762
+Error (12006): Node instance "axi_dma_unfiltered1" instantiates undefined entity "axi3_dma_read". Make sure that the required user library paths are specified correctly. If the project contains EDIF Input Files (.edf), make sure that you specified the EDA synthesis tool settings correctly. Otherwise, define the specified entity or change the calling entity. The Altera Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_QSYS/synthesis/Kvazaar_QSYS.v Line: 853
+Error (12006): Node instance "axi_dma_unfiltered2" instantiates undefined entity "axi3_dma_read". Make sure that the required user library paths are specified correctly. If the project contains EDIF Input Files (.edf), make sure that you specified the EDA synthesis tool settings correctly. Otherwise, define the specified entity or change the calling entity. The Altera Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_QSYS/synthesis/Kvazaar_QSYS.v Line: 944
+Error (12006): Node instance "camera_control_oc" instantiates undefined entity "Kvazaar_QSYS_camera_control_oc". Make sure that the required user library paths are specified correctly. If the project contains EDIF Input Files (.edf), make sure that you specified the EDA synthesis tool settings correctly. Otherwise, define the specified entity or change the calling entity. The Altera Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_QSYS/synthesis/Kvazaar_QSYS.v Line: 967
+Error (12006): Node instance "configure_camera" instantiates undefined entity "Kvazaar_QSYS_configure_camera". Make sure that the required user library paths are specified correctly. If the project contains EDIF Input Files (.edf), make sure that you specified the EDA synthesis tool settings correctly. Otherwise, define the specified entity or change the calling entity. The Altera Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_QSYS/synthesis/Kvazaar_QSYS.v Line: 978
+Error (12006): Node instance "dma_yuv" instantiates undefined entity "axi3_dma_write_yuv". Make sure that the required user library paths are specified correctly. If the project contains EDIF Input Files (.edf), make sure that you specified the EDA synthesis tool settings correctly. Otherwise, define the specified entity or change the calling entity. The Altera Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_QSYS/synthesis/Kvazaar_QSYS.v Line: 1078
+Error (12006): Node instance "hps_0" instantiates undefined entity "Kvazaar_QSYS_hps_0". Make sure that the required user library paths are specified correctly. If the project contains EDIF Input Files (.edf), make sure that you specified the EDA synthesis tool settings correctly. Otherwise, define the specified entity or change the calling entity. The Altera Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_QSYS/synthesis/Kvazaar_QSYS.v Line: 1394
+Error (12006): Node instance "lambda_loaded" instantiates undefined entity "Kvazaar_QSYS_lambda_loaded". Make sure that the required user library paths are specified correctly. If the project contains EDIF Input Files (.edf), make sure that you specified the EDA synthesis tool settings correctly. Otherwise, define the specified entity or change the calling entity. The Altera Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_QSYS/synthesis/Kvazaar_QSYS.v Line: 1406
+Error (12006): Node instance "lcu_loaded" instantiates undefined entity "Kvazaar_QSYS_lambda_loaded". Make sure that the required user library paths are specified correctly. If the project contains EDIF Input Files (.edf), make sure that you specified the EDA synthesis tool settings correctly. Otherwise, define the specified entity or change the calling entity. The Altera Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_QSYS/synthesis/Kvazaar_QSYS.v Line: 1418
+Error (12006): Node instance "result_ready" instantiates undefined entity "Kvazaar_QSYS_result_ready". Make sure that the required user library paths are specified correctly. If the project contains EDIF Input Files (.edf), make sure that you specified the EDA synthesis tool settings correctly. Otherwise, define the specified entity or change the calling entity. The Altera Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_QSYS/synthesis/Kvazaar_QSYS.v Line: 1430
+Error (12006): Node instance "sad_result_high" instantiates undefined entity "Kvazaar_QSYS_sad_result_high". Make sure that the required user library paths are specified correctly. If the project contains EDIF Input Files (.edf), make sure that you specified the EDA synthesis tool settings correctly. Otherwise, define the specified entity or change the calling entity. The Altera Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_QSYS/synthesis/Kvazaar_QSYS.v Line: 1441
+Error (12006): Node instance "sad_result_low" instantiates undefined entity "Kvazaar_QSYS_sad_result_high". Make sure that the required user library paths are specified correctly. If the project contains EDIF Input Files (.edf), make sure that you specified the EDA synthesis tool settings correctly. Otherwise, define the specified entity or change the calling entity. The Altera Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_QSYS/synthesis/Kvazaar_QSYS.v Line: 1452
+Error (12006): Node instance "yuv_ctrl" instantiates undefined entity "Kvazaar_QSYS_yuv_ctrl". Make sure that the required user library paths are specified correctly. If the project contains EDIF Input Files (.edf), make sure that you specified the EDA synthesis tool settings correctly. Otherwise, define the specified entity or change the calling entity. The Altera Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_QSYS/synthesis/Kvazaar_QSYS.v Line: 1463
+Error (12006): Node instance "yuv_status" instantiates undefined entity "Kvazaar_QSYS_lambda_loaded". Make sure that the required user library paths are specified correctly. If the project contains EDIF Input Files (.edf), make sure that you specified the EDA synthesis tool settings correctly. Otherwise, define the specified entity or change the calling entity. The Altera Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_QSYS/synthesis/Kvazaar_QSYS.v Line: 1475
+Error (12006): Node instance "mm_interconnect_1" instantiates undefined entity "Kvazaar_QSYS_mm_interconnect_1". Make sure that the required user library paths are specified correctly. If the project contains EDIF Input Files (.edf), make sure that you specified the EDA synthesis tool settings correctly. Otherwise, define the specified entity or change the calling entity. The Altera Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_QSYS/synthesis/Kvazaar_QSYS.v Line: 1589
+Error (12006): Node instance "mm_interconnect_2" instantiates undefined entity "Kvazaar_QSYS_mm_interconnect_2". Make sure that the required user library paths are specified correctly. If the project contains EDIF Input Files (.edf), make sure that you specified the EDA synthesis tool settings correctly. Otherwise, define the specified entity or change the calling entity. The Altera Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_QSYS/synthesis/Kvazaar_QSYS.v Line: 1667
+Error (12006): Node instance "mm_interconnect_3" instantiates undefined entity "Kvazaar_QSYS_mm_interconnect_3". Make sure that the required user library paths are specified correctly. If the project contains EDIF Input Files (.edf), make sure that you specified the EDA synthesis tool settings correctly. Otherwise, define the specified entity or change the calling entity. The Altera Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_QSYS/synthesis/Kvazaar_QSYS.v Line: 1936
+Error (12006): Node instance "irq_mapper" instantiates undefined entity "Kvazaar_QSYS_irq_mapper". Make sure that the required user library paths are specified correctly. If the project contains EDIF Input Files (.edf), make sure that you specified the EDA synthesis tool settings correctly. Otherwise, define the specified entity or change the calling entity. The Altera Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_QSYS/synthesis/Kvazaar_QSYS.v Line: 1946
+Error (12006): Node instance "irq_mapper_001" instantiates undefined entity "Kvazaar_QSYS_irq_mapper_001". Make sure that the required user library paths are specified correctly. If the project contains EDIF Input Files (.edf), make sure that you specified the EDA synthesis tool settings correctly. Otherwise, define the specified entity or change the calling entity. The Altera Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_QSYS/synthesis/Kvazaar_QSYS.v Line: 1952
+Error (12006): Node instance "rst_controller" instantiates undefined entity "altera_reset_controller". Make sure that the required user library paths are specified correctly. If the project contains EDIF Input Files (.edf), make sure that you specified the EDA synthesis tool settings correctly. Otherwise, define the specified entity or change the calling entity. The Altera Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_QSYS/synthesis/Kvazaar_QSYS.v Line: 2015
+Error (12006): Node instance "rst_controller_001" instantiates undefined entity "altera_reset_controller". Make sure that the required user library paths are specified correctly. If the project contains EDIF Input Files (.edf), make sure that you specified the EDA synthesis tool settings correctly. Otherwise, define the specified entity or change the calling entity. The Altera Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: P:/shared_p/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_QSYS/synthesis/Kvazaar_QSYS.v Line: 2078
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 22 errors, 14 warnings
+    Error: Peak virtual memory: 5625 megabytes
+    Error: Processing ended: Sat Apr 10 17:28:10 2021
+    Error: Elapsed time: 00:00:26
+    Error: Total CPU time (on all processors): 00:00:27
+
+

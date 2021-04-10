@@ -1,141 +1,195 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ipxact:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+<ipxact:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.tut.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 	<ipxact:vendor>TUNI.fi</ipxact:vendor>
 	<ipxact:library>ip.hw</ipxact:library>
 	<ipxact:name>Kvazaar_QSYS</ipxact:name>
 	<ipxact:version>1.0_student</ipxact:version>
-<ipxact:busInterfaces>
+	<ipxact:busInterfaces>
 		<ipxact:busInterface>
-			<ipxact:name>orig_channel</ipxact:name>
-			<ipxact:description>TODO:
-orig dma reader
-lz -&gt; lz ; vz -&gt; vz ; z -&gt; z</ipxact:description>
-			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="catapult_channel" version="1.0"/>
-			<ipxact:abstractionTypes>
-				<ipxact:abstractionType>
-					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="catapult_channel.absDef" version="1.0"/>
-				</ipxact:abstractionType>
-			</ipxact:abstractionTypes>
-			<ipxact:master/>
-			<ipxact:connectionRequired>false</ipxact:connectionRequired>
-			<ipxact:bitsInLau>8</ipxact:bitsInLau>
-			<ipxact:endianness>little</ipxact:endianness>
-		</ipxact:busInterface>
-		<ipxact:busInterface>
-			<ipxact:name>top_ref_channel</ipxact:name>
-			<ipxact:description>TODO:
-top_ref/unfiltered1 dma reader
-lz -&gt; lz ; vz -&gt; vz ; z -&gt; z</ipxact:description>
-			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="catapult_channel" version="1.0"/>
-			<ipxact:abstractionTypes>
-				<ipxact:abstractionType>
-					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="catapult_channel.absDef" version="1.0"/>
-				</ipxact:abstractionType>
-			</ipxact:abstractionTypes>
-			<ipxact:master/>
-			<ipxact:connectionRequired>false</ipxact:connectionRequired>
-			<ipxact:bitsInLau>8</ipxact:bitsInLau>
-			<ipxact:endianness>little</ipxact:endianness>
-		</ipxact:busInterface>
-		<ipxact:busInterface>
-			<ipxact:name>left_ref_channel</ipxact:name>
-			<ipxact:description>TODO:
-left_ref/unfiltered2 dma reader
-lz -&gt; lz ; vz -&gt; vz ; z -&gt; z</ipxact:description>
-			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="catapult_channel" version="1.0"/>
-			<ipxact:abstractionTypes>
-				<ipxact:abstractionType>
-					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="catapult_channel.absDef" version="1.0"/>
-				</ipxact:abstractionType>
-			</ipxact:abstractionTypes>
-			<ipxact:master/>
-			<ipxact:connectionRequired>false</ipxact:connectionRequired>
-			<ipxact:bitsInLau>8</ipxact:bitsInLau>
-			<ipxact:endianness>little</ipxact:endianness>
-		</ipxact:busInterface>
-		<ipxact:busInterface>
-			<ipxact:name>config_channel</ipxact:name>
-			<ipxact:description>TODO:
-config axi_to_channel
-lz -&gt; lz ; vz -&gt; vz ; z -&gt; z</ipxact:description>
-			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="catapult_channel" version="1.0"/>
-			<ipxact:abstractionTypes>
-				<ipxact:abstractionType>
-					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="catapult_channel.absDef" version="1.0"/>
-				</ipxact:abstractionType>
-			</ipxact:abstractionTypes>
-			<ipxact:master/>
-			<ipxact:connectionRequired>false</ipxact:connectionRequired>
-			<ipxact:bitsInLau>8</ipxact:bitsInLau>
-			<ipxact:endianness>little</ipxact:endianness>
-		</ipxact:busInterface>
-		<ipxact:busInterface>
-			<ipxact:name>y_channel</ipxact:name>
-			<ipxact:description>TODO:
-luma y dma_yuv
-lz -&gt; vz ; vz -&gt; lz ; z -&gt; z</ipxact:description>
-			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="catapult_channel" version="1.0"/>
-			<ipxact:abstractionTypes>
-				<ipxact:abstractionType>
-					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="catapult_channel.absDef" version="1.0"/>
-				</ipxact:abstractionType>
-			</ipxact:abstractionTypes>
-			<ipxact:slave/>
-			<ipxact:connectionRequired>false</ipxact:connectionRequired>
-			<ipxact:bitsInLau>8</ipxact:bitsInLau>
-			<ipxact:endianness>little</ipxact:endianness>
-		</ipxact:busInterface>
-		<ipxact:busInterface>
-			<ipxact:name>u_channel</ipxact:name>
-			<ipxact:description>TODO:
-chroma u dma_yuv
-lz -&gt; vz ; vz -&gt; lz ; z -&gt; z</ipxact:description>
-			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="catapult_channel" version="1.0"/>
-			<ipxact:abstractionTypes>
-				<ipxact:abstractionType>
-					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="catapult_channel.absDef" version="1.0"/>
-				</ipxact:abstractionType>
-			</ipxact:abstractionTypes>
-			<ipxact:slave/>
-			<ipxact:connectionRequired>false</ipxact:connectionRequired>
-			<ipxact:bitsInLau>8</ipxact:bitsInLau>
-			<ipxact:endianness>little</ipxact:endianness>
-		</ipxact:busInterface>
-		<ipxact:busInterface>
-			<ipxact:name>v_channel</ipxact:name>
-			<ipxact:description>TODO:
-chroma v dma_yuv
-lz -&gt; vz ; vz -&gt; lz ; z -&gt; z</ipxact:description>
-			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="catapult_channel" version="1.0"/>
-			<ipxact:abstractionTypes>
-				<ipxact:abstractionType>
-					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="catapult_channel.absDef" version="1.0"/>
-				</ipxact:abstractionType>
-			</ipxact:abstractionTypes>
-			<ipxact:slave/>
-			<ipxact:connectionRequired>false</ipxact:connectionRequired>
-			<ipxact:bitsInLau>8</ipxact:bitsInLau>
-			<ipxact:endianness>little</ipxact:endianness>
-		</ipxact:busInterface>
-		<ipxact:busInterface>
-			<ipxact:name>camera_config</ipxact:name>
-			<ipxact:description>TODO:
-address -&gt; address ; chipselect -&gt; chipselect ; clken -&gt; clken ; write -&gt; write ;
-readdata -&gt; readdata ; writedata -&gt; writedata ; byteeneable -&gt; byteeneable</ipxact:description>
-			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="onchip_ifc" version="1.0"/>
-			<ipxact:abstractionTypes>
-				<ipxact:abstractionType>
-					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="onchip_ifc.absDef" version="1.0"/>
-				</ipxact:abstractionType>
-			</ipxact:abstractionTypes>
-			<ipxact:slave/>
-			<ipxact:connectionRequired>false</ipxact:connectionRequired>
-			<ipxact:bitsInLau>8</ipxact:bitsInLau>
-			<ipxact:endianness>little</ipxact:endianness>
-		</ipxact:busInterface>
-		<ipxact:busInterface>
-			<ipxact:name>clock_75MHz</ipxact:name>
+			<ipxact:name>push_buttons</ipxact:name>
 			<ipxact:description>DONE</ipxact:description>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="push_button" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="push_button.absDef" version="1.0"/>
+					<ipxact:portMaps>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>USER_PB_FPGA</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>1</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>hps_0_f2h_stm_hw_events_stm_hwevents</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>1</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+					</ipxact:portMaps>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:slave/>
+			<ipxact:connectionRequired>false</ipxact:connectionRequired>
+			<ipxact:bitsInLau>8</ipxact:bitsInLau>
+			<ipxact:endianness>little</ipxact:endianness>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>dip_switch</ipxact:name>
+			<ipxact:description>DONE</ipxact:description>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="dip_switch" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="dip_switch.absDef" version="1.0"/>
+					<ipxact:portMaps>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>USER_DIPSW_FPGA</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>3</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>hps_0_f2h_stm_hw_events_stm_hwevents</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>9</ipxact:left>
+										<ipxact:right>6</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+					</ipxact:portMaps>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:slave/>
+			<ipxact:connectionRequired>false</ipxact:connectionRequired>
+			<ipxact:bitsInLau>8</ipxact:bitsInLau>
+			<ipxact:endianness>little</ipxact:endianness>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>camera_start_config</ipxact:name>
+			<ipxact:description>TODO:
+configure_camera -&gt; configure_camera_pio_export</ipxact:description>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="camera_config" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="camera_config.absDef" version="1.0"/>
+					<ipxact:portMaps>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CONFIGURE_CAMERA_EXTERNAL_CONNECTION_EXPORT</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>configure_camera_external_connection_export</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+					</ipxact:portMaps>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:master/>
+			<ipxact:connectionRequired>false</ipxact:connectionRequired>
+			<ipxact:bitsInLau>8</ipxact:bitsInLau>
+			<ipxact:endianness>little</ipxact:endianness>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>yuv_ctrl</ipxact:name>
+			<ipxact:description>TODO:
+yuv_status -&gt; done ; yuv_ctrl -&gt; ctrl
+</ipxact:description>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="yuv_ctrl" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="yuv_ctrl.absDef" version="1.0"/>
+					<ipxact:portMaps>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>ctrl</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>yuv_ctrl_external_connection_export</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>done</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>yuv_status_external_connection_export</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+					</ipxact:portMaps>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:master/>
+			<ipxact:connectionRequired>false</ipxact:connectionRequired>
+			<ipxact:bitsInLau>8</ipxact:bitsInLau>
+			<ipxact:endianness>little</ipxact:endianness>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>sad_result</ipxact:name>
+			<ipxact:description>TODO:
+sad_result [31..0] =&gt; sad_result(low)
+sad_result [63..32] =&gt; sad_result(high)</ipxact:description>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="sad_result" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="sad_result.absDef" version="1.0"/>
+					<ipxact:portMaps>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>SAD_RESULT</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>63</ipxact:left>
+									<ipxact:right>32</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>sad_result_high_external_connection_export</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>31</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>SAD_RESULT</ipxact:name>
+								<ipxact:range>
+									<ipxact:left>31</ipxact:left>
+									<ipxact:right>0</ipxact:right>
+								</ipxact:range>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>sad_result_low_external_connection_export</ipxact:name>
+								<ipxact:partSelect>
+									<ipxact:range>
+										<ipxact:left>31</ipxact:left>
+										<ipxact:right>0</ipxact:right>
+									</ipxact:range>
+								</ipxact:partSelect>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+					</ipxact:portMaps>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:slave/>
+			<ipxact:connectionRequired>false</ipxact:connectionRequired>
+			<ipxact:bitsInLau>8</ipxact:bitsInLau>
+			<ipxact:endianness>little</ipxact:endianness>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>clock_camera</ipxact:name>
+			<ipxact:description>TODO:
+clk -&gt; dma_yuv_fifo_clk</ipxact:description>
 			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="clock_reset" version="1.0"/>
 			<ipxact:abstractionTypes>
 				<ipxact:abstractionType>
@@ -144,37 +198,9 @@ readdata -&gt; readdata ; writedata -&gt; writedata ; byteeneable -&gt; byteenea
 						<ipxact:portMap>
 							<ipxact:logicalPort>
 								<ipxact:name>CLK</ipxact:name>
-								<ipxact:range>
-									<ipxact:left>0</ipxact:left>
-									<ipxact:right>0</ipxact:right>
-								</ipxact:range>
 							</ipxact:logicalPort>
 							<ipxact:physicalPort>
-								<ipxact:name>clk_clk</ipxact:name>
-								<ipxact:partSelect>
-									<ipxact:range>
-										<ipxact:left>0</ipxact:left>
-										<ipxact:right>0</ipxact:right>
-									</ipxact:range>
-								</ipxact:partSelect>
-							</ipxact:physicalPort>
-						</ipxact:portMap>
-						<ipxact:portMap>
-							<ipxact:logicalPort>
-								<ipxact:name>RST_N</ipxact:name>
-								<ipxact:range>
-									<ipxact:left>0</ipxact:left>
-									<ipxact:right>0</ipxact:right>
-								</ipxact:range>
-							</ipxact:logicalPort>
-							<ipxact:physicalPort>
-								<ipxact:name>reset_reset_n</ipxact:name>
-								<ipxact:partSelect>
-									<ipxact:range>
-										<ipxact:left>0</ipxact:left>
-										<ipxact:right>0</ipxact:right>
-									</ipxact:range>
-								</ipxact:partSelect>
+								<ipxact:name>dma_yuv_fifo_clk_clk</ipxact:name>
 							</ipxact:physicalPort>
 						</ipxact:portMap>
 					</ipxact:portMaps>
@@ -1624,122 +1650,44 @@ readdata -&gt; readdata ; writedata -&gt; writedata ; byteeneable -&gt; byteenea
 			<ipxact:endianness>little</ipxact:endianness>
 		</ipxact:busInterface>
 		<ipxact:busInterface>
-			<ipxact:name>clock_camera</ipxact:name>
-			<ipxact:description>TODO:
-clk -&gt; dma_yuv_fifo_clk</ipxact:description>
+			<ipxact:name>clock_75MHz</ipxact:name>
+			<ipxact:description>DONE</ipxact:description>
 			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="clock_reset" version="1.0"/>
 			<ipxact:abstractionTypes>
 				<ipxact:abstractionType>
 					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="clock_reset.absDef" version="1.0"/>
-				</ipxact:abstractionType>
-			</ipxact:abstractionTypes>
-			<ipxact:slave/>
-			<ipxact:connectionRequired>false</ipxact:connectionRequired>
-			<ipxact:bitsInLau>8</ipxact:bitsInLau>
-			<ipxact:endianness>little</ipxact:endianness>
-		</ipxact:busInterface>
-		<ipxact:busInterface>
-			<ipxact:name>sad_result</ipxact:name>
-			<ipxact:description>TODO:
-sad_result [31..0] =&gt; sad_result(low)
-sad_result [63..32] =&gt; sad_result(high)</ipxact:description>
-			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="sad_result" version="1.0"/>
-			<ipxact:abstractionTypes>
-				<ipxact:abstractionType>
-					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="sad_result.absDef" version="1.0"/>
-				</ipxact:abstractionType>
-			</ipxact:abstractionTypes>
-			<ipxact:slave/>
-			<ipxact:connectionRequired>false</ipxact:connectionRequired>
-			<ipxact:bitsInLau>8</ipxact:bitsInLau>
-			<ipxact:endianness>little</ipxact:endianness>
-		</ipxact:busInterface>
-		<ipxact:busInterface>
-			<ipxact:name>yuv_ctrl</ipxact:name>
-			<ipxact:description>TODO:
-yuv_status -&gt; done ; yuv_ctrl -&gt; ctrl
-</ipxact:description>
-			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="yuv_ctrl" version="1.0"/>
-			<ipxact:abstractionTypes>
-				<ipxact:abstractionType>
-					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="yuv_ctrl.absDef" version="1.0"/>
-				</ipxact:abstractionType>
-			</ipxact:abstractionTypes>
-			<ipxact:master/>
-			<ipxact:connectionRequired>false</ipxact:connectionRequired>
-			<ipxact:bitsInLau>8</ipxact:bitsInLau>
-			<ipxact:endianness>little</ipxact:endianness>
-		</ipxact:busInterface>
-		<ipxact:busInterface>
-			<ipxact:name>camera_start_config</ipxact:name>
-			<ipxact:description>TODO:
-configure_camera -&gt; configure_camera_pio_export</ipxact:description>
-			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="camera_config" version="1.0"/>
-			<ipxact:abstractionTypes>
-				<ipxact:abstractionType>
-					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="camera_config.absDef" version="1.0"/>
-				</ipxact:abstractionType>
-			</ipxact:abstractionTypes>
-			<ipxact:master/>
-			<ipxact:connectionRequired>false</ipxact:connectionRequired>
-			<ipxact:bitsInLau>8</ipxact:bitsInLau>
-			<ipxact:endianness>little</ipxact:endianness>
-		</ipxact:busInterface>
-		<ipxact:busInterface>
-			<ipxact:name>dip_switch</ipxact:name>
-			<ipxact:description>DONE</ipxact:description>
-			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="dip_switch" version="1.0"/>
-			<ipxact:abstractionTypes>
-				<ipxact:abstractionType>
-					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="dip_switch.absDef" version="1.0"/>
 					<ipxact:portMaps>
 						<ipxact:portMap>
 							<ipxact:logicalPort>
-								<ipxact:name>USER_DIPSW_FPGA</ipxact:name>
+								<ipxact:name>CLK</ipxact:name>
 								<ipxact:range>
-									<ipxact:left>3</ipxact:left>
+									<ipxact:left>0</ipxact:left>
 									<ipxact:right>0</ipxact:right>
 								</ipxact:range>
 							</ipxact:logicalPort>
 							<ipxact:physicalPort>
-								<ipxact:name>hps_0_f2h_stm_hw_events_stm_hwevents</ipxact:name>
+								<ipxact:name>clk_clk</ipxact:name>
 								<ipxact:partSelect>
 									<ipxact:range>
-										<ipxact:left>9</ipxact:left>
-										<ipxact:right>6</ipxact:right>
+										<ipxact:left>0</ipxact:left>
+										<ipxact:right>0</ipxact:right>
 									</ipxact:range>
 								</ipxact:partSelect>
 							</ipxact:physicalPort>
 						</ipxact:portMap>
-					</ipxact:portMaps>
-				</ipxact:abstractionType>
-			</ipxact:abstractionTypes>
-			<ipxact:slave/>
-			<ipxact:connectionRequired>false</ipxact:connectionRequired>
-			<ipxact:bitsInLau>8</ipxact:bitsInLau>
-			<ipxact:endianness>little</ipxact:endianness>
-		</ipxact:busInterface>
-		<ipxact:busInterface>
-			<ipxact:name>push_buttons</ipxact:name>
-			<ipxact:description>DONE</ipxact:description>
-			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="push_button" version="1.0"/>
-			<ipxact:abstractionTypes>
-				<ipxact:abstractionType>
-					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="push_button.absDef" version="1.0"/>
-					<ipxact:portMaps>
 						<ipxact:portMap>
 							<ipxact:logicalPort>
-								<ipxact:name>USER_PB_FPGA</ipxact:name>
+								<ipxact:name>RST_N</ipxact:name>
 								<ipxact:range>
-									<ipxact:left>1</ipxact:left>
+									<ipxact:left>0</ipxact:left>
 									<ipxact:right>0</ipxact:right>
 								</ipxact:range>
 							</ipxact:logicalPort>
 							<ipxact:physicalPort>
-								<ipxact:name>hps_0_f2h_stm_hw_events_stm_hwevents</ipxact:name>
+								<ipxact:name>reset_reset_n</ipxact:name>
 								<ipxact:partSelect>
 									<ipxact:range>
-										<ipxact:left>1</ipxact:left>
+										<ipxact:left>0</ipxact:left>
 										<ipxact:right>0</ipxact:right>
 									</ipxact:range>
 								</ipxact:partSelect>
@@ -1753,12 +1701,381 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 			<ipxact:bitsInLau>8</ipxact:bitsInLau>
 			<ipxact:endianness>little</ipxact:endianness>
 		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>camera_config</ipxact:name>
+			<ipxact:description>TODO:
+address -&gt; address ; chipselect -&gt; chipselect ; clken -&gt; clken ; write -&gt; write ;
+readdata -&gt; readdata ; writedata -&gt; writedata ; byteeneable -&gt; byteeneable</ipxact:description>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="onchip_ifc" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="onchip_ifc.absDef" version="1.0"/>
+					<ipxact:portMaps>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CAMERA_CONTROL_OC_S2_ADDRESS</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>camera_control_oc_s2_address</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CAMERA_CONTROL_OC_S2_CHIPSELECT</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>camera_control_oc_s2_chipselect</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CAMERA_CONTROL_OC_S2_CLKEN</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>camera_control_oc_s2_clken</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CAMERA_CONTROL_OC_S2_WRITE</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>camera_control_oc_s2_write</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CAMERA_CONTROL_OC_S2_READDATA</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>camera_control_oc_s2_readdata</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CAMERA_CONTROL_OC_S2_WRITEDATA</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>camera_control_oc_s2_writedata</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CAMERA_CONTROL_OC_S2_BYTEENABLE</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>camera_control_oc_s2_byteenable</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+					</ipxact:portMaps>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:slave/>
+			<ipxact:connectionRequired>false</ipxact:connectionRequired>
+			<ipxact:bitsInLau>8</ipxact:bitsInLau>
+			<ipxact:endianness>little</ipxact:endianness>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>v_channel</ipxact:name>
+			<ipxact:description>TODO:
+chroma v dma_yuv
+lz -&gt; vz ; vz -&gt; lz ; z -&gt; z</ipxact:description>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="catapult_channel" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="catapult_channel.absDef" version="1.0"/>
+					<ipxact:portMaps>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CHANNEL_VZ</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>dma_yuv_yuv_input_v_data_in_lz</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CHANNEL_LZ</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>dma_yuv_yuv_input_v_data_in_vz</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CHANNEL_DATA</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>dma_yuv_yuv_input_v_data_in_z</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+					</ipxact:portMaps>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:slave/>
+			<ipxact:connectionRequired>false</ipxact:connectionRequired>
+			<ipxact:bitsInLau>8</ipxact:bitsInLau>
+			<ipxact:endianness>little</ipxact:endianness>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>u_channel</ipxact:name>
+			<ipxact:description>TODO:
+chroma u dma_yuv
+lz -&gt; vz ; vz -&gt; lz ; z -&gt; z</ipxact:description>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="catapult_channel" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="catapult_channel.absDef" version="1.0"/>
+					<ipxact:portMaps>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CHANNEL_DATA</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>dma_yuv_yuv_input_u_data_in_z</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CHANNEL_LZ</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>dma_yuv_yuv_input_u_data_in_vz</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CHANNEL_VZ</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>dma_yuv_yuv_input_u_data_in_lz</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+					</ipxact:portMaps>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:slave/>
+			<ipxact:connectionRequired>false</ipxact:connectionRequired>
+			<ipxact:bitsInLau>8</ipxact:bitsInLau>
+			<ipxact:endianness>little</ipxact:endianness>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>y_channel</ipxact:name>
+			<ipxact:description>TODO:
+luma y dma_yuv
+lz -&gt; vz ; vz -&gt; lz ; z -&gt; z</ipxact:description>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="catapult_channel" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="catapult_channel.absDef" version="1.0"/>
+					<ipxact:portMaps>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CHANNEL_DATA</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>dma_yuv_yuv_input_y_data_in_z</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CHANNEL_LZ</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>dma_yuv_yuv_input_y_data_in_vz</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CHANNEL_VZ</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>dma_yuv_yuv_input_y_data_in_lz</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+					</ipxact:portMaps>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:slave/>
+			<ipxact:connectionRequired>false</ipxact:connectionRequired>
+			<ipxact:bitsInLau>8</ipxact:bitsInLau>
+			<ipxact:endianness>little</ipxact:endianness>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>config_channel</ipxact:name>
+			<ipxact:description>TODO:
+config axi_to_channel
+lz -&gt; lz ; vz -&gt; vz ; z -&gt; z</ipxact:description>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="catapult_channel" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="catapult_channel.absDef" version="1.0"/>
+					<ipxact:portMaps>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CHANNEL_VZ</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>acc_config_channel_vz</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CHANNEL_DATA</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>acc_config_channel_data</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CHANNEL_LZ</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>acc_config_channel_lz</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+					</ipxact:portMaps>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:master/>
+			<ipxact:connectionRequired>false</ipxact:connectionRequired>
+			<ipxact:bitsInLau>8</ipxact:bitsInLau>
+			<ipxact:endianness>little</ipxact:endianness>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>left_ref_channel</ipxact:name>
+			<ipxact:description>TODO:
+left_ref/unfiltered2 dma reader
+lz -&gt; lz ; vz -&gt; vz ; z -&gt; z</ipxact:description>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="catapult_channel" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="catapult_channel.absDef" version="1.0"/>
+					<ipxact:portMaps>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CHANNEL_DATA</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>axi_dma_unfiltered2_channel_data_export</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CHANNEL_LZ</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>axi_dma_unfiltered2_channel_lz_export</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CHANNEL_VZ</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>axi_dma_unfiltered2_channel_vz_export</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+					</ipxact:portMaps>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:master/>
+			<ipxact:connectionRequired>false</ipxact:connectionRequired>
+			<ipxact:bitsInLau>8</ipxact:bitsInLau>
+			<ipxact:endianness>little</ipxact:endianness>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>top_ref_channel</ipxact:name>
+			<ipxact:description>TODO:
+top_ref/unfiltered1 dma reader
+lz -&gt; lz ; vz -&gt; vz ; z -&gt; z</ipxact:description>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="catapult_channel" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="catapult_channel.absDef" version="1.0"/>
+					<ipxact:portMaps>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CHANNEL_DATA</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>axi_dma_unfiltered1_channel_data_export</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CHANNEL_LZ</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>axi_dma_unfiltered1_channel_lz_export</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CHANNEL_VZ</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>axi_dma_unfiltered1_channel_vz_export</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+					</ipxact:portMaps>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:master/>
+			<ipxact:connectionRequired>false</ipxact:connectionRequired>
+			<ipxact:bitsInLau>8</ipxact:bitsInLau>
+			<ipxact:endianness>little</ipxact:endianness>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>orig_channel</ipxact:name>
+			<ipxact:description>TODO:
+orig dma reader
+lz -&gt; lz ; vz -&gt; vz ; z -&gt; z</ipxact:description>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="catapult_channel" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="catapult_channel.absDef" version="1.0"/>
+					<ipxact:portMaps>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CHANNEL_DATA</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>axi_dma_orig_block_channel_data_export</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CHANNEL_LZ</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>axi_dma_orig_block_channel_lz_export</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>CHANNEL_VZ</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>axi_dma_orig_block_channel_vz_export</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+					</ipxact:portMaps>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:master/>
+			<ipxact:connectionRequired>false</ipxact:connectionRequired>
+			<ipxact:bitsInLau>8</ipxact:bitsInLau>
+			<ipxact:endianness>little</ipxact:endianness>
+		</ipxact:busInterface>
 	</ipxact:busInterfaces>
 	<ipxact:model>
 		<ipxact:views>
 			<ipxact:view>
 				<ipxact:name>flat</ipxact:name>
 				<ipxact:envIdentifier>verilog:Kactus2:</ipxact:envIdentifier>
+				<ipxact:envIdentifier>Verilog:kactus2.cs.tut.fi:</ipxact:envIdentifier>
 				<ipxact:componentInstantiationRef>flat</ipxact:componentInstantiationRef>
 			</ipxact:view>
 			<ipxact:view>
@@ -1786,12 +2103,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>clk.clk</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>in</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -1805,12 +2116,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>reset.reset_n</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>in</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -1824,12 +2129,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>hps_0_f2h_cold_reset_req.reset_n</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>in</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -1848,12 +2147,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>hps_0_f2h_debug_reset_req.reset_n</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>in</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -1872,12 +2165,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>hps_0_f2h_warm_reset_req.reset_n</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>in</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -1895,7 +2182,7 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:name>hps_0_h2f_reset_reset_n</ipxact:name>
 				<ipxact:description>hps_0_h2f_reset.reset_n</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
-					<ipxact:direction>out</ipxact:direction>
+					<ipxact:direction>phantom</ipxact:direction>
 					<ipxact:vectors>
 						<ipxact:vector>
 							<ipxact:left>0</ipxact:left>
@@ -1915,12 +2202,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_gpio_inst_GPIO44</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>inout</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -1934,12 +2215,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_gpio_inst_GPIO43</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>inout</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -1953,12 +2228,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_gpio_inst_GPIO42</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>inout</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -1972,12 +2241,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_gpio_inst_GPIO41</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>inout</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -1991,12 +2254,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_gpio_inst_GPIO35</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>inout</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2010,12 +2267,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_gpio_inst_GPIO09</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>inout</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2029,12 +2280,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_trace_inst_D7</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>out</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2048,12 +2293,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_trace_inst_D6</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>out</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2067,12 +2306,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_trace_inst_D5</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>out</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2086,12 +2319,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_trace_inst_D4</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>out</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2105,12 +2332,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_trace_inst_D3</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>out</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2124,12 +2345,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_trace_inst_D2</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>out</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2143,12 +2358,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_trace_inst_D1</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>out</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2162,12 +2371,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_trace_inst_D0</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>out</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2181,12 +2384,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_trace_inst_CLK</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>out</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2200,12 +2397,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_can0_inst_TX</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>out</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2219,12 +2410,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_can0_inst_RX</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>in</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2238,12 +2423,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_i2c0_inst_SCL</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>inout</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2257,12 +2436,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_i2c0_inst_SDA</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>inout</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2276,12 +2449,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_uart0_inst_TX</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>out</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2295,12 +2462,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_uart0_inst_RX</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>in</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2314,12 +2475,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_spim0_inst_SS0</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>out</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2333,12 +2488,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_spim0_inst_MISO</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>in</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2352,12 +2501,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_spim0_inst_MOSI</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>out</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2371,12 +2514,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_spim0_inst_CLK</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>out</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2390,12 +2527,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_usb1_inst_NXT</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>in</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2409,12 +2540,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_usb1_inst_DIR</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>in</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2428,12 +2553,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_usb1_inst_STP</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>out</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2447,12 +2566,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_usb1_inst_CLK</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>in</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2466,12 +2579,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_usb1_inst_D7</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>inout</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2485,12 +2592,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_usb1_inst_D6</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>inout</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2504,12 +2605,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_usb1_inst_D5</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>inout</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2523,12 +2618,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_usb1_inst_D4</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>inout</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2542,12 +2631,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_usb1_inst_D3</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>inout</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2561,12 +2644,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_usb1_inst_D2</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>inout</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2580,12 +2657,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_usb1_inst_D1</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>inout</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2599,12 +2670,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_usb1_inst_D0</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>inout</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2618,12 +2683,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_sdio_inst_D3</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>inout</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2637,12 +2696,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_sdio_inst_D2</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>inout</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2656,12 +2709,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_sdio_inst_CLK</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>out</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2675,12 +2722,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_sdio_inst_D1</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>inout</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2694,12 +2735,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_sdio_inst_D0</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>inout</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2713,12 +2748,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_sdio_inst_CMD</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>inout</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2732,12 +2761,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_qspi_inst_CLK</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>out</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2751,12 +2774,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_qspi_inst_SS0</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>out</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2770,12 +2787,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_qspi_inst_IO3</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>inout</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2789,12 +2800,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_qspi_inst_IO2</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>inout</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2808,12 +2813,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_qspi_inst_IO1</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>inout</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2827,12 +2826,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_qspi_inst_IO0</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>inout</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2846,12 +2839,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_emac1_inst_RXD3</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>in</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2865,12 +2852,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_emac1_inst_RXD2</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>in</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2884,12 +2865,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_emac1_inst_RXD1</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>in</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2903,12 +2878,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_emac1_inst_RX_CLK</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>in</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2922,12 +2891,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_emac1_inst_TX_CTL</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>out</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2941,12 +2904,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_emac1_inst_RX_CTL</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>in</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2960,12 +2917,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_emac1_inst_MDC</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>out</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2979,12 +2930,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_emac1_inst_MDIO</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>inout</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -2998,12 +2943,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_emac1_inst_RXD0</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>in</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -3017,12 +2956,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_emac1_inst_TXD3</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>out</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -3036,12 +2969,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_emac1_inst_TXD2</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>out</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -3055,12 +2982,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_emac1_inst_TXD1</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>out</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -3074,12 +2995,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.hps_io_emac1_inst_TXD0</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>out</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -3093,12 +3008,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>hps_0_hps_io.hps_io_emac1_inst_TX_CLK</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>out</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -3112,12 +3021,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.oct_rzqin</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>in</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -3150,12 +3053,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.mem_odt</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>out</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -3226,12 +3123,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.mem_reset_n</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>out</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -3245,12 +3136,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.mem_we_n</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>out</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -3264,12 +3149,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.mem_cas_n</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>out</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -3283,12 +3162,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.mem_ras_n</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>out</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -3302,12 +3175,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.mem_cs_n</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>out</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -3321,12 +3188,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.mem_cke</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>out</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -3340,12 +3201,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.mem_ck_n</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>out</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -3359,12 +3214,6 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:description>.mem_ck</ipxact:description>
 				<ipxact:wire allLogicalDirectionsAllowed="true">
 					<ipxact:direction>out</ipxact:direction>
-					<ipxact:vectors>
-						<ipxact:vector>
-							<ipxact:left>0</ipxact:left>
-							<ipxact:right>0</ipxact:right>
-						</ipxact:vector>
-					</ipxact:vectors>
 					<ipxact:wireTypeDefs>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
@@ -3426,6 +3275,641 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 						<ipxact:wireTypeDef>
 							<ipxact:typeName constrained="true">wire</ipxact:typeName>
 							<ipxact:viewRef>flat</ipxact:viewRef>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+					<ipxact:drivers>
+						<ipxact:driver>
+							<ipxact:defaultValue>0</ipxact:defaultValue>
+						</ipxact:driver>
+					</ipxact:drivers>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>acc_config_channel_vz</ipxact:name>
+				<ipxact:description>acc_config_channel.vz</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>acc_config_channel_data</ipxact:name>
+				<ipxact:description>.data</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>31</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>acc_config_channel_lz</ipxact:name>
+				<ipxact:description>.lz</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>axi_dma_orig_block_channel_data_export</ipxact:name>
+				<ipxact:description>axi_dma_orig_block_channel_data.export</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>31</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>axi_dma_orig_block_channel_lz_export</ipxact:name>
+				<ipxact:description>axi_dma_orig_block_channel_lz.export</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>axi_dma_orig_block_channel_vz_export</ipxact:name>
+				<ipxact:description>axi_dma_orig_block_channel_vz.export</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>axi_dma_orig_block_clear_fifo_export</ipxact:name>
+				<ipxact:description>axi_dma_orig_block_clear_fifo.export</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+				<ipxact:vendorExtensions>
+					<kactus2:adHocVisible/>
+				</ipxact:vendorExtensions>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>axi_dma_unfiltered1_channel_data_export</ipxact:name>
+				<ipxact:description>axi_dma_unfiltered1_channel_data.export</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>15</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>axi_dma_unfiltered1_channel_lz_export</ipxact:name>
+				<ipxact:description>axi_dma_unfiltered1_channel_lz.export</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>axi_dma_unfiltered1_channel_vz_export</ipxact:name>
+				<ipxact:description>axi_dma_unfiltered1_channel_vz.export</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>axi_dma_unfiltered1_clear_fifo_export</ipxact:name>
+				<ipxact:description>axi_dma_unfiltered1_clear_fifo.export</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+				<ipxact:vendorExtensions>
+					<kactus2:adHocVisible/>
+				</ipxact:vendorExtensions>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>axi_dma_unfiltered2_channel_data_export</ipxact:name>
+				<ipxact:description>axi_dma_unfiltered2_channel_data.export</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>15</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>axi_dma_unfiltered2_channel_lz_export</ipxact:name>
+				<ipxact:description>axi_dma_unfiltered2_channel_lz.export</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>axi_dma_unfiltered2_channel_vz_export</ipxact:name>
+				<ipxact:description>axi_dma_unfiltered2_channel_vz.export</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>axi_dma_unfiltered2_clear_fifo_export</ipxact:name>
+				<ipxact:description>axi_dma_unfiltered2_clear_fifo.export</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+				<ipxact:vendorExtensions>
+					<kactus2:adHocVisible/>
+				</ipxact:vendorExtensions>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>camera_control_oc_s2_address</ipxact:name>
+				<ipxact:description>camera_control_oc_s2.address</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>5</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>camera_control_oc_s2_chipselect</ipxact:name>
+				<ipxact:description>.chipselect</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+					<ipxact:drivers>
+						<ipxact:driver>
+							<ipxact:defaultValue>1</ipxact:defaultValue>
+						</ipxact:driver>
+					</ipxact:drivers>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>camera_control_oc_s2_clken</ipxact:name>
+				<ipxact:description>.clken</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+					<ipxact:drivers>
+						<ipxact:driver>
+							<ipxact:defaultValue>1</ipxact:defaultValue>
+						</ipxact:driver>
+					</ipxact:drivers>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>camera_control_oc_s2_write</ipxact:name>
+				<ipxact:description>.write</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+					<ipxact:drivers>
+						<ipxact:driver>
+							<ipxact:defaultValue>0</ipxact:defaultValue>
+						</ipxact:driver>
+					</ipxact:drivers>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>camera_control_oc_s2_readdata</ipxact:name>
+				<ipxact:description>.readdata</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>15</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>camera_control_oc_s2_writedata</ipxact:name>
+				<ipxact:description>.writedata</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>15</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+					<ipxact:drivers>
+						<ipxact:driver>
+							<ipxact:defaultValue>0</ipxact:defaultValue>
+						</ipxact:driver>
+					</ipxact:drivers>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>camera_control_oc_s2_byteenable</ipxact:name>
+				<ipxact:description>.byteenable</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>1</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+					<ipxact:drivers>
+						<ipxact:driver>
+							<ipxact:defaultValue>3</ipxact:defaultValue>
+						</ipxact:driver>
+					</ipxact:drivers>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>configure_camera_external_connection_export</ipxact:name>
+				<ipxact:description>configure_camera_external_connection.export</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>dma_yuv_fifo_clk_clk</ipxact:name>
+				<ipxact:description>dma_yuv_fifo_clk.clk</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>dma_yuv_yuv_input_u_data_in_z</ipxact:name>
+				<ipxact:description>dma_yuv_yuv_input.u_data_in_z</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>7</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>dma_yuv_yuv_input_v_data_in_lz</ipxact:name>
+				<ipxact:description>.v_data_in_lz</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>dma_yuv_yuv_input_v_data_in_vz</ipxact:name>
+				<ipxact:description>.v_data_in_vz</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>dma_yuv_yuv_input_v_data_in_z</ipxact:name>
+				<ipxact:description>.v_data_in_z</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>7</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>dma_yuv_yuv_input_y_data_in_vz</ipxact:name>
+				<ipxact:description>.y_data_in_vz</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>dma_yuv_yuv_input_y_data_in_z</ipxact:name>
+				<ipxact:description>.y_data_in_z</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>7</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>dma_yuv_yuv_input_y_data_in_lz</ipxact:name>
+				<ipxact:description>.y_data_in_lz</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>dma_yuv_yuv_input_clear_dma_and_fifo</ipxact:name>
+				<ipxact:description>.clear_dma_and_fifo</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+					<ipxact:drivers>
+						<ipxact:driver>
+							<ipxact:defaultValue>0</ipxact:defaultValue>
+						</ipxact:driver>
+					</ipxact:drivers>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>dma_yuv_yuv_input_u_data_in_vz</ipxact:name>
+				<ipxact:description>.u_data_in_vz</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>dma_yuv_yuv_input_u_data_in_lz</ipxact:name>
+				<ipxact:description>.u_data_in_lz</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>lambda_loaded_external_connection_export</ipxact:name>
+				<ipxact:description>lambda_loaded_external_connection.export</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+				<ipxact:vendorExtensions>
+					<kactus2:adHocVisible/>
+				</ipxact:vendorExtensions>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>lcu_loaded_external_connection_export</ipxact:name>
+				<ipxact:description>lcu_loaded_external_connection.export</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+				<ipxact:vendorExtensions>
+					<kactus2:adHocVisible/>
+				</ipxact:vendorExtensions>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>result_ready_external_connection_export</ipxact:name>
+				<ipxact:description>result_ready_external_connection.export</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>1</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+				<ipxact:vendorExtensions>
+					<kactus2:adHocVisible/>
+				</ipxact:vendorExtensions>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>sad_result_high_external_connection_export</ipxact:name>
+				<ipxact:description>sad_result_high_external_connection.export</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>31</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>sad_result_low_external_connection_export</ipxact:name>
+				<ipxact:description>sad_result_low_external_connection.export</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>31</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>yuv_ctrl_external_connection_export</ipxact:name>
+				<ipxact:description>yuv_ctrl_external_connection.export</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>3</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>yuv_status_external_connection_export</ipxact:name>
+				<ipxact:description>yuv_status_external_connection.export</ipxact:description>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>wire</ipxact:typeName>
 						</ipxact:wireTypeDef>
 					</ipxact:wireTypeDefs>
 				</ipxact:wire>
