@@ -1,9 +1,9 @@
 #insert file name of the sequence here
-SEQUENCE=videofile.yuv
+SEQUENCE=mBosphorus_1920x1080_120fps_420_8bit_YUV.yuv
 #insert QP value here
-QP=50
+QP=27
 #insert ID of your group here
-GID=99
+GID=05
 
 #The name of the used executable
 BIN_NAME=./Kvazaar_0

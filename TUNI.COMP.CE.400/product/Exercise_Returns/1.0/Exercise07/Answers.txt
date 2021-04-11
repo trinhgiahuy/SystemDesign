@@ -1,8 +1,10 @@
 INCLUDE ANSWERS IN HERE
 
 1. What was your frame rate when running Kvazaar with the IP accelerator? 
+- The FPS is 0.15 when run Kvazaar with IP accelerator
 
 2. In exercise 5, you made some prediction about accelerated frame rate. It probably did not match the results of this exercise. Why?
+- In exercise 5, the frame rate 
 
 3. On the other hand, the estimation done in exercise 6 was probably much closer. Why?
 
