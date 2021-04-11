@@ -1,0 +1,125 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate P:\shared_p\5\TUNI.fi\ip.hw\Kvazaar_QSYS\1.0_student\Kvazaar_QSYS.qsys --block-symbol-file --output-directory=P:\shared_p\5\TUNI.fi\product\Kvazaar_IP_acc_Camera\1.0_student\quartus_project\Kvazaar_QSYS --family="Cyclone V" --part=5CSXFC6D6F31C6
+Progress: Loading 1.0_student/Kvazaar_QSYS.qsys
+Progress: Reading input file
+Progress: Adding acc_config [axi_to_channel 1.0]
+Progress: Parameterizing module acc_config
+Progress: Adding axi_dma_orig_block [axi_dma_read 1.0]
+Progress: Parameterizing module axi_dma_orig_block
+Progress: Adding axi_dma_unfiltered1 [axi_dma_read 1.0]
+Progress: Parameterizing module axi_dma_unfiltered1
+Progress: Adding axi_dma_unfiltered2 [axi_dma_read 1.0]
+Progress: Parameterizing module axi_dma_unfiltered2
+Progress: Adding camera_control_oc [altera_avalon_onchip_memory2 16.0]
+Progress: Parameterizing module camera_control_oc
+Progress: Adding clk_0 [clock_source 16.0]
+Progress: Parameterizing module clk_0
+Progress: Adding configure_camera [altera_avalon_pio 16.0]
+Progress: Parameterizing module configure_camera
+Progress: Adding dma_yuv [axi_dma_write_yuv 1.0]
+Progress: Parameterizing module dma_yuv
+Progress: Adding hps_0 [altera_hps 16.0]
+Progress: Parameterizing module hps_0
+Progress: Adding lambda_loaded [altera_avalon_pio 16.0]
+Progress: Parameterizing module lambda_loaded
+Progress: Adding lcu_loaded [altera_avalon_pio 16.0]
+Progress: Parameterizing module lcu_loaded
+Progress: Adding result_ready [altera_avalon_pio 16.0]
+Progress: Parameterizing module result_ready
+Progress: Adding sad_result_high [altera_avalon_pio 16.0]
+Progress: Parameterizing module sad_result_high
+Progress: Adding sad_result_low [altera_avalon_pio 16.0]
+Progress: Parameterizing module sad_result_low
+Progress: Adding yuv_ctrl [altera_avalon_pio 16.0]
+Progress: Parameterizing module yuv_ctrl
+Progress: Adding yuv_status [altera_avalon_pio 16.0]
+Progress: Parameterizing module yuv_status
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: Kvazaar_QSYS.hps_0: HPS Main PLL counter settings: n = 0  m = 73
+Info: Kvazaar_QSYS.hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: Kvazaar_QSYS.hps_0: "Configuration/HPS-to-FPGA user 0 clock frequency" (desired_cfg_clk_mhz) requested 100.0 MHz, but only achieved 97.368421 MHz
+Warning: Kvazaar_QSYS.hps_0: "QSPI clock frequency" (desired_qspi_clk_mhz) requested 400.0 MHz, but only achieved 370.0 MHz
+Warning: Kvazaar_QSYS.hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Info: Kvazaar_QSYS.hps_0: ECC will be enabled in the preloader because an interface width of 24 or 40 has been chosen.
+Info: Kvazaar_QSYS.lambda_loaded: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: Kvazaar_QSYS.lcu_loaded: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: Kvazaar_QSYS.result_ready: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: Kvazaar_QSYS.sad_result_high: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: Kvazaar_QSYS.sad_result_low: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: Kvazaar_QSYS.yuv_status: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate P:\shared_p\5\TUNI.fi\ip.hw\Kvazaar_QSYS\1.0_student\Kvazaar_QSYS.qsys --synthesis=VERILOG --output-directory=P:\shared_p\5\TUNI.fi\product\Kvazaar_IP_acc_Camera\1.0_student\quartus_project\Kvazaar_QSYS\synthesis --family="Cyclone V" --part=5CSXFC6D6F31C6
+Progress: Loading 1.0_student/Kvazaar_QSYS.qsys
+Progress: Reading input file
+Progress: Adding acc_config [axi_to_channel 1.0]
+Progress: Parameterizing module acc_config
+Progress: Adding axi_dma_orig_block [axi_dma_read 1.0]
+Progress: Parameterizing module axi_dma_orig_block
+Progress: Adding axi_dma_unfiltered1 [axi_dma_read 1.0]
+Progress: Parameterizing module axi_dma_unfiltered1
+Progress: Adding axi_dma_unfiltered2 [axi_dma_read 1.0]
+Progress: Parameterizing module axi_dma_unfiltered2
+Progress: Adding camera_control_oc [altera_avalon_onchip_memory2 16.0]
+Progress: Parameterizing module camera_control_oc
+Progress: Adding clk_0 [clock_source 16.0]
+Progress: Parameterizing module clk_0
+Progress: Adding configure_camera [altera_avalon_pio 16.0]
+Progress: Parameterizing module configure_camera
+Progress: Adding dma_yuv [axi_dma_write_yuv 1.0]
+Progress: Parameterizing module dma_yuv
+Progress: Adding hps_0 [altera_hps 16.0]
+Progress: Parameterizing module hps_0
+Progress: Adding lambda_loaded [altera_avalon_pio 16.0]
+Progress: Parameterizing module lambda_loaded
+Progress: Adding lcu_loaded [altera_avalon_pio 16.0]
+Progress: Parameterizing module lcu_loaded
+Progress: Adding result_ready [altera_avalon_pio 16.0]
+Progress: Parameterizing module result_ready
+Progress: Adding sad_result_high [altera_avalon_pio 16.0]
+Progress: Parameterizing module sad_result_high
+Progress: Adding sad_result_low [altera_avalon_pio 16.0]
+Progress: Parameterizing module sad_result_low
+Progress: Adding yuv_ctrl [altera_avalon_pio 16.0]
+Progress: Parameterizing module yuv_ctrl
+Progress: Adding yuv_status [altera_avalon_pio 16.0]
+Progress: Parameterizing module yuv_status
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: Kvazaar_QSYS.hps_0: HPS Main PLL counter settings: n = 0  m = 73
+Info: Kvazaar_QSYS.hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Warning: Kvazaar_QSYS.hps_0: "Configuration/HPS-to-FPGA user 0 clock frequency" (desired_cfg_clk_mhz) requested 100.0 MHz, but only achieved 97.368421 MHz
+Warning: Kvazaar_QSYS.hps_0: "QSPI clock frequency" (desired_qspi_clk_mhz) requested 400.0 MHz, but only achieved 370.0 MHz
+Warning: Kvazaar_QSYS.hps_0: 1 or more output clock frequencies cannot be achieved precisely, consider revising desired output clock frequencies.
+Info: Kvazaar_QSYS.hps_0: ECC will be enabled in the preloader because an interface width of 24 or 40 has been chosen.
+Info: Kvazaar_QSYS.lambda_loaded: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: Kvazaar_QSYS.lcu_loaded: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: Kvazaar_QSYS.result_ready: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: Kvazaar_QSYS.sad_result_high: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: Kvazaar_QSYS.sad_result_low: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: Kvazaar_QSYS.yuv_status: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: Kvazaar_QSYS: Generating Kvazaar_QSYS "Kvazaar_QSYS" for QUARTUS_SYNTH
+Info: Interconnect is inserted between master dma_yuv.altera_axi_master and slave hps_0.f2h_sdram0_data because they have different clock source.
+Info: Inserting clock-crossing logic between cmd_demux.src0 and cmd_mux.sink0
+Info: Inserting clock-crossing logic between cmd_demux_001.src0 and cmd_mux_001.sink0
+Info: Inserting clock-crossing logic between rsp_demux.src0 and rsp_mux.sink0
+Info: Inserting clock-crossing logic between rsp_demux_001.src0 and rsp_mux_001.sink0
+Info: Interconnect is inserted between master axi_dma_unfiltered1.altera_axi_master and slave hps_0.f2h_sdram2_data because the master has wid signal 7 bit wide, but the slave is 8 bit wide.
+Info: Interconnect is inserted between master axi_dma_unfiltered1.altera_axi_master and slave hps_0.f2h_sdram2_data because the master has bid signal 7 bit wide, but the slave is 8 bit wide.
+Info: Interconnect is inserted between master axi_dma_unfiltered1.altera_axi_master and slave hps_0.f2h_sdram2_data because the master has arid signal 7 bit wide, but the slave is 8 bit wide.
+Info: Interconnect is inserted between master axi_dma_unfiltered1.altera_axi_master and slave hps_0.f2h_sdram2_data because the master has rid signal 7 bit wide, but the slave is 8 bit wide.
+Info: Interconnect is inserted between master axi_dma_unfiltered1.altera_axi_master and slave hps_0.f2h_sdram2_data because the master has awid signal 7 bit wide, but the slave is 8 bit wide.
+Warning: hps_0.f2h_irq0: Cannot connect clock for irq_mapper.sender
+Warning: hps_0.f2h_irq0: Cannot connect reset for irq_mapper.sender
+Warning: hps_0.f2h_irq1: Cannot connect clock for irq_mapper_001.sender
+Warning: hps_0.f2h_irq1: Cannot connect reset for irq_mapper_001.sender
+Info: Kvazaar_QSYS: Done "Kvazaar_QSYS" with 1 modules, 0 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

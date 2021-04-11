@@ -1,10 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ipxact:designConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014/ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+<ipxact:designConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.tut.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 	<ipxact:vendor>TUNI.fi</ipxact:vendor>
 	<ipxact:library>product</ipxact:library>
 	<ipxact:name>Kvazaar_IP_acc_Camera.designcfg</ipxact:name>
 	<ipxact:version>1.0_student</ipxact:version>
 	<ipxact:designRef vendor="TUNI.fi" library="product" name="Kvazaar_IP_acc_Camera.design" version="1.0_student"/>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>Clock_Reset_0</ipxact:instanceName>
+		<ipxact:view viewRef="flat"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>IP_SAD_Accelerator_0</ipxact:instanceName>
+		<ipxact:view viewRef="flat"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>CCD_Configer_0</ipxact:instanceName>
+		<ipxact:view viewRef="flat"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>CCD_Configer_I2C_0</ipxact:instanceName>
+		<ipxact:view viewRef="flat"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>CCD_Capture_0</ipxact:instanceName>
+		<ipxact:view viewRef="flat"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>RAW_to_RGB_0</ipxact:instanceName>
+		<ipxact:view viewRef="flat"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>RGB_to_YUV_0</ipxact:instanceName>
+		<ipxact:view viewRef="flat"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>LTP_Controller_0</ipxact:instanceName>
+		<ipxact:view viewRef="flat"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>Kvazaar_QSYS_0</ipxact:instanceName>
+		<ipxact:view viewRef="flat"/>
+	</ipxact:viewConfiguration>
 	<ipxact:vendorExtensions>
 		<kactus2:configurableElementValues>
 			<kactus2:componentInstance>
