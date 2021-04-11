@@ -1,26 +1,26 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ipxact:designConfiguration xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <ipxact:vendor>TUNI.fi</ipxact:vendor>
-  <ipxact:library>product</ipxact:library>
-  <ipxact:name>Kvazaar.Veek-System.sysdesigncfg</ipxact:name>
-  <ipxact:version>1.0_student</ipxact:version>
-  <ipxact:designRef vendor="TUNI.fi" library="product" name="Kvazaar.Veek-System.sysdesign" version="1.0_student" />
-  <ipxact:viewConfiguration>
-    <ipxact:instanceName>Kvazaar_0</ipxact:instanceName>
-    <ipxact:view viewRef="default" />
-  </ipxact:viewConfiguration>
-  <ipxact:viewConfiguration>
-    <ipxact:instanceName>Kvazaar_acc_support_0</ipxact:instanceName>
-    <ipxact:view viewRef="null" />
-  </ipxact:viewConfiguration>
-  <ipxact:viewConfiguration>
-    <ipxact:instanceName>arm_cortex_a9_0</ipxact:instanceName>
-    <ipxact:view viewRef="gcc-tool-chain" />
-  </ipxact:viewConfiguration>
-  <ipxact:vendorExtensions xmlns:kactus2="http://funbase.cs.TUNI.fi/">
-    <kactus2:kts_attributes>
-      <kactus2:kts_implementation>SYS</kactus2:kts_implementation>
-    </kactus2:kts_attributes>
-    <kactus2:version>2,7,1108,0</kactus2:version>
-  </ipxact:vendorExtensions>
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:designConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.tut.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>TUNI.fi</ipxact:vendor>
+	<ipxact:library>product</ipxact:library>
+	<ipxact:name>Kvazaar.Veek-System.sysdesigncfg</ipxact:name>
+	<ipxact:version>1.0_student</ipxact:version>
+	<ipxact:designRef vendor="TUNI.fi" library="product" name="Kvazaar.Veek-System.sysdesign" version="1.0_student"/>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>Kvazaar_0</ipxact:instanceName>
+		<ipxact:view viewRef="hw_accelerated_plus_camera"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>Kvazaar_acc_support_0</ipxact:instanceName>
+		<ipxact:view viewRef="camera"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>arm_cortex_a9_0</ipxact:instanceName>
+		<ipxact:view viewRef="gcc-tool-chain"/>
+	</ipxact:viewConfiguration>
+	<ipxact:vendorExtensions>
+		<kactus2:version>2,7,1108,0</kactus2:version>
+		<kactus2:kts_attributes>
+			<kactus2:kts_implementation>SYS</kactus2:kts_implementation>
+		</kactus2:kts_attributes>
+	</ipxact:vendorExtensions>
 </ipxact:designConfiguration>

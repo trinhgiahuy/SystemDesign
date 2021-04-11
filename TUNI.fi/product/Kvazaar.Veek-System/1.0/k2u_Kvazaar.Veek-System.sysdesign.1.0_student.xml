@@ -19,8 +19,9 @@
 			<ipxact:componentRef vendor="TUNI.fi" library="ip.swp.stack" name="Kvazaar_acc_support" version="1.0"/>
 			<ipxact:vendorExtensions>
 				<kactus2:uuid>{faa6edbd-d666-4d71-a4d0-8e9c4b249b8c}</kactus2:uuid>
-				<kactus2:mapping hwRef="{3a49ce0a-71bd-4107-ad43-5b3a4c23daff}"/>
 				<kactus2:position x="190" y="180"/>
+				<kactus2:fileSetRef>Veek-System_Kvazaar_acc_support_0_headers</kactus2:fileSetRef>
+				<kactus2:mapping hwRef="{3a49ce0a-71bd-4107-ad43-5b3a4c23daff}"/>
 			</ipxact:vendorExtensions>
 		</ipxact:componentInstance>
 		<ipxact:componentInstance>
@@ -28,9 +29,9 @@
 			<ipxact:componentRef vendor="TUNI.fi" library="ip.sw" name="Kvazaar" version="0.7.2"/>
 			<ipxact:vendorExtensions>
 				<kactus2:uuid>{1e671776-cf80-4aed-ada3-b047cfe8df1b}</kactus2:uuid>
-				<kactus2:mapping hwRef="{3a49ce0a-71bd-4107-ad43-5b3a4c23daff}"/>
 				<kactus2:position x="190" y="100"/>
 				<kactus2:fileSetRef>Veek-System_Kvazaar_0_headers</kactus2:fileSetRef>
+				<kactus2:mapping hwRef="{3a49ce0a-71bd-4107-ad43-5b3a4c23daff}"/>
 			</ipxact:vendorExtensions>
 		</ipxact:componentInstance>
 	</ipxact:componentInstances>
