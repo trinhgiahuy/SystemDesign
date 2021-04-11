@@ -129,6 +129,10 @@
 			<ipxact:name>HW-Timed-Simulation_Kvazaar_sim_support_0_headers</ipxact:name>
 			<ipxact:group>sourceFiles</ipxact:group>
 		</ipxact:fileSet>
+		<ipxact:fileSet>
+			<ipxact:name>Veek-System_Kvazaar_acc_support_0_headers</ipxact:name>
+			<ipxact:group>sourceFiles</ipxact:group>
+		</ipxact:fileSet>
 	</ipxact:fileSets>
 	<ipxact:vendorExtensions>
 		<kactus2:systemViews>
