@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ipxact:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+<ipxact:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.tut.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
 	<ipxact:vendor>TUNI.fi</ipxact:vendor>
 	<ipxact:library>ip.hw</ipxact:library>
 	<ipxact:name>Kvazaar_QSYS</ipxact:name>
 	<ipxact:version>1.0_student</ipxact:version>
-<ipxact:busInterfaces>
+	<ipxact:busInterfaces>
 		<ipxact:busInterface>
 			<ipxact:name>orig_channel</ipxact:name>
 			<ipxact:description>TODO:
@@ -3439,6 +3439,9 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 			<ipxact:file>
 				<ipxact:name>../../../product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_QSYS/synthesis/Kvazaar_QSYS.qip</ipxact:name>
 				<ipxact:fileType user="QIP">user</ipxact:fileType>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>d41d8cd98f00b204e9800998ecf8427e</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
 				<ipxact:name>../../../product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_QSYS/synthesis/Kvazaar_QSYS.v</ipxact:name>
@@ -3451,6 +3454,9 @@ configure_camera -&gt; configure_camera_pio_export</ipxact:description>
 				<ipxact:name>Kvazaar_QSYS.qsys</ipxact:name>
 				<ipxact:fileType user="qsys">user</ipxact:fileType>
 				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>3655a68be433a435fc4f235232fa3ba7</kactus2:hash>
+				</ipxact:vendorExtensions>
 			</ipxact:file>
 		</ipxact:fileSet>
 	</ipxact:fileSets>
