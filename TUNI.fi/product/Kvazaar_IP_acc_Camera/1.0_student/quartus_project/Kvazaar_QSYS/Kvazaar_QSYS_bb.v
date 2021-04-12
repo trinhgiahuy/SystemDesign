@@ -1,6 +1,5 @@
 
 module Kvazaar_QSYS (
-<<<<<<< HEAD
 	acc_config_channel_vz,
 	acc_config_channel_data,
 	acc_config_channel_lz,
@@ -41,26 +40,6 @@ module Kvazaar_QSYS (
 	hps_0_f2h_stm_hw_events_stm_hwevents,
 	hps_0_f2h_warm_reset_req_reset_n,
 	hps_0_h2f_reset_reset_n,
-=======
-	memory_mem_a,
-	memory_mem_ba,
-	memory_mem_ck,
-	memory_mem_ck_n,
-	memory_mem_cke,
-	memory_mem_cs_n,
-	memory_mem_ras_n,
-	memory_mem_cas_n,
-	memory_mem_we_n,
-	memory_mem_reset_n,
-	memory_mem_dq,
-	memory_mem_dqs,
-	memory_mem_dqs_n,
-	memory_mem_odt,
-	memory_mem_dm,
-	memory_oct_rzqin,
-	clk_clk,
-	reset_reset_n,
->>>>>>> e884336c5d299bf4691e53595ed9645c1dc40c6d
 	hps_0_hps_io_hps_io_emac1_inst_TX_CLK,
 	hps_0_hps_io_hps_io_emac1_inst_TXD0,
 	hps_0_hps_io_hps_io_emac1_inst_TXD1,
@@ -124,7 +103,6 @@ module Kvazaar_QSYS (
 	hps_0_hps_io_hps_io_gpio_inst_GPIO42,
 	hps_0_hps_io_hps_io_gpio_inst_GPIO43,
 	hps_0_hps_io_hps_io_gpio_inst_GPIO44,
-<<<<<<< HEAD
 	lambda_loaded_external_connection_export,
 	lcu_loaded_external_connection_export,
 	memory_mem_a,
@@ -190,74 +168,6 @@ module Kvazaar_QSYS (
 	input	[27:0]	hps_0_f2h_stm_hw_events_stm_hwevents;
 	input		hps_0_f2h_warm_reset_req_reset_n;
 	output		hps_0_h2f_reset_reset_n;
-=======
-	hps_0_f2h_stm_hw_events_stm_hwevents,
-	hps_0_f2h_cold_reset_req_reset_n,
-	hps_0_f2h_debug_reset_req_reset_n,
-	hps_0_f2h_warm_reset_req_reset_n,
-	hps_0_h2f_reset_reset_n,
-	sad_result_low_external_connection_export,
-	hps_0_f2h_sdram0_clock_clk,
-	sad_result_high_external_connection_export,
-	acc_config_channel_vz,
-	acc_config_channel_data,
-	acc_config_channel_lz,
-	result_ready_external_connection_export,
-	lcu_loaded_external_connection_export,
-	lambda_loaded_external_connection_export,
-	axi_dma_unfiltered1_channel_lz_export,
-	axi_dma_unfiltered1_channel_vz_export,
-	axi_dma_unfiltered1_channel_data_export,
-	axi_dma_unfiltered1_clear_fifo_export,
-	axi_dma_unfiltered2_channel_lz_export,
-	axi_dma_unfiltered2_channel_vz_export,
-	axi_dma_unfiltered2_channel_data_export,
-	axi_dma_unfiltered2_clear_fifo_export,
-	axi_dma_orig_block_channel_lz_export,
-	axi_dma_orig_block_channel_vz_export,
-	axi_dma_orig_block_channel_data_export,
-	axi_dma_orig_block_clear_fifo_export,
-	dma_yuv_fifo_clk_clk,
-	dma_yuv_yuv_input_u_data_in_z,
-	dma_yuv_yuv_input_v_data_in_lz,
-	dma_yuv_yuv_input_v_data_in_vz,
-	dma_yuv_yuv_input_v_data_in_z,
-	dma_yuv_yuv_input_y_data_in_vz,
-	dma_yuv_yuv_input_y_data_in_z,
-	dma_yuv_yuv_input_y_data_in_lz,
-	dma_yuv_yuv_input_clear_dma_and_fifo,
-	dma_yuv_yuv_input_u_data_in_vz,
-	dma_yuv_yuv_input_u_data_in_lz,
-	camera_control_oc_s2_address,
-	camera_control_oc_s2_chipselect,
-	camera_control_oc_s2_clken,
-	camera_control_oc_s2_write,
-	camera_control_oc_s2_readdata,
-	camera_control_oc_s2_writedata,
-	camera_control_oc_s2_byteenable,
-	configure_camera_external_connection_export,
-	yuv_ctrl_external_connection_export,
-	yuv_status_external_connection_export);	
-
-	output	[14:0]	memory_mem_a;
-	output	[2:0]	memory_mem_ba;
-	output		memory_mem_ck;
-	output		memory_mem_ck_n;
-	output		memory_mem_cke;
-	output		memory_mem_cs_n;
-	output		memory_mem_ras_n;
-	output		memory_mem_cas_n;
-	output		memory_mem_we_n;
-	output		memory_mem_reset_n;
-	inout	[39:0]	memory_mem_dq;
-	inout	[4:0]	memory_mem_dqs;
-	inout	[4:0]	memory_mem_dqs_n;
-	output		memory_mem_odt;
-	output	[4:0]	memory_mem_dm;
-	input		memory_oct_rzqin;
-	input		clk_clk;
-	input		reset_reset_n;
->>>>>>> e884336c5d299bf4691e53595ed9645c1dc40c6d
 	output		hps_0_hps_io_hps_io_emac1_inst_TX_CLK;
 	output		hps_0_hps_io_hps_io_emac1_inst_TXD0;
 	output		hps_0_hps_io_hps_io_emac1_inst_TXD1;
@@ -321,7 +231,6 @@ module Kvazaar_QSYS (
 	inout		hps_0_hps_io_hps_io_gpio_inst_GPIO42;
 	inout		hps_0_hps_io_hps_io_gpio_inst_GPIO43;
 	inout		hps_0_hps_io_hps_io_gpio_inst_GPIO44;
-<<<<<<< HEAD
 	input		lambda_loaded_external_connection_export;
 	input		lcu_loaded_external_connection_export;
 	output	[14:0]	memory_mem_a;
@@ -344,53 +253,6 @@ module Kvazaar_QSYS (
 	input	[1:0]	result_ready_external_connection_export;
 	input	[31:0]	sad_result_high_external_connection_export;
 	input	[31:0]	sad_result_low_external_connection_export;
-=======
-	input	[27:0]	hps_0_f2h_stm_hw_events_stm_hwevents;
-	input		hps_0_f2h_cold_reset_req_reset_n;
-	input		hps_0_f2h_debug_reset_req_reset_n;
-	input		hps_0_f2h_warm_reset_req_reset_n;
-	output		hps_0_h2f_reset_reset_n;
-	input	[31:0]	sad_result_low_external_connection_export;
-	input		hps_0_f2h_sdram0_clock_clk;
-	input	[31:0]	sad_result_high_external_connection_export;
-	input		acc_config_channel_vz;
-	output	[31:0]	acc_config_channel_data;
-	output		acc_config_channel_lz;
-	input	[1:0]	result_ready_external_connection_export;
-	input		lcu_loaded_external_connection_export;
-	input		lambda_loaded_external_connection_export;
-	output		axi_dma_unfiltered1_channel_lz_export;
-	input		axi_dma_unfiltered1_channel_vz_export;
-	output	[15:0]	axi_dma_unfiltered1_channel_data_export;
-	input		axi_dma_unfiltered1_clear_fifo_export;
-	output		axi_dma_unfiltered2_channel_lz_export;
-	input		axi_dma_unfiltered2_channel_vz_export;
-	output	[15:0]	axi_dma_unfiltered2_channel_data_export;
-	input		axi_dma_unfiltered2_clear_fifo_export;
-	output		axi_dma_orig_block_channel_lz_export;
-	input		axi_dma_orig_block_channel_vz_export;
-	output	[31:0]	axi_dma_orig_block_channel_data_export;
-	input		axi_dma_orig_block_clear_fifo_export;
-	input		dma_yuv_fifo_clk_clk;
-	input	[7:0]	dma_yuv_yuv_input_u_data_in_z;
-	output		dma_yuv_yuv_input_v_data_in_lz;
-	input		dma_yuv_yuv_input_v_data_in_vz;
-	input	[7:0]	dma_yuv_yuv_input_v_data_in_z;
-	input		dma_yuv_yuv_input_y_data_in_vz;
-	input	[7:0]	dma_yuv_yuv_input_y_data_in_z;
-	output		dma_yuv_yuv_input_y_data_in_lz;
-	input		dma_yuv_yuv_input_clear_dma_and_fifo;
-	input		dma_yuv_yuv_input_u_data_in_vz;
-	output		dma_yuv_yuv_input_u_data_in_lz;
-	input	[5:0]	camera_control_oc_s2_address;
-	input		camera_control_oc_s2_chipselect;
-	input		camera_control_oc_s2_clken;
-	input		camera_control_oc_s2_write;
-	output	[15:0]	camera_control_oc_s2_readdata;
-	input	[15:0]	camera_control_oc_s2_writedata;
-	input	[1:0]	camera_control_oc_s2_byteenable;
-	output		configure_camera_external_connection_export;
->>>>>>> e884336c5d299bf4691e53595ed9645c1dc40c6d
 	output	[3:0]	yuv_ctrl_external_connection_export;
 	input		yuv_status_external_connection_export;
 endmodule

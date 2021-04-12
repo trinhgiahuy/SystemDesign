@@ -1,9 +1,5 @@
 Info: Starting: Create block symbol file (.bsf)
-<<<<<<< HEAD
-Info: qsys-generate P:\system_device\5\TUNI.fi\ip.hw\Kvazaar_QSYS\1.0_student\Kvazaar_QSYS.qsys --block-symbol-file --output-directory=P:\system_device\5\TUNI.fi\product\Kvazaar_IP_acc_Camera\1.0_student\quartus_project\Kvazaar_QSYS --family="Cyclone V" --part=5CSXFC6D6F31C6
-=======
 Info: qsys-generate P:\shared_p\5\TUNI.fi\ip.hw\Kvazaar_QSYS\1.0_student\Kvazaar_QSYS.qsys --block-symbol-file --output-directory=P:\shared_p\5\TUNI.fi\product\Kvazaar_IP_acc_Camera\1.0_student\quartus_project\Kvazaar_QSYS --family="Cyclone V" --part=5CSXFC6D6F31C6
->>>>>>> e884336c5d299bf4691e53595ed9645c1dc40c6d
 Progress: Loading 1.0_student/Kvazaar_QSYS.qsys
 Progress: Reading input file
 Progress: Adding acc_config [axi_to_channel 1.0]
@@ -58,11 +54,7 @@ Info: qsys-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
 Info: Starting: Create HDL design files for synthesis
-<<<<<<< HEAD
-Info: qsys-generate P:\system_device\5\TUNI.fi\ip.hw\Kvazaar_QSYS\1.0_student\Kvazaar_QSYS.qsys --synthesis=VERILOG --output-directory=P:\system_device\5\TUNI.fi\product\Kvazaar_IP_acc_Camera\1.0_student\quartus_project\Kvazaar_QSYS\synthesis --family="Cyclone V" --part=5CSXFC6D6F31C6
-=======
 Info: qsys-generate P:\shared_p\5\TUNI.fi\ip.hw\Kvazaar_QSYS\1.0_student\Kvazaar_QSYS.qsys --synthesis=VERILOG --output-directory=P:\shared_p\5\TUNI.fi\product\Kvazaar_IP_acc_Camera\1.0_student\quartus_project\Kvazaar_QSYS\synthesis --family="Cyclone V" --part=5CSXFC6D6F31C6
->>>>>>> e884336c5d299bf4691e53595ed9645c1dc40c6d
 Progress: Loading 1.0_student/Kvazaar_QSYS.qsys
 Progress: Reading input file
 Progress: Adding acc_config [axi_to_channel 1.0]
@@ -114,14 +106,6 @@ Info: Kvazaar_QSYS.sad_result_high: PIO inputs are not hardwired in test bench. 
 Info: Kvazaar_QSYS.sad_result_low: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: Kvazaar_QSYS.yuv_status: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: Kvazaar_QSYS: Generating Kvazaar_QSYS "Kvazaar_QSYS" for QUARTUS_SYNTH
-<<<<<<< HEAD
-=======
-Info: Interconnect is inserted between master dma_yuv.altera_axi_master and slave hps_0.f2h_sdram0_data because they have different clock source.
-Info: Inserting clock-crossing logic between cmd_demux.src0 and cmd_mux.sink0
-Info: Inserting clock-crossing logic between cmd_demux_001.src0 and cmd_mux_001.sink0
-Info: Inserting clock-crossing logic between rsp_demux.src0 and rsp_mux.sink0
-Info: Inserting clock-crossing logic between rsp_demux_001.src0 and rsp_mux_001.sink0
->>>>>>> e884336c5d299bf4691e53595ed9645c1dc40c6d
 Info: Interconnect is inserted between master axi_dma_unfiltered1.altera_axi_master and slave hps_0.f2h_sdram2_data because the master has wid signal 7 bit wide, but the slave is 8 bit wide.
 Info: Interconnect is inserted between master axi_dma_unfiltered1.altera_axi_master and slave hps_0.f2h_sdram2_data because the master has bid signal 7 bit wide, but the slave is 8 bit wide.
 Info: Interconnect is inserted between master axi_dma_unfiltered1.altera_axi_master and slave hps_0.f2h_sdram2_data because the master has arid signal 7 bit wide, but the slave is 8 bit wide.
@@ -131,7 +115,6 @@ Warning: hps_0.f2h_irq0: Cannot connect clock for irq_mapper.sender
 Warning: hps_0.f2h_irq0: Cannot connect reset for irq_mapper.sender
 Warning: hps_0.f2h_irq1: Cannot connect clock for irq_mapper_001.sender
 Warning: hps_0.f2h_irq1: Cannot connect reset for irq_mapper_001.sender
-<<<<<<< HEAD
 Info: acc_config: "Kvazaar_QSYS" instantiated axi_to_channel "acc_config"
 Info: axi_dma_orig_block: "Kvazaar_QSYS" instantiated axi_dma_read "axi_dma_orig_block"
 Info: Reusing file P:/system_device/5/TUNI.fi/product/Kvazaar_IP_acc_Camera/1.0_student/quartus_project/Kvazaar_QSYS/synthesis/submodules/pre_calk_pkg.vhd
@@ -233,8 +216,5 @@ Info: border: "hps_io" instantiated altera_interface_generator "border"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
 Info: error_adapter_0: "avalon_st_adapter_005" instantiated error_adapter "error_adapter_0"
 Info: Kvazaar_QSYS: Done "Kvazaar_QSYS" with 53 modules, 113 files
-=======
-Info: Kvazaar_QSYS: Done "Kvazaar_QSYS" with 1 modules, 0 files
->>>>>>> e884336c5d299bf4691e53595ed9645c1dc40c6d
 Info: qsys-generate succeeded.
 Info: Finished: Create HDL design files for synthesis

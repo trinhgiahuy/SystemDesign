@@ -6,7 +6,6 @@
 	<ipxact:version>1.0_student</ipxact:version>
 	<ipxact:componentInstances>
 		<ipxact:componentInstance>
-<<<<<<< HEAD
 			<ipxact:instanceName>Clock_Reset</ipxact:instanceName>
 			<ipxact:componentRef vendor="TUNI.fi" library="ip.hw" name="Clock_Reset" version="1.0"/>
 			<ipxact:vendorExtensions>
@@ -19,25 +18,11 @@
 					<kactus2:portPosition busRef="clock_camera" x="110" y="80"/>
 					<kactus2:portPosition busRef="clock_camera_ref" x="-110" y="110"/>
 					<kactus2:portPosition busRef="push_buttons" x="-110" y="200"/>
-=======
-			<ipxact:instanceName>Clock_Reset_0</ipxact:instanceName>
-			<ipxact:componentRef vendor="TUNI.fi" library="ip.hw" name="Clock_Reset" version="1.0"/>
-			<ipxact:vendorExtensions>
-				<kactus2:uuid>{6bea043c-03cc-42b6-823a-06fc4e7abada}</kactus2:uuid>
-				<kactus2:portPositions>
-					<kactus2:portPosition busRef="clock_33MHz" x="110" y="150"/>
-					<kactus2:portPosition busRef="clock_camera_ref" x="-110" y="100"/>
-					<kactus2:portPosition busRef="clock_50MHz_ref" x="-110" y="70"/>
-					<kactus2:portPosition busRef="clock_75MHz" x="110" y="40"/>
-					<kactus2:portPosition busRef="push_buttons" x="-110" y="130"/>
-					<kactus2:portPosition busRef="clock_camera" x="110" y="110"/>
->>>>>>> e884336c5d299bf4691e53595ed9645c1dc40c6d
 				</kactus2:portPositions>
 				<kactus2:position x="280" y="60"/>
 			</ipxact:vendorExtensions>
 		</ipxact:componentInstance>
 		<ipxact:componentInstance>
-<<<<<<< HEAD
 			<ipxact:instanceName>Kvazaar_QSYS</ipxact:instanceName>
 			<ipxact:componentRef vendor="TUNI.fi" library="ip.hw" name="Kvazaar_QSYS" version="1.0_student"/>
 			<ipxact:vendorExtensions>
@@ -68,43 +53,10 @@
 					<kactus2:adHocVisible portName="lcu_loaded_external_connection_export" x="110" y="210"/>
 					<kactus2:adHocVisible portName="result_ready_external_connection_export" x="110" y="130"/>
 				</kactus2:adHocVisibilities>
-=======
-			<ipxact:instanceName>Kvazaar_QSYS_0</ipxact:instanceName>
-			<ipxact:componentRef vendor="TUNI.fi" library="ip.hw" name="Kvazaar_QSYS" version="1.0_student"/>
-			<ipxact:vendorExtensions>
-				<kactus2:uuid>{c255fca7-eae2-4b14-98be-276e60f9193e}</kactus2:uuid>
-				<kactus2:adHocVisibilities>
-					<kactus2:adHocVisible portName="axi_dma_unfiltered1_clear_fifo_export" x="110" y="330"/>
-					<kactus2:adHocVisible portName="lambda_loaded_external_connection_export" x="110" y="480"/>
-					<kactus2:adHocVisible portName="result_ready_external_connection_export" x="110" y="420"/>
-					<kactus2:adHocVisible portName="axi_dma_orig_block_clear_fifo_export" x="110" y="390"/>
-					<kactus2:adHocVisible portName="axi_dma_unfiltered2_clear_fifo_export" x="110" y="360"/>
-					<kactus2:adHocVisible portName="lcu_loaded_external_connection_export" x="110" y="450"/>
-				</kactus2:adHocVisibilities>
-				<kactus2:portPositions>
-					<kactus2:portPosition busRef="clock_75MHz" x="-110" y="40"/>
-					<kactus2:portPosition busRef="yuv_ctrl" x="110" y="860"/>
-					<kactus2:portPosition busRef="clock_camera" x="-110" y="110"/>
-					<kactus2:portPosition busRef="dip_switch" x="-110" y="510"/>
-					<kactus2:portPosition busRef="HPS_connection" x="-110" y="570"/>
-					<kactus2:portPosition busRef="sad_result" x="110" y="630"/>
-					<kactus2:portPosition busRef="push_buttons" x="-110" y="540"/>
-					<kactus2:portPosition busRef="camera_start_config" x="110" y="690"/>
-					<kactus2:portPosition busRef="v_channel" x="110" y="830"/>
-					<kactus2:portPosition busRef="y_channel" x="110" y="770"/>
-					<kactus2:portPosition busRef="left_ref_channel" x="110" y="600"/>
-					<kactus2:portPosition busRef="top_ref_channel" x="110" y="570"/>
-					<kactus2:portPosition busRef="camera_config" x="110" y="720"/>
-					<kactus2:portPosition busRef="u_channel" x="110" y="800"/>
-					<kactus2:portPosition busRef="config_channel" x="110" y="540"/>
-					<kactus2:portPosition busRef="orig_channel" x="110" y="510"/>
-				</kactus2:portPositions>
->>>>>>> e884336c5d299bf4691e53595ed9645c1dc40c6d
 				<kactus2:position x="600" y="60"/>
 			</ipxact:vendorExtensions>
 		</ipxact:componentInstance>
 		<ipxact:componentInstance>
-<<<<<<< HEAD
 			<ipxact:instanceName>IP_SAD_Accelerator</ipxact:instanceName>
 			<ipxact:componentRef vendor="TUNI.fi" library="ip.hw" name="IP_SAD_Accelerator" version="1.0"/>
 			<ipxact:vendorExtensions>
@@ -124,33 +76,11 @@
 					<kactus2:adHocVisible portName="lambda_loaded" x="-110" y="190"/>
 					<kactus2:adHocVisible portName="lcu_loaded" x="-110" y="210"/>
 					<kactus2:adHocVisible portName="result_ready" x="-110" y="130"/>
-=======
-			<ipxact:instanceName>IP_SAD_Accelerator_0</ipxact:instanceName>
-			<ipxact:componentRef vendor="TUNI.fi" library="ip.hw" name="IP_SAD_Accelerator" version="1.0"/>
-			<ipxact:vendorExtensions>
-				<kactus2:uuid>{bc1ebd94-b16a-4e7c-a17d-2b3106eee407}</kactus2:uuid>
-				<kactus2:portPositions>
-					<kactus2:portPosition busRef="clock_75MHz" x="-110" y="40"/>
-					<kactus2:portPosition busRef="orig_channel" x="-110" y="510"/>
-					<kactus2:portPosition busRef="top_ref_channel" x="-110" y="570"/>
-					<kactus2:portPosition busRef="sad_result" x="-110" y="630"/>
-					<kactus2:portPosition busRef="config_channel" x="-110" y="540"/>
-					<kactus2:portPosition busRef="left_ref_channel" x="-110" y="600"/>
-				</kactus2:portPositions>
-				<kactus2:adHocVisibilities>
-					<kactus2:adHocVisible portName="lcu_loaded" x="-110" y="450"/>
-					<kactus2:adHocVisible portName="result_ready" x="-110" y="420"/>
-					<kactus2:adHocVisible portName="lambda_loaded" x="-110" y="480"/>
-					<kactus2:adHocVisible portName="clear_unfilt2_fifo" x="-110" y="360"/>
-					<kactus2:adHocVisible portName="clear_unfilt1_fifo" x="-110" y="330"/>
-					<kactus2:adHocVisible portName="clear_orig_fifo" x="-110" y="390"/>
->>>>>>> e884336c5d299bf4691e53595ed9645c1dc40c6d
 				</kactus2:adHocVisibilities>
 				<kactus2:position x="920" y="60"/>
 			</ipxact:vendorExtensions>
 		</ipxact:componentInstance>
 		<ipxact:componentInstance>
-<<<<<<< HEAD
 			<ipxact:instanceName>CCD_Configer</ipxact:instanceName>
 			<ipxact:componentRef vendor="TUNI.fi" library="ip.hw" name="CCD_Configer" version="1.0"/>
 			<ipxact:vendorExtensions>
@@ -231,97 +161,11 @@
 					<kactus2:portPosition busRef="clock_camera" x="-110" y="870"/>
 				</kactus2:portPositions>
 				<kactus2:position x="2000" y="60"/>
-=======
-			<ipxact:instanceName>CCD_Configer_0</ipxact:instanceName>
-			<ipxact:componentRef vendor="TUNI.fi" library="ip.hw" name="CCD_Configer" version="1.0"/>
-			<ipxact:vendorExtensions>
-				<kactus2:uuid>{42043a54-3f1d-4782-91fd-bb0cb166d53c}</kactus2:uuid>
-				<kactus2:position x="1240" y="60"/>
-				<kactus2:portPositions>
-					<kactus2:portPosition busRef="clock_75MHz" x="-110" y="40"/>
-					<kactus2:portPosition busRef="camera_config" x="-110" y="90"/>
-					<kactus2:portPosition busRef="push_buttons" x="-110" y="210"/>
-					<kactus2:portPosition busRef="camera_start_config" x="-110" y="70"/>
-					<kactus2:portPosition busRef="CCD_config" x="-110" y="130"/>
-				</kactus2:portPositions>
-			</ipxact:vendorExtensions>
-		</ipxact:componentInstance>
-		<ipxact:componentInstance>
-			<ipxact:instanceName>CCD_Configer_I2C_0</ipxact:instanceName>
-			<ipxact:componentRef vendor="TUNI.fi" library="ip.hw" name="CCD_Configer_I2C" version="1.0"/>
-			<ipxact:vendorExtensions>
-				<kactus2:uuid>{c9325127-aadc-44b4-a604-f71cb51c65c2}</kactus2:uuid>
-				<kactus2:portPositions>
-					<kactus2:portPosition busRef="clock_75MHz" x="-110" y="40"/>
-					<kactus2:portPosition busRef="dip_switch" x="110" y="90"/>
-					<kactus2:portPosition busRef="CCD_config" x="-110" y="190"/>
-					<kactus2:portPosition busRef="I2C_data" x="110" y="40"/>
-				</kactus2:portPositions>
-				<kactus2:position x="1240" y="320"/>
-			</ipxact:vendorExtensions>
-		</ipxact:componentInstance>
-		<ipxact:componentInstance>
-			<ipxact:instanceName>CCD_Capture_0</ipxact:instanceName>
-			<ipxact:componentRef vendor="TUNI.fi" library="ip.hw" name="CCD_Capture" version="1.0"/>
-			<ipxact:vendorExtensions>
-				<kactus2:uuid>{c39019dd-6a92-43a0-bfda-9d20571cbe44}</kactus2:uuid>
-				<kactus2:portPositions>
-					<kactus2:portPosition busRef="clock_camera" x="-110" y="40"/>
-					<kactus2:portPosition busRef="CCD_data" x="110" y="80"/>
-				</kactus2:portPositions>
-				<kactus2:position x="1240" y="560"/>
-			</ipxact:vendorExtensions>
-		</ipxact:componentInstance>
-		<ipxact:componentInstance>
-			<ipxact:instanceName>RAW_to_RGB_0</ipxact:instanceName>
-			<ipxact:componentRef vendor="TUNI.fi" library="ip.hw" name="RAW_to_RGB" version="1.0"/>
-			<ipxact:vendorExtensions>
-				<kactus2:uuid>{19b62ac4-4eab-4f15-b7a7-90bb3333e61b}</kactus2:uuid>
-				<kactus2:position x="1680" y="60"/>
-				<kactus2:portPositions>
-					<kactus2:portPosition busRef="clock_camera" x="-110" y="70"/>
-					<kactus2:portPosition busRef="RAW_data" x="-110" y="180"/>
-					<kactus2:portPosition busRef="dip_switch" x="-110" y="240"/>
-					<kactus2:portPosition busRef="RGB_data" x="110" y="80"/>
-				</kactus2:portPositions>
-			</ipxact:vendorExtensions>
-		</ipxact:componentInstance>
-		<ipxact:componentInstance>
-			<ipxact:instanceName>RGB_to_YUV_0</ipxact:instanceName>
-			<ipxact:componentRef vendor="TUNI.fi" library="ip.hw" name="RGB_to_YUV" version="1.0"/>
-			<ipxact:vendorExtensions>
-				<kactus2:uuid>{d6584d67-4920-4593-8cd7-751cc83fa9e9}</kactus2:uuid>
-				<kactus2:portPositions>
-					<kactus2:portPosition busRef="clock_camera" x="-110" y="40"/>
-					<kactus2:portPosition busRef="RGB_data" x="110" y="60"/>
-					<kactus2:portPosition busRef="u_channel" x="-110" y="170"/>
-					<kactus2:portPosition busRef="v_channel" x="-110" y="200"/>
-					<kactus2:portPosition busRef="yuv_ctrl" x="-110" y="230"/>
-					<kactus2:portPosition busRef="CCD_data" x="-110" y="80"/>
-					<kactus2:portPosition busRef="y_channel" x="-110" y="140"/>
-				</kactus2:portPositions>
-				<kactus2:position x="1680" y="350"/>
-			</ipxact:vendorExtensions>
-		</ipxact:componentInstance>
-		<ipxact:componentInstance>
-			<ipxact:instanceName>LTP_Controller_0</ipxact:instanceName>
-			<ipxact:componentRef vendor="TUNI.fi" library="ip.hw" name="LTP_Controller" version="1.0"/>
-			<ipxact:vendorExtensions>
-				<kactus2:uuid>{fd8c8bef-475e-4155-82a9-4db85769b9d2}</kactus2:uuid>
-				<kactus2:position x="2000" y="60"/>
-				<kactus2:portPositions>
-					<kactus2:portPosition busRef="clock_33MHz" x="-110" y="150"/>
-					<kactus2:portPosition busRef="LCD" x="110" y="70"/>
-					<kactus2:portPosition busRef="RGB_data" x="-110" y="80"/>
-					<kactus2:portPosition busRef="clock_camera" x="-110" y="110"/>
-				</kactus2:portPositions>
->>>>>>> e884336c5d299bf4691e53595ed9645c1dc40c6d
 			</ipxact:vendorExtensions>
 		</ipxact:componentInstance>
 	</ipxact:componentInstances>
 	<ipxact:interconnections>
 		<ipxact:interconnection>
-<<<<<<< HEAD
 			<ipxact:name>LTP_Controller_LCD_to_LCD</ipxact:name>
 			<ipxact:activeInterface componentRef="LTP_Controller" busRef="LCD"/>
 			<ipxact:hierInterface busRef="LCD"/>
@@ -515,206 +359,10 @@
 			<ipxact:name>Kvazaar_QSYS_v_channel_to_RGB_to_YUV_v_channel</ipxact:name>
 			<ipxact:activeInterface componentRef="Kvazaar_QSYS" busRef="v_channel"/>
 			<ipxact:activeInterface componentRef="RGB_to_YUV" busRef="v_channel"/>
-=======
-			<ipxact:name>Clock_Reset_0_clock_25MHz_to_clock_25MHz</ipxact:name>
-			<ipxact:activeInterface componentRef="Clock_Reset_0" busRef="clock_25MHz"/>
-			<ipxact:hierInterface busRef="clock_25MHz"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>Clock_Reset_0_clock_50MHz_ref_to_clock_50MHz</ipxact:name>
-			<ipxact:activeInterface componentRef="Clock_Reset_0" busRef="clock_50MHz_ref"/>
-			<ipxact:hierInterface busRef="clock_50MHz"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>Clock_Reset_0_clock_camera_ref_to_clock_camera</ipxact:name>
-			<ipxact:activeInterface componentRef="Clock_Reset_0" busRef="clock_camera_ref"/>
-			<ipxact:hierInterface busRef="clock_camera"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>Clock_Reset_0_push_buttons_to_push_buttons</ipxact:name>
-			<ipxact:activeInterface componentRef="Clock_Reset_0" busRef="push_buttons"/>
-			<ipxact:hierInterface busRef="push_buttons"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>Kvazaar_QSYS_0_push_buttons_to_push_buttons</ipxact:name>
-			<ipxact:activeInterface componentRef="Kvazaar_QSYS_0" busRef="push_buttons"/>
-			<ipxact:hierInterface busRef="push_buttons"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>Kvazaar_QSYS_0_dip_switch_to_dip_switch</ipxact:name>
-			<ipxact:activeInterface componentRef="Kvazaar_QSYS_0" busRef="dip_switch"/>
-			<ipxact:hierInterface busRef="dip_switch"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>Kvazaar_QSYS_0_HPS_connection_to_HPS_connection</ipxact:name>
-			<ipxact:activeInterface componentRef="Kvazaar_QSYS_0" busRef="HPS_connection"/>
-			<ipxact:hierInterface busRef="HPS_connection"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>Clock_Reset_0_clock_75MHz_to_Kvazaar_QSYS_0_clock_75MHz</ipxact:name>
-			<ipxact:activeInterface componentRef="Clock_Reset_0" busRef="clock_75MHz"/>
-			<ipxact:activeInterface componentRef="Kvazaar_QSYS_0" busRef="clock_75MHz"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>Clock_Reset_0_clock_camera_to_Kvazaar_QSYS_0_clock_camera</ipxact:name>
-			<ipxact:activeInterface componentRef="Clock_Reset_0" busRef="clock_camera"/>
-			<ipxact:activeInterface componentRef="Kvazaar_QSYS_0" busRef="clock_camera"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>Kvazaar_QSYS_0_orig_channel_to_IP_SAD_Accelerator_0_orig_channel</ipxact:name>
-			<ipxact:activeInterface componentRef="Kvazaar_QSYS_0" busRef="orig_channel"/>
-			<ipxact:activeInterface componentRef="IP_SAD_Accelerator_0" busRef="orig_channel"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>Kvazaar_QSYS_0_config_channel_to_IP_SAD_Accelerator_0_config_channel</ipxact:name>
-			<ipxact:activeInterface componentRef="Kvazaar_QSYS_0" busRef="config_channel"/>
-			<ipxact:activeInterface componentRef="IP_SAD_Accelerator_0" busRef="config_channel"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>Kvazaar_QSYS_0_top_ref_channel_to_IP_SAD_Accelerator_0_top_ref_channel</ipxact:name>
-			<ipxact:activeInterface componentRef="Kvazaar_QSYS_0" busRef="top_ref_channel"/>
-			<ipxact:activeInterface componentRef="IP_SAD_Accelerator_0" busRef="top_ref_channel"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>Kvazaar_QSYS_0_left_ref_channel_to_IP_SAD_Accelerator_0_left_ref_channel</ipxact:name>
-			<ipxact:activeInterface componentRef="Kvazaar_QSYS_0" busRef="left_ref_channel"/>
-			<ipxact:activeInterface componentRef="IP_SAD_Accelerator_0" busRef="left_ref_channel"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>Kvazaar_QSYS_0_sad_result_to_IP_SAD_Accelerator_0_sad_result</ipxact:name>
-			<ipxact:activeInterface componentRef="Kvazaar_QSYS_0" busRef="sad_result"/>
-			<ipxact:activeInterface componentRef="IP_SAD_Accelerator_0" busRef="sad_result"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>Kvazaar_QSYS_0_camera_start_config_to_CCD_Configer_0_camera_start_config</ipxact:name>
-			<ipxact:activeInterface componentRef="Kvazaar_QSYS_0" busRef="camera_start_config"/>
-			<ipxact:activeInterface componentRef="CCD_Configer_0" busRef="camera_start_config"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>Kvazaar_QSYS_0_y_channel_to_RGB_to_YUV_0_y_channel</ipxact:name>
-			<ipxact:activeInterface componentRef="Kvazaar_QSYS_0" busRef="y_channel"/>
-			<ipxact:activeInterface componentRef="RGB_to_YUV_0" busRef="y_channel"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>Kvazaar_QSYS_0_yuv_ctrl_to_RGB_to_YUV_0_yuv_ctrl</ipxact:name>
-			<ipxact:activeInterface componentRef="Kvazaar_QSYS_0" busRef="yuv_ctrl"/>
-			<ipxact:activeInterface componentRef="RGB_to_YUV_0" busRef="yuv_ctrl"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>CCD_Configer_0_push_buttons_to_push_buttons</ipxact:name>
-			<ipxact:activeInterface componentRef="CCD_Configer_0" busRef="push_buttons"/>
-			<ipxact:hierInterface busRef="push_buttons"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>CCD_Configer_0_clock_75MHz_to_Clock_Reset_0_clock_75MHz</ipxact:name>
-			<ipxact:activeInterface componentRef="CCD_Configer_0" busRef="clock_75MHz"/>
-			<ipxact:activeInterface componentRef="Clock_Reset_0" busRef="clock_75MHz"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>CCD_Configer_0_camera_config_to_Kvazaar_QSYS_0_camera_config</ipxact:name>
-			<ipxact:activeInterface componentRef="CCD_Configer_0" busRef="camera_config"/>
-			<ipxact:activeInterface componentRef="Kvazaar_QSYS_0" busRef="camera_config"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>CCD_Configer_0_CCD_config_to_CCD_Configer_I2C_0_CCD_config</ipxact:name>
-			<ipxact:activeInterface componentRef="CCD_Configer_0" busRef="CCD_config"/>
-			<ipxact:activeInterface componentRef="CCD_Configer_I2C_0" busRef="CCD_config"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>Kvazaar_QSYS_0_v_channel_to_RGB_to_YUV_0_v_channel</ipxact:name>
-			<ipxact:activeInterface componentRef="Kvazaar_QSYS_0" busRef="v_channel"/>
-			<ipxact:activeInterface componentRef="RGB_to_YUV_0" busRef="v_channel"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>Kvazaar_QSYS_0_u_channel_to_RGB_to_YUV_0_u_channel</ipxact:name>
-			<ipxact:activeInterface componentRef="Kvazaar_QSYS_0" busRef="u_channel"/>
-			<ipxact:activeInterface componentRef="RGB_to_YUV_0" busRef="u_channel"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>CCD_Capture_0_CCD_data_to_CCD_data</ipxact:name>
-			<ipxact:activeInterface componentRef="CCD_Capture_0" busRef="CCD_data"/>
-			<ipxact:hierInterface busRef="CCD_data"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>RGB_to_YUV_0_CCD_data_to_CCD_data</ipxact:name>
-			<ipxact:activeInterface componentRef="RGB_to_YUV_0" busRef="CCD_data"/>
-			<ipxact:hierInterface busRef="CCD_data"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>CCD_Configer_I2C_0_I2C_data_to_i2c_data</ipxact:name>
-			<ipxact:activeInterface componentRef="CCD_Configer_I2C_0" busRef="I2C_data"/>
-			<ipxact:hierInterface busRef="i2c_data"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>RAW_to_RGB_0_RAW_data_to_CCD_Capture_0_RAW_data</ipxact:name>
-			<ipxact:activeInterface componentRef="RAW_to_RGB_0" busRef="RAW_data"/>
-			<ipxact:activeInterface componentRef="CCD_Capture_0" busRef="RAW_data"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>Clock_Reset_0_clock_camera_to_RAW_to_RGB_0_clock_camera</ipxact:name>
-			<ipxact:activeInterface componentRef="Clock_Reset_0" busRef="clock_camera"/>
-			<ipxact:activeInterface componentRef="RAW_to_RGB_0" busRef="clock_camera"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>Clock_Reset_0_clock_camera_to_CCD_Capture_0_clock_camera</ipxact:name>
-			<ipxact:activeInterface componentRef="Clock_Reset_0" busRef="clock_camera"/>
-			<ipxact:activeInterface componentRef="CCD_Capture_0" busRef="clock_camera"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>Clock_Reset_0_clock_camera_to_RGB_to_YUV_0_clock_camera</ipxact:name>
-			<ipxact:activeInterface componentRef="Clock_Reset_0" busRef="clock_camera"/>
-			<ipxact:activeInterface componentRef="RGB_to_YUV_0" busRef="clock_camera"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>Clock_Reset_0_clock_camera_to_LTP_Controller_0_clock_camera</ipxact:name>
-			<ipxact:activeInterface componentRef="Clock_Reset_0" busRef="clock_camera"/>
-			<ipxact:activeInterface componentRef="LTP_Controller_0" busRef="clock_camera"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>RAW_to_RGB_0_RGB_data_to_LTP_Controller_0_RGB_data</ipxact:name>
-			<ipxact:activeInterface componentRef="RAW_to_RGB_0" busRef="RGB_data"/>
-			<ipxact:activeInterface componentRef="LTP_Controller_0" busRef="RGB_data"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>RAW_to_RGB_0_RGB_data_to_RGB_to_YUV_0_RGB_data</ipxact:name>
-			<ipxact:activeInterface componentRef="RAW_to_RGB_0" busRef="RGB_data"/>
-			<ipxact:activeInterface componentRef="RGB_to_YUV_0" busRef="RGB_data"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>LTP_Controller_0_LCD_to_LCD</ipxact:name>
-			<ipxact:activeInterface componentRef="LTP_Controller_0" busRef="LCD"/>
-			<ipxact:hierInterface busRef="LCD"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>IP_SAD_Accelerator_0_clock_75MHz_to_Clock_Reset_0_clock_75MHz</ipxact:name>
-			<ipxact:activeInterface componentRef="IP_SAD_Accelerator_0" busRef="clock_75MHz"/>
-			<ipxact:activeInterface componentRef="Clock_Reset_0" busRef="clock_75MHz"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>Clock_Reset_0_clock_33MHz_to_LTP_Controller_0_clock_33MHz</ipxact:name>
-			<ipxact:activeInterface componentRef="Clock_Reset_0" busRef="clock_33MHz"/>
-			<ipxact:activeInterface componentRef="LTP_Controller_0" busRef="clock_33MHz"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>RAW_to_RGB_0_dip_switch_to_dip_switch</ipxact:name>
-			<ipxact:activeInterface componentRef="RAW_to_RGB_0" busRef="dip_switch"/>
-			<ipxact:hierInterface busRef="dip_switch"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>CCD_Configer_I2C_0_clock_75MHz_to_Clock_Reset_0_clock_75MHz</ipxact:name>
-			<ipxact:activeInterface componentRef="CCD_Configer_I2C_0" busRef="clock_75MHz"/>
-			<ipxact:activeInterface componentRef="Clock_Reset_0" busRef="clock_75MHz"/>
-		</ipxact:interconnection>
-		<ipxact:interconnection>
-			<ipxact:name>CCD_Configer_I2C_0_dip_switch_to_dip_switch</ipxact:name>
-			<ipxact:activeInterface componentRef="CCD_Configer_I2C_0" busRef="dip_switch"/>
-			<ipxact:hierInterface busRef="dip_switch"/>
->>>>>>> e884336c5d299bf4691e53595ed9645c1dc40c6d
 		</ipxact:interconnection>
 	</ipxact:interconnections>
 	<ipxact:adHocConnections>
 		<ipxact:adHocConnection>
-<<<<<<< HEAD
 			<ipxact:name>Kvazaar_QSYS_result_ready_external_connection_export_to_IP_SAD_Accelerator_result_ready</ipxact:name>
 			<ipxact:portReferences>
 				<ipxact:internalPortReference componentRef="Kvazaar_QSYS" portRef="result_ready_external_connection_export"/>
@@ -761,54 +409,6 @@
 			<ipxact:tiedValue>1</ipxact:tiedValue>
 			<ipxact:portReferences>
 				<ipxact:externalPortReference portRef="CAMERA_TRIGGER"/>
-=======
-			<ipxact:name>CAMERA_TRIGGER_to_tiedValue</ipxact:name>
-			<ipxact:tiedValue>1</ipxact:tiedValue>
-			<ipxact:portReferences>
-				<ipxact:externalPortReference portRef="CAMERA_TRIGGER"/>
-			</ipxact:portReferences>
-		</ipxact:adHocConnection>
-		<ipxact:adHocConnection>
-			<ipxact:name>Kvazaar_QSYS_0_axi_dma_unfiltered1_clear_fifo_export_to_IP_SAD_Accelerator_0_clear_unfilt1_fifo</ipxact:name>
-			<ipxact:portReferences>
-				<ipxact:internalPortReference componentRef="Kvazaar_QSYS_0" portRef="axi_dma_unfiltered1_clear_fifo_export"/>
-				<ipxact:internalPortReference componentRef="IP_SAD_Accelerator_0" portRef="clear_unfilt1_fifo"/>
-			</ipxact:portReferences>
-		</ipxact:adHocConnection>
-		<ipxact:adHocConnection>
-			<ipxact:name>Kvazaar_QSYS_0_axi_dma_unfiltered2_clear_fifo_export_to_IP_SAD_Accelerator_0_clear_unfilt2_fifo</ipxact:name>
-			<ipxact:portReferences>
-				<ipxact:internalPortReference componentRef="Kvazaar_QSYS_0" portRef="axi_dma_unfiltered2_clear_fifo_export"/>
-				<ipxact:internalPortReference componentRef="IP_SAD_Accelerator_0" portRef="clear_unfilt2_fifo"/>
-			</ipxact:portReferences>
-		</ipxact:adHocConnection>
-		<ipxact:adHocConnection>
-			<ipxact:name>Kvazaar_QSYS_0_axi_dma_orig_block_clear_fifo_export_to_IP_SAD_Accelerator_0_clear_orig_fifo</ipxact:name>
-			<ipxact:portReferences>
-				<ipxact:internalPortReference componentRef="Kvazaar_QSYS_0" portRef="axi_dma_orig_block_clear_fifo_export"/>
-				<ipxact:internalPortReference componentRef="IP_SAD_Accelerator_0" portRef="clear_orig_fifo"/>
-			</ipxact:portReferences>
-		</ipxact:adHocConnection>
-		<ipxact:adHocConnection>
-			<ipxact:name>Kvazaar_QSYS_0_result_ready_external_connection_export_to_IP_SAD_Accelerator_0_result_ready</ipxact:name>
-			<ipxact:portReferences>
-				<ipxact:internalPortReference componentRef="Kvazaar_QSYS_0" portRef="result_ready_external_connection_export"/>
-				<ipxact:internalPortReference componentRef="IP_SAD_Accelerator_0" portRef="result_ready"/>
-			</ipxact:portReferences>
-		</ipxact:adHocConnection>
-		<ipxact:adHocConnection>
-			<ipxact:name>Kvazaar_QSYS_0_lcu_loaded_external_connection_export_to_IP_SAD_Accelerator_0_lcu_loaded</ipxact:name>
-			<ipxact:portReferences>
-				<ipxact:internalPortReference componentRef="Kvazaar_QSYS_0" portRef="lcu_loaded_external_connection_export"/>
-				<ipxact:internalPortReference componentRef="IP_SAD_Accelerator_0" portRef="lcu_loaded"/>
-			</ipxact:portReferences>
-		</ipxact:adHocConnection>
-		<ipxact:adHocConnection>
-			<ipxact:name>Kvazaar_QSYS_0_lambda_loaded_external_connection_export_to_IP_SAD_Accelerator_0_lambda_loaded</ipxact:name>
-			<ipxact:portReferences>
-				<ipxact:internalPortReference componentRef="Kvazaar_QSYS_0" portRef="lambda_loaded_external_connection_export"/>
-				<ipxact:internalPortReference componentRef="IP_SAD_Accelerator_0" portRef="lambda_loaded"/>
->>>>>>> e884336c5d299bf4691e53595ed9645c1dc40c6d
 			</ipxact:portReferences>
 		</ipxact:adHocConnection>
 	</ipxact:adHocConnections>
@@ -1050,33 +650,16 @@
 			</kactus2:route>
 		</kactus2:routes>
 		<kactus2:adHocVisibilities>
-<<<<<<< HEAD
 			<kactus2:adHocVisible portName="CAMERA_TRIGGER" x="60" y="360"/>
 		</kactus2:adHocVisibilities>
 		<kactus2:interfaceGraphics>
 			<kactus2:name>LCD</kactus2:name>
 			<kactus2:position x="2220" y="100"/>
-=======
-			<kactus2:adHocVisible portName="CAMERA_TRIGGER" x="60" y="260"/>
-		</kactus2:adHocVisibilities>
-		<kactus2:interfaceGraphics>
-			<kactus2:name>LCD</kactus2:name>
-			<kactus2:position x="2220" y="130"/>
-			<kactus2:direction x="-1" y="0"/>
-		</kactus2:interfaceGraphics>
-		<kactus2:interfaceGraphics>
-			<kactus2:name>CCD_data</kactus2:name>
-			<kactus2:position x="1460" y="640"/>
->>>>>>> e884336c5d299bf4691e53595ed9645c1dc40c6d
 			<kactus2:direction x="-1" y="0"/>
 		</kactus2:interfaceGraphics>
 		<kactus2:interfaceGraphics>
 			<kactus2:name>i2c_data</kactus2:name>
-<<<<<<< HEAD
 			<kactus2:position x="1460" y="760"/>
-=======
-			<kactus2:position x="1460" y="360"/>
->>>>>>> e884336c5d299bf4691e53595ed9645c1dc40c6d
 			<kactus2:direction x="-1" y="0"/>
 		</kactus2:interfaceGraphics>
 		<kactus2:interfaceGraphics>
@@ -1096,25 +679,16 @@
 		</kactus2:interfaceGraphics>
 		<kactus2:interfaceGraphics>
 			<kactus2:name>push_buttons</kactus2:name>
-<<<<<<< HEAD
 			<kactus2:position x="60" y="220"/>
-=======
-			<kactus2:position x="60" y="190"/>
->>>>>>> e884336c5d299bf4691e53595ed9645c1dc40c6d
 			<kactus2:direction x="1" y="0"/>
 		</kactus2:interfaceGraphics>
 		<kactus2:interfaceGraphics>
 			<kactus2:name>dip_switch</kactus2:name>
-<<<<<<< HEAD
 			<kactus2:position x="60" y="70"/>
-=======
-			<kactus2:position x="60" y="300"/>
->>>>>>> e884336c5d299bf4691e53595ed9645c1dc40c6d
 			<kactus2:direction x="1" y="0"/>
 		</kactus2:interfaceGraphics>
 		<kactus2:interfaceGraphics>
 			<kactus2:name>HPS_connection</kactus2:name>
-<<<<<<< HEAD
 			<kactus2:position x="60" y="480"/>
 			<kactus2:direction x="1" y="0"/>
 		</kactus2:interfaceGraphics>
@@ -1131,9 +705,6 @@
 		<kactus2:interfaceGraphics>
 			<kactus2:name>bus_1</kactus2:name>
 			<kactus2:position x="1460" y="390"/>
-=======
-			<kactus2:position x="60" y="630"/>
->>>>>>> e884336c5d299bf4691e53595ed9645c1dc40c6d
 			<kactus2:direction x="1" y="0"/>
 		</kactus2:interfaceGraphics>
 		<kactus2:routes>

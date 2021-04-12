@@ -1,5 +1,4 @@
 	Kvazaar_QSYS u0 (
-<<<<<<< HEAD
 		.acc_config_channel_vz                       (<connected-to-acc_config_channel_vz>),                       //                   acc_config_channel.vz
 		.acc_config_channel_data                     (<connected-to-acc_config_channel_data>),                     //                                     .data
 		.acc_config_channel_lz                       (<connected-to-acc_config_channel_lz>),                       //                                     .lz
@@ -40,26 +39,6 @@
 		.hps_0_f2h_stm_hw_events_stm_hwevents        (<connected-to-hps_0_f2h_stm_hw_events_stm_hwevents>),        //              hps_0_f2h_stm_hw_events.stm_hwevents
 		.hps_0_f2h_warm_reset_req_reset_n            (<connected-to-hps_0_f2h_warm_reset_req_reset_n>),            //             hps_0_f2h_warm_reset_req.reset_n
 		.hps_0_h2f_reset_reset_n                     (<connected-to-hps_0_h2f_reset_reset_n>),                     //                      hps_0_h2f_reset.reset_n
-=======
-		.memory_mem_a                                (<connected-to-memory_mem_a>),                                //                               memory.mem_a
-		.memory_mem_ba                               (<connected-to-memory_mem_ba>),                               //                                     .mem_ba
-		.memory_mem_ck                               (<connected-to-memory_mem_ck>),                               //                                     .mem_ck
-		.memory_mem_ck_n                             (<connected-to-memory_mem_ck_n>),                             //                                     .mem_ck_n
-		.memory_mem_cke                              (<connected-to-memory_mem_cke>),                              //                                     .mem_cke
-		.memory_mem_cs_n                             (<connected-to-memory_mem_cs_n>),                             //                                     .mem_cs_n
-		.memory_mem_ras_n                            (<connected-to-memory_mem_ras_n>),                            //                                     .mem_ras_n
-		.memory_mem_cas_n                            (<connected-to-memory_mem_cas_n>),                            //                                     .mem_cas_n
-		.memory_mem_we_n                             (<connected-to-memory_mem_we_n>),                             //                                     .mem_we_n
-		.memory_mem_reset_n                          (<connected-to-memory_mem_reset_n>),                          //                                     .mem_reset_n
-		.memory_mem_dq                               (<connected-to-memory_mem_dq>),                               //                                     .mem_dq
-		.memory_mem_dqs                              (<connected-to-memory_mem_dqs>),                              //                                     .mem_dqs
-		.memory_mem_dqs_n                            (<connected-to-memory_mem_dqs_n>),                            //                                     .mem_dqs_n
-		.memory_mem_odt                              (<connected-to-memory_mem_odt>),                              //                                     .mem_odt
-		.memory_mem_dm                               (<connected-to-memory_mem_dm>),                               //                                     .mem_dm
-		.memory_oct_rzqin                            (<connected-to-memory_oct_rzqin>),                            //                                     .oct_rzqin
-		.clk_clk                                     (<connected-to-clk_clk>),                                     //                                  clk.clk
-		.reset_reset_n                               (<connected-to-reset_reset_n>),                               //                                reset.reset_n
->>>>>>> e884336c5d299bf4691e53595ed9645c1dc40c6d
 		.hps_0_hps_io_hps_io_emac1_inst_TX_CLK       (<connected-to-hps_0_hps_io_hps_io_emac1_inst_TX_CLK>),       //                         hps_0_hps_io.hps_io_emac1_inst_TX_CLK
 		.hps_0_hps_io_hps_io_emac1_inst_TXD0         (<connected-to-hps_0_hps_io_hps_io_emac1_inst_TXD0>),         //                                     .hps_io_emac1_inst_TXD0
 		.hps_0_hps_io_hps_io_emac1_inst_TXD1         (<connected-to-hps_0_hps_io_hps_io_emac1_inst_TXD1>),         //                                     .hps_io_emac1_inst_TXD1
@@ -123,7 +102,6 @@
 		.hps_0_hps_io_hps_io_gpio_inst_GPIO42        (<connected-to-hps_0_hps_io_hps_io_gpio_inst_GPIO42>),        //                                     .hps_io_gpio_inst_GPIO42
 		.hps_0_hps_io_hps_io_gpio_inst_GPIO43        (<connected-to-hps_0_hps_io_hps_io_gpio_inst_GPIO43>),        //                                     .hps_io_gpio_inst_GPIO43
 		.hps_0_hps_io_hps_io_gpio_inst_GPIO44        (<connected-to-hps_0_hps_io_hps_io_gpio_inst_GPIO44>),        //                                     .hps_io_gpio_inst_GPIO44
-<<<<<<< HEAD
 		.lambda_loaded_external_connection_export    (<connected-to-lambda_loaded_external_connection_export>),    //    lambda_loaded_external_connection.export
 		.lcu_loaded_external_connection_export       (<connected-to-lcu_loaded_external_connection_export>),       //       lcu_loaded_external_connection.export
 		.memory_mem_a                                (<connected-to-memory_mem_a>),                                //                               memory.mem_a
@@ -146,53 +124,6 @@
 		.result_ready_external_connection_export     (<connected-to-result_ready_external_connection_export>),     //     result_ready_external_connection.export
 		.sad_result_high_external_connection_export  (<connected-to-sad_result_high_external_connection_export>),  //  sad_result_high_external_connection.export
 		.sad_result_low_external_connection_export   (<connected-to-sad_result_low_external_connection_export>),   //   sad_result_low_external_connection.export
-=======
-		.hps_0_f2h_stm_hw_events_stm_hwevents        (<connected-to-hps_0_f2h_stm_hw_events_stm_hwevents>),        //              hps_0_f2h_stm_hw_events.stm_hwevents
-		.hps_0_f2h_cold_reset_req_reset_n            (<connected-to-hps_0_f2h_cold_reset_req_reset_n>),            //             hps_0_f2h_cold_reset_req.reset_n
-		.hps_0_f2h_debug_reset_req_reset_n           (<connected-to-hps_0_f2h_debug_reset_req_reset_n>),           //            hps_0_f2h_debug_reset_req.reset_n
-		.hps_0_f2h_warm_reset_req_reset_n            (<connected-to-hps_0_f2h_warm_reset_req_reset_n>),            //             hps_0_f2h_warm_reset_req.reset_n
-		.hps_0_h2f_reset_reset_n                     (<connected-to-hps_0_h2f_reset_reset_n>),                     //                      hps_0_h2f_reset.reset_n
-		.sad_result_low_external_connection_export   (<connected-to-sad_result_low_external_connection_export>),   //   sad_result_low_external_connection.export
-		.hps_0_f2h_sdram0_clock_clk                  (<connected-to-hps_0_f2h_sdram0_clock_clk>),                  //               hps_0_f2h_sdram0_clock.clk
-		.sad_result_high_external_connection_export  (<connected-to-sad_result_high_external_connection_export>),  //  sad_result_high_external_connection.export
-		.acc_config_channel_vz                       (<connected-to-acc_config_channel_vz>),                       //                   acc_config_channel.vz
-		.acc_config_channel_data                     (<connected-to-acc_config_channel_data>),                     //                                     .data
-		.acc_config_channel_lz                       (<connected-to-acc_config_channel_lz>),                       //                                     .lz
-		.result_ready_external_connection_export     (<connected-to-result_ready_external_connection_export>),     //     result_ready_external_connection.export
-		.lcu_loaded_external_connection_export       (<connected-to-lcu_loaded_external_connection_export>),       //       lcu_loaded_external_connection.export
-		.lambda_loaded_external_connection_export    (<connected-to-lambda_loaded_external_connection_export>),    //    lambda_loaded_external_connection.export
-		.axi_dma_unfiltered1_channel_lz_export       (<connected-to-axi_dma_unfiltered1_channel_lz_export>),       //       axi_dma_unfiltered1_channel_lz.export
-		.axi_dma_unfiltered1_channel_vz_export       (<connected-to-axi_dma_unfiltered1_channel_vz_export>),       //       axi_dma_unfiltered1_channel_vz.export
-		.axi_dma_unfiltered1_channel_data_export     (<connected-to-axi_dma_unfiltered1_channel_data_export>),     //     axi_dma_unfiltered1_channel_data.export
-		.axi_dma_unfiltered1_clear_fifo_export       (<connected-to-axi_dma_unfiltered1_clear_fifo_export>),       //       axi_dma_unfiltered1_clear_fifo.export
-		.axi_dma_unfiltered2_channel_lz_export       (<connected-to-axi_dma_unfiltered2_channel_lz_export>),       //       axi_dma_unfiltered2_channel_lz.export
-		.axi_dma_unfiltered2_channel_vz_export       (<connected-to-axi_dma_unfiltered2_channel_vz_export>),       //       axi_dma_unfiltered2_channel_vz.export
-		.axi_dma_unfiltered2_channel_data_export     (<connected-to-axi_dma_unfiltered2_channel_data_export>),     //     axi_dma_unfiltered2_channel_data.export
-		.axi_dma_unfiltered2_clear_fifo_export       (<connected-to-axi_dma_unfiltered2_clear_fifo_export>),       //       axi_dma_unfiltered2_clear_fifo.export
-		.axi_dma_orig_block_channel_lz_export        (<connected-to-axi_dma_orig_block_channel_lz_export>),        //        axi_dma_orig_block_channel_lz.export
-		.axi_dma_orig_block_channel_vz_export        (<connected-to-axi_dma_orig_block_channel_vz_export>),        //        axi_dma_orig_block_channel_vz.export
-		.axi_dma_orig_block_channel_data_export      (<connected-to-axi_dma_orig_block_channel_data_export>),      //      axi_dma_orig_block_channel_data.export
-		.axi_dma_orig_block_clear_fifo_export        (<connected-to-axi_dma_orig_block_clear_fifo_export>),        //        axi_dma_orig_block_clear_fifo.export
-		.dma_yuv_fifo_clk_clk                        (<connected-to-dma_yuv_fifo_clk_clk>),                        //                     dma_yuv_fifo_clk.clk
-		.dma_yuv_yuv_input_u_data_in_z               (<connected-to-dma_yuv_yuv_input_u_data_in_z>),               //                    dma_yuv_yuv_input.u_data_in_z
-		.dma_yuv_yuv_input_v_data_in_lz              (<connected-to-dma_yuv_yuv_input_v_data_in_lz>),              //                                     .v_data_in_lz
-		.dma_yuv_yuv_input_v_data_in_vz              (<connected-to-dma_yuv_yuv_input_v_data_in_vz>),              //                                     .v_data_in_vz
-		.dma_yuv_yuv_input_v_data_in_z               (<connected-to-dma_yuv_yuv_input_v_data_in_z>),               //                                     .v_data_in_z
-		.dma_yuv_yuv_input_y_data_in_vz              (<connected-to-dma_yuv_yuv_input_y_data_in_vz>),              //                                     .y_data_in_vz
-		.dma_yuv_yuv_input_y_data_in_z               (<connected-to-dma_yuv_yuv_input_y_data_in_z>),               //                                     .y_data_in_z
-		.dma_yuv_yuv_input_y_data_in_lz              (<connected-to-dma_yuv_yuv_input_y_data_in_lz>),              //                                     .y_data_in_lz
-		.dma_yuv_yuv_input_clear_dma_and_fifo        (<connected-to-dma_yuv_yuv_input_clear_dma_and_fifo>),        //                                     .clear_dma_and_fifo
-		.dma_yuv_yuv_input_u_data_in_vz              (<connected-to-dma_yuv_yuv_input_u_data_in_vz>),              //                                     .u_data_in_vz
-		.dma_yuv_yuv_input_u_data_in_lz              (<connected-to-dma_yuv_yuv_input_u_data_in_lz>),              //                                     .u_data_in_lz
-		.camera_control_oc_s2_address                (<connected-to-camera_control_oc_s2_address>),                //                 camera_control_oc_s2.address
-		.camera_control_oc_s2_chipselect             (<connected-to-camera_control_oc_s2_chipselect>),             //                                     .chipselect
-		.camera_control_oc_s2_clken                  (<connected-to-camera_control_oc_s2_clken>),                  //                                     .clken
-		.camera_control_oc_s2_write                  (<connected-to-camera_control_oc_s2_write>),                  //                                     .write
-		.camera_control_oc_s2_readdata               (<connected-to-camera_control_oc_s2_readdata>),               //                                     .readdata
-		.camera_control_oc_s2_writedata              (<connected-to-camera_control_oc_s2_writedata>),              //                                     .writedata
-		.camera_control_oc_s2_byteenable             (<connected-to-camera_control_oc_s2_byteenable>),             //                                     .byteenable
-		.configure_camera_external_connection_export (<connected-to-configure_camera_external_connection_export>), // configure_camera_external_connection.export
->>>>>>> e884336c5d299bf4691e53595ed9645c1dc40c6d
 		.yuv_ctrl_external_connection_export         (<connected-to-yuv_ctrl_external_connection_export>),         //         yuv_ctrl_external_connection.export
 		.yuv_status_external_connection_export       (<connected-to-yuv_status_external_connection_export>)        //       yuv_status_external_connection.export
 	);
