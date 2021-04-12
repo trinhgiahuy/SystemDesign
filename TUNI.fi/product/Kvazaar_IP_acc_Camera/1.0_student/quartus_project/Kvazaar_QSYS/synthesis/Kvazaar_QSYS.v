@@ -43,6 +43,7 @@ module Kvazaar_QSYS (
 		input  wire        hps_0_f2h_debug_reset_req_reset_n,           //            hps_0_f2h_debug_reset_req.reset_n
 		input  wire [27:0] hps_0_f2h_stm_hw_events_stm_hwevents,        //              hps_0_f2h_stm_hw_events.stm_hwevents
 		input  wire        hps_0_f2h_warm_reset_req_reset_n,            //             hps_0_f2h_warm_reset_req.reset_n
+		output wire        hps_0_h2f_reset_reset_n,                     //                      hps_0_h2f_reset.reset_n
 		output wire        hps_0_hps_io_hps_io_emac1_inst_TX_CLK,       //                         hps_0_hps_io.hps_io_emac1_inst_TX_CLK
 		output wire        hps_0_hps_io_hps_io_emac1_inst_TXD0,         //                                     .hps_io_emac1_inst_TXD0
 		output wire        hps_0_hps_io_hps_io_emac1_inst_TXD1,         //                                     .hps_io_emac1_inst_TXD1
@@ -619,7 +620,6 @@ module Kvazaar_QSYS (
 	wire  [31:0] hps_0_f2h_irq1_irq;                                             // irq_mapper_001:sender_irq -> hps_0:f2h_irq_p1
 	wire         rst_controller_reset_out_reset;                                 // rst_controller:reset_out -> [acc_config:rst_n, axi_dma_orig_block:rst_n, axi_dma_unfiltered1:rst_n, axi_dma_unfiltered2:rst_n, camera_control_oc:reset, camera_control_oc:reset2, configure_camera:reset_n, dma_yuv:rst_n, lambda_loaded:reset_n, lcu_loaded:reset_n, mm_interconnect_1:axi_dma_unfiltered2_reset_sink_reset_bridge_in_reset_reset, mm_interconnect_2:axi_dma_unfiltered1_reset_sink_reset_bridge_in_reset_reset, mm_interconnect_3:acc_config_reset_sink_reset_bridge_in_reset_reset, result_ready:reset_n, sad_result_high:reset_n, sad_result_low:reset_n, yuv_ctrl:reset_n, yuv_status:reset_n]
 	wire         rst_controller_001_reset_out_reset;                             // rst_controller_001:reset_out -> [mm_interconnect_1:hps_0_f2h_sdram1_data_agent_reset_sink_reset_bridge_in_reset_reset, mm_interconnect_2:axi_dma_unfiltered1_altera_axi_master_id_pad_clk_reset_reset_bridge_in_reset_reset, mm_interconnect_3:hps_0_h2f_axi_master_agent_clk_reset_reset_bridge_in_reset_reset]
-	wire         hps_0_h2f_reset_reset;                                          // hps_0:h2f_rst_n -> rst_controller_001:reset_in0
 
 	axi3_to_channel #(
 		.slave_data_width_g    (32),
@@ -1164,7 +1164,7 @@ module Kvazaar_QSYS (
 		.hps_io_gpio_inst_GPIO42  (hps_0_hps_io_hps_io_gpio_inst_GPIO42),            //                    .hps_io_gpio_inst_GPIO42
 		.hps_io_gpio_inst_GPIO43  (hps_0_hps_io_hps_io_gpio_inst_GPIO43),            //                    .hps_io_gpio_inst_GPIO43
 		.hps_io_gpio_inst_GPIO44  (hps_0_hps_io_hps_io_gpio_inst_GPIO44),            //                    .hps_io_gpio_inst_GPIO44
-		.h2f_rst_n                (hps_0_h2f_reset_reset),                           //           h2f_reset.reset_n
+		.h2f_rst_n                (hps_0_h2f_reset_reset_n),                         //           h2f_reset.reset_n
 		.f2h_sdram0_clk           (clk_clk),                                         //    f2h_sdram0_clock.clk
 		.f2h_sdram0_ARADDR        (dma_yuv_altera_axi_master_araddr),                //     f2h_sdram0_data.araddr
 		.f2h_sdram0_ARLEN         (dma_yuv_altera_axi_master_arlen),                 //                    .arlen
@@ -2040,7 +2040,7 @@ module Kvazaar_QSYS (
 		.USE_RESET_REQUEST_IN15    (0),
 		.ADAPT_RESET_REQUEST       (0)
 	) rst_controller_001 (
-		.reset_in0      (~hps_0_h2f_reset_reset),             // reset_in0.reset
+		.reset_in0      (~hps_0_h2f_reset_reset_n),           // reset_in0.reset
 		.clk            (clk_clk),                            //       clk.clk
 		.reset_out      (rst_controller_001_reset_out_reset), // reset_out.reset
 		.reset_req      (),                                   // (terminated)
