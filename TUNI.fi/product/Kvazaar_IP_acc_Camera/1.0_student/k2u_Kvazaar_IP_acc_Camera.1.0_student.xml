@@ -357,6 +357,8 @@
 			<ipxact:endianness>little</ipxact:endianness>
 		</ipxact:busInterface>
 		<ipxact:busInterface>
+<<<<<<< HEAD
+=======
 			<ipxact:name>clock_25MHz</ipxact:name>
 			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="clock_reset" version="1.0"/>
 			<ipxact:abstractionTypes>
@@ -540,6 +542,7 @@
 			<ipxact:endianness>little</ipxact:endianness>
 		</ipxact:busInterface>
 		<ipxact:busInterface>
+>>>>>>> e884336c5d299bf4691e53595ed9645c1dc40c6d
 			<ipxact:name>HPS_connection</ipxact:name>
 			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="HPS_ifc" version="1.0"/>
 			<ipxact:abstractionTypes>
@@ -1878,6 +1881,12 @@
 								</ipxact:partSelect>
 							</ipxact:physicalPort>
 						</ipxact:portMap>
+<<<<<<< HEAD
+					</ipxact:portMaps>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:master/>
+=======
 						<ipxact:portMap>
 							<ipxact:logicalPort>
 								<ipxact:name>MEMORY_MEM_RESET_N</ipxact:name>
@@ -1972,6 +1981,7 @@
 				</ipxact:abstractionType>
 			</ipxact:abstractionTypes>
 			<ipxact:slave/>
+>>>>>>> e884336c5d299bf4691e53595ed9645c1dc40c6d
 			<ipxact:connectionRequired>false</ipxact:connectionRequired>
 			<ipxact:bitsInLau>8</ipxact:bitsInLau>
 			<ipxact:endianness>little</ipxact:endianness>
@@ -2572,6 +2582,7 @@
 	<ipxact:fileSets>
 		<ipxact:fileSet>
 			<ipxact:name>qsys_components</ipxact:name>
+			<ipxact:group>generatedFiles</ipxact:group>
 			<ipxact:file>
 				<ipxact:name>qsys_components/axi_dma_read_hw.tcl</ipxact:name>
 				<ipxact:fileType>tclSource</ipxact:fileType>
@@ -2621,6 +2632,14 @@
 				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
+				<ipxact:name>quartus_project/Kvazaar_IP_acc_Camera.v</ipxact:name>
+				<ipxact:fileType>verilogSource</ipxact:fileType>
+				<ipxact:description>Generated at 10:23:24 on 09.04.2021 by Kactus2. </ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>be7ebe6a9e03ef5ce88d05ad00e90661b098718a</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
 				<ipxact:name>qsys_components/pre_calk_pkg.vhd</ipxact:name>
 				<ipxact:fileType>vhdlSource</ipxact:fileType>
 				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
@@ -2659,6 +2678,13 @@
 			<ipxact:name>verilogSource</ipxact:name>
 			<ipxact:group>generatedFiles</ipxact:group>
 			<ipxact:file>
+<<<<<<< HEAD
+				<ipxact:name>quartus_project/Kvazaar_IP_acc_Camera.v</ipxact:name>
+				<ipxact:fileType>verilogSource</ipxact:fileType>
+				<ipxact:description>Generated at 14:37:23 on 10.04.2021 by Kactus2. </ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>be7ebe6a9e03ef5ce88d05ad00e90661b098718a</kactus2:hash>
+=======
 				<ipxact:name>Kvazaar_IP_acc_Camera.v</ipxact:name>
 				<ipxact:fileType>verilogSource</ipxact:fileType>
 				<ipxact:description>Generated at 17:00:29 on 10.04.2021 by Kactus2. </ipxact:description>
@@ -2669,12 +2695,21 @@
 				<ipxact:description>Generated at 17:01:20 on 10.04.2021 by Kactus2. </ipxact:description>
 				<ipxact:vendorExtensions>
 					<kactus2:hash>8ad982d1bfbc03bcc942dc8782b382016337eedd</kactus2:hash>
+>>>>>>> e884336c5d299bf4691e53595ed9645c1dc40c6d
 				</ipxact:vendorExtensions>
 			</ipxact:file>
 		</ipxact:fileSet>
 		<ipxact:fileSet>
 			<ipxact:name>Documentation</ipxact:name>
 			<ipxact:group>documentation</ipxact:group>
+<<<<<<< HEAD
+			<ipxact:file>
+				<ipxact:name>doc/Kvazaar_IP_acc_Camera_document.html</ipxact:name>
+				<ipxact:fileType user="htmlFile">user</ipxact:fileType>
+				<ipxact:description>Html file that contains the documentation for this component and subcomponents</ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>cbce63a2642e0082e51aac3bfcae20b4</kactus2:hash>
+=======
 			<ipxact:group>generatedFiles</ipxact:group>
 			<ipxact:file>
 				<ipxact:name>doc/doc_ip_acc_camera_quartus.html</ipxact:name>
@@ -2682,6 +2717,7 @@
 				<ipxact:description>Html file that contains the documentation for this component and subcomponents</ipxact:description>
 				<ipxact:vendorExtensions>
 					<kactus2:hash>09aff4be1e1904f6ee70820eca04ed50</kactus2:hash>
+>>>>>>> e884336c5d299bf4691e53595ed9645c1dc40c6d
 				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
@@ -2729,7 +2765,11 @@
 				<ipxact:fileType user="picture">user</ipxact:fileType>
 				<ipxact:description>Preview picture needed by the html document.</ipxact:description>
 				<ipxact:vendorExtensions>
+<<<<<<< HEAD
+					<kactus2:hash>7406007fb9028986989392060fe99c1c</kactus2:hash>
+=======
 					<kactus2:hash>8616030bf803f0569fd55eb9cb3b820b</kactus2:hash>
+>>>>>>> e884336c5d299bf4691e53595ed9645c1dc40c6d
 				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
@@ -2737,7 +2777,11 @@
 				<ipxact:fileType user="picture">user</ipxact:fileType>
 				<ipxact:description>Preview picture needed by the html document.</ipxact:description>
 				<ipxact:vendorExtensions>
+<<<<<<< HEAD
+					<kactus2:hash>d3b96e57cf9efdf33f6d4025a9c908db</kactus2:hash>
+=======
 					<kactus2:hash>cde78e8b2b6fb909deed4e42fae0ee3c</kactus2:hash>
+>>>>>>> e884336c5d299bf4691e53595ed9645c1dc40c6d
 				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
@@ -2873,7 +2917,11 @@
 				<ipxact:fileType user="picture">user</ipxact:fileType>
 				<ipxact:description>Preview picture needed by the html document.</ipxact:description>
 				<ipxact:vendorExtensions>
+<<<<<<< HEAD
+					<kactus2:hash>922676262ca166da3033b3706ca172a6</kactus2:hash>
+=======
 					<kactus2:hash>be18b8e5ee125f034f077286e3f4adf2</kactus2:hash>
+>>>>>>> e884336c5d299bf4691e53595ed9645c1dc40c6d
 				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
@@ -2881,7 +2929,11 @@
 				<ipxact:fileType user="picture">user</ipxact:fileType>
 				<ipxact:description>Preview picture needed by the html document.</ipxact:description>
 				<ipxact:vendorExtensions>
+<<<<<<< HEAD
+					<kactus2:hash>0394b75558bb421fe8fd3bd3a3762ce6</kactus2:hash>
+=======
 					<kactus2:hash>1d1ca5dbc74958923d68221fa9c0174a</kactus2:hash>
+>>>>>>> e884336c5d299bf4691e53595ed9645c1dc40c6d
 				</ipxact:vendorExtensions>
 			</ipxact:file>
 			<ipxact:file>
@@ -2900,11 +2952,14 @@
 					<kactus2:hash>beb03b6816d7b0beb2db046abf1ce243</kactus2:hash>
 				</ipxact:vendorExtensions>
 			</ipxact:file>
+<<<<<<< HEAD
+=======
 			<ipxact:file>
 				<ipxact:name>quartus_project/Kvazaar_IP_acc_Camera.v</ipxact:name>
 				<ipxact:fileType>verilogSource</ipxact:fileType>
 				<ipxact:description>Generated at 17:22:14 on 10.04.2021 by Kactus2. </ipxact:description>
 			</ipxact:file>
+>>>>>>> e884336c5d299bf4691e53595ed9645c1dc40c6d
 		</ipxact:fileSet>
 	</ipxact:fileSets>
 	<ipxact:vendorExtensions>

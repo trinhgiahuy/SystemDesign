@@ -6,6 +6,41 @@
 	<ipxact:version>1.0_student</ipxact:version>
 	<ipxact:designRef vendor="TUNI.fi" library="product" name="Kvazaar_IP_acc_Camera.design" version="1.0_student"/>
 	<ipxact:viewConfiguration>
+<<<<<<< HEAD
+		<ipxact:instanceName>CCD_Configer</ipxact:instanceName>
+		<ipxact:view viewRef="flat"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>CCD_Configer_I2C</ipxact:instanceName>
+		<ipxact:view viewRef="flat"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>CCD_Capture</ipxact:instanceName>
+		<ipxact:view viewRef="flat"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>Kvazaar_QSYS</ipxact:instanceName>
+		<ipxact:view viewRef="flat"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>Clock_Reset</ipxact:instanceName>
+		<ipxact:view viewRef="flat"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>IP_SAD_Accelerator</ipxact:instanceName>
+		<ipxact:view viewRef="flat"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>RAW_to_RGB</ipxact:instanceName>
+		<ipxact:view viewRef="flat"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>RGB_to_YUV</ipxact:instanceName>
+		<ipxact:view viewRef="flat"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>LTP_Controller</ipxact:instanceName>
+=======
 		<ipxact:instanceName>Clock_Reset_0</ipxact:instanceName>
 		<ipxact:view viewRef="flat"/>
 	</ipxact:viewConfiguration>
@@ -39,6 +74,7 @@
 	</ipxact:viewConfiguration>
 	<ipxact:viewConfiguration>
 		<ipxact:instanceName>Kvazaar_QSYS_0</ipxact:instanceName>
+>>>>>>> e884336c5d299bf4691e53595ed9645c1dc40c6d
 		<ipxact:view viewRef="flat"/>
 	</ipxact:viewConfiguration>
 	<ipxact:vendorExtensions>
