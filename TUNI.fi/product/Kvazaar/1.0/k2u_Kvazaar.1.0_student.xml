@@ -80,12 +80,20 @@
 				<ipxact:name>../../Kvazaar.Veek-System/1.0/sw_Veek-System/Makefile</ipxact:name>
 				<ipxact:fileType user="makefile">user</ipxact:fileType>
 			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>../../Kvazaar.Veek-System/1.0/sw_Accelerated/Makefile</ipxact:name>
+				<ipxact:fileType user="makefile">user</ipxact:fileType>
+			</ipxact:file>
 		</ipxact:fileSet>
 		<ipxact:fileSet>
 			<ipxact:name>Veek-System_Kvazaar_0_headers</ipxact:name>
 			<ipxact:group>sourceFiles</ipxact:group>
 			<ipxact:file>
 				<ipxact:name>../../Kvazaar.Veek-System/1.0/sw_Veek-System/Kvazaar_0</ipxact:name>
+				<ipxact:fileType user="makefile">user</ipxact:fileType>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>../../Kvazaar.Veek-System/1.0/sw_Accelerated/Kvazaar_0</ipxact:name>
 				<ipxact:fileType user="makefile">user</ipxact:fileType>
 			</ipxact:file>
 		</ipxact:fileSet>
