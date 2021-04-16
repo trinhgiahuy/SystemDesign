@@ -1,6 +1,8 @@
 INCLUDE ANSWERS IN HERE
 
 1. What is the most significant change in the profiling picture compared to the previous exercises?
+- The executing time used within the some function such as kvz_search_lcu,kvz_search_intra_cu which used to encounter for a large amount of time
+  in previous profiling exercise. This profiling picture does not contain kvz_intra_predict and kvz_angular_pred_generic function.
 
 2. Fill the below table with performance measurements, using the parameters of the corresponding row.
 
