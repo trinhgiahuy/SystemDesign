@@ -1,6 +1,6 @@
 QP=24
 THREADS=2
-CAMERA_MODE=camera_high
+CAMERA_MODE=camera_low
 RESOLUTION=400x240
 
 ENCODER="Kvazaar_0 -i $CAMERA_MODE -o - --input-res $RESOLUTION --no-rdoq --no-sao --no-deblock \
