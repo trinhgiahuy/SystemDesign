@@ -1,31 +1,32 @@
 INCLUDE ANSWERS IN HERE
 
 1. What is the most significant change in the profiling picture compared to the previous exercises?
-- The executing time used within the some function such as kvz_search_lcu,kvz_search_intra_cu which used to encounter for a large amount of time
-  in previous profiling exercise. This profiling picture does not contain kvz_intra_predict and kvz_angular_pred_generic function.
+- The function kvz_intra_recon_lcu_luma executing most of the time used within it (50.08%) comparing to function kvz_search_cu_intra (59.59%) in the previous profling picture. In addition,the executing time of function kvz_quantize_residual_trskip has increase significantly while this number decrease in function kvz_intra_predict. This profiling picture comprise some new functions such as kvz_videoframe_compute_psnr and kvz_threadqueue_waitfor. 	 
 
 2. Fill the below table with performance measurements, using the parameters of the corresponding row.
 
 # RESOLUTION   THREADS   QP   LATENCY (ms)   FPS
 ##################################################
-# 800x480      2         24   			2.8
-# 800x480      1         24 			1.6  
-# 800x480      2         37   			3.2
-# 800x480      1         37   			2.1
-# 400x240      2         24   
-# 400x240      1         24   
-# 400x240      2         37   
-# 400x240      1         37   
+# 800x480      2         24   	3900		2.8
+# 800x480      1         24 	5600		1.6  
+# 800x480      2         37   	3100		3.2
+# 800x480      1         37   	4700		2.1
+# 400x240      2         24   	1200		10
+# 400x240      1         24   	1900		5.5
+# 400x240      2         37   	1000		12
+# 400x240      1         37   	1300		8.0
 ##################################################
 
 3. Which parameters of the above table have the most significant impact on the performance of the system?
-   
+- The resolution of video play a most significant impact on the overall system performance. The less resolution used for streaming, the less latency and more FPS we could get.
+    
 4. Did you complete the bonus task? If you did, what is the significant change in quality of the video?
-   Missing watermark is not the answer.
+- No we did not.
 
 5. What was hard? What was easy?
+- The exercise instruction is quite clear and straightforward.However, this exercise requires our knowledge from all previous exercises to complete it successfully.
 
 6. Fill the used hours below, including answering questions and any downtime:
 
-    GROUP MEMBER 1:
-    GROUP MEMBER 2:
+    GROUP MEMBER 1: Quang 5:00
+    GROUP MEMBER 2: Huy   8:00
