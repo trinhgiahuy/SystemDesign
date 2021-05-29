@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014/ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>TUNI.fi</ipxact:vendor>
+	<ipxact:library>ip.swp.stack</ipxact:library>
+	<ipxact:name>Kvazaar_sim_support</ipxact:name>
+	<ipxact:version>1.0_student</ipxact:version>
+	<ipxact:model>
+		<ipxact:views>
+			<ipxact:view>
+				<ipxact:name>untimed_simulation</ipxact:name>
+				<ipxact:description>Used to build Kvazaar for untimed simulation.</ipxact:description>
+				<ipxact:componentInstantiationRef>untimed_simulation_sw_component_instantiation</ipxact:componentInstantiationRef>
+			</ipxact:view>
+			<ipxact:view>
+				<ipxact:name>sw_timed_simulation</ipxact:name>
+				<ipxact:componentInstantiationRef>sw_timed_simulation_sw_component_instantiation</ipxact:componentInstantiationRef>
+			</ipxact:view>
+			<ipxact:view>
+				<ipxact:name>hw_timed_simulation</ipxact:name>
+				<ipxact:componentInstantiationRef>hw_timed_simulation_sw_component_instantiation</ipxact:componentInstantiationRef>
+			</ipxact:view>
+			<ipxact:view>
+				<ipxact:name>hw_timed_simulation_wave_output</ipxact:name>
+				<ipxact:componentInstantiationRef>hw_timed_simulation_wave_output_sw_component_instantiation</ipxact:componentInstantiationRef>
+			</ipxact:view>
+		</ipxact:views>
+		<ipxact:instantiations>
+			<ipxact:componentInstantiation>
+				<ipxact:name>untimed_simulation_sw_component_instantiation</ipxact:name>
+				<ipxact:defaultFileBuilder>
+					<ipxact:fileType>cppSource</ipxact:fileType>
+					<ipxact:command></ipxact:command>
+					<ipxact:flags>-Werror -Wall -Wtype-limits -Wvla -lrt -lm -pthread -O2 -O3  -I$(SYSTEMC_HOME)/include -lsystemc -DSIMULATION_UNTIMED -L. -L$(SYSTEMC_HOME)/lib -std=c++11</ipxact:flags>
+					<ipxact:replaceDefaultFlags>false</ipxact:replaceDefaultFlags>
+				</ipxact:defaultFileBuilder>
+				<ipxact:fileSetRef>
+					<ipxact:localName>untimed_src</ipxact:localName>
+				</ipxact:fileSetRef>
+				<ipxact:fileSetRef>
+					<ipxact:localName>untimed_headers</ipxact:localName>
+				</ipxact:fileSetRef>
+			</ipxact:componentInstantiation>
+			<ipxact:componentInstantiation>
+				<ipxact:name>sw_timed_simulation_sw_component_instantiation</ipxact:name>
+				<ipxact:defaultFileBuilder>
+					<ipxact:fileType>cppSource</ipxact:fileType>
+					<ipxact:command></ipxact:command>
+					<ipxact:flags>-Werror -Wall -Wtype-limits -Wvla -lrt -lm -pthread -O2 -O3 -I$(SYSTEMC_HOME)/include -lsystemc -DEXPLORATION_SW -L. -L$(SYSTEMC_HOME)/lib -std=c++11</ipxact:flags>
+					<ipxact:replaceDefaultFlags>false</ipxact:replaceDefaultFlags>
+				</ipxact:defaultFileBuilder>
+				<ipxact:fileSetRef>
+					<ipxact:localName>timed_src</ipxact:localName>
+				</ipxact:fileSetRef>
+				<ipxact:fileSetRef>
+					<ipxact:localName>timed_headers</ipxact:localName>
+				</ipxact:fileSetRef>
+			</ipxact:componentInstantiation>
+			<ipxact:componentInstantiation>
+				<ipxact:name>hw_timed_simulation_sw_component_instantiation</ipxact:name>
+				<ipxact:defaultFileBuilder>
+					<ipxact:fileType>cppSource</ipxact:fileType>
+					<ipxact:command></ipxact:command>
+					<ipxact:flags>-Werror -Wall -Wtype-limits -Wvla -lrt -lm -pthread -O2 -O3 -I$(SYSTEMC_HOME)/include -lsystemc -DEXPLORATION_HW -L. -L$(SYSTEMC_HOME)/lib -std=c++11</ipxact:flags>
+					<ipxact:replaceDefaultFlags>false</ipxact:replaceDefaultFlags>
+				</ipxact:defaultFileBuilder>
+				<ipxact:fileSetRef>
+					<ipxact:localName>timed_src</ipxact:localName>
+				</ipxact:fileSetRef>
+				<ipxact:fileSetRef>
+					<ipxact:localName>timed_headers</ipxact:localName>
+				</ipxact:fileSetRef>
+			</ipxact:componentInstantiation>
+			<ipxact:componentInstantiation>
+				<ipxact:name>hw_timed_simulation_wave_output_sw_component_instantiation</ipxact:name>
+				<ipxact:defaultFileBuilder>
+					<ipxact:fileType>cppSource</ipxact:fileType>
+					<ipxact:command></ipxact:command>
+					<ipxact:flags>-Werror -Wall -Wtype-limits -Wvla -lrt -lm -pthread -O2 -O3 -I$(SYSTEMC_HOME)/include -lsystemc -DEXPLORATION_HW -DOUTPUT_WAVE -L. -L$(SYSTEMC_HOME)/lib -std=c++11</ipxact:flags>
+					<ipxact:replaceDefaultFlags>false</ipxact:replaceDefaultFlags>
+				</ipxact:defaultFileBuilder>
+				<ipxact:fileSetRef>
+					<ipxact:localName>timed_src</ipxact:localName>
+				</ipxact:fileSetRef>
+				<ipxact:fileSetRef>
+					<ipxact:localName>timed_headers</ipxact:localName>
+				</ipxact:fileSetRef>
+			</ipxact:componentInstantiation>
+		</ipxact:instantiations>
+	</ipxact:model>
+	<ipxact:fileSets>
+		<ipxact:fileSet>
+			<ipxact:name>untimed_src</ipxact:name>
+			<ipxact:description>Files used to get support for untimed simulation model of hardware accelerated Kvazaar.</ipxact:description>
+			<ipxact:file>
+				<ipxact:name>untimed_src/supplement/camera_supplement.c</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>untimed_src/supplement/encmain_supplement.c</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>untimed_src/supplement/encoderstate_supplement.c</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>untimed_src/systemc/sc_kvazaar_ip_sub.c</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>untimed_src/systemc/sc_kvazaar.c</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>untimed_src/systemc/sc_main.c</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>untimed_src/supplement/search_intra_supplement.c</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>untimed_src/supplement/search_supplement.c</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+			</ipxact:file>
+			<ipxact:defaultFileBuilder>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:command>g++</ipxact:command>
+				<ipxact:flags>-DIP_ACC -I$(SYSTEMC_HOME)/include -lsystemc</ipxact:flags>
+				<ipxact:replaceDefaultFlags>false</ipxact:replaceDefaultFlags>
+			</ipxact:defaultFileBuilder>
+		</ipxact:fileSet>
+		<ipxact:fileSet>
+			<ipxact:name>untimed_headers</ipxact:name>
+			<ipxact:file>
+				<ipxact:name>untimed_src/supplement/camera_supplement.h</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>untimed_src/supplement/encmain_supplement.h</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>untimed_src/supplement/encoderstate_supplement.h</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>untimed_src/supplement/global_supplement.h</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>untimed_src/systemc/sc_kvazaar_ip_sub.h</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>untimed_src/systemc/sc_kvazaar.h</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>untimed_src/supplement/search_intra_supplement.h</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>untimed_src/supplement/search_supplement.h</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+		</ipxact:fileSet>
+		<ipxact:fileSet>
+			<ipxact:name>timed_src</ipxact:name>
+			<ipxact:file>
+				<ipxact:name>timed_src/supplement/camera_supplement.c</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>timed_src/supplement/encmain_supplement.c</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>timed_src/supplement/encoderstate_supplement.c</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>timed_src/ip_accelerator/ip_config.c</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>timed_src/ip_accelerator/ip_ctrl.c</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>timed_src/ip_accelerator/ip_get_ang_neg.c</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>timed_src/ip_accelerator/ip_get_ang_pos.c</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>timed_src/ip_accelerator/ip_get_ang_zero.c</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>timed_src/ip_accelerator/ip_get_dc.c</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>timed_src/ip_accelerator/ip_get_planar.c</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>timed_src/ip_accelerator/ip_sad.c</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>timed_src/systemc/sc_kvazaar_ip_sub.c</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>timed_src/systemc/sc_kvazaar.c</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>timed_src/systemc/sc_main.c</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>timed_src/supplement/search_intra_supplement.c</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>timed_src/supplement/search_supplement.c</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+			</ipxact:file>
+		</ipxact:fileSet>
+		<ipxact:fileSet>
+			<ipxact:name>timed_headers</ipxact:name>
+			<ipxact:file>
+				<ipxact:name>timed_src/supplement/camera_supplement.h</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>timed_src/supplement/encmain_supplement.h</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>timed_src/supplement/encoderstate_supplement.h</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>timed_src/systemc/exploration.h</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>timed_src/supplement/global_supplement.h</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>timed_src/ip_accelerator/ip_config.h</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>timed_src/ip_accelerator/ip_ctrl.h</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>timed_src/ip_accelerator/ip_get_ang_neg.h</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>timed_src/ip_accelerator/ip_get_ang_pos.h</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>timed_src/ip_accelerator/ip_get_ang_zero.h</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>timed_src/ip_accelerator/ip_get_dc.h</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>timed_src/ip_accelerator/ip_get_planar.h</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>timed_src/ip_accelerator/ip_global.h</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>timed_src/ip_accelerator/ip_sad.h</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>timed_src/systemc/sc_kvazaar_ip_sub.h</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>timed_src/systemc/sc_kvazaar.h</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>timed_src/supplement/search_intra_supplement.h</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>timed_src/supplement/search_supplement.h</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+		</ipxact:fileSet>
+	</ipxact:fileSets>
+	<ipxact:description>NOTICE:
+
+Assumes that enviroment variable SYSTEMC_HOME points to the SystemC installation directory!</ipxact:description>
+	<ipxact:vendorExtensions>
+		<kactus2:apiInterfaces>
+			<kactus2:apiInterface>
+				<ipxact:name>Sup2Main</ipxact:name>
+				<ipxact:description>Interface provided for the Kvazaar main component.</ipxact:description>
+				<kactus2:apiType vendor="TUNI.fi" library="ip.swp.api" name="Kvazaar_deps" version="1.0"/>
+				<kactus2:dependencyDirection>provider</kactus2:dependencyDirection>
+			</kactus2:apiInterface>
+		</kactus2:apiInterfaces>
+		<kactus2:author>Sjövall &amp; Virtanen</kactus2:author>
+		<kactus2:version>2,7,1110,0</kactus2:version>
+		<kactus2:kts_attributes>
+			<kactus2:kts_productHier>Flat</kactus2:kts_productHier>
+			<kactus2:kts_implementation>SW</kactus2:kts_implementation>
+			<kactus2:kts_firmness>Mutable</kactus2:kts_firmness>
+		</kactus2:kts_attributes>
+	</ipxact:vendorExtensions>
+</ipxact:component>

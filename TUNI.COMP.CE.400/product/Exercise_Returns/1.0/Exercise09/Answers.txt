@@ -1,0 +1,12 @@
+INCLUDE ANSWERS IN HERE
+
+1. What was hard? What was easy?
+- The hard part is that we have to recall all the exercises' main task and what steps we did by reading again all 
+  instruction and our gitlab commits which is quite long. However, this week exercise is a summary exercise, 
+  thus we don't need to get familiar with new task or knowledge.
+
+2. Fill the used hours below, including answering questions and any downtime:
+
+	Huy  : 8:00
+	Quang: 4:00
+	

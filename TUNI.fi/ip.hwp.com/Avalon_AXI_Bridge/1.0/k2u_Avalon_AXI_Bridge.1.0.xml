@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014/ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>TUNI.fi</ipxact:vendor>
+	<ipxact:library>ip.hwp.com</ipxact:library>
+	<ipxact:name>Avalon_AXI_Bridge</ipxact:name>
+	<ipxact:version>1.0</ipxact:version>
+	<ipxact:busInterfaces>
+		<ipxact:busInterface>
+			<ipxact:name>avalon</ipxact:name>
+			<ipxact:description>The Avalon end of the bridge.</ipxact:description>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="avalon_bus" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="avalon_bus.absDef" version="1.0"/>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:mirroredMaster/>
+			<ipxact:connectionRequired>false</ipxact:connectionRequired>
+			<ipxact:bitsInLau>8</ipxact:bitsInLau>
+			<ipxact:endianness>little</ipxact:endianness>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>axi</ipxact:name>
+			<ipxact:description>The AXI end of the bridge.</ipxact:description>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="axi3_bus" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="axi3_bus.absDef" version="1.0"/>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:mirroredSlave/>
+			<ipxact:connectionRequired>false</ipxact:connectionRequired>
+			<ipxact:bitsInLau>8</ipxact:bitsInLau>
+			<ipxact:endianness>little</ipxact:endianness>
+		</ipxact:busInterface>
+	</ipxact:busInterfaces>
+	<ipxact:channels>
+		<ipxact:channel>
+			<ipxact:name>avalon_2_axi</ipxact:name>
+			<ipxact:busInterfaceRef>
+				<ipxact:localName>avalon</ipxact:localName>
+			</ipxact:busInterfaceRef>
+			<ipxact:busInterfaceRef>
+				<ipxact:localName>axi</ipxact:localName>
+			</ipxact:busInterfaceRef>
+		</ipxact:channel>
+	</ipxact:channels>
+	<ipxact:model>
+		<ipxact:views>
+			<ipxact:view>
+				<ipxact:name>rtl</ipxact:name>
+				<ipxact:envIdentifier>::</ipxact:envIdentifier>
+				<ipxact:componentInstantiationRef>rtl</ipxact:componentInstantiationRef>
+			</ipxact:view>
+		</ipxact:views>
+		<ipxact:instantiations>
+			<ipxact:componentInstantiation>
+				<ipxact:name>rtl</ipxact:name>
+			</ipxact:componentInstantiation>
+		</ipxact:instantiations>
+	</ipxact:model>
+	<ipxact:description>This component represents wrapping of Avalon to AXI implicitly done in Qsys.</ipxact:description>
+	<ipxact:vendorExtensions>
+		<kactus2:kts_attributes>
+			<kactus2:kts_productHier>IP</kactus2:kts_productHier>
+			<kactus2:kts_implementation>HW</kactus2:kts_implementation>
+			<kactus2:kts_firmness>Mutable</kactus2:kts_firmness>
+		</kactus2:kts_attributes>
+	</ipxact:vendorExtensions>
+</ipxact:component>

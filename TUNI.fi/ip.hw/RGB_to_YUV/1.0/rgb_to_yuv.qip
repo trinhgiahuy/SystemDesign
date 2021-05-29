@@ -1,0 +1,4 @@
+set_global_assignment -name HEX_FILE [file join $::quartus(qip_path) R.hex]
+set_global_assignment -name HEX_FILE [file join $::quartus(qip_path) G.hex]
+set_global_assignment -name HEX_FILE [file join $::quartus(qip_path) B.hex]
+set_global_assignment -name VQM_FILE [file join $::quartus(qip_path) rgb_to_yuv.vqm]

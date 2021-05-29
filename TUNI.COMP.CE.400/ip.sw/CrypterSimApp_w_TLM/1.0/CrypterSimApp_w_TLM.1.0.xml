@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.tut.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>TUNI.COMP.CE.400</ipxact:vendor>
+	<ipxact:library>ip.sw</ipxact:library>
+	<ipxact:name>CrypterSimApp_w_TLM</ipxact:name>
+	<ipxact:version>1.0</ipxact:version>
+	<ipxact:model>
+		<ipxact:views>
+			<ipxact:view>
+				<ipxact:name>default</ipxact:name>
+				<ipxact:componentInstantiationRef>default_sw_component_instantiation</ipxact:componentInstantiationRef>
+			</ipxact:view>
+		</ipxact:views>
+		<ipxact:instantiations>
+			<ipxact:componentInstantiation>
+				<ipxact:name>default_sw_component_instantiation</ipxact:name>
+				<ipxact:defaultFileBuilder>
+					<ipxact:fileType>cppSource</ipxact:fileType>
+					<ipxact:command></ipxact:command>
+					<ipxact:flags>-L$(SYSTEMC_HOME)/lib -lsystemc  -std=c++11</ipxact:flags>
+					<ipxact:replaceDefaultFlags>false</ipxact:replaceDefaultFlags>
+				</ipxact:defaultFileBuilder>
+				<ipxact:fileSetRef>
+					<ipxact:localName>src</ipxact:localName>
+				</ipxact:fileSetRef>
+			</ipxact:componentInstantiation>
+		</ipxact:instantiations>
+	</ipxact:model>
+	<ipxact:fileSets>
+		<ipxact:fileSet>
+			<ipxact:name>src</ipxact:name>
+			<ipxact:file>
+				<ipxact:name>header.hh</ipxact:name>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>79dd560260c210cb79e09efdbf8d66f1532f2495</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>main.cpp</ipxact:name>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>b8590967ccd1bb81db116e6ebf5ce7fcd0525e90</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>process.hh</ipxact:name>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>1657b9ea0c8562fcd95056faa7e861ad8bfd9028</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>process1.cpp</ipxact:name>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>43d120622ce8b1dcc1d4cf5f0b4190a74d6a23c8</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>process2.cpp</ipxact:name>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>70c93c8667ba8c11ddb62b97f2852a2036835b18</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>process3.cpp</ipxact:name>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>d1a86fbc9f3903ad42719f77f2acb35e2c301ca6</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>process4.cpp</ipxact:name>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>6fb39bae69eb55040777aef1302703f3ff526e3b</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>test_bench.cpp</ipxact:name>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>0d49ce20b01d66f9fad25dfae09dacb835128018</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>test_bench.hh</ipxact:name>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>2225bfafa5e7ac4c766448a4b5586723a67f9124</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>value1.cpp</ipxact:name>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>eb8f5109029bc8c13531f40f461b7e9a3a283a78</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>value1.hh</ipxact:name>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>1edf4391375755bc0fae84eb8811fb62902c627a</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:defaultFileBuilder>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:command></ipxact:command>
+				<ipxact:flags>-I$(SYSTEMC_HOME)/include</ipxact:flags>
+				<ipxact:replaceDefaultFlags>false</ipxact:replaceDefaultFlags>
+			</ipxact:defaultFileBuilder>
+		</ipxact:fileSet>
+	</ipxact:fileSets>
+	<ipxact:vendorExtensions>
+		<kactus2:fileDependencies>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>test_bench.cpp</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/algorithm</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>test_bench.cpp</kactus2:fileRef1>
+				<kactus2:fileRef2>test_bench.hh</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>test_bench.hh</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/systemc.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>test_bench.hh</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/header.hh</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>test_bench.hh</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/vector</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>header.hh</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/systemc.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>header.hh</kactus2:fileRef1>
+				<kactus2:fileRef2>value1.hh</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>header.hh</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/string</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>main.cpp</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/systemc.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>main.cpp</kactus2:fileRef1>
+				<kactus2:fileRef2>header.hh</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>main.cpp</kactus2:fileRef1>
+				<kactus2:fileRef2>process.hh</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>main.cpp</kactus2:fileRef1>
+				<kactus2:fileRef2>test_bench.hh</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>process.hh</kactus2:fileRef1>
+				<kactus2:fileRef2>header.hh</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>process.hh</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/systemc.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>process1.cpp</kactus2:fileRef1>
+				<kactus2:fileRef2>process.hh</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>process2.cpp</kactus2:fileRef1>
+				<kactus2:fileRef2>process.hh</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>process3.cpp</kactus2:fileRef1>
+				<kactus2:fileRef2>process.hh</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>process4.cpp</kactus2:fileRef1>
+				<kactus2:fileRef2>process.hh</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>value1.cpp</kactus2:fileRef1>
+				<kactus2:fileRef2>header.hh</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>value1.hh</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/systemc.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+		</kactus2:fileDependencies>
+		<kactus2:version>2,8,49,0</kactus2:version>
+		<kactus2:kts_attributes>
+			<kactus2:kts_productHier>Flat</kactus2:kts_productHier>
+			<kactus2:kts_implementation>SW</kactus2:kts_implementation>
+			<kactus2:kts_firmness>Mutable</kactus2:kts_firmness>
+		</kactus2:kts_attributes>
+	</ipxact:vendorExtensions>
+</ipxact:component>

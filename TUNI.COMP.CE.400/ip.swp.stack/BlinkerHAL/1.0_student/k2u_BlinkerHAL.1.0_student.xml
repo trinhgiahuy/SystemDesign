@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014/ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>TUNI.COMP.CE.400</ipxact:vendor>
+	<ipxact:library>ip.swp.stack</ipxact:library>
+	<ipxact:name>BlinkerHAL</ipxact:name>
+	<ipxact:version>1.0_student</ipxact:version>
+	<ipxact:model>
+		<ipxact:views>
+			<ipxact:view>
+				<ipxact:name>default</ipxact:name>
+				<ipxact:description>Default software view referring to all source files.</ipxact:description>
+				<ipxact:componentInstantiationRef>default_sw_component_instantiation</ipxact:componentInstantiationRef>
+			</ipxact:view>
+		</ipxact:views>
+		<ipxact:instantiations>
+			<ipxact:componentInstantiation>
+				<ipxact:name>default_sw_component_instantiation</ipxact:name>
+				<ipxact:defaultFileBuilder>
+					<ipxact:fileType>cSource</ipxact:fileType>
+					<ipxact:command></ipxact:command>
+					<ipxact:flags>-lrt</ipxact:flags>
+					<ipxact:replaceDefaultFlags>false</ipxact:replaceDefaultFlags>
+				</ipxact:defaultFileBuilder>
+				<ipxact:fileSetRef>
+					<ipxact:localName>src</ipxact:localName>
+				</ipxact:fileSetRef>
+			</ipxact:componentInstantiation>
+		</ipxact:instantiations>
+	</ipxact:model>
+	<ipxact:fileSets>
+		<ipxact:fileSet>
+			<ipxact:name>src</ipxact:name>
+			<ipxact:description>Source codes of the HAL needed for blinker application.</ipxact:description>
+			<ipxact:file>
+				<ipxact:name>blinker_hal.c</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType user="padsCAEDecal">user</ipxact:fileType>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>blinker_hal.h</ipxact:name>
+				<ipxact:fileType>cSource</ipxact:fileType>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+			</ipxact:file>
+		</ipxact:fileSet>
+	</ipxact:fileSets>
+	<ipxact:vendorExtensions>
+		<kactus2:apiInterfaces>
+			<kactus2:apiInterface>
+				<ipxact:name>APP_API</ipxact:name>
+				<kactus2:apiType vendor="TUNI.COMP.CE.400" library="ip.swp.api" name="BlinkerHALAPI" version="1.0"/>
+				<kactus2:dependencyDirection>provider</kactus2:dependencyDirection>
+			</kactus2:apiInterface>
+			<kactus2:apiInterface>
+				<ipxact:name>SWP_API</ipxact:name>
+				<kactus2:apiType vendor="TUNI.fi" library="ip.swp.api" name="FPGAHALAPI" version="1.0"/>
+				<kactus2:dependencyDirection>requester</kactus2:dependencyDirection>
+			</kactus2:apiInterface>
+		</kactus2:apiInterfaces>
+		<kactus2:fileDependencies>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>blinker_hAL.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/stdio.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>blinker_hAL.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/stdlib.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>blinker_hAL.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/string.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>blinker_hAL.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/time.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>blinker_hAL.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/stdint.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>blinker_hAL.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/sys/mman.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>blinker_hAL.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/fcntl.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>blinker_hAL.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/unistd.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>blinker_hAL.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/stdio.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>blinker_hAL.c</kactus2:fileRef1>
+				<kactus2:fileRef2>fpga_map.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>blinker_hAL.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/blinker_hal.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>blinker_hAL.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/stdint.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>fpga_map.c</kactus2:fileRef1>
+				<kactus2:fileRef2>fpga_map.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>fpga_map.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/stdio.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>fpga_map.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/sys/mman.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>fpga_map.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/fcntl.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>fpga_map.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/unistd.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>fpga_map.h</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/stdint.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+		</kactus2:fileDependencies>
+		<kactus2:kts_attributes>
+			<kactus2:kts_productHier>Flat</kactus2:kts_productHier>
+			<kactus2:kts_implementation>SW</kactus2:kts_implementation>
+			<kactus2:kts_firmness>Mutable</kactus2:kts_firmness>
+		</kactus2:kts_attributes>
+	</ipxact:vendorExtensions>
+</ipxact:component>

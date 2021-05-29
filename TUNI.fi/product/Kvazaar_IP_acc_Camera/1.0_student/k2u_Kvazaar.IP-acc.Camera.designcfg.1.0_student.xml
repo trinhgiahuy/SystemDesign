@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:designConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.tut.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>TUNI.fi</ipxact:vendor>
+	<ipxact:library>product</ipxact:library>
+	<ipxact:name>Kvazaar_IP_acc_Camera.designcfg</ipxact:name>
+	<ipxact:version>1.0_student</ipxact:version>
+	<ipxact:designRef vendor="TUNI.fi" library="product" name="Kvazaar_IP_acc_Camera.design" version="1.0_student"/>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>CCD_Configer</ipxact:instanceName>
+		<ipxact:view viewRef="flat"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>CCD_Configer_I2C</ipxact:instanceName>
+		<ipxact:view viewRef="flat"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>CCD_Capture</ipxact:instanceName>
+		<ipxact:view viewRef="flat"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>Kvazaar_QSYS</ipxact:instanceName>
+		<ipxact:view viewRef="flat"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>Clock_Reset</ipxact:instanceName>
+		<ipxact:view viewRef="flat"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>IP_SAD_Accelerator</ipxact:instanceName>
+		<ipxact:view viewRef="flat"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>RAW_to_RGB</ipxact:instanceName>
+		<ipxact:view viewRef="flat"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>RGB_to_YUV</ipxact:instanceName>
+		<ipxact:view viewRef="flat"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>LTP_Controller</ipxact:instanceName>
+		<ipxact:view viewRef="flat"/>
+	</ipxact:viewConfiguration>
+	<ipxact:vendorExtensions>
+		<kactus2:configurableElementValues>
+			<kactus2:componentInstance>
+				<kactus2:uuid>{3ba6efd3-1a17-4629-9db0-591c6060375c}</kactus2:uuid>
+				<kactus2:configurableElementValue referenceId="uuid_1398bb60_4284_4a0d_8c89_2b235f8abd2d" value="32"/>
+				<kactus2:configurableElementValue referenceId="uuid_139b4ae6_fab6_408b_8635_c466dbf0c333" value="16"/>
+				<kactus2:configurableElementValue referenceId="uuid_d7ff7b71_102a_45da_8a17_5f5e39f193d8" value="16"/>
+			</kactus2:componentInstance>
+			<kactus2:componentInstance>
+				<kactus2:uuid>{d8112da8-73c5-414f-810a-1b3520f97710}</kactus2:uuid>
+				<kactus2:configurableElementValue referenceId="uuid_b95ad623_54c1_4036_b8dd_243c191e53d4" value="75000000"/>
+			</kactus2:componentInstance>
+		</kactus2:configurableElementValues>
+		<kactus2:version>2,8,49,0</kactus2:version>
+		<kactus2:kts_attributes>
+			<kactus2:kts_implementation>HW</kactus2:kts_implementation>
+		</kactus2:kts_attributes>
+	</ipxact:vendorExtensions>
+</ipxact:designConfiguration>

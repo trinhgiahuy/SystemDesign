@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ipxact:designConfiguration xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ipxact:vendor>TUNI.fi</ipxact:vendor>
+  <ipxact:library>product</ipxact:library>
+  <ipxact:name>Kvazaar.Simulation-System.sysdesigncfg</ipxact:name>
+  <ipxact:version>1.0_student</ipxact:version>
+  <ipxact:designRef vendor="TUNI.fi" library="product" name="Kvazaar.Simulation-System.sysdesign" version="1.0_student" />
+  <ipxact:viewConfiguration>
+    <ipxact:instanceName>Kvazaar_0</ipxact:instanceName>
+    <ipxact:view viewRef="untimed_simulation" />
+  </ipxact:viewConfiguration>
+  <ipxact:viewConfiguration>
+    <ipxact:instanceName>Kvazaar_sim_support_0</ipxact:instanceName>
+    <ipxact:view viewRef="untimed_simulation" />
+  </ipxact:viewConfiguration>
+  <ipxact:viewConfiguration>
+    <ipxact:instanceName>x86_64_0</ipxact:instanceName>
+    <ipxact:view viewRef="g++-tool-chain" />
+  </ipxact:viewConfiguration>
+  <ipxact:vendorExtensions xmlns:kactus2="http://funbase.cs.TUNI.fi/">
+    <kactus2:kts_attributes>
+      <kactus2:kts_implementation>SYS</kactus2:kts_implementation>
+    </kactus2:kts_attributes>
+    <kactus2:version>2,7,1111,0</kactus2:version>
+  </ipxact:vendorExtensions>
+</ipxact:designConfiguration>

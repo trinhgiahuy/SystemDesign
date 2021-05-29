@@ -1,0 +1,148 @@
+INCLUDE ANSWERS IN HERE
+
+SOME OF THE QUESTIONS AND ANSWERS ARE FAIRLY SPECULATIVE, AS THE SYSTEM IS
+ESSENTIALLY A GREYBOX: THERE ARE DIAGRAMS, SPECIFICATIONS, AND KNOWN PRACTICES,
+BUT THE PRECISE IMPLEMENTATION IS OBSCURE.
+
+*** TRANSFER RATES ***
+
+1. Insert all benchmarking results here.
+
+*** Application ***
+
+# Meas. #### WRITING ######### (U) USER SPACE (MB/s) ### (K) KERNEL SPACE (MB/s) #
+#  1    #  8 BIT LOCAL ARRAY:           204.84                        -          #
+#  2    # 16 BIT LOCAL ARRAY:           654.31                        -          #
+#  3    # 32 BIT LOCAL ARRAY:          1183.71                        -          #
+#  4    #  8 BIT ONCHIP ON FPGA:          6.70                      55.27        #
+#  5    # 16 BIT ONCHIP ON FPGA:         13.51                     148.75        #
+#  6    # 32 BIT ONCHIP ON FPGA:         26.79                     205.70        #
+#  7    #  8 BIT MAPPED ARRAY:            8.98                     196.49        #
+#  8    # 16 BIT MAPPED ARRAY:           17.96                     242.17        #
+#  9    # 32 BIT MAPPED ARRAY:           63.82                     258.52        #
+#  10   # 64 BIT DMA WRITER:               -                       416.89        #
+# Meas. #### READING ######### (U) USER SPACE (MB/s) ### (K) KERNEL SPACE (MB/s) #
+#  11   #  8 BIT LOCAL ARRAY:           215.93                        -          #
+#  12   # 16 BIT LOCAL ARRAY:           353.83                        -          #
+#  13   # 32 BIT LOCAL ARRAY:           499.52                        -          #
+#  14   #  8 BIT ONCHIP ON FPGA:          7.32                      60.67        #
+#  15   # 16 BIT ONCHIP ON FPGA:         14.63                     100.62        #
+#  16   # 32 BIT ONCHIP ON FPGA:         29.17                     123.97        #
+#  17   #  8 BIT MAPPED ARRAY:            7.43                     104.33        #
+#  18   # 16 BIT MAPPED ARRAY:           14.85                     127.24        #
+#  19   # 32 BIT MAPPED ARRAY:           29.57                     143.40        #
+#  20   # 64 BIT DMA READER:               -                       377.78        #
+##################################################################################
+
+2. How fast were the DMA write and read measured by the application and how fast were they actually (show calculations and differences)? Give a reason for this?
+
+	*** Signal Tap ***
+	The amount of transferred data is 4096 B ~ 4096/1024 kB = 4 kB ~ 4/1024 MB.
+	+ Writing
+		The clock cycles it takes from the first awvalid (21) to the last wvalid (803) is 782 cycles.
+		=> DMA writing speed: (4/1024 MB)/(782 cycles * (1/100 000 000) s/cycle) ~ 499.52 MB/s
+	+ Reading:
+		The clock cycles it takes from the first arvalid (24) to the last rvalid (934) is 910 cycles.
+		=> DMA reading speed: (4/1024 MB)/(910 cycles * (1/100 000 000) s/cycle) ~ 429.26 MB/s
+
+	WRITE ON SIGNAL TAP: 499.52 MB/s
+	DIFFERENCE TO APPLICATION MEASUREMENT: 82.63 MB/s
+
+	READ ON SIGNAL TAP: 429.26 MB/s
+	DIFFERENCE TO APPLICATION MEASUREMENT: 51.48 MB/s
+	
+	REASON: It may be caused due to the bottle neck of bus/interface while transmitting data to AXI_DMA_tester.
+
+3. Did you mark the measurement points to the hardware designs as instructed?
+
+Yes we did.
+
+*** MEMORY ***
+
+4. How much memory the operating system on ARM sees available? How much the ARM processor really has?
+
+	MEMORY FOR ARM: 1 GiB - 772796 kB = 275780 kB ~ 
+	MEMORY FOR OPERATING SYSTEM: 772796 kB
+
+*** MIPS ***
+
+5. What was the calculated MIPS of the FPGA and the virtual machine CPU?
+INSERT THE COMPLETE CALCULATIONS! TELL THE USED FREQUENCY OF THE CPU!
+
+	FPGA MIPS: 112 DSPs * 287 MHz/DSP ~ 32144 MIPS
+	VIRTUAL MACHINE CPU MIPS: 1 * (3.4 GHz / 3) ~ 1133.333 MIPS (base clock)
+
+6. What was the measured MIPS of the ARM CPU and the virtual machine CPU?
+
+	MEASURED ARM MIPS: 519.485643 MIPS
+	MEASURED VIRTUAL MACHINE CPU MIPS: 1162.174035 MIPS
+
+7. For CPUs, MIPS was measured in this exercise. Why this gives us a value differing from calculated MIPS?
+
+The difference is caused by using unexact CPU frequency.
+
+8. What is probably the most important thing that the used MIPS measurements did not take into account?
+HINT: We told you the answer in the instructions, but we are just making sure you understand.
+
+The measurements did not take the possible memory bottle neck into account.
+
+*** SPECULATIVE FRAME RATE ***
+
+9. How much were the speculative frame rates?
+INSERT THE COMPLETE CALCULATIONS! TELL THE USED FRAME RATE!
+
+relation_acc = ( ARM MIPS * 0.4 + FPGA MIPS * 0.6 ) / VM MIPS = (519.485643*0.4 + 32144*0.6)/1162.174035 = 16.774
+relation_sw  = ARM MIPS / VM MIPS = 519.485643 / 1162.174035 = 0.447
+
+	HARDWARE ACCELERATED FPS: VM frame rate * relation_acc = 1.15 * 16.774 = 19.29 
+	PURE SOFTWARE FPS: VM frame rate * relation_sw = 1.15 * 0.447 = 0.51
+
+10. Why did we assume that roughly 60% of the execution was on the FPGA rather than the ARM CPU?
+HINT: Look at the profiling results of exercise 1, or instructions of exercise 3.
+
+Because the three identified functions in ex1/q11 are now accelerated with FPGA and they take about 62.55% of used time.
+	
+*** BOGOMIPS ***
+
+11. What was the BogoMIPS of the ARM CPU andthe virtual machine CPU?
+
+	ARM BOGO MIPS: 1594.16
+	VIRTUAL MACHINE BOGO MIPS: 6816.01
+	
+12. Why BogoMIPS is not so good measurement for performance? Find out if you do not know.
+
+"Bogo" comes from "bogus", which is some fake thing. BogoMIPS calculates how fast a busy-loop runs on a computer.
+It does not take into account the parallelism of the processor, and the loop is not well-defined.
+Therefore, BogoMIPS is not reliable to measure performance.
+	
+*** KVAZAAR ON ARM ***
+	
+13. What was the processor utilization percentage and the memory usage of Kvazaar?
+
+	PROCESSOR UTILIZATION: 117.50%
+	MEMORY USAGE: 35016 kB
+
+14. How Kvazaar performed on the ARM CPU in comparison to work station? Do the profiling pictures look similar?
+HINT: Compare the FPS to earlier exercises, since the CPU times are not comparable because of the frame limit.
+
+	NON-PROFILING FPS: 0.08
+	DIFFERENCE TO WORKSTATION: ( NON-PROFILING FPS / WORKSTATION FPS ) = 0.08 / 1.15 ~ 6.96%
+	PROFILING FPS: 0.06
+	ANALYSIS ON PICTURES: The profiling pictures look almost similar except some small differences in function connections
+
+15. How Kvazaar performed in comparison to the speculated software frame rate? What could be a reason for the difference?
+
+	NON-PROFILING FPS: 0.08
+	SPECULATED PURE SOFTWARE FPS: 0.51
+	REASON: The MIPS measurement did not take into account the memory bottleneck as answered in question 8.
+		Therefore, the speculated FPS is not reliable and does not match the actual performance.
+
+16. What was hard? What was easy?
+
+The exercise instruction is straightforward, and following that, we manage to do the exercise.
+However, the MIPS part and address spaces are still confusing.
+
+17. Fill the used hours below, including answering questions and any downtime:
+
+	Quang: <04:30>
+	Huy  : <04:30>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ipxact:design xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ipxact:vendor>TUNI.fi</ipxact:vendor>
+  <ipxact:library>board</ipxact:library>
+  <ipxact:name>PC.hierarchical.design</ipxact:name>
+  <ipxact:version>1.0</ipxact:version>
+  <ipxact:componentInstances>
+    <ipxact:componentInstance>
+      <ipxact:instanceName>x86_64_0</ipxact:instanceName>
+      <ipxact:displayName />
+      <ipxact:description />
+      <ipxact:componentRef vendor="TUNI.fi" library="ip.hwp.cpu" name="x86-64" version="1.0" />
+      <ipxact:vendorExtensions xmlns:kactus2="http://funbase.cs.TUNI.fi/">
+        <kactus2:position x="130" y="60" />
+        <kactus2:propertyValues />
+        <kactus2:uuid>{a76f2486-cf2e-4899-b5f8-399ccbeb8e33}</kactus2:uuid>
+      </ipxact:vendorExtensions>
+    </ipxact:componentInstance>
+  </ipxact:componentInstances>
+  <ipxact:vendorExtensions xmlns:kactus2="http://funbase.cs.TUNI.fi/">
+    <kactus2:columnLayout>
+      <kactus2:column name="Components" contentType="2" allowedItems="2" minWidth="259" width="259" />
+    </kactus2:columnLayout>
+    <kactus2:routes />
+  </ipxact:vendorExtensions>
+</ipxact:design>

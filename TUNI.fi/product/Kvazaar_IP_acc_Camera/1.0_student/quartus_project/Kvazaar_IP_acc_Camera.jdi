@@ -1,0 +1,16 @@
+<sld_project_info>
+  <project>
+    <hash md5_digest_80b="8ef89d73bfa84467260d"/>
+  </project>
+  <file_info>
+    <file device="5CSXFC6D6F31C6" path="Kvazaar_IP_acc_Camera.sof" usercode="0xFFFFFFFF"/>
+  </file_info>
+  <sld_infos>
+    <sld_info hpath="Kvazaar_QSYS:Kvazaar_QSYS" name="Kvazaar_QSYS">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME Kvazaar_QSYS HAS_SOPCINFO 1 GENERATION_ID 1618130412"/>
+      </assignment_values>
+      <parameters/>
+    </sld_info>
+  </sld_infos>
+</sld_project_info>

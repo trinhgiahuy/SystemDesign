@@ -1,0 +1,296 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'Clock_Reset|alterapll2_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -1.563
+TNS   : -9.826
+
+Type  : Slow 1100mV 85C Model Setup 'Kvazaar_QSYS:Kvazaar_QSYS|Kvazaar_QSYS_hps_0:hps_0|Kvazaar_QSYS_hps_0_hps_io:hps_io|Kvazaar_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 1.730
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'Clock_Reset|alterapll2_inst|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 22.420
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'Kvazaar_QSYS:Kvazaar_QSYS|Kvazaar_QSYS_hps_0:hps_0|Kvazaar_QSYS_hps_0_hps_io:hps_io|Kvazaar_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.143
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'Clock_Reset|alterapll2_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.212
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'Clock_Reset|alterapll2_inst|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.308
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'Kvazaar_QSYS:Kvazaar_QSYS|Kvazaar_QSYS_hps_0:hps_0|Kvazaar_QSYS_hps_0_hps_io:hps_io|Kvazaar_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 3.375
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'Clock_Reset|alterapll2_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 4.221
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'Clock_Reset|alterapll2_inst|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 24.341
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'Kvazaar_QSYS:Kvazaar_QSYS|Kvazaar_QSYS_hps_0:hps_0|Kvazaar_QSYS_hps_0_hps_io:hps_io|Kvazaar_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.382
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'Clock_Reset|alterapll2_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.578
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'Clock_Reset|alterapll2_inst|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.591
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'Clock_Reset|alterapll2_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 0.606
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'Kvazaar_QSYS:Kvazaar_QSYS|Kvazaar_QSYS_hps_0:hps_0|Kvazaar_QSYS_hps_0_hps_io:hps_io|Kvazaar_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|pll_write_clk_dq_write_clk'
+Slack : 0.608
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'Kvazaar_QSYS:Kvazaar_QSYS|Kvazaar_QSYS_hps_0:hps_0|Kvazaar_QSYS_hps_0_hps_io:hps_io|Kvazaar_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.623
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'Clock_Reset|alterapll2_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 5.432
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : 9.900
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'Clock_Reset|alterapll2_inst|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 13.913
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'Clock_Reset|alterapll2_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -1.684
+TNS   : -11.268
+
+Type  : Slow 1100mV 0C Model Setup 'Kvazaar_QSYS:Kvazaar_QSYS|Kvazaar_QSYS_hps_0:hps_0|Kvazaar_QSYS_hps_0_hps_io:hps_io|Kvazaar_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 1.727
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'Clock_Reset|alterapll2_inst|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 22.736
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'Clock_Reset|alterapll2_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.082
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'Kvazaar_QSYS:Kvazaar_QSYS|Kvazaar_QSYS_hps_0:hps_0|Kvazaar_QSYS_hps_0_hps_io:hps_io|Kvazaar_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.162
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'Clock_Reset|alterapll2_inst|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.289
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'Kvazaar_QSYS:Kvazaar_QSYS|Kvazaar_QSYS_hps_0:hps_0|Kvazaar_QSYS_hps_0_hps_io:hps_io|Kvazaar_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 3.468
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'Clock_Reset|alterapll2_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 4.484
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'Clock_Reset|alterapll2_inst|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 24.610
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'Kvazaar_QSYS:Kvazaar_QSYS|Kvazaar_QSYS_hps_0:hps_0|Kvazaar_QSYS_hps_0_hps_io:hps_io|Kvazaar_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.373
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'Clock_Reset|alterapll2_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.529
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'Clock_Reset|alterapll2_inst|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.529
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'Clock_Reset|alterapll2_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 0.606
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'Kvazaar_QSYS:Kvazaar_QSYS|Kvazaar_QSYS_hps_0:hps_0|Kvazaar_QSYS_hps_0_hps_io:hps_io|Kvazaar_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|pll_write_clk_dq_write_clk'
+Slack : 0.613
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'Kvazaar_QSYS:Kvazaar_QSYS|Kvazaar_QSYS_hps_0:hps_0|Kvazaar_QSYS_hps_0_hps_io:hps_io|Kvazaar_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.630
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'Clock_Reset|alterapll2_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 5.412
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : 9.926
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'Clock_Reset|alterapll2_inst|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 13.893
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'Kvazaar_QSYS:Kvazaar_QSYS|Kvazaar_QSYS_hps_0:hps_0|Kvazaar_QSYS_hps_0_hps_io:hps_io|Kvazaar_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 2.110
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'Clock_Reset|alterapll2_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 4.717
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'Clock_Reset|alterapll2_inst|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 24.824
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'Kvazaar_QSYS:Kvazaar_QSYS|Kvazaar_QSYS_hps_0:hps_0|Kvazaar_QSYS_hps_0_hps_io:hps_io|Kvazaar_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.084
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'Clock_Reset|alterapll2_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.133
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'Clock_Reset|alterapll2_inst|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.177
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'Kvazaar_QSYS:Kvazaar_QSYS|Kvazaar_QSYS_hps_0:hps_0|Kvazaar_QSYS_hps_0_hps_io:hps_io|Kvazaar_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 3.727
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'Clock_Reset|alterapll2_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 7.772
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'Clock_Reset|alterapll2_inst|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 26.162
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'Clock_Reset|alterapll2_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.306
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'Clock_Reset|alterapll2_inst|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.346
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'Kvazaar_QSYS:Kvazaar_QSYS|Kvazaar_QSYS_hps_0:hps_0|Kvazaar_QSYS_hps_0_hps_io:hps_io|Kvazaar_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.455
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'Clock_Reset|alterapll2_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 0.606
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'Kvazaar_QSYS:Kvazaar_QSYS|Kvazaar_QSYS_hps_0:hps_0|Kvazaar_QSYS_hps_0_hps_io:hps_io|Kvazaar_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|pll_write_clk_dq_write_clk'
+Slack : 0.883
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'Kvazaar_QSYS:Kvazaar_QSYS|Kvazaar_QSYS_hps_0:hps_0|Kvazaar_QSYS_hps_0_hps_io:hps_io|Kvazaar_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.891
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'Clock_Reset|alterapll2_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 5.549
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : 9.643
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'Clock_Reset|alterapll2_inst|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 14.033
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'Kvazaar_QSYS:Kvazaar_QSYS|Kvazaar_QSYS_hps_0:hps_0|Kvazaar_QSYS_hps_0_hps_io:hps_io|Kvazaar_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 2.110
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'Clock_Reset|alterapll2_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 5.234
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'Clock_Reset|alterapll2_inst|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 25.511
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'Clock_Reset|alterapll2_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.065
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'Kvazaar_QSYS:Kvazaar_QSYS|Kvazaar_QSYS_hps_0:hps_0|Kvazaar_QSYS_hps_0_hps_io:hps_io|Kvazaar_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.077
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'Clock_Reset|alterapll2_inst|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.164
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'Kvazaar_QSYS:Kvazaar_QSYS|Kvazaar_QSYS_hps_0:hps_0|Kvazaar_QSYS_hps_0_hps_io:hps_io|Kvazaar_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 3.825
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'Clock_Reset|alterapll2_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 8.175
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'Clock_Reset|alterapll2_inst|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 26.657
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'Clock_Reset|alterapll2_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.274
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'Clock_Reset|alterapll2_inst|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.290
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'Kvazaar_QSYS:Kvazaar_QSYS|Kvazaar_QSYS_hps_0:hps_0|Kvazaar_QSYS_hps_0_hps_io:hps_io|Kvazaar_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.428
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'Clock_Reset|alterapll2_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 0.606
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'Kvazaar_QSYS:Kvazaar_QSYS|Kvazaar_QSYS_hps_0:hps_0|Kvazaar_QSYS_hps_0_hps_io:hps_io|Kvazaar_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|pll_write_clk_dq_write_clk'
+Slack : 0.887
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'Kvazaar_QSYS:Kvazaar_QSYS|Kvazaar_QSYS_hps_0:hps_0|Kvazaar_QSYS_hps_0_hps_io:hps_io|Kvazaar_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.894
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'Clock_Reset|alterapll2_inst|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 5.551
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : 9.632
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'Clock_Reset|alterapll2_inst|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 14.036
+TNS   : 0.000
+
+------------------------------------------------------------
+Info: see the "DDR report" for DDR timing results
+------------------------------------------------------------
+------------------------------------------------------------

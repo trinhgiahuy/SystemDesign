@@ -1,0 +1,79 @@
+INCLUDE ANSWERS IN HERE
+
+1. Did you get similar results simulating Kvazaar on ARM? What was the simulated FPS for Kvazaar on ARM?
+
+Yes, the simulated FPS for SW is 0.08.
+
+2. What were your values for delay_c, search_intra_rough_percentage_c, rest_percentage_c?
+
+delay_c = 17000
+search_intra_rough_percentage_c = 0.5820
+rest_percentage_c = 0.4064
+
+3. What was the simulated FPS of the HW-accelerated version?
+
+The simulated FPS of the HW-accelerated version is 0.19.
+
+4. How was the computation time/delay added to the simulation on both ARM simulation and HW-accelerated simulation? What function/s, variable/s, and calculations are used?
+
+-- SW simulation (ARM):
+The delay is added through function "search_intra_rough_delay" in "search_intra.c" (line 386). The added delay is width*delay_c*search_intra_rough_percentage_c = width * 17000 * 0.5820, with "width" is the width of the prediction block. The function "search_intra_rough_delay" is defined in "search_intra_supplement.c", where Kvazaar instance ip_acc_driver passes the delay to calculation via function "delay_ns" in "sc_kvazaar.c". This delay is accumulated in "intra_rough_search_time" variable to compute the simulation time. The SW model uses both "intra_rough_search_time" and "rest_of_the_encoder" (defined next) to calculate the delay, which yields longer simulation time compared to HW-accelerated.
+
+-- HW simulation:
+The delay is added through function "search_intra" in "search_intra.c" (line 683). The added delay is cu_width*delay_c*rest_percentage_c = cu_width * 17000 * 0.4064. The function "search_intra" is also defined in "search_intra_supplement.c", where Kvazaar instance ip_acc_driver passes the delay to calculation via function "delay_ns" in "sc_kvazaar.c". This delay is accumulated in "rest_of_the_encoder" to give the simulation time. The HW simulation uses only this "rest_of_the_encoder" variable.
+
+5. Do you think the computation time/delay is calculated accurately enough?
+
+I think it is not enough, since we are just estimating the FPS with the constant delay_c.
+		
+6. How do we know the improvement we got with the HW accelerator is correct?
+
+I think it is because the FPS matches with real life (in previous exercises).
+
+7. How many data transfers happened and how much data was sent and read while simulating the HW-accelerated version?
+
+####################### SIMULATION DATA #######################
+# Simulation time        :      10.35 seconds                 #
+# FPS                    :       0.19                         #
+# Config data            :     240108 Writes    2881296 Bytes #
+# Unfilt1 data           :     240108 Writes    3175692 Bytes #
+# Unfilt2 data           :     240108 Writes    3175692 Bytes #
+# Orig data              :       1020 Writes    4177920 Bytes #
+# Lambda                 :          1 Reads           4 Bytes #
+# Results                :     240108 Reads      960432 Bytes #
+# Transfers to/from HW   :       0.00 %                       #
+# Intra rough search HW  :       0.00 %                       #
+# Rest of the encoder    :       0.00 %                       #
+###############################################################
+
+8. What percentages did you get for search_intra_rough/(HW-accelerator and transfers) and for the rest of the encoder, simulating Kvazaar on ARM and simulating the HW-accelerated version?
+
+# Transfers to/from HW   :       0.01 %                       #
+# Intra rough search HW  :       0.01 %                       #
+# Rest of the encoder    :       0.98 %                       #
+
+9. What does using wait() in delay_ns() cause?
+
+It increases the simulation time by making the simulation wait for each call of search intra function (both SW and HW).
+
+10. By looking at the two different waveforms, what kind of problems not using wait() causes?
+
+By not using wait(), the simulation time is shorter. (60 us vs. 3 ms), and the handshake signals have less time to communicate.
+
+11. What were your values for ARM_USED_CORES, arm_overclock_mhz_c, NUMBER_OF_ACCS and FPGA_FREQ_MHZ that achieved full HD real time encoding?
+
+ARM_USED_CORES     : 96
+arm_overclock_mhz_c: 1250
+NUMBER_OF_ACCS     : 112
+FPGA_FREQ_MHZ      : 287
+
+=> FPS = 25.22
+
+12. What was hard? What was easy?
+
+The theoretical part seems to be complicated, but the implementation is easy to understand.
+
+13. Fill the used hours below, including answering questions and any downtime:
+
+	Quang: 07:00
+	Huy  : 08:00

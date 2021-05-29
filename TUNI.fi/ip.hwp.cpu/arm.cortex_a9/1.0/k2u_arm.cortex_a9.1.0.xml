@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014/ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>TUNI.fi</ipxact:vendor>
+	<ipxact:library>ip.hwp.cpu</ipxact:library>
+	<ipxact:name>arm.cortex_a9</ipxact:name>
+	<ipxact:version>1.0</ipxact:version>
+	<ipxact:busInterfaces>
+		<ipxact:busInterface>
+			<ipxact:name>L2_interface</ipxact:name>
+			<ipxact:description>Interface used to access cache from CPU.</ipxact:description>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="L2_interface" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="L2_interface.absDef" version="1.0"/>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:master/>
+			<ipxact:connectionRequired>false</ipxact:connectionRequired>
+			<ipxact:bitsInLau>8</ipxact:bitsInLau>
+			<ipxact:endianness>little</ipxact:endianness>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>L3_interface</ipxact:name>
+			<ipxact:description>Interface used to access cache from CPU.</ipxact:description>
+			<ipxact:busType vendor="TUNI.fi" library="ip.hwp.ifc" name="L3_interface" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="TUNI.fi" library="ip.hwp.ifc" name="L3_interface.absDef" version="1.0"/>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:master/>
+			<ipxact:connectionRequired>false</ipxact:connectionRequired>
+			<ipxact:bitsInLau>8</ipxact:bitsInLau>
+			<ipxact:endianness>little</ipxact:endianness>
+		</ipxact:busInterface>
+	</ipxact:busInterfaces>
+	<ipxact:addressSpaces>
+		<ipxact:addressSpace>
+			<ipxact:name>default_interconnect</ipxact:name>
+			<ipxact:range>4294967295</ipxact:range>
+			<ipxact:width>32</ipxact:width>
+			<ipxact:segments>
+				<ipxact:segment>
+					<ipxact:name>Boot_ROM0</ipxact:name>
+					<ipxact:addressOffset>'h0</ipxact:addressOffset>
+					<ipxact:range>65536</ipxact:range>
+				</ipxact:segment>
+				<ipxact:segment>
+					<ipxact:name>Reserved</ipxact:name>
+					<ipxact:addressOffset>'h10000</ipxact:addressOffset>
+					<ipxact:range>983040</ipxact:range>
+				</ipxact:segment>
+				<ipxact:segment>
+					<ipxact:name>On-Ship_RAM</ipxact:name>
+					<ipxact:addressOffset>'hFFFF0000</ipxact:addressOffset>
+					<ipxact:range>65535</ipxact:range>
+				</ipxact:segment>
+				<ipxact:segment>
+					<ipxact:name>SCU_and_L2_Registers</ipxact:name>
+					<ipxact:description>Snoop Control Unit</ipxact:description>
+					<ipxact:addressOffset>'hFFFEC000</ipxact:addressOffset>
+					<ipxact:range>16384</ipxact:range>
+				</ipxact:segment>
+				<ipxact:segment>
+					<ipxact:name>Boot_ROM1</ipxact:name>
+					<ipxact:addressOffset>'hFFFD0000</ipxact:addressOffset>
+					<ipxact:range>114688</ipxact:range>
+				</ipxact:segment>
+				<ipxact:segment>
+					<ipxact:name>Peripherals_and_L3_GPV</ipxact:name>
+					<ipxact:addressOffset>'hFF400000</ipxact:addressOffset>
+					<ipxact:range>12386304</ipxact:range>
+				</ipxact:segment>
+				<ipxact:segment>
+					<ipxact:name>LWHPS2FPGA</ipxact:name>
+					<ipxact:addressOffset>'hFF200000</ipxact:addressOffset>
+					<ipxact:range>2097152</ipxact:range>
+				</ipxact:segment>
+				<ipxact:segment>
+					<ipxact:name>DAP</ipxact:name>
+					<ipxact:description>Debug Access Port</ipxact:description>
+					<ipxact:addressOffset>'hFF000000</ipxact:addressOffset>
+					<ipxact:range>2097152</ipxact:range>
+				</ipxact:segment>
+				<ipxact:segment>
+					<ipxact:name>STM</ipxact:name>
+					<ipxact:description>System Trace Macrocell</ipxact:description>
+					<ipxact:addressOffset>'hFC000000</ipxact:addressOffset>
+					<ipxact:range>50331648</ipxact:range>
+				</ipxact:segment>
+				<ipxact:segment>
+					<ipxact:name>HPS2FPGA</ipxact:name>
+					<ipxact:addressOffset>'hC0000000</ipxact:addressOffset>
+					<ipxact:range>1006632960</ipxact:range>
+				</ipxact:segment>
+				<ipxact:segment>
+					<ipxact:name>SDRAM7</ipxact:name>
+					<ipxact:addressOffset>'hA8020000</ipxact:addressOffset>
+					<ipxact:range>402522112</ipxact:range>
+				</ipxact:segment>
+				<ipxact:segment>
+					<ipxact:name>SDRAM6</ipxact:name>
+					<ipxact:addressOffset>'h90040000</ipxact:addressOffset>
+					<ipxact:range>402522112</ipxact:range>
+				</ipxact:segment>
+				<ipxact:segment>
+					<ipxact:name>SDRAM5</ipxact:name>
+					<ipxact:addressOffset>'h78060000</ipxact:addressOffset>
+					<ipxact:range>402522112</ipxact:range>
+				</ipxact:segment>
+				<ipxact:segment>
+					<ipxact:name>SDRAM4</ipxact:name>
+					<ipxact:addressOffset>'h60080000</ipxact:addressOffset>
+					<ipxact:range>402522112</ipxact:range>
+				</ipxact:segment>
+				<ipxact:segment>
+					<ipxact:name>SDRAM3</ipxact:name>
+					<ipxact:addressOffset>'h480A0000</ipxact:addressOffset>
+					<ipxact:range>402522112</ipxact:range>
+				</ipxact:segment>
+				<ipxact:segment>
+					<ipxact:name>SDRAM2</ipxact:name>
+					<ipxact:addressOffset>'h300C0000</ipxact:addressOffset>
+					<ipxact:range>402522112</ipxact:range>
+				</ipxact:segment>
+				<ipxact:segment>
+					<ipxact:name>SDRAM1</ipxact:name>
+					<ipxact:addressOffset>'h180E0000</ipxact:addressOffset>
+					<ipxact:range>402522112</ipxact:range>
+				</ipxact:segment>
+				<ipxact:segment>
+					<ipxact:name>SDRAM0</ipxact:name>
+					<ipxact:addressOffset>'h100000</ipxact:addressOffset>
+					<ipxact:range>402522112</ipxact:range>
+				</ipxact:segment>
+			</ipxact:segments>
+			<ipxact:addressUnitBits>8</ipxact:addressUnitBits>
+		</ipxact:addressSpace>
+	</ipxact:addressSpaces>
+	<ipxact:model>
+		<ipxact:views>
+			<ipxact:view>
+				<ipxact:name>flat</ipxact:name>
+				<ipxact:envIdentifier>::</ipxact:envIdentifier>
+				<ipxact:componentInstantiationRef>flat</ipxact:componentInstantiationRef>
+			</ipxact:view>
+			<ipxact:view>
+				<ipxact:name>gcc-tool-chain</ipxact:name>
+				<ipxact:componentInstantiationRef>gcc-tool-chain_sw_component_instantiation</ipxact:componentInstantiationRef>
+			</ipxact:view>
+			<ipxact:view>
+				<ipxact:name>gcc-tool-chain-debug</ipxact:name>
+				<ipxact:componentInstantiationRef>gcc-tool-chain-debug_sw_component_instantiation</ipxact:componentInstantiationRef>
+			</ipxact:view>
+		</ipxact:views>
+		<ipxact:instantiations>
+			<ipxact:componentInstantiation>
+				<ipxact:name>flat</ipxact:name>
+			</ipxact:componentInstantiation>
+			<ipxact:componentInstantiation>
+				<ipxact:name>hierarchical</ipxact:name>
+			</ipxact:componentInstantiation>
+			<ipxact:componentInstantiation>
+				<ipxact:name>gcc-tool-chain_sw_component_instantiation</ipxact:name>
+				<ipxact:defaultFileBuilder>
+					<ipxact:fileType>cSource</ipxact:fileType>
+					<ipxact:command>arm-linux-gnueabihf-gcc</ipxact:command>
+				</ipxact:defaultFileBuilder>
+			</ipxact:componentInstantiation>
+			<ipxact:componentInstantiation>
+				<ipxact:name>gcc-tool-chain-debug_sw_component_instantiation</ipxact:name>
+				<ipxact:defaultFileBuilder>
+					<ipxact:fileType>cSource</ipxact:fileType>
+					<ipxact:command>arm-linux-gnueabihf-gcc</ipxact:command>
+					<ipxact:flags>-DIP_DEBUG</ipxact:flags>
+				</ipxact:defaultFileBuilder>
+			</ipxact:componentInstantiation>
+		</ipxact:instantiations>
+	</ipxact:model>
+	<ipxact:cpus>
+		<ipxact:cpu>
+			<ipxact:name>cpu0</ipxact:name>
+			<ipxact:addressSpaceRef addressSpaceRef="default_interconnect"/>
+		</ipxact:cpu>
+		<ipxact:cpu>
+			<ipxact:name>cpu1</ipxact:name>
+			<ipxact:addressSpaceRef addressSpaceRef="default_interconnect"/>
+		</ipxact:cpu>
+	</ipxact:cpus>
+	<ipxact:description>Dual-core ARM Cortex-A9 MPCore
+
+32 KiB Instuction Cache + 32 KiB Data Cache per core
+
+http://www.arm.com/products/processors/cortex-a/cortex-a9.php</ipxact:description>
+	<ipxact:vendorExtensions>
+		<kactus2:kts_attributes>
+			<kactus2:kts_productHier>IP</kactus2:kts_productHier>
+			<kactus2:kts_implementation>HW</kactus2:kts_implementation>
+			<kactus2:kts_firmness>Fixed</kactus2:kts_firmness>
+		</kactus2:kts_attributes>
+	</ipxact:vendorExtensions>
+</ipxact:component>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>TUNI.COMP.CE.400</ipxact:vendor>
+	<ipxact:library>product</ipxact:library>
+	<ipxact:name>Exercise_Returns</ipxact:name>
+	<ipxact:version>1.0</ipxact:version>
+	<ipxact:model>
+		<ipxact:views>
+			<ipxact:view>
+				<ipxact:name>flat</ipxact:name>
+				<ipxact:envIdentifier>::</ipxact:envIdentifier>
+				<ipxact:componentInstantiationRef>flat</ipxact:componentInstantiationRef>
+			</ipxact:view>
+		</ipxact:views>
+		<ipxact:instantiations>
+			<ipxact:componentInstantiation>
+				<ipxact:name>flat</ipxact:name>
+			</ipxact:componentInstantiation>
+		</ipxact:instantiations>
+	</ipxact:model>
+	<ipxact:fileSets>
+		<ipxact:fileSet>
+			<ipxact:name>Exercise01</ipxact:name>
+			<ipxact:description>Return files of the MANDATORY second exercise.</ipxact:description>
+			<ipxact:file>
+				<ipxact:name>Exercise01/Answers.txt</ipxact:name>
+				<ipxact:fileType user="textFile">user</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:description>INSERT ANSWERS TO QUESTIONS HERE!</ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>99f5aaf8ecb00cbf91566f6477467f4f</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>Exercise01/encode_run.sh</ipxact:name>
+				<ipxact:fileType user="shellScript">user</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:description>Calls script that runs Kvazaar with exercise-specific parameters and output the terminal prints to a log file as well.</ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>8542b30d542f5b172297063f264943ab</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>Exercise01/pg_encode_run.sh</ipxact:name>
+				<ipxact:fileType user="shellScript">user</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:description>Call script for the Kvazaar profiling run. In practice, just creates a log file with alternative name.</ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>1451ef64f8bcbde5d79e11dca3e15422</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>Exercise01/profile_image.sh</ipxact:name>
+				<ipxact:fileType user="shellScript">user</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:description>Runs gprof2dot.py with exercise-specific parameter, thus creating profile.png to the same folder.
+</ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>0558ab5500573937fc716f57f971822b</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+		</ipxact:fileSet>
+		<ipxact:fileSet>
+			<ipxact:name>Exercise02</ipxact:name>
+			<ipxact:description>Exercise return files.</ipxact:description>
+			<ipxact:file>
+				<ipxact:name>Exercise02/Answers.txt</ipxact:name>
+				<ipxact:fileType user="textFile">user</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:description>INSERT ANSWERS TO QUESTIONS HERE!</ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>7b248e2287e14587cafd3febd960a06a</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+		</ipxact:fileSet>
+		<ipxact:fileSet>
+			<ipxact:name>Exercise03</ipxact:name>
+			<ipxact:description>Exercise return files.</ipxact:description>
+			<ipxact:file>
+				<ipxact:name>Exercise03/Answers.txt</ipxact:name>
+				<ipxact:fileType user="textFile">user</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:description>INSERT ANSWERS TO QUESTIONS HERE!</ipxact:description>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>09906f2f09fe69cf8fe9d1bb4f2b8318</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>Exercise03/encode_run.sh</ipxact:name>
+				<ipxact:fileType user="shellScript">user</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:description>Calls script that runs Kvazaar with exercise-specific parameters and output the terminal prints to a log file as well.</ipxact:description>
+			</ipxact:file>
+		</ipxact:fileSet>
+		<ipxact:fileSet>
+			<ipxact:name>Exercise04</ipxact:name>
+			<ipxact:description>Exercise return files.</ipxact:description>
+			<ipxact:file>
+				<ipxact:name>Exercise04/Answers.txt</ipxact:name>
+				<ipxact:fileType>textFile</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="false">false</ipxact:isIncludeFile>
+				<ipxact:description>INSERT ANSWERS TO QUESTIONS HERE!</ipxact:description>
+				<ipxact:vendorExtensions xmlns:kactus2="http://funbase.cs.TUNI.fi/">
+					<kactus2:hash>1409ed282b8893dcfc2451ec58a90f26</kactus2:hash>
+			</ipxact:vendorExtensions>
+			</ipxact:file>
+		</ipxact:fileSet>
+		<ipxact:fileSet>
+			<ipxact:name>Exercise05</ipxact:name>
+			<ipxact:description>Exercise return files.</ipxact:description>
+			<ipxact:file>
+				<ipxact:name>Exercise05/Answers.txt</ipxact:name>
+				<ipxact:fileType>textFile</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="false">false</ipxact:isIncludeFile>
+				<ipxact:description>INSERT ANSWERS TO QUESTIONS HERE!</ipxact:description>
+				<ipxact:vendorExtensions xmlns:kactus2="http://funbase.cs.TUNI.fi/">
+					<kactus2:hash>9f7ece7da78b6bd781945664ac36b520</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>Exercise05/profile_image.sh</ipxact:name>
+				<ipxact:fileType>shellScript</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="false">false</ipxact:isIncludeFile>
+				<ipxact:description>Runs gprof2dot.py with exercise-specific parameter, thus creating profile.png to the same folder.</ipxact:description>
+				<ipxact:vendorExtensions xmlns:kactus2="http://funbase.cs.TUNI.fi/">
+					<kactus2:hash>2ffab87c6852e202480464f6e688bf85</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+		</ipxact:fileSet>
+		<ipxact:fileSet>
+			<ipxact:name>Exercise06</ipxact:name>
+			<ipxact:description>Exercise return files.</ipxact:description>
+			<ipxact:file>
+				<ipxact:name>Exercise06/Answers.txt</ipxact:name>
+				<ipxact:fileType>textFile</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="false">false</ipxact:isIncludeFile>
+				<ipxact:description>INSERT ANSWERS TO QUESTIONS HERE!</ipxact:description>
+				<ipxact:vendorExtensions xmlns:kactus2="http://funbase.cs.TUNI.fi/">
+					<kactus2:hash>99eac4da6e22ea60850839ab223e2b43</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>Exercise06/encode_run.sh</ipxact:name>
+				<ipxact:fileType user="shellScript">user</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="false">false</ipxact:isIncludeFile>
+			</ipxact:file>
+		</ipxact:fileSet>
+		<ipxact:fileSet>
+			<ipxact:name>Exercise07</ipxact:name>
+			<ipxact:description>Exercise return files.</ipxact:description>
+			<ipxact:file>
+				<ipxact:name>Exercise07/Answers.txt</ipxact:name>
+				<ipxact:fileType>textFile</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="false">false</ipxact:isIncludeFile>
+				<ipxact:description>INSERT ANSWERS TO QUESTIONS HERE!!!</ipxact:description>
+				<ipxact:vendorExtensions xmlns:kactus2="http://funbase.cs.TUNI.fi/">
+				<kactus2:hash>7a13164c81a5e9f1d6465071bbed7f7d</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+			<ipxact:file>
+				<ipxact:name>Exercise07/encode_run.sh</ipxact:name>
+				<ipxact:fileType user="shellScript">user</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="false">false</ipxact:isIncludeFile>
+			</ipxact:file>
+		</ipxact:fileSet>
+		<ipxact:fileSet>
+			<ipxact:name>Exercise08</ipxact:name>
+			<ipxact:description>Exercise return files.</ipxact:description>
+			<ipxact:file>
+				<ipxact:name>Exercise08/Answers.txt</ipxact:name>
+				<ipxact:fileType>textFile</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="false">false</ipxact:isIncludeFile>
+				<ipxact:description>INSERT ANSWERS TO QUESTIONS HERE!!!</ipxact:description>
+				<ipxact:vendorExtensions xmlns:kactus2="http://funbase.cs.TUNI.fi/">
+				<kactus2:hash>63e751cfaf98b5c4aeac3ac6993d30f1</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+		</ipxact:fileSet>
+		<ipxact:fileSet>
+			<ipxact:name>Exercise09</ipxact:name>
+			<ipxact:description>Return files of the MANDATORY final exercise.</ipxact:description>
+			<ipxact:file>
+				<ipxact:name>Exercise09/Answers.txt</ipxact:name>
+				<ipxact:fileType user="textFile">user</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="false">false</ipxact:isIncludeFile>
+				<ipxact:description>INSERT ANSWERS TO QUESTIONS HERE!!!</ipxact:description>
+				<ipxact:vendorExtensions xmlns:kactus2="http://funbase.cs.TUNI.fi/">
+				<kactus2:hash>09906f2f09fe69cf8fe9d1bb4f2b8318</kactus2:hash>
+				</ipxact:vendorExtensions>
+				</ipxact:file>
+				<ipxact:file>
+				<ipxact:name>Exercise09/TIE-50506_Ex09_report.docx</ipxact:name>
+				<ipxact:fileType user="doc">user</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="false">false</ipxact:isIncludeFile>
+				<ipxact:description>MANDATORY template for the MANDATORY final report!!!</ipxact:description>
+				<ipxact:vendorExtensions xmlns:kactus2="http://funbase.cs.TUNI.fi/">
+				<kactus2:hash>d48e0d478add261236c8bb73909ec320</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>			
+		</ipxact:fileSet>
+		<ipxact:fileSet>
+			<ipxact:name>ExerciseB</ipxact:name>
+			<ipxact:description>Exercise return files.</ipxact:description>
+			<ipxact:file>
+				<ipxact:name>ExerciseB/AnswersB.txt</ipxact:name>
+				<ipxact:fileType user="textFile">user</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="false">false</ipxact:isIncludeFile>
+				<ipxact:description>INSERT ANSWERS TO QUESTIONS HERE!</ipxact:description>
+			</ipxact:file>
+		</ipxact:fileSet>
+	</ipxact:fileSets>
+	<ipxact:description>Each file set contains returns of the exercisewith same name.
+
+In addition the actual returns, may also contain some scripts used to generate those returns.</ipxact:description>
+	<ipxact:vendorExtensions>
+		<kactus2:version>2,7,1134,0</kactus2:version>
+		<kactus2:kts_attributes>
+			<kactus2:kts_productHier>Product</kactus2:kts_productHier>
+			<kactus2:kts_implementation>HW</kactus2:kts_implementation>
+			<kactus2:kts_firmness>Mutable</kactus2:kts_firmness>
+		</kactus2:kts_attributes>
+	</ipxact:vendorExtensions>
+</ipxact:component>

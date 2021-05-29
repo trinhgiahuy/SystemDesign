@@ -1,0 +1,21 @@
+INCLUDE ANSWERS IN HERE
+
+1. What was your frame rate when running Kvazaar with the IP accelerator? 
+- The FPS is 0.15 when run Kvazaar with IP accelerator.
+
+2. In exercise 5, you made some prediction about accelerated frame rate. It probably did not match the results of this exercise. Why?
+- In exercise 5, the frame rate does not match because its FPS is calculated based on VM frame rate and relation accelerated which the measurement take places in theory.
+
+3. On the other hand, the estimation done in exercise 6 was probably much closer. Why?
+- The simulated FPS of the HW-accelerated version in Exercise 6 is 0.19 which is much closer since hardware_timed simulation calculation, we have take into account the time reading and writing from onchip FPGA to HPS vice versa and from FPGA to DDR that mapped from/to kernel space.
+
+4. What problem does running the camera user application in continuous mode seem to cause in the  captured video?
+HINT: The watermark is not caused by the continuous mode.
+- There are noises appeared in the video before frame 11.
+
+5. What was hard? What was easy?
+- The exercise does not require much knowledge of system design. However, the creating Qsys component step consumes a lot of time for debugging when encouting error.
+
+6. How many hours did the exercise take per person, including answering questions and any downtime?
+   GROUP MEMBER 1: Quang 8:00
+   GROUP MEMBER 2: Huy   10:00

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>TUNI.fi</ipxact:vendor>
+	<ipxact:library>ip.swp.stack</ipxact:library>
+	<ipxact:name>CameraDriver</ipxact:name>
+	<ipxact:version>1.1_student</ipxact:version>
+	<ipxact:fileSets>
+		<ipxact:fileSet>
+			<ipxact:name>bin</ipxact:name>
+			<ipxact:file>
+				<ipxact:name>bin/camera_driver.ko</ipxact:name>
+				<ipxact:fileType>unknown</ipxact:fileType>
+				<ipxact:isIncludeFile externalDeclarations="true">true</ipxact:isIncludeFile>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>0331b38aa08954acd1fe8046582f0e6b</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+		</ipxact:fileSet>
+	</ipxact:fileSets>
+	<ipxact:vendorExtensions>
+		<kactus2:fileDependencies>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>src/camera_driver.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/linux/module.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>src/camera_driver.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/linux/kernel.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>src/camera_driver.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/linux/init.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>src/camera_driver.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/linux/fs.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>src/camera_driver.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/linux/device.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>src/camera_driver.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/linux/debugfs.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>src/camera_driver.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/linux/slab.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>src/camera_driver.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/linux/irq.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>src/camera_driver.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/linux/interrupt.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>src/camera_driver.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/linux/gpio.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>src/camera_driver.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/linux/cdev.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>src/camera_driver.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/asm/uaccess.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>src/camera_driver.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/asm/io.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>src/camera_driver.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/linux/semaphore.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>src/camera_driver.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/linux/mm.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>src/camera_driver.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/linux/delay.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+			<kactus2:fileDependency manual="false" bidirectional="false" locked="false">
+				<kactus2:fileRef1>src/camera_driver.c</kactus2:fileRef1>
+				<kactus2:fileRef2>$External$/linux/kdev_t.h</kactus2:fileRef2>
+				<ipxact:description></ipxact:description>
+			</kactus2:fileDependency>
+		</kactus2:fileDependencies>
+		<kactus2:version></kactus2:version>
+		<kactus2:kts_attributes>
+			<kactus2:kts_productHier>Flat</kactus2:kts_productHier>
+			<kactus2:kts_implementation>SW</kactus2:kts_implementation>
+			<kactus2:kts_firmness>Mutable</kactus2:kts_firmness>
+		</kactus2:kts_attributes>
+	</ipxact:vendorExtensions>
+</ipxact:component>

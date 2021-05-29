@@ -1,0 +1,2508 @@
+//
+// Verilog description for cell main_ip_get_ang_zero, 
+// 11/13/15 10:06:50
+//
+// Precision RTL Plus , 2014b.10_6d4-bit//
+
+
+module main_ip_get_ang_zero ( data_in_rsc_z, data_in_rsc_vz, data_in_rsc_lz, 
+                              data_out_rsc_z, data_out_rsc_vz, data_out_rsc_lz, 
+                              clk, arst_n ) ;
+
+    input [31:0]data_in_rsc_z ;
+    input data_in_rsc_vz ;
+    output data_in_rsc_lz ;
+    output [15:0]data_out_rsc_z ;
+    input data_out_rsc_vz ;
+    output data_out_rsc_lz ;
+    input clk ;
+    input arst_n ;
+
+    wire [15:0]data_out_rsc_z_dup_0d;
+    wire [15:0]src1_rsci_data_out_d_oreg;
+    wire [7:0]src2_rsci_data_out_d_oreg;
+    wire src2_rsc_addr_1d3_, src2_rsc_addr_1d2_, src2_rsc_addr_1d1_, 
+         src2_rsc_addr_1d0_, src2_rsc_addr_9d_, src2_rsc_addr_8d_, 
+         main_ip_get_ang_zero_core_inst_core_wten;
+    wire [7:0]main_ip_get_ang_zero_core_inst_src2_temp_lpi_3d;
+    wire [3:0]main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_3d;
+    wire [7:0]main_ip_get_ang_zero_core_inst_ref_zero_sva_1d;
+    wire main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d1_, 
+         main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_6d_, 
+         main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_5d_, 
+         main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_4d_, 
+         main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_3d_, 
+         main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_2d_, 
+         main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d_, 
+         main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_0d_;
+    wire [7:0]main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d;
+    wire [5:0]main_ip_get_ang_zero_core_inst_k_sva;
+    wire main_ip_get_ang_zero_core_inst_exit_for_1d_for_sva, 
+         main_ip_get_ang_zero_core_inst_for_stage_0d, 
+         main_ip_get_ang_zero_core_inst_for_1d_stage_0d;
+    wire [7:0]main_ip_get_ang_zero_core_inst_src2_temp_lpi_2d_dfm_2d;
+    wire main_ip_get_ang_zero_core_inst_for_1d_for_asn_6d_itm_1d, 
+         main_ip_get_ang_zero_core_inst_for_1d_for_land_lpi_2d_dfm_st_3d, 
+         main_ip_get_ang_zero_core_inst_for_1d_for_asn_1d0_itm_3d, 
+         main_ip_get_ang_zero_core_inst_for_1d_for_asn_1d0_itm_4d, 
+         main_ip_get_ang_zero_core_inst_for_1d_stage_0d_2d, 
+         main_ip_get_ang_zero_core_inst_for_1d_stage_0d_3d;
+    wire [1:0]main_ip_get_ang_zero_core_inst_bytes_1d_lpi_1d_dfm_3d_sg1;
+    wire main_ip_get_ang_zero_core_inst_bytes_1d_lpi_1d_dfm_5d, 
+         main_ip_get_ang_zero_core_inst_reg_data_out_rsci_ld_core_psct_cse, 
+         main_ip_get_ang_zero_core_inst_reg_data_in_rsci_ld_core_psct_cse, 
+         main_ip_get_ang_zero_core_inst_reg_for_1d_for_land_lpi_2d_dfm_st_2d_cse;
+    wire [8:0]main_ip_get_ang_zero_core_inst_for_1d_for_value_sva_3d_mx0;
+    wire main_ip_get_ang_zero_core_inst_acc_1d_nl_5d_;
+    wire [7:0]main_ip_get_ang_zero_core_inst_rtlc10_copy_n402;
+    wire [1:0]
+         main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var
+         ;
+    wire 
+         main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_data_out_rsci_inst_main_ip_get_ang_zero_core_data_out_rsci_data_out_wait_ctrl_inst_data_out_rsci_icwt, 
+         main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_data_in_rsci_inst_main_ip_get_ang_zero_core_data_in_rsci_data_in_wait_ctrl_inst_data_in_rsci_icwt, 
+         nx2029z8, nx2029z7, nx2029z6, nx2029z5, nx2029z4, nx2029z3, nx2029z2, 
+         nx2029z10, nx11340z1, nx24957z10, nx24957z9, nx24957z8, nx24957z7, 
+         nx24957z6, nx24957z5, nx24957z4, nx24957z3, nx57300z1, 
+         data_in_rsc_z_int_3d1_, data_in_rsc_z_int_3d0_, data_in_rsc_z_int_2d9_, 
+         data_in_rsc_z_int_2d8_, data_in_rsc_z_int_2d7_, data_in_rsc_z_int_2d6_, 
+         data_in_rsc_z_int_2d5_, data_in_rsc_z_int_2d4_, data_in_rsc_z_int_2d3_, 
+         data_in_rsc_z_int_2d2_, data_in_rsc_z_int_2d1_, data_in_rsc_z_int_1d7_, 
+         data_in_rsc_z_int_1d6_, data_in_rsc_z_int_1d5_, data_in_rsc_z_int_1d4_, 
+         data_in_rsc_z_int_1d3_, data_in_rsc_z_int_1d2_, data_in_rsc_z_int_1d0_, 
+         data_in_rsc_z_int_9d_, data_in_rsc_z_int_8d_, data_in_rsc_z_int_7d_, 
+         data_in_rsc_vz_int, data_out_rsc_vz_int, clk_int, arst_n_int, 
+         data_in_rsc_lz_dup_0d, data_out_rsc_lz_dup_0d, src1_rsc_we_1d_, 
+         src1_rsc_addr_1d1_, src1_rsc_addr_1d0_, src1_rsc_addr_9d_, 
+         src1_rsc_addr_8d_, src1_rsc_addr_5d_, src1_rsc_addr_4d_, src1_rsc_addr_3d_, 
+         src1_rsc_addr_2d_, src1_rsc_addr_1d_;
+    wire [15:0]src1_rsc_data_in;
+    wire src2_rsc_addr_5d_, src2_rsc_addr_4d_, src2_rsc_addr_3d_, src2_rsc_addr_2d_, 
+         src2_rsc_addr_1d_, src2_rsc_addr_0d_;
+    wire [15:0]src2_rsc_data_in;
+    wire not_arst_n, GND, main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_2d0_, 
+         main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_1d9_, 
+         main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_1d8_, 
+         main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_1d1_, 
+         main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_6d_, 
+         main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_5d_, 
+         main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_1d_, 
+         main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_0d_, 
+         main_ip_get_ang_zero_core_inst_and_dcpl_3d7, 
+         main_ip_get_ang_zero_core_inst_exit_for_1d_for_sva_dfm, 
+         NOT_main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_2d_dfm_3d_, 
+         NOT_main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_2d_dfm_0d_, 
+         main_ip_get_ang_zero_core_inst_for_1d_for_acc_3d_psp_sva_3d_, 
+         main_ip_get_ang_zero_core_inst_for_1d_for_acc_3d_psp_sva_2d_, 
+         main_ip_get_ang_zero_core_inst_for_1d_for_acc_3d_psp_sva_1d_, 
+         main_ip_get_ang_zero_core_inst_z_out_5d_, 
+         main_ip_get_ang_zero_core_inst_z_out_4d_;
+    wire [7:0]main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d_mx0w0;
+    wire main_ip_get_ang_zero_core_inst_for_and_1d_nl_0d_, 
+         main_ip_get_ang_zero_core_inst_mux_4d5_nl_5d_, 
+         main_ip_get_ang_zero_core_inst_not_for_stage_0d_1d0n1s2;
+    wire [1:0]main_ip_get_ang_zero_core_inst_bytes_1d_lpi_1d_dfm_3d_sg1_1d0n1s1;
+    wire [5:0]main_ip_get_ang_zero_core_inst_k_sva_1d0n1s1;
+    wire main_ip_get_ang_zero_core_inst_exit_for_1d_for_sva_1d0n1s1, 
+         main_ip_get_ang_zero_core_inst_not_for_1d_stage_0d_1d0n1s2, 
+         main_ip_get_ang_zero_core_inst_for_1d_stage_0d_2d_1d0n1s1, 
+         main_ip_get_ang_zero_core_inst_for_1d_stage_0d_3d_1d0n1s1, 
+         main_ip_get_ang_zero_core_inst_for_1d_for_asn_1d0_itm_3d_1d0n1s1, 
+         main_ip_get_ang_zero_core_inst_not_for_1d_for_land_lpi_2d_dfm_st_3d_1d0n1s2, 
+         nx13422z1, nx6488z1, nx53775z1, nx56303z1, 
+         main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var_NS_1d_, 
+         nx51902z1, 
+         NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_data_out_rsci_inst_data_out_rsci_biwt, 
+         main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_data_out_rsci_inst_main_ip_get_ang_zero_core_data_out_rsci_data_out_wait_ctrl_inst_data_out_rsci_icwt_2dn1s1, 
+         NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_data_in_rsci_inst_data_in_rsci_biwt, 
+         main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_data_in_rsci_inst_main_ip_get_ang_zero_core_data_in_rsci_data_in_wait_ctrl_inst_data_in_rsci_icwt_2dn1s1, 
+         nx12272z1, nx51520z1, nx31920z1, nx16068z2, nx54114z4, nx51243z1, 
+         nx51243z2, nx51243z3, nx7794z1, nx51520z3, nx54114z1, nx48269z1, 
+         nx60617z1, data_in_rsc_z_int_4d_, data_in_rsc_z_int_3d_, 
+         data_in_rsc_z_int_2d_, nx2029z1, nx1032z1, nx35z1, nx64574z1, nx63577z1, 
+         nx62580z1, nx61583z1, nx60586z1, nx42314z1, nx20589z1, nx21586z1, 
+         nx22583z1, nx23580z1, nx24577z1, nx25574z1, nx51902z3, nx51902z2, 
+         nx54114z2, nx54114z7, nx16068z3, nx7794z3, nx7794z2, nx60617z2, 
+         nx42314z3, nx34911z1, nx34911z2, nx42314z2, nx16068z1, nx51520z2, 
+         nx54114z3, nx54114z6, nx54114z5, nx51243z4, NOT_src1_rsc_addr_0d_, 
+         NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen, 
+         nx9673z1, nx54114z8, nx246_repl0, nx232_repl0, nx218_repl0, nx204_repl0, 
+         nx190_repl0, nx176_repl0, nx162_repl0, nx148_repl0, nx127_repl0, 
+         nx113_repl0, nx99_repl0, nx85_repl0, nx71_repl0, nx56_repl0, nx42_repl0, 
+         nx28_repl0, nx119_repl0, nx105_repl0, nx91_repl0, nx77_repl0, 
+         nx63_repl0, nx48_repl0, nx34_repl0, nx20_repl0, 
+         NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl, 
+         nx24957z2;
+    wire [2560:0] xmplr_dummy ;
+
+
+
+
+    ram_dq_8d_0d mem (.wr_data1 ({src1_rsc_data_in[15],src1_rsc_data_in[14],
+               src1_rsc_data_in[13],src1_rsc_data_in[12],src1_rsc_data_in[11],
+               src1_rsc_data_in[10],src1_rsc_data_in[9],src1_rsc_data_in[8]}), .addr1 (
+               {nx51243z1,nx51243z2,src1_rsc_addr_1d1_,src1_rsc_addr_1d0_,
+               src1_rsc_addr_9d_,src1_rsc_addr_8d_,NOT_src1_rsc_addr_0d_}), .wr_clk1 (
+               clk_int), .rd_clk1 (clk_int), .wr_ena1 (nx51243z3), .ena1 (
+               NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen
+               ), .wr_data2 ({src1_rsc_data_in[7],src1_rsc_data_in[6],
+               src1_rsc_data_in[5],src1_rsc_data_in[4],src1_rsc_data_in[3],
+               src1_rsc_data_in[2],src1_rsc_data_in[1],src1_rsc_data_in[0]}), .addr2 (
+               {xmplr_dummy [0],src1_rsc_addr_5d_,src1_rsc_addr_4d_,
+               src1_rsc_addr_3d_,src1_rsc_addr_2d_,src1_rsc_addr_1d_,nx7794z1}), .wr_ena2 (
+               nx51520z3), .p_not_arst_n (not_arst_n), .p_src1_rsci_data_out_d_oreg_8d__repl0 (
+               src1_rsci_data_out_d_oreg[8]), .p_src1_rsci_data_out_d_oreg_9d__repl0 (
+               src1_rsci_data_out_d_oreg[9]), .p_src1_rsci_data_out_d_oreg_1d0__repl0 (
+               src1_rsci_data_out_d_oreg[10]), .p_src1_rsci_data_out_d_oreg_1d1__repl0 (
+               src1_rsci_data_out_d_oreg[11]), .p_src1_rsci_data_out_d_oreg_1d2__repl0 (
+               src1_rsci_data_out_d_oreg[12]), .p_src1_rsci_data_out_d_oreg_1d3__repl0 (
+               src1_rsci_data_out_d_oreg[13]), .p_src1_rsci_data_out_d_oreg_1d4__repl0 (
+               src1_rsci_data_out_d_oreg[14]), .p_src1_rsci_data_out_d_oreg_1d5__repl0 (
+               src1_rsci_data_out_d_oreg[15]), .p_src1_rsci_data_out_d_oreg_0d__repl0 (
+               src1_rsci_data_out_d_oreg[0]), .p_src1_rsci_data_out_d_oreg_1d__repl0 (
+               src1_rsci_data_out_d_oreg[1]), .p_src1_rsci_data_out_d_oreg_2d__repl0 (
+               src1_rsci_data_out_d_oreg[2]), .p_src1_rsci_data_out_d_oreg_3d__repl0 (
+               src1_rsci_data_out_d_oreg[3]), .p_src1_rsci_data_out_d_oreg_4d__repl0 (
+               src1_rsci_data_out_d_oreg[4]), .p_src1_rsci_data_out_d_oreg_5d__repl0 (
+               src1_rsci_data_out_d_oreg[5]), .p_src1_rsci_data_out_d_oreg_6d__repl0 (
+               src1_rsci_data_out_d_oreg[6]), .p_src1_rsci_data_out_d_oreg_7d__repl0 (
+               src1_rsci_data_out_d_oreg[7]), .p_nx246_repl0 (nx246_repl0), .p_nx232_repl0 (
+               nx232_repl0), .p_nx218_repl0 (nx218_repl0), .p_nx204_repl0 (
+               nx204_repl0), .p_nx190_repl0 (nx190_repl0), .p_nx176_repl0 (
+               nx176_repl0), .p_nx162_repl0 (nx162_repl0), .p_nx148_repl0 (
+               nx148_repl0), .p_nx127_repl0 (nx127_repl0), .p_nx113_repl0 (
+               nx113_repl0), .p_nx99_repl0 (nx99_repl0), .p_nx85_repl0 (
+               nx85_repl0), .p_nx71_repl0 (nx71_repl0), .p_nx56_repl0 (
+               nx56_repl0), .p_nx42_repl0 (nx42_repl0), .p_nx28_repl0 (
+               nx28_repl0), .p_NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl (
+               NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+               )) ;
+    ram_dq_8d_1d mem_0d (.wr_data1 ({src2_rsc_data_in[15],src2_rsc_data_in[14],
+               src2_rsc_data_in[13],src2_rsc_data_in[12],src2_rsc_data_in[11],
+               src2_rsc_data_in[10],src2_rsc_data_in[9],src2_rsc_data_in[8]}), .addr1 (
+               {src2_rsc_addr_1d3_,src2_rsc_addr_1d2_,src2_rsc_addr_1d1_,
+               src2_rsc_addr_1d0_,src2_rsc_addr_9d_,src2_rsc_addr_8d_,
+               src1_rsc_we_1d_}), .wr_clk1 (clk_int), .wr_ena1 (nx54114z1), .wr_data2 (
+               {src2_rsc_data_in[7],src2_rsc_data_in[6],src2_rsc_data_in[5],
+               src2_rsc_data_in[4],src2_rsc_data_in[3],src2_rsc_data_in[2],
+               src2_rsc_data_in[1],src2_rsc_data_in[0]}), .addr2 ({
+               xmplr_dummy [1],src2_rsc_addr_5d_,src2_rsc_addr_4d_,
+               src2_rsc_addr_3d_,src2_rsc_addr_2d_,src2_rsc_addr_1d_,
+               src2_rsc_addr_0d_}), .rd_clk2 (clk_int), .wr_ena2 (nx51520z3), .ena2 (
+               NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen
+               ), .p_not_arst_n (not_arst_n), .p_src2_rsci_data_out_d_oreg_0d__repl0 (
+               src2_rsci_data_out_d_oreg[0]), .p_src2_rsci_data_out_d_oreg_1d__repl0 (
+               src2_rsci_data_out_d_oreg[1]), .p_src2_rsci_data_out_d_oreg_2d__repl0 (
+               src2_rsci_data_out_d_oreg[2]), .p_src2_rsci_data_out_d_oreg_3d__repl0 (
+               src2_rsci_data_out_d_oreg[3]), .p_src2_rsci_data_out_d_oreg_4d__repl0 (
+               src2_rsci_data_out_d_oreg[4]), .p_src2_rsci_data_out_d_oreg_5d__repl0 (
+               src2_rsci_data_out_d_oreg[5]), .p_src2_rsci_data_out_d_oreg_6d__repl0 (
+               src2_rsci_data_out_d_oreg[6]), .p_src2_rsci_data_out_d_oreg_7d__repl0 (
+               src2_rsci_data_out_d_oreg[7]), .p_nx119_repl0 (nx119_repl0), .p_nx105_repl0 (
+               nx105_repl0), .p_nx91_repl0 (nx91_repl0), .p_nx77_repl0 (
+               nx77_repl0), .p_nx63_repl0 (nx63_repl0), .p_nx48_repl0 (
+               nx48_repl0), .p_nx34_repl0 (nx34_repl0), .p_nx20_repl0 (
+               nx20_repl0), .p_NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl (
+               NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+               )) ;
+    assign not_arst_n = ~arst_n_int ;
+    assign GND = 1'b0 ;
+    assign nx11340z1 = 1'b1 ;
+    cyclonev_io_ibuf data_in_rsc_z_ibuf_3d1_ (.o (data_in_rsc_z_int_3d1_), .i (
+                     data_in_rsc_z[31])) ;
+    cyclonev_io_ibuf data_in_rsc_z_ibuf_3d0_ (.o (data_in_rsc_z_int_3d0_), .i (
+                     data_in_rsc_z[30])) ;
+    cyclonev_io_ibuf data_in_rsc_z_ibuf_2d9_ (.o (data_in_rsc_z_int_2d9_), .i (
+                     data_in_rsc_z[29])) ;
+    cyclonev_io_ibuf data_in_rsc_z_ibuf_2d8_ (.o (data_in_rsc_z_int_2d8_), .i (
+                     data_in_rsc_z[28])) ;
+    cyclonev_io_ibuf data_in_rsc_z_ibuf_2d7_ (.o (data_in_rsc_z_int_2d7_), .i (
+                     data_in_rsc_z[27])) ;
+    cyclonev_io_ibuf data_in_rsc_z_ibuf_2d6_ (.o (data_in_rsc_z_int_2d6_), .i (
+                     data_in_rsc_z[26])) ;
+    cyclonev_io_ibuf data_in_rsc_z_ibuf_2d5_ (.o (data_in_rsc_z_int_2d5_), .i (
+                     data_in_rsc_z[25])) ;
+    cyclonev_io_ibuf data_in_rsc_z_ibuf_2d4_ (.o (data_in_rsc_z_int_2d4_), .i (
+                     data_in_rsc_z[24])) ;
+    cyclonev_io_ibuf data_in_rsc_z_ibuf_2d3_ (.o (data_in_rsc_z_int_2d3_), .i (
+                     data_in_rsc_z[23])) ;
+    cyclonev_io_ibuf data_in_rsc_z_ibuf_2d2_ (.o (data_in_rsc_z_int_2d2_), .i (
+                     data_in_rsc_z[22])) ;
+    cyclonev_io_ibuf data_in_rsc_z_ibuf_2d1_ (.o (data_in_rsc_z_int_2d1_), .i (
+                     data_in_rsc_z[21])) ;
+    cyclonev_io_ibuf data_in_rsc_z_ibuf_2d0_ (.o (
+                     main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_2d0_), .i (
+                     data_in_rsc_z[20])) ;
+    cyclonev_io_ibuf data_in_rsc_z_ibuf_1d9_ (.o (
+                     main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_1d9_), .i (
+                     data_in_rsc_z[19])) ;
+    cyclonev_io_ibuf data_in_rsc_z_ibuf_1d8_ (.o (
+                     main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_1d8_), .i (
+                     data_in_rsc_z[18])) ;
+    cyclonev_io_ibuf data_in_rsc_z_ibuf_1d7_ (.o (data_in_rsc_z_int_1d7_), .i (
+                     data_in_rsc_z[17])) ;
+    cyclonev_io_ibuf data_in_rsc_z_ibuf_1d6_ (.o (data_in_rsc_z_int_1d6_), .i (
+                     data_in_rsc_z[16])) ;
+    cyclonev_io_ibuf data_in_rsc_z_ibuf_1d5_ (.o (data_in_rsc_z_int_1d5_), .i (
+                     data_in_rsc_z[15])) ;
+    cyclonev_io_ibuf data_in_rsc_z_ibuf_1d4_ (.o (data_in_rsc_z_int_1d4_), .i (
+                     data_in_rsc_z[14])) ;
+    cyclonev_io_ibuf data_in_rsc_z_ibuf_1d3_ (.o (data_in_rsc_z_int_1d3_), .i (
+                     data_in_rsc_z[13])) ;
+    cyclonev_io_ibuf data_in_rsc_z_ibuf_1d2_ (.o (data_in_rsc_z_int_1d2_), .i (
+                     data_in_rsc_z[12])) ;
+    cyclonev_io_ibuf data_in_rsc_z_ibuf_1d1_ (.o (
+                     main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_1d1_), .i (
+                     data_in_rsc_z[11])) ;
+    cyclonev_io_ibuf data_in_rsc_z_ibuf_1d0_ (.o (data_in_rsc_z_int_1d0_), .i (
+                     data_in_rsc_z[10])) ;
+    cyclonev_io_ibuf data_in_rsc_z_ibuf_9d_ (.o (data_in_rsc_z_int_9d_), .i (
+                     data_in_rsc_z[9])) ;
+    cyclonev_io_ibuf data_in_rsc_z_ibuf_8d_ (.o (data_in_rsc_z_int_8d_), .i (
+                     data_in_rsc_z[8])) ;
+    cyclonev_io_ibuf data_in_rsc_z_ibuf_7d_ (.o (data_in_rsc_z_int_7d_), .i (
+                     data_in_rsc_z[7])) ;
+    cyclonev_io_ibuf data_in_rsc_z_ibuf_6d_ (.o (
+                     main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_6d_), .i (
+                     data_in_rsc_z[6])) ;
+    cyclonev_io_ibuf data_in_rsc_z_ibuf_5d_ (.o (
+                     main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_5d_), .i (
+                     data_in_rsc_z[5])) ;
+    cyclonev_io_ibuf data_in_rsc_z_ibuf_4d_ (.o (data_in_rsc_z_int_4d_), .i (
+                     data_in_rsc_z[4])) ;
+    cyclonev_io_ibuf data_in_rsc_z_ibuf_3d_ (.o (data_in_rsc_z_int_3d_), .i (
+                     data_in_rsc_z[3])) ;
+    cyclonev_io_ibuf data_in_rsc_z_ibuf_2d_ (.o (data_in_rsc_z_int_2d_), .i (
+                     data_in_rsc_z[2])) ;
+    cyclonev_io_ibuf data_in_rsc_z_ibuf_1d_ (.o (
+                     main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_1d_), .i (
+                     data_in_rsc_z[1])) ;
+    cyclonev_io_ibuf data_in_rsc_z_ibuf_0d_ (.o (
+                     main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_0d_), .i (
+                     data_in_rsc_z[0])) ;
+    cyclonev_io_ibuf data_in_rsc_vz_ibuf (.o (data_in_rsc_vz_int), .i (
+                     data_in_rsc_vz)) ;
+    cyclonev_io_ibuf data_out_rsc_vz_ibuf (.o (data_out_rsc_vz_int), .i (
+                     data_out_rsc_vz)) ;
+    cyclonev_io_ibuf clk_ibuf (.o (clk_int), .i (clk)) ;
+    cyclonev_io_ibuf arst_n_ibuf (.o (arst_n_int), .i (arst_n)) ;
+    cyclonev_io_obuf data_in_rsc_lz_obuf (.o (data_in_rsc_lz), .i (
+                     data_in_rsc_lz_dup_0d)) ;
+    cyclonev_io_obuf data_out_rsc_z_obuf_1d5_ (.o (data_out_rsc_z[15]), .i (
+                     data_out_rsc_z_dup_0d[15])) ;
+    cyclonev_io_obuf data_out_rsc_z_obuf_1d4_ (.o (data_out_rsc_z[14]), .i (
+                     data_out_rsc_z_dup_0d[14])) ;
+    cyclonev_io_obuf data_out_rsc_z_obuf_1d3_ (.o (data_out_rsc_z[13]), .i (
+                     data_out_rsc_z_dup_0d[13])) ;
+    cyclonev_io_obuf data_out_rsc_z_obuf_1d2_ (.o (data_out_rsc_z[12]), .i (
+                     data_out_rsc_z_dup_0d[12])) ;
+    cyclonev_io_obuf data_out_rsc_z_obuf_1d1_ (.o (data_out_rsc_z[11]), .i (
+                     data_out_rsc_z_dup_0d[11])) ;
+    cyclonev_io_obuf data_out_rsc_z_obuf_1d0_ (.o (data_out_rsc_z[10]), .i (
+                     data_out_rsc_z_dup_0d[10])) ;
+    cyclonev_io_obuf data_out_rsc_z_obuf_9d_ (.o (data_out_rsc_z[9]), .i (
+                     data_out_rsc_z_dup_0d[9])) ;
+    cyclonev_io_obuf data_out_rsc_z_obuf_8d_ (.o (data_out_rsc_z[8]), .i (
+                     data_out_rsc_z_dup_0d[8])) ;
+    cyclonev_io_obuf data_out_rsc_z_obuf_7d_ (.o (data_out_rsc_z[7]), .i (
+                     data_out_rsc_z_dup_0d[7])) ;
+    cyclonev_io_obuf data_out_rsc_z_obuf_6d_ (.o (data_out_rsc_z[6]), .i (
+                     data_out_rsc_z_dup_0d[6])) ;
+    cyclonev_io_obuf data_out_rsc_z_obuf_5d_ (.o (data_out_rsc_z[5]), .i (
+                     data_out_rsc_z_dup_0d[5])) ;
+    cyclonev_io_obuf data_out_rsc_z_obuf_4d_ (.o (data_out_rsc_z[4]), .i (
+                     data_out_rsc_z_dup_0d[4])) ;
+    cyclonev_io_obuf data_out_rsc_z_obuf_3d_ (.o (data_out_rsc_z[3]), .i (
+                     data_out_rsc_z_dup_0d[3])) ;
+    cyclonev_io_obuf data_out_rsc_z_obuf_2d_ (.o (data_out_rsc_z[2]), .i (
+                     data_out_rsc_z_dup_0d[2])) ;
+    cyclonev_io_obuf data_out_rsc_z_obuf_1d_ (.o (data_out_rsc_z[1]), .i (
+                     data_out_rsc_z_dup_0d[1])) ;
+    cyclonev_io_obuf data_out_rsc_z_obuf_0d_ (.o (data_out_rsc_z[0]), .i (
+                     data_out_rsc_z_dup_0d[0])) ;
+    cyclonev_io_obuf data_out_rsc_lz_obuf (.o (data_out_rsc_lz), .i (
+                     data_out_rsc_lz_dup_0d)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_src2_temp_lpi_3d_7d_ (.q (
+           main_ip_get_ang_zero_core_inst_src2_temp_lpi_3d[7]), .d (
+           main_ip_get_ang_zero_core_inst_src2_temp_lpi_2d_dfm_2d[7]), .clk (
+           clk_int), .ena (nx53775z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_src2_temp_lpi_3d_6d_ (.q (
+           main_ip_get_ang_zero_core_inst_src2_temp_lpi_3d[6]), .d (
+           main_ip_get_ang_zero_core_inst_src2_temp_lpi_2d_dfm_2d[6]), .clk (
+           clk_int), .ena (nx53775z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_src2_temp_lpi_3d_5d_ (.q (
+           main_ip_get_ang_zero_core_inst_src2_temp_lpi_3d[5]), .d (
+           main_ip_get_ang_zero_core_inst_src2_temp_lpi_2d_dfm_2d[5]), .clk (
+           clk_int), .ena (nx53775z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_src2_temp_lpi_3d_4d_ (.q (
+           main_ip_get_ang_zero_core_inst_src2_temp_lpi_3d[4]), .d (
+           main_ip_get_ang_zero_core_inst_src2_temp_lpi_2d_dfm_2d[4]), .clk (
+           clk_int), .ena (nx53775z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_src2_temp_lpi_3d_3d_ (.q (
+           main_ip_get_ang_zero_core_inst_src2_temp_lpi_3d[3]), .d (
+           main_ip_get_ang_zero_core_inst_src2_temp_lpi_2d_dfm_2d[3]), .clk (
+           clk_int), .ena (nx53775z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_src2_temp_lpi_3d_2d_ (.q (
+           main_ip_get_ang_zero_core_inst_src2_temp_lpi_3d[2]), .d (
+           main_ip_get_ang_zero_core_inst_src2_temp_lpi_2d_dfm_2d[2]), .clk (
+           clk_int), .ena (nx53775z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_src2_temp_lpi_3d_1d_ (.q (
+           main_ip_get_ang_zero_core_inst_src2_temp_lpi_3d[1]), .d (
+           main_ip_get_ang_zero_core_inst_src2_temp_lpi_2d_dfm_2d[1]), .clk (
+           clk_int), .ena (nx53775z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_src2_temp_lpi_3d_0d_ (.q (
+           main_ip_get_ang_zero_core_inst_src2_temp_lpi_3d[0]), .d (
+           main_ip_get_ang_zero_core_inst_src2_temp_lpi_2d_dfm_2d[0]), .clk (
+           clk_int), .ena (nx53775z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_src2_temp_lpi_2d_dfm_2d_7d_ (.q (
+           main_ip_get_ang_zero_core_inst_src2_temp_lpi_2d_dfm_2d[7]), .d (
+           main_ip_get_ang_zero_core_inst_rtlc10_copy_n402[7]), .clk (clk_int), 
+           .ena (nx56303z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_src2_temp_lpi_2d_dfm_2d_6d_ (.q (
+           main_ip_get_ang_zero_core_inst_src2_temp_lpi_2d_dfm_2d[6]), .d (
+           main_ip_get_ang_zero_core_inst_rtlc10_copy_n402[6]), .clk (clk_int), 
+           .ena (nx56303z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_src2_temp_lpi_2d_dfm_2d_5d_ (.q (
+           main_ip_get_ang_zero_core_inst_src2_temp_lpi_2d_dfm_2d[5]), .d (
+           main_ip_get_ang_zero_core_inst_rtlc10_copy_n402[5]), .clk (clk_int), 
+           .ena (nx56303z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_src2_temp_lpi_2d_dfm_2d_4d_ (.q (
+           main_ip_get_ang_zero_core_inst_src2_temp_lpi_2d_dfm_2d[4]), .d (
+           main_ip_get_ang_zero_core_inst_rtlc10_copy_n402[4]), .clk (clk_int), 
+           .ena (nx56303z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_src2_temp_lpi_2d_dfm_2d_3d_ (.q (
+           main_ip_get_ang_zero_core_inst_src2_temp_lpi_2d_dfm_2d[3]), .d (
+           main_ip_get_ang_zero_core_inst_rtlc10_copy_n402[3]), .clk (clk_int), 
+           .ena (nx56303z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_src2_temp_lpi_2d_dfm_2d_2d_ (.q (
+           main_ip_get_ang_zero_core_inst_src2_temp_lpi_2d_dfm_2d[2]), .d (
+           main_ip_get_ang_zero_core_inst_rtlc10_copy_n402[2]), .clk (clk_int), 
+           .ena (nx56303z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_src2_temp_lpi_2d_dfm_2d_1d_ (.q (
+           main_ip_get_ang_zero_core_inst_src2_temp_lpi_2d_dfm_2d[1]), .d (
+           main_ip_get_ang_zero_core_inst_rtlc10_copy_n402[1]), .clk (clk_int), 
+           .ena (nx56303z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_src2_temp_lpi_2d_dfm_2d_0d_ (.q (
+           main_ip_get_ang_zero_core_inst_src2_temp_lpi_2d_dfm_2d[0]), .d (
+           main_ip_get_ang_zero_core_inst_rtlc10_copy_n402[0]), .clk (clk_int), 
+           .ena (nx56303z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas 
+           main_ip_get_ang_zero_core_inst_reg_reg_for_1d_for_land_lpi_2d_dfm_st_2d_cse
+            (.q (
+           main_ip_get_ang_zero_core_inst_reg_for_1d_for_land_lpi_2d_dfm_st_2d_cse)
+           , .d (main_ip_get_ang_zero_core_inst_for_1d_for_land_lpi_2d_dfm_st_3d), 
+           .clk (clk_int), .ena (
+           NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_reg_data_out_rsci_ld_core_psct_cse
+            (.q (
+           main_ip_get_ang_zero_core_inst_reg_data_out_rsci_ld_core_psct_cse), .d (
+           main_ip_get_ang_zero_core_inst_and_dcpl_3d7), .clk (clk_int), .ena (
+           NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_reg_data_in_rsci_ld_core_psct_cse
+            (.q (
+           main_ip_get_ang_zero_core_inst_reg_data_in_rsci_ld_core_psct_cse), .d (
+           nx51520z1), .clk (clk_int), .ena (
+           NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_ref_zero_sva_dfm_1d_7d_ (.q (
+           main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d[7]), .d (
+           main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d_mx0w0[7]), .clk (
+           clk_int), .ena (nx6488z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_ref_zero_sva_dfm_1d_6d_ (.q (
+           main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d[6]), .d (
+           main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d_mx0w0[6]), .clk (
+           clk_int), .ena (nx6488z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_ref_zero_sva_dfm_1d_5d_ (.q (
+           main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d[5]), .d (
+           main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d_mx0w0[5]), .clk (
+           clk_int), .ena (nx6488z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_ref_zero_sva_dfm_1d_4d_ (.q (
+           main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d[4]), .d (
+           main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d_mx0w0[4]), .clk (
+           clk_int), .ena (nx6488z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_ref_zero_sva_dfm_1d_3d_ (.q (
+           main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d[3]), .d (
+           main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d_mx0w0[3]), .clk (
+           clk_int), .ena (nx6488z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_ref_zero_sva_dfm_1d_2d_ (.q (
+           main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d[2]), .d (
+           main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d_mx0w0[2]), .clk (
+           clk_int), .ena (nx6488z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_ref_zero_sva_dfm_1d_1d_ (.q (
+           main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d[1]), .d (
+           main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d_mx0w0[1]), .clk (
+           clk_int), .ena (nx6488z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_ref_zero_sva_dfm_1d_0d_ (.q (
+           main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d[0]), .d (
+           main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d_mx0w0[0]), .clk (
+           clk_int), .ena (nx6488z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_ref_zero_sva_1d_7d_ (.q (
+           main_ip_get_ang_zero_core_inst_ref_zero_sva_1d[7]), .d (
+           main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d_mx0w0[7]), .clk (
+           clk_int), .ena (nx13422z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_ref_zero_sva_1d_6d_ (.q (
+           main_ip_get_ang_zero_core_inst_ref_zero_sva_1d[6]), .d (
+           main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d_mx0w0[6]), .clk (
+           clk_int), .ena (nx13422z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_ref_zero_sva_1d_5d_ (.q (
+           main_ip_get_ang_zero_core_inst_ref_zero_sva_1d[5]), .d (
+           main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d_mx0w0[5]), .clk (
+           clk_int), .ena (nx13422z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_ref_zero_sva_1d_4d_ (.q (
+           main_ip_get_ang_zero_core_inst_ref_zero_sva_1d[4]), .d (
+           main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d_mx0w0[4]), .clk (
+           clk_int), .ena (nx13422z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_ref_zero_sva_1d_3d_ (.q (
+           main_ip_get_ang_zero_core_inst_ref_zero_sva_1d[3]), .d (
+           main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d_mx0w0[3]), .clk (
+           clk_int), .ena (nx13422z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_ref_zero_sva_1d_2d_ (.q (
+           main_ip_get_ang_zero_core_inst_ref_zero_sva_1d[2]), .d (
+           main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d_mx0w0[2]), .clk (
+           clk_int), .ena (nx13422z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_ref_zero_sva_1d_1d_ (.q (
+           main_ip_get_ang_zero_core_inst_ref_zero_sva_1d[1]), .d (
+           main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d_mx0w0[1]), .clk (
+           clk_int), .ena (nx13422z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_ref_zero_sva_1d_0d_ (.q (
+           main_ip_get_ang_zero_core_inst_ref_zero_sva_1d[0]), .d (
+           main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d_mx0w0[0]), .clk (
+           clk_int), .ena (nx13422z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_l_1d_sg1_lpi_3d_3d_ (.q (
+           main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_3d[3]), .d (
+           main_ip_get_ang_zero_core_inst_for_1d_for_acc_3d_psp_sva_3d_), .clk (
+           clk_int), .ena (
+           NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_l_1d_sg1_lpi_3d_2d_ (.q (
+           main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_3d[2]), .d (
+           main_ip_get_ang_zero_core_inst_for_1d_for_acc_3d_psp_sva_2d_), .clk (
+           clk_int), .ena (
+           NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_l_1d_sg1_lpi_3d_1d_ (.q (
+           main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_3d[1]), .d (
+           main_ip_get_ang_zero_core_inst_for_1d_for_acc_3d_psp_sva_1d_), .clk (
+           clk_int), .ena (
+           NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_l_1d_sg1_lpi_3d_0d_ (.q (
+           main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_3d[0]), .d (
+           NOT_main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_2d_dfm_0d_), .clk (
+           clk_int), .ena (
+           NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_k_sva_5d_ (.q (
+           main_ip_get_ang_zero_core_inst_k_sva[5]), .d (
+           main_ip_get_ang_zero_core_inst_k_sva_1d0n1s1[5]), .clk (clk_int), .ena (
+           NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_k_sva_4d_ (.q (
+           main_ip_get_ang_zero_core_inst_k_sva[4]), .d (
+           main_ip_get_ang_zero_core_inst_k_sva_1d0n1s1[4]), .clk (clk_int), .ena (
+           NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_k_sva_3d_ (.q (
+           main_ip_get_ang_zero_core_inst_k_sva[3]), .d (
+           main_ip_get_ang_zero_core_inst_k_sva_1d0n1s1[3]), .clk (clk_int), .ena (
+           NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_k_sva_2d_ (.q (
+           main_ip_get_ang_zero_core_inst_k_sva[2]), .d (
+           main_ip_get_ang_zero_core_inst_k_sva_1d0n1s1[2]), .clk (clk_int), .ena (
+           NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_k_sva_1d_ (.q (
+           main_ip_get_ang_zero_core_inst_k_sva[1]), .d (
+           main_ip_get_ang_zero_core_inst_k_sva_1d0n1s1[1]), .clk (clk_int), .ena (
+           NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_k_sva_0d_ (.q (
+           main_ip_get_ang_zero_core_inst_k_sva[0]), .d (
+           main_ip_get_ang_zero_core_inst_k_sva_1d0n1s1[0]), .clk (clk_int), .ena (
+           NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_for_stage_0d (.q (
+           main_ip_get_ang_zero_core_inst_for_stage_0d), .d (
+           main_ip_get_ang_zero_core_inst_not_for_stage_0d_1d0n1s2), .clk (clk_int
+           ), .ena (
+           NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_for_1d_stage_0d_3d (.q (
+           main_ip_get_ang_zero_core_inst_for_1d_stage_0d_3d), .d (
+           main_ip_get_ang_zero_core_inst_for_1d_stage_0d_3d_1d0n1s1), .clk (clk_int
+           ), .ena (
+           NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_for_1d_stage_0d_2d (.q (
+           main_ip_get_ang_zero_core_inst_for_1d_stage_0d_2d), .d (
+           main_ip_get_ang_zero_core_inst_for_1d_stage_0d_2d_1d0n1s1), .clk (clk_int
+           ), .ena (
+           NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_for_1d_stage_0d (.q (
+           main_ip_get_ang_zero_core_inst_for_1d_stage_0d), .d (
+           main_ip_get_ang_zero_core_inst_not_for_1d_stage_0d_1d0n1s2), .clk (
+           clk_int), .ena (
+           NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_for_1d_for_land_lpi_2d_dfm_st_3d (.q (
+           main_ip_get_ang_zero_core_inst_for_1d_for_land_lpi_2d_dfm_st_3d), .d (
+           main_ip_get_ang_zero_core_inst_not_for_1d_for_land_lpi_2d_dfm_st_3d_1d0n1s2
+           ), .clk (clk_int), .ena (
+           NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_for_1d_for_asn_6d_itm_1d (.q (
+           main_ip_get_ang_zero_core_inst_for_1d_for_asn_6d_itm_1d), .d (
+           main_ip_get_ang_zero_core_inst_exit_for_1d_for_sva), .clk (clk_int), .ena (
+           NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_for_1d_for_asn_1d0_itm_4d (.q (
+           main_ip_get_ang_zero_core_inst_for_1d_for_asn_1d0_itm_4d), .d (
+           main_ip_get_ang_zero_core_inst_for_1d_for_asn_1d0_itm_3d), .clk (clk_int
+           ), .ena (
+           NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_for_1d_for_asn_1d0_itm_3d (.q (
+           main_ip_get_ang_zero_core_inst_for_1d_for_asn_1d0_itm_3d), .d (
+           main_ip_get_ang_zero_core_inst_for_1d_for_asn_1d0_itm_3d_1d0n1s1), .clk (
+           clk_int), .ena (
+           NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_exit_for_1d_for_sva (.q (
+           main_ip_get_ang_zero_core_inst_exit_for_1d_for_sva), .d (
+           main_ip_get_ang_zero_core_inst_exit_for_1d_for_sva_1d0n1s1), .clk (
+           clk_int), .ena (
+           NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_data_out_rsci_d_sg1_7d_ (.q (
+           data_out_rsc_z_dup_0d[15]), .d (src1_rsci_data_out_d_oreg[7]), .clk (
+           clk_int), .ena (nx48269z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_data_out_rsci_d_sg1_6d_ (.q (
+           data_out_rsc_z_dup_0d[14]), .d (src1_rsci_data_out_d_oreg[6]), .clk (
+           clk_int), .ena (nx48269z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_data_out_rsci_d_sg1_5d_ (.q (
+           data_out_rsc_z_dup_0d[13]), .d (src1_rsci_data_out_d_oreg[5]), .clk (
+           clk_int), .ena (nx48269z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_data_out_rsci_d_sg1_4d_ (.q (
+           data_out_rsc_z_dup_0d[12]), .d (src1_rsci_data_out_d_oreg[4]), .clk (
+           clk_int), .ena (nx48269z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_data_out_rsci_d_sg1_3d_ (.q (
+           data_out_rsc_z_dup_0d[11]), .d (src1_rsci_data_out_d_oreg[3]), .clk (
+           clk_int), .ena (nx48269z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_data_out_rsci_d_sg1_2d_ (.q (
+           data_out_rsc_z_dup_0d[10]), .d (src1_rsci_data_out_d_oreg[2]), .clk (
+           clk_int), .ena (nx48269z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_data_out_rsci_d_sg1_1d_ (.q (
+           data_out_rsc_z_dup_0d[9]), .d (src1_rsci_data_out_d_oreg[1]), .clk (
+           clk_int), .ena (nx48269z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_data_out_rsci_d_sg1_0d_ (.q (
+           data_out_rsc_z_dup_0d[8]), .d (src1_rsci_data_out_d_oreg[0]), .clk (
+           clk_int), .ena (nx48269z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_data_out_rsci_d_1d_7d_ (.q (
+           data_out_rsc_z_dup_0d[7]), .d (nx2029z1), .clk (clk_int), .ena (
+           nx48269z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_data_out_rsci_d_1d_6d_ (.q (
+           data_out_rsc_z_dup_0d[6]), .d (nx1032z1), .clk (clk_int), .ena (
+           nx48269z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_data_out_rsci_d_1d_5d_ (.q (
+           data_out_rsc_z_dup_0d[5]), .d (nx35z1), .clk (clk_int), .ena (
+           nx48269z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_data_out_rsci_d_1d_4d_ (.q (
+           data_out_rsc_z_dup_0d[4]), .d (nx64574z1), .clk (clk_int), .ena (
+           nx48269z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_data_out_rsci_d_1d_3d_ (.q (
+           data_out_rsc_z_dup_0d[3]), .d (nx63577z1), .clk (clk_int), .ena (
+           nx48269z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_data_out_rsci_d_1d_2d_ (.q (
+           data_out_rsc_z_dup_0d[2]), .d (nx62580z1), .clk (clk_int), .ena (
+           nx48269z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_data_out_rsci_d_1d_1d_ (.q (
+           data_out_rsc_z_dup_0d[1]), .d (nx61583z1), .clk (clk_int), .ena (
+           nx48269z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_data_out_rsci_d_1d_0d_ (.q (
+           data_out_rsc_z_dup_0d[0]), .d (nx60586z1), .clk (clk_int), .ena (
+           nx48269z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_config_temp_data_in_tmp_1d_sva_6d_ (
+           .q (main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_6d_)
+           , .d (main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_6d_), .clk (
+           clk_int), .ena (nx60617z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_config_temp_data_in_tmp_1d_sva_5d_ (
+           .q (main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_5d_)
+           , .d (main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_5d_), .clk (
+           clk_int), .ena (nx60617z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_config_temp_data_in_tmp_1d_sva_4d_ (
+           .q (main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_4d_)
+           , .d (data_in_rsc_z_int_4d_), .clk (clk_int), .ena (nx60617z1), .clrn (
+           arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_config_temp_data_in_tmp_1d_sva_3d_ (
+           .q (main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_3d_)
+           , .d (data_in_rsc_z_int_3d_), .clk (clk_int), .ena (nx60617z1), .clrn (
+           arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_config_temp_data_in_tmp_1d_sva_2d_ (
+           .q (main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_2d_)
+           , .d (data_in_rsc_z_int_2d_), .clk (clk_int), .ena (nx60617z1), .clrn (
+           arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_config_temp_data_in_tmp_1d_sva_1d1_
+            (.q (
+           main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d1_), .d (
+           main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_1d1_), .clk (
+           clk_int), .ena (nx60617z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_config_temp_data_in_tmp_1d_sva_1d_ (
+           .q (main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d_)
+           , .d (main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_1d_), .clk (
+           clk_int), .ena (nx60617z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_config_temp_data_in_tmp_1d_sva_0d_ (
+           .q (main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_0d_)
+           , .d (main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_0d_), .clk (
+           clk_int), .ena (nx60617z1), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_bytes_1d_lpi_1d_dfm_5d (.q (
+           main_ip_get_ang_zero_core_inst_bytes_1d_lpi_1d_dfm_5d), .d (nx42314z1), 
+           .clk (clk_int), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_bytes_1d_lpi_1d_dfm_3d_sg1_1d_ (.q (
+           main_ip_get_ang_zero_core_inst_bytes_1d_lpi_1d_dfm_3d_sg1[1]), .d (
+           main_ip_get_ang_zero_core_inst_bytes_1d_lpi_1d_dfm_3d_sg1_1d0n1s1[1]), .clk (
+           clk_int), .ena (
+           NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_bytes_1d_lpi_1d_dfm_3d_sg1_0d_ (.q (
+           main_ip_get_ang_zero_core_inst_bytes_1d_lpi_1d_dfm_3d_sg1[0]), .d (
+           main_ip_get_ang_zero_core_inst_bytes_1d_lpi_1d_dfm_3d_sg1_1d0n1s1[0]), .clk (
+           clk_int), .ena (
+           NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_a_1d_sg1_sva_5d_ (.q (
+           src2_rsc_addr_1d3_), .d (nx20589z1), .clk (clk_int), .ena (
+           NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_a_1d_sg1_sva_4d_ (.q (
+           src2_rsc_addr_1d2_), .d (nx21586z1), .clk (clk_int), .ena (
+           NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_a_1d_sg1_sva_3d_ (.q (
+           src2_rsc_addr_1d1_), .d (nx22583z1), .clk (clk_int), .ena (
+           NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_a_1d_sg1_sva_2d_ (.q (
+           src2_rsc_addr_1d0_), .d (nx23580z1), .clk (clk_int), .ena (
+           NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_a_1d_sg1_sva_1d_ (.q (
+           src2_rsc_addr_9d_), .d (nx24577z1), .clk (clk_int), .ena (
+           NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas main_ip_get_ang_zero_core_inst_reg_a_1d_sg1_sva_0d_ (.q (
+           src2_rsc_addr_8d_), .d (nx25574z1), .clk (clk_int), .ena (
+           NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas 
+           main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_reg_core_wten
+            (.q (main_ip_get_ang_zero_core_inst_core_wten), .d (nx9673z1), .clk (
+           clk_int), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas 
+           main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_data_out_rsci_inst_main_ip_get_ang_zero_core_data_out_rsci_data_out_wait_ctrl_inst_reg_data_out_rsci_icwt
+            (.q (
+           main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_data_out_rsci_inst_main_ip_get_ang_zero_core_data_out_rsci_data_out_wait_ctrl_inst_data_out_rsci_icwt
+           ), .d (
+           main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_data_out_rsci_inst_main_ip_get_ang_zero_core_data_out_rsci_data_out_wait_ctrl_inst_data_out_rsci_icwt_2dn1s1
+           ), .clk (clk_int), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas 
+           main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_data_in_rsci_inst_main_ip_get_ang_zero_core_data_in_rsci_data_in_wait_ctrl_inst_reg_data_in_rsci_icwt
+            (.q (
+           main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_data_in_rsci_inst_main_ip_get_ang_zero_core_data_in_rsci_data_in_wait_ctrl_inst_data_in_rsci_icwt
+           ), .d (
+           main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_data_in_rsci_inst_main_ip_get_ang_zero_core_data_in_rsci_data_in_wait_ctrl_inst_data_in_rsci_icwt_2dn1s1
+           ), .clk (clk_int), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas 
+           main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_reg_state_var_1d_
+            (.q (
+           main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+           ), .d (
+           main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var_NS_1d_
+           ), .clk (clk_int), .ena (
+           NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas 
+           main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_reg_state_var_0d_
+            (.q (
+           main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+           ), .d (nx12272z1), .clk (clk_int), .ena (
+           NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (arst_n_int), .prn (nx11340z1)) ;
+    dffeas ix54114z26559 (.q (nx91_repl0), .d (src2_rsc_data_in[13]), .clk (
+           clk_int), .clrn (nx11340z1), .prn (nx11340z1)) ;
+    cyclonev_lcell_comb ix48269z62807 (.combout (nx48269z1), .datab (
+                        main_ip_get_ang_zero_core_inst_reg_data_out_rsci_ld_core_psct_cse
+                        ), .datac (
+                        main_ip_get_ang_zero_core_inst_for_1d_stage_0d_3d), .datad (
+                        nx7794z1), .datae (
+                        NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_data_out_rsci_inst_data_out_rsci_biwt
+                        ), .dataf (nx60617z2)) ;
+                        defparam ix48269z62807.lut_mask = 64'h003000f000000000;
+    cyclonev_lcell_comb ix54114z62827 (.combout (nx54114z8), .dataa (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+                        ), .datab (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        ), .datac (main_ip_get_ang_zero_core_inst_k_sva[2]), .datad (
+                        main_ip_get_ang_zero_core_inst_k_sva[3]), .datae (
+                        src2_rsc_addr_1d0_), .dataf (src2_rsc_addr_1d1_)) ;
+                        defparam ix54114z62827.lut_mask = 64'h08887fff7fff7fff;
+    cyclonev_lcell_comb ix51243z62821 (.combout (NOT_src1_rsc_addr_0d_), .datae (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+                        ), .dataf (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        )) ;
+                        defparam ix51243z62821.lut_mask = 64'hffff000000000000;
+    cyclonev_lcell_comb ix51243z62823 (.combout (nx51243z4), .dataa (
+                        src2_rsc_addr_1d2_), .datab (nx7794z1), .datac (
+                        src1_rsc_addr_8d_), .datad (src1_rsc_addr_1d1_), .datae (
+                        src1_rsc_addr_9d_), .dataf (src1_rsc_addr_1d0_)) ;
+                        defparam ix51243z62823.lut_mask = 64'hfffffffffffffffb;
+    cyclonev_lcell_comb ix54114z62822 (.combout (nx54114z5), .datac (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+                        ), .datad (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        ), .datae (main_ip_get_ang_zero_core_inst_for_stage_0d), 
+                        .dataf (src2_rsc_addr_1d2_)) ;
+                        defparam ix54114z62822.lut_mask = 64'hf0ffffffffffffff;
+    cyclonev_lcell_comb ix54114z62823 (.combout (nx54114z6), .datae (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+                        ), .dataf (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        )) ;
+                        defparam ix54114z62823.lut_mask = 64'h0000ffffffffffff;
+    cyclonev_lcell_comb ix54114z62818 (.combout (nx54114z3), .datab (
+                        src2_rsc_addr_1d0_), .datac (src2_rsc_addr_1d2_), .datad (
+                        nx54114z4), .datae (src2_rsc_addr_3d_), .dataf (
+                        src2_rsc_addr_5d_)) ;
+                        defparam ix54114z62818.lut_mask = 64'hff3fffcffff3fffc;
+    cyclonev_lcell_comb ix51520z62808 (.combout (nx51520z2), .datad (
+                        main_ip_get_ang_zero_core_inst_for_1d_stage_0d_3d), .datae (
+                        main_ip_get_ang_zero_core_inst_for_1d_stage_0d_2d), .dataf (
+                        main_ip_get_ang_zero_core_inst_for_1d_stage_0d)) ;
+                        defparam ix51520z62808.lut_mask = 64'hffffffffffffff00;
+    cyclonev_lcell_comb ix16068z62808 (.combout (nx16068z1), .datae (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_0d_
+                        ), .dataf (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_5d_
+                        )) ;
+                        defparam ix16068z62808.lut_mask = 64'hffffffffffff0000;
+    cyclonev_lcell_comb ix34911z62811 (.combout (nx34911z2), .dataa (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+                        ), .datab (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        ), .datac (main_ip_get_ang_zero_core_inst_k_sva[3]), .datad (
+                        main_ip_get_ang_zero_core_inst_k_sva[4]), .datae (
+                        src2_rsc_addr_1d1_), .dataf (src2_rsc_addr_1d2_)) ;
+                        defparam ix34911z62811.lut_mask = 64'hf777800080008000;
+    cyclonev_lcell_comb ix34911z62809 (.combout (nx34911z1), .datac (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+                        ), .datad (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        ), .datae (main_ip_get_ang_zero_core_inst_k_sva[2]), .dataf (
+                        src2_rsc_addr_1d0_)) ;
+                        defparam ix34911z62809.lut_mask = 64'hffff0ffff0000000;
+    cyclonev_lcell_comb ix7794z62809 (.combout (nx7794z2), .dataa (
+                        main_ip_get_ang_zero_core_inst_k_sva[0]), .datab (
+                        main_ip_get_ang_zero_core_inst_k_sva[1]), .datac (
+                        main_ip_get_ang_zero_core_inst_k_sva[2]), .datad (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_0d_
+                        ), .datae (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d_
+                        ), .dataf (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_2d_
+                        )) ;
+                        defparam ix7794z62809.lut_mask = 64'h7fbfdfeff7fbfdfe;
+    cyclonev_lcell_comb ix7794z62810 (.combout (nx7794z3), .dataa (
+                        main_ip_get_ang_zero_core_inst_k_sva[3]), .datab (
+                        main_ip_get_ang_zero_core_inst_k_sva[4]), .datac (
+                        main_ip_get_ang_zero_core_inst_k_sva[5]), .datad (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_3d_
+                        ), .datae (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_4d_
+                        ), .dataf (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_5d_
+                        )) ;
+                        defparam ix7794z62810.lut_mask = 64'h7fbfdfeff7fbfdfe;
+    cyclonev_lcell_comb ix16068z62810 (.combout (nx16068z3), .dataa (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d_
+                        ), .datab (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_2d_
+                        ), .datac (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_3d_
+                        ), .datad (
+                        NOT_main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_2d_dfm_0d_)
+                        , .datae (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_acc_3d_psp_sva_1d_
+                        ), .dataf (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_acc_3d_psp_sva_2d_
+                        )) ;
+                        defparam ix16068z62810.lut_mask = 64'h7fbfdfeff7fbfdfe;
+    cyclonev_lcell_comb ix54114z62824 (.combout (nx54114z7), .datab (
+                        src2_rsc_addr_9d_), .datac (src2_rsc_addr_1d1_), .datad (
+                        src2_rsc_addr_2d_), .datae (nx51520z3), .dataf (
+                        src2_rsc_addr_4d_)) ;
+                        defparam ix54114z62824.lut_mask = 64'h3fcffffff3fcffff;
+    cyclonev_lcell_comb ix54114z62817 (.combout (nx54114z2), .datab (
+                        src2_rsc_addr_8d_), .datac (src2_rsc_addr_9d_), .datad (
+                        src2_rsc_addr_1d0_), .datae (src2_rsc_addr_1d1_), .dataf (
+                        src2_rsc_addr_1d2_)) ;
+                        defparam ix54114z62817.lut_mask = 64'hfffffffffffffffc;
+    cyclonev_lcell_comb ix51902z62810 (.combout (nx51902z2), .dataa (
+                        main_ip_get_ang_zero_core_inst_bytes_1d_lpi_1d_dfm_5d), .datab (
+                        main_ip_get_ang_zero_core_inst_bytes_1d_lpi_1d_dfm_3d_sg1[0]
+                        ), .datac (
+                        main_ip_get_ang_zero_core_inst_bytes_1d_lpi_1d_dfm_3d_sg1[1]
+                        ), .datad (src2_rsc_addr_8d_), .datae (src2_rsc_addr_1d0_)
+                        , .dataf (src2_rsc_addr_1d2_)) ;
+                        defparam ix51902z62810.lut_mask = 64'hd5d7dddff5f7fdff;
+    cyclonev_lcell_comb ix51902z62811 (.combout (nx51902z3), .dataa (
+                        main_ip_get_ang_zero_core_inst_bytes_1d_lpi_1d_dfm_5d), .datab (
+                        main_ip_get_ang_zero_core_inst_bytes_1d_lpi_1d_dfm_3d_sg1[0]
+                        ), .datac (
+                        main_ip_get_ang_zero_core_inst_bytes_1d_lpi_1d_dfm_3d_sg1[1]
+                        ), .datad (src2_rsc_addr_9d_), .datae (src2_rsc_addr_1d1_)
+                        , .dataf (src2_rsc_addr_1d3_)) ;
+                        defparam ix51902z62811.lut_mask = 64'habafbbbfebeffbff;
+    cyclonev_lcell_comb ix25574z62807 (.combout (nx25574z1), .datac (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+                        ), .datad (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        ), .datae (main_ip_get_ang_zero_core_inst_for_stage_0d), 
+                        .dataf (src2_rsc_addr_8d_)) ;
+                        defparam ix25574z62807.lut_mask = 64'h00000f000f000000;
+    cyclonev_lcell_comb ix24577z62807 (.combout (nx24577z1), .datab (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+                        ), .datac (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        ), .datad (main_ip_get_ang_zero_core_inst_for_stage_0d), 
+                        .datae (src2_rsc_addr_8d_), .dataf (src2_rsc_addr_9d_)) ;
+                        defparam ix24577z62807.lut_mask = 64'h0030303030000000;
+    cyclonev_lcell_comb ix23580z62807 (.combout (nx23580z1), .dataa (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+                        ), .datab (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        ), .datac (main_ip_get_ang_zero_core_inst_for_stage_0d), 
+                        .datad (src2_rsc_addr_8d_), .datae (src2_rsc_addr_9d_), .dataf (
+                        src2_rsc_addr_1d0_)) ;
+                        defparam ix23580z62807.lut_mask = 64'h0444444440000000;
+    cyclonev_lcell_comb ix22583z62807 (.combout (nx22583z1), .dataa (nx34911z1)
+                        , .datab (nx31920z1), .datac (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+                        ), .datad (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        ), .datae (main_ip_get_ang_zero_core_inst_for_stage_0d), 
+                        .dataf (src2_rsc_addr_1d1_)) ;
+                        defparam ix22583z62807.lut_mask = 64'h07000f0008000000;
+    cyclonev_lcell_comb ix21586z62807 (.combout (nx21586z1), .dataa (
+                        main_ip_get_ang_zero_core_inst_for_stage_0d), .datab (
+                        src2_rsc_addr_1d1_), .datac (src2_rsc_addr_1d2_), .datad (
+                        nx51902z1), .datae (nx34911z1), .dataf (nx31920z1)) ;
+                        defparam ix21586z62807.lut_mask = 64'h007800f000f000f0;
+    cyclonev_lcell_comb ix20589z62807 (.combout (nx20589z1), .datac (
+                        main_ip_get_ang_zero_core_inst_for_stage_0d), .datad (
+                        src2_rsc_addr_1d3_), .datae (nx51902z1), .dataf (
+                        main_ip_get_ang_zero_core_inst_z_out_5d_)) ;
+                        defparam ix20589z62807.lut_mask = 64'h0000fff000000f00;
+    cyclonev_lcell_comb ix42314z62807 (.combout (nx42314z1), .dataa (
+                        main_ip_get_ang_zero_core_inst_bytes_1d_lpi_1d_dfm_5d), .datab (
+                        nx51902z1), .datac (data_in_rsc_z_int_2d_), .datad (
+                        nx42314z2), .datae (nx60617z2), .dataf (nx42314z3)) ;
+                        defparam ix42314z62807.lut_mask = 64'he2eeaaaaaaaaaaaa;
+    cyclonev_lcell_comb ix60586z62807 (.combout (nx60586z1), .datac (
+                        main_ip_get_ang_zero_core_inst_reg_for_1d_for_land_lpi_2d_dfm_st_2d_cse
+                        ), .datad (src1_rsci_data_out_d_oreg[8]), .datae (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_value_sva_3d_mx0[0]
+                        ), .dataf (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_value_sva_3d_mx0[8]
+                        )) ;
+                        defparam ix60586z62807.lut_mask = 64'hfff0fff0fff00f00;
+    cyclonev_lcell_comb ix61583z62807 (.combout (nx61583z1), .datac (
+                        main_ip_get_ang_zero_core_inst_reg_for_1d_for_land_lpi_2d_dfm_st_2d_cse
+                        ), .datad (src1_rsci_data_out_d_oreg[9]), .datae (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_value_sva_3d_mx0[1]
+                        ), .dataf (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_value_sva_3d_mx0[8]
+                        )) ;
+                        defparam ix61583z62807.lut_mask = 64'hfff0fff0fff00f00;
+    cyclonev_lcell_comb ix62580z62807 (.combout (nx62580z1), .datac (
+                        main_ip_get_ang_zero_core_inst_reg_for_1d_for_land_lpi_2d_dfm_st_2d_cse
+                        ), .datad (src1_rsci_data_out_d_oreg[10]), .datae (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_value_sva_3d_mx0[2]
+                        ), .dataf (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_value_sva_3d_mx0[8]
+                        )) ;
+                        defparam ix62580z62807.lut_mask = 64'hfff0fff0fff00f00;
+    cyclonev_lcell_comb ix63577z62807 (.combout (nx63577z1), .datac (
+                        main_ip_get_ang_zero_core_inst_reg_for_1d_for_land_lpi_2d_dfm_st_2d_cse
+                        ), .datad (src1_rsci_data_out_d_oreg[11]), .datae (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_value_sva_3d_mx0[3]
+                        ), .dataf (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_value_sva_3d_mx0[8]
+                        )) ;
+                        defparam ix63577z62807.lut_mask = 64'hfff0fff0fff00f00;
+    cyclonev_lcell_comb ix64574z62807 (.combout (nx64574z1), .datac (
+                        main_ip_get_ang_zero_core_inst_reg_for_1d_for_land_lpi_2d_dfm_st_2d_cse
+                        ), .datad (src1_rsci_data_out_d_oreg[12]), .datae (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_value_sva_3d_mx0[4]
+                        ), .dataf (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_value_sva_3d_mx0[8]
+                        )) ;
+                        defparam ix64574z62807.lut_mask = 64'hfff0fff0fff00f00;
+    cyclonev_lcell_comb ix35z62807 (.combout (nx35z1), .datac (
+                        main_ip_get_ang_zero_core_inst_reg_for_1d_for_land_lpi_2d_dfm_st_2d_cse
+                        ), .datad (src1_rsci_data_out_d_oreg[13]), .datae (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_value_sva_3d_mx0[5]
+                        ), .dataf (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_value_sva_3d_mx0[8]
+                        )) ;
+                        defparam ix35z62807.lut_mask = 64'hfff0fff0fff00f00;
+    cyclonev_lcell_comb ix1032z62807 (.combout (nx1032z1), .datac (
+                        main_ip_get_ang_zero_core_inst_reg_for_1d_for_land_lpi_2d_dfm_st_2d_cse
+                        ), .datad (src1_rsci_data_out_d_oreg[14]), .datae (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_value_sva_3d_mx0[6]
+                        ), .dataf (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_value_sva_3d_mx0[8]
+                        )) ;
+                        defparam ix1032z62807.lut_mask = 64'hfff0fff0fff00f00;
+    cyclonev_lcell_comb ix2029z62807 (.combout (nx2029z1), .datac (
+                        main_ip_get_ang_zero_core_inst_reg_for_1d_for_land_lpi_2d_dfm_st_2d_cse
+                        ), .datad (src1_rsci_data_out_d_oreg[15]), .datae (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_value_sva_3d_mx0[7]
+                        ), .dataf (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_value_sva_3d_mx0[8]
+                        )) ;
+                        defparam ix2029z62807.lut_mask = 64'hfff0fff0fff00f00;
+    dffeas ix51243z26568 (.q (nx85_repl0), .d (src1_rsc_data_in[4]), .clk (
+           clk_int), .clrn (nx11340z1), .prn (nx11340z1)) ;
+    cyclonev_lcell_comb ix54114z62816 (.combout (nx54114z1), .dataa (
+                        src2_rsc_addr_1d3_), .datab (src1_rsc_we_1d_), .datac (
+                        nx54114z2), .datad (nx9673z1), .datae (nx54114z3), .dataf (
+                        nx54114z7)) ;
+                        defparam ix54114z62816.lut_mask = 64'h0013001300130002;
+    cyclonev_lcell_comb ix51520z62809 (.combout (nx51520z3), .datac (
+                        main_ip_get_ang_zero_core_inst_for_stage_0d), .datad (
+                        nx51902z1), .datae (nx51902z2), .dataf (nx51902z3)) ;
+                        defparam ix51520z62809.lut_mask = 64'h00f0000000000000;
+    cyclonev_lcell_comb ix7794z62808 (.combout (nx7794z1), .datae (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+                        ), .dataf (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        )) ;
+                        defparam ix7794z62808.lut_mask = 64'h0000ffffffffffff;
+    cyclonev_lcell_comb ix51243z62822 (.combout (nx51243z3), .datab (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+                        ), .datac (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        ), .datad (main_ip_get_ang_zero_core_inst_for_stage_0d), 
+                        .datae (src2_rsc_addr_1d3_), .dataf (nx51243z4)) ;
+                        defparam ix51243z62822.lut_mask = 64'h0000300030003000;
+    cyclonev_lcell_comb ix51243z62816 (.combout (nx51243z2), .datad (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+                        ), .datae (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        ), .dataf (src2_rsc_addr_1d2_)) ;
+                        defparam ix51243z62816.lut_mask = 64'h00ffffff00000000;
+    cyclonev_lcell_comb ix51243z62815 (.combout (nx51243z1), .datad (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+                        ), .datae (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        ), .dataf (src2_rsc_addr_1d3_)) ;
+                        defparam ix51243z62815.lut_mask = 64'h00ffffff00000000;
+    cyclonev_lcell_comb ix54114z62819 (.combout (nx54114z4), .dataa (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+                        ), .datab (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        ), .datac (main_ip_get_ang_zero_core_inst_for_stage_0d), 
+                        .datad (main_ip_get_ang_zero_core_inst_k_sva[0]), .datae (
+                        main_ip_get_ang_zero_core_inst_k_sva[1]), .dataf (
+                        src2_rsc_addr_8d_)) ;
+                        defparam ix54114z62819.lut_mask = 64'hff77ffffc8c8c840;
+    cyclonev_lcell_comb ix16068z62809 (.combout (nx16068z2), .datac (
+                        main_ip_get_ang_zero_core_inst_exit_for_1d_for_sva), .datad (
+                        main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_3d[0]), .datae (
+                        main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_3d[1]), .dataf (
+                        main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_3d[2])) ;
+                        defparam ix16068z62809.lut_mask = 64'hf0ffffffffffffff;
+    cyclonev_lcell_comb ix31920z62808 (.combout (nx31920z1), .dataa (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+                        ), .datab (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        ), .datac (main_ip_get_ang_zero_core_inst_k_sva[0]), .datad (
+                        main_ip_get_ang_zero_core_inst_k_sva[1]), .datae (
+                        src2_rsc_addr_8d_), .dataf (src2_rsc_addr_9d_)) ;
+                        defparam ix31920z62808.lut_mask = 64'hf777800080008000;
+    cyclonev_lcell_comb ix51520z62807 (.combout (nx51520z1), .dataa (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+                        ), .datab (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        ), .datac (nx51520z2), .datad (
+                        main_ip_get_ang_zero_core_inst_acc_1d_nl_5d_), .datae (
+                        nx51520z3), .dataf (
+                        main_ip_get_ang_zero_core_inst_not_for_stage_0d_1d0n1s2)
+                        ) ;
+                        defparam ix51520z62807.lut_mask = 64'h7f7f7f7f0f0b0b0b;
+    cyclonev_lcell_comb ix12272z62807 (.combout (nx12272z1), .datad (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+                        ), .datae (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        ), .dataf (main_ip_get_ang_zero_core_inst_for_stage_0d)
+                        ) ;
+                        defparam ix12272z62807.lut_mask = 64'hff0000ffffff00ff;
+    cyclonev_lcell_comb ix10420z62807 (.combout (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_data_in_rsci_inst_main_ip_get_ang_zero_core_data_in_rsci_data_in_wait_ctrl_inst_data_in_rsci_icwt_2dn1s1
+                        ), .datac (data_in_rsc_vz_int), .datad (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_data_in_rsci_inst_main_ip_get_ang_zero_core_data_in_rsci_data_in_wait_ctrl_inst_data_in_rsci_icwt
+                        ), .datae (
+                        main_ip_get_ang_zero_core_inst_reg_data_in_rsci_ld_core_psct_cse
+                        ), .dataf (main_ip_get_ang_zero_core_inst_core_wten)) ;
+                        defparam ix10420z62807.lut_mask = 64'h0f000f00f00f0f00;
+    cyclonev_lcell_comb ix64456z62807 (.combout (
+                        NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_data_in_rsci_inst_data_in_rsci_biwt
+                        ), .datac (data_in_rsc_vz_int), .datad (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_data_in_rsci_inst_main_ip_get_ang_zero_core_data_in_rsci_data_in_wait_ctrl_inst_data_in_rsci_icwt
+                        ), .datae (
+                        main_ip_get_ang_zero_core_inst_reg_data_in_rsci_ld_core_psct_cse
+                        ), .dataf (main_ip_get_ang_zero_core_inst_core_wten)) ;
+                        defparam ix64456z62807.lut_mask = 64'h0fff0fff0f0f0fff;
+    cyclonev_lcell_comb ix11340z62807 (.combout (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_data_out_rsci_inst_main_ip_get_ang_zero_core_data_out_rsci_data_out_wait_ctrl_inst_data_out_rsci_icwt_2dn1s1
+                        ), .datac (data_out_rsc_vz_int), .datad (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_data_out_rsci_inst_main_ip_get_ang_zero_core_data_out_rsci_data_out_wait_ctrl_inst_data_out_rsci_icwt
+                        ), .datae (
+                        main_ip_get_ang_zero_core_inst_reg_data_out_rsci_ld_core_psct_cse
+                        ), .dataf (main_ip_get_ang_zero_core_inst_core_wten)) ;
+                        defparam ix11340z62807.lut_mask = 64'h0f000f00f00f0f00;
+    cyclonev_lcell_comb ix9673z62808 (.combout (
+                        NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_data_out_rsci_inst_data_out_rsci_biwt
+                        ), .datac (data_out_rsc_vz_int), .datad (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_data_out_rsci_inst_main_ip_get_ang_zero_core_data_out_rsci_data_out_wait_ctrl_inst_data_out_rsci_icwt
+                        ), .datae (
+                        main_ip_get_ang_zero_core_inst_reg_data_out_rsci_ld_core_psct_cse
+                        ), .dataf (main_ip_get_ang_zero_core_inst_core_wten)) ;
+                        defparam ix9673z62808.lut_mask = 64'h0fff0fff0f0f0fff;
+    cyclonev_lcell_comb ix51902z62808 (.combout (nx51902z1), .datae (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+                        ), .dataf (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        )) ;
+                        defparam ix51902z62808.lut_mask = 64'hffff0000ffffffff;
+    cyclonev_lcell_comb ix11275z62807 (.combout (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var_NS_1d_
+                        ), .datab (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+                        ), .datac (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        ), .datad (
+                        main_ip_get_ang_zero_core_inst_for_1d_stage_0d_3d), .datae (
+                        main_ip_get_ang_zero_core_inst_for_1d_stage_0d_2d), .dataf (
+                        main_ip_get_ang_zero_core_inst_for_1d_stage_0d)) ;
+                        defparam ix11275z62807.lut_mask = 64'hfcfcfcfcfcfcfc3c;
+    cyclonev_lcell_comb ix56303z62807 (.combout (nx56303z1), .datab (
+                        main_ip_get_ang_zero_core_inst_for_1d_stage_0d_3d), .datac (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_asn_1d0_itm_4d), 
+                        .datad (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_asn_6d_itm_1d), .datae (
+                        nx60617z2), .dataf (nx42314z3)) ;
+                        defparam ix56303z62807.lut_mask = 64'hfff3000000000000;
+    cyclonev_lcell_comb ix12529z62807 (.combout (
+                        main_ip_get_ang_zero_core_inst_not_for_1d_for_land_lpi_2d_dfm_st_3d_1d0n1s2
+                        ), .dataa (
+                        main_ip_get_ang_zero_core_inst_exit_for_1d_for_sva), .datab (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_6d_
+                        ), .datac (
+                        main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_3d[0]), .datad (
+                        main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_3d[1]), .datae (
+                        main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_3d[2]), .dataf (
+                        main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_3d[3])) ;
+                        defparam ix12529z62807.lut_mask = 64'h888888888888888c;
+    cyclonev_lcell_comb ix60617z62807 (.combout (nx60617z1), .datac (
+                        main_ip_get_ang_zero_core_inst_reg_data_out_rsci_ld_core_psct_cse
+                        ), .datad (nx60617z2), .datae (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        ), .dataf (
+                        NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_data_out_rsci_inst_data_out_rsci_biwt
+                        )) ;
+                        defparam ix60617z62807.lut_mask = 64'h00000f000000ff00;
+    cyclonev_lcell_comb ix362z62807 (.combout (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_asn_1d0_itm_3d_1d0n1s1
+                        ), .datac (nx7794z2), .datad (nx7794z3), .datae (
+                        main_ip_get_ang_zero_core_inst_acc_1d_nl_5d_), .dataf (
+                        main_ip_get_ang_zero_core_inst_exit_for_1d_for_sva_dfm)
+                        ) ;
+                        defparam ix362z62807.lut_mask = 64'h000fffff00000000;
+    cyclonev_lcell_comb ix61324z62807 (.combout (
+                        main_ip_get_ang_zero_core_inst_for_1d_stage_0d_3d_1d0n1s1), 
+                        .datad (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+                        ), .datae (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        ), .dataf (
+                        main_ip_get_ang_zero_core_inst_for_1d_stage_0d_2d)) ;
+                        defparam ix61324z62807.lut_mask = 64'hff00000000000000;
+    cyclonev_lcell_comb ix61323z62807 (.combout (
+                        main_ip_get_ang_zero_core_inst_for_1d_stage_0d_2d_1d0n1s1), 
+                        .datad (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+                        ), .datae (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        ), .dataf (main_ip_get_ang_zero_core_inst_for_1d_stage_0d)
+                        ) ;
+                        defparam ix61323z62807.lut_mask = 64'hff00000000000000;
+    cyclonev_lcell_comb ix7794z62807 (.combout (
+                        main_ip_get_ang_zero_core_inst_not_for_1d_stage_0d_1d0n1s2)
+                        , .dataa (main_ip_get_ang_zero_core_inst_for_1d_stage_0d)
+                        , .datab (nx7794z1), .datac (nx7794z2), .datad (nx7794z3
+                        ), .datae (main_ip_get_ang_zero_core_inst_acc_1d_nl_5d_), 
+                        .dataf (
+                        main_ip_get_ang_zero_core_inst_exit_for_1d_for_sva_dfm)
+                        ) ;
+                        defparam ix7794z62807.lut_mask = 64'heeeccccceeeeeeee;
+    cyclonev_lcell_comb ix16068z62807 (.combout (
+                        main_ip_get_ang_zero_core_inst_exit_for_1d_for_sva_1d0n1s1
+                        ), .dataa (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_4d_
+                        ), .datab (nx16068z1), .datac (
+                        NOT_main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_2d_dfm_3d_)
+                        , .datad (nx7794z1), .datae (nx16068z2), .dataf (
+                        nx16068z3)) ;
+                        defparam ix16068z62807.lut_mask = 64'hff00ff0fff12ff2f;
+    cyclonev_lcell_comb ix29926z62807 (.combout (
+                        main_ip_get_ang_zero_core_inst_k_sva_1d0n1s1[0]), .datac (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+                        ), .datad (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        ), .datae (main_ip_get_ang_zero_core_inst_k_sva[0]), .dataf (
+                        main_ip_get_ang_zero_core_inst_exit_for_1d_for_sva_dfm)
+                        ) ;
+                        defparam ix29926z62807.lut_mask = 64'h0fffffffffff0fff;
+    cyclonev_lcell_comb ix30923z62807 (.combout (
+                        main_ip_get_ang_zero_core_inst_k_sva_1d0n1s1[1]), .datac (
+                        main_ip_get_ang_zero_core_inst_exit_for_1d_for_sva_dfm), 
+                        .datad (main_ip_get_ang_zero_core_inst_k_sva[0]), .datae (
+                        main_ip_get_ang_zero_core_inst_k_sva[1]), .dataf (
+                        nx7794z1)) ;
+                        defparam ix30923z62807.lut_mask = 64'h000000000ffff000;
+    cyclonev_lcell_comb ix31920z62807 (.combout (
+                        main_ip_get_ang_zero_core_inst_k_sva_1d0n1s1[2]), .datac (
+                        nx31920z1), .datad (
+                        main_ip_get_ang_zero_core_inst_exit_for_1d_for_sva_dfm), 
+                        .datae (main_ip_get_ang_zero_core_inst_k_sva[2]), .dataf (
+                        nx7794z1)) ;
+                        defparam ix31920z62807.lut_mask = 64'h000000000ffff000;
+    cyclonev_lcell_comb ix32917z62807 (.combout (
+                        main_ip_get_ang_zero_core_inst_k_sva_1d0n1s1[3]), .datab (
+                        nx34911z1), .datac (nx31920z1), .datad (
+                        main_ip_get_ang_zero_core_inst_exit_for_1d_for_sva_dfm), 
+                        .datae (main_ip_get_ang_zero_core_inst_k_sva[3]), .dataf (
+                        nx7794z1)) ;
+                        defparam ix32917z62807.lut_mask = 64'h000000003fffc000;
+    cyclonev_lcell_comb ix33914z62807 (.combout (
+                        main_ip_get_ang_zero_core_inst_k_sva_1d0n1s1[4]), .datac (
+                        main_ip_get_ang_zero_core_inst_k_sva[4]), .datad (
+                        nx7794z1), .datae (
+                        main_ip_get_ang_zero_core_inst_z_out_4d_), .dataf (
+                        main_ip_get_ang_zero_core_inst_exit_for_1d_for_sva_dfm)
+                        ) ;
+                        defparam ix33914z62807.lut_mask = 64'h00ff000000f000f0;
+    cyclonev_lcell_comb ix34911z62807 (.combout (
+                        main_ip_get_ang_zero_core_inst_k_sva_1d0n1s1[5]), .datac (
+                        main_ip_get_ang_zero_core_inst_k_sva[5]), .datad (
+                        nx7794z1), .datae (
+                        main_ip_get_ang_zero_core_inst_z_out_5d_), .dataf (
+                        main_ip_get_ang_zero_core_inst_exit_for_1d_for_sva_dfm)
+                        ) ;
+                        defparam ix34911z62807.lut_mask = 64'h00ff000000f000f0;
+    cyclonev_lcell_comb ix38451z62807 (.combout (
+                        main_ip_get_ang_zero_core_inst_bytes_1d_lpi_1d_dfm_3d_sg1_1d0n1s1[0]
+                        ), .dataa (
+                        main_ip_get_ang_zero_core_inst_bytes_1d_lpi_1d_dfm_3d_sg1[0]
+                        ), .datab (nx51902z1), .datac (data_in_rsc_z_int_2d_), .datad (
+                        data_in_rsc_z_int_3d_), .datae (data_in_rsc_z_int_4d_), .dataf (
+                        main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_5d_)
+                        ) ;
+                        defparam ix38451z62807.lut_mask = 64'he2e2e2eee2e2e2e2;
+    cyclonev_lcell_comb ix39448z62807 (.combout (
+                        main_ip_get_ang_zero_core_inst_bytes_1d_lpi_1d_dfm_3d_sg1_1d0n1s1[1]
+                        ), .dataa (
+                        main_ip_get_ang_zero_core_inst_bytes_1d_lpi_1d_dfm_3d_sg1[1]
+                        ), .datab (nx51902z1), .datac (data_in_rsc_z_int_2d_), .datad (
+                        data_in_rsc_z_int_3d_), .datae (data_in_rsc_z_int_4d_), .dataf (
+                        main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_5d_)
+                        ) ;
+                        defparam ix39448z62807.lut_mask = 64'h2e2e2e2e2e2e2e22;
+    cyclonev_lcell_comb ix51902z62807 (.combout (
+                        main_ip_get_ang_zero_core_inst_not_for_stage_0d_1d0n1s2), 
+                        .datab (main_ip_get_ang_zero_core_inst_for_stage_0d), .datac (
+                        nx51902z1), .datad (
+                        main_ip_get_ang_zero_core_inst_acc_1d_nl_5d_), .datae (
+                        nx51902z2), .dataf (nx51902z3)) ;
+                        defparam ix51902z62807.lut_mask = 64'hfcf0f0f0f0f0f0f0;
+    cyclonev_lcell_comb ix34911z62810 (.combout (
+                        main_ip_get_ang_zero_core_inst_mux_4d5_nl_5d_), .datac (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+                        ), .datad (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        ), .datae (main_ip_get_ang_zero_core_inst_k_sva[5]), .dataf (
+                        src2_rsc_addr_1d3_)) ;
+                        defparam ix34911z62810.lut_mask = 64'hffff0ffff0000000;
+    cyclonev_lcell_comb ix6488z62808 (.combout (
+                        main_ip_get_ang_zero_core_inst_for_and_1d_nl_0d_), .dataa (
+                        src2_rsc_addr_8d_), .datab (src2_rsc_addr_9d_), .datac (
+                        src2_rsc_addr_1d0_), .datad (src2_rsc_addr_1d1_), .datae (
+                        src2_rsc_addr_1d2_), .dataf (src2_rsc_addr_1d3_)) ;
+                        defparam ix6488z62808.lut_mask = 64'hfffffffffffffffe;
+    cyclonev_lcell_comb ix13467z62807 (.combout (
+                        main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d_mx0w0[0]
+                        ), .datad (
+                        main_ip_get_ang_zero_core_inst_ref_zero_sva_1d[0]), .datae (
+                        main_ip_get_ang_zero_core_inst_for_and_1d_nl_0d_), .dataf (
+                        src2_rsc_data_in[8])) ;
+                        defparam ix13467z62807.lut_mask = 64'hff00ffffff000000;
+    cyclonev_lcell_comb ix12470z62807 (.combout (
+                        main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d_mx0w0[1]
+                        ), .datad (
+                        main_ip_get_ang_zero_core_inst_ref_zero_sva_1d[1]), .datae (
+                        main_ip_get_ang_zero_core_inst_for_and_1d_nl_0d_), .dataf (
+                        src2_rsc_data_in[9])) ;
+                        defparam ix12470z62807.lut_mask = 64'hff00ffffff000000;
+    cyclonev_lcell_comb ix11473z62807 (.combout (
+                        main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d_mx0w0[2]
+                        ), .datab (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d1_
+                        ), .datac (
+                        main_ip_get_ang_zero_core_inst_ref_zero_sva_1d[2]), .datad (
+                        data_in_rsc_z_int_2d_), .datae (
+                        main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_1d8_)
+                        , .dataf (main_ip_get_ang_zero_core_inst_for_and_1d_nl_0d_
+                        )) ;
+                        defparam ix11473z62807.lut_mask = 64'hf0f0f0f0ffcc3300;
+    cyclonev_lcell_comb ix10476z62807 (.combout (
+                        main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d_mx0w0[3]
+                        ), .datab (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d1_
+                        ), .datac (
+                        main_ip_get_ang_zero_core_inst_ref_zero_sva_1d[3]), .datad (
+                        data_in_rsc_z_int_3d_), .datae (
+                        main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_1d9_)
+                        , .dataf (main_ip_get_ang_zero_core_inst_for_and_1d_nl_0d_
+                        )) ;
+                        defparam ix10476z62807.lut_mask = 64'hf0f0f0f0ffcc3300;
+    dffeas ix54114z26560 (.q (nx77_repl0), .d (src2_rsc_data_in[12]), .clk (
+           clk_int), .clrn (nx11340z1), .prn (nx11340z1)) ;
+    cyclonev_lcell_comb ix9479z62807 (.combout (
+                        main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d_mx0w0[4]
+                        ), .datab (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d1_
+                        ), .datac (
+                        main_ip_get_ang_zero_core_inst_ref_zero_sva_1d[4]), .datad (
+                        data_in_rsc_z_int_4d_), .datae (
+                        main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_2d0_)
+                        , .dataf (main_ip_get_ang_zero_core_inst_for_and_1d_nl_0d_
+                        )) ;
+                        defparam ix9479z62807.lut_mask = 64'hf0f0f0f0ffcc3300;
+    cyclonev_lcell_comb ix8482z62807 (.combout (
+                        main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d_mx0w0[5]
+                        ), .datad (
+                        main_ip_get_ang_zero_core_inst_ref_zero_sva_1d[5]), .datae (
+                        main_ip_get_ang_zero_core_inst_for_and_1d_nl_0d_), .dataf (
+                        src2_rsc_data_in[13])) ;
+                        defparam ix8482z62807.lut_mask = 64'hff00ffffff000000;
+    cyclonev_lcell_comb ix7485z62807 (.combout (
+                        main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d_mx0w0[6]
+                        ), .datad (
+                        main_ip_get_ang_zero_core_inst_ref_zero_sva_1d[6]), .datae (
+                        main_ip_get_ang_zero_core_inst_for_and_1d_nl_0d_), .dataf (
+                        src2_rsc_data_in[14])) ;
+                        defparam ix7485z62807.lut_mask = 64'hff00ffffff000000;
+    cyclonev_lcell_comb ix6488z62807 (.combout (
+                        main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d_mx0w0[7]
+                        ), .datad (
+                        main_ip_get_ang_zero_core_inst_ref_zero_sva_1d[7]), .datae (
+                        main_ip_get_ang_zero_core_inst_for_and_1d_nl_0d_), .dataf (
+                        src2_rsc_data_in[15])) ;
+                        defparam ix6488z62807.lut_mask = 64'hff00ffffff000000;
+    cyclonev_lcell_comb ix33914z62808 (.combout (
+                        main_ip_get_ang_zero_core_inst_z_out_4d_), .dataa (
+                        main_ip_get_ang_zero_core_inst_k_sva[4]), .datab (
+                        nx31920z1), .datac (
+                        main_ip_get_ang_zero_core_inst_k_sva[3]), .datad (
+                        nx34911z1), .datae (nx7794z1), .dataf (src2_rsc_addr_1d2_
+                        ), .datag (src2_rsc_addr_1d1_)) ;
+                        defparam ix33914z62808.lut_mask = 64'h3fff6aaac0006aaa;
+                        defparam ix33914z62808.extended_lut = "on";
+    cyclonev_lcell_comb ix34911z62808 (.combout (
+                        main_ip_get_ang_zero_core_inst_z_out_5d_), .datac (
+                        nx34911z1), .datad (
+                        main_ip_get_ang_zero_core_inst_mux_4d5_nl_5d_), .datae (
+                        nx34911z2), .dataf (nx31920z1)) ;
+                        defparam ix34911z62808.lut_mask = 64'h0ff0ff00ff00ff00;
+    cyclonev_lcell_comb ix40851z62807 (.combout (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_acc_3d_psp_sva_1d_
+                        ), .datad (
+                        main_ip_get_ang_zero_core_inst_exit_for_1d_for_sva), .datae (
+                        main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_3d[0]), .dataf (
+                        main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_3d[1])) ;
+                        defparam ix40851z62807.lut_mask = 64'h000000ff00ff0000;
+    cyclonev_lcell_comb ix41848z62807 (.combout (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_acc_3d_psp_sva_2d_
+                        ), .datac (
+                        main_ip_get_ang_zero_core_inst_exit_for_1d_for_sva), .datad (
+                        main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_3d[0]), .datae (
+                        main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_3d[1]), .dataf (
+                        main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_3d[2])) ;
+                        defparam ix41848z62807.lut_mask = 64'h000f0f0f0f000000;
+    cyclonev_lcell_comb ix42845z62807 (.combout (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_acc_3d_psp_sva_3d_
+                        ), .datab (
+                        main_ip_get_ang_zero_core_inst_exit_for_1d_for_sva), .datac (
+                        main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_3d[0]), .datad (
+                        main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_3d[1]), .datae (
+                        main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_3d[2]), .dataf (
+                        main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_3d[3])) ;
+                        defparam ix42845z62807.lut_mask = 64'h0333333330000000;
+    cyclonev_lcell_comb ix39854z62807 (.combout (
+                        NOT_main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_2d_dfm_0d_)
+                        , .datae (
+                        main_ip_get_ang_zero_core_inst_exit_for_1d_for_sva), .dataf (
+                        main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_3d[0])) ;
+                        defparam ix39854z62807.lut_mask = 64'hffff0000ffffffff;
+    cyclonev_lcell_comb ix29926z62809 (.combout (
+                        NOT_main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_2d_dfm_3d_)
+                        , .datae (
+                        main_ip_get_ang_zero_core_inst_exit_for_1d_for_sva), .dataf (
+                        main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_3d[3])) ;
+                        defparam ix29926z62809.lut_mask = 64'hffff0000ffffffff;
+    cyclonev_lcell_comb ix29926z62808 (.combout (
+                        main_ip_get_ang_zero_core_inst_exit_for_1d_for_sva_dfm), 
+                        .dataa (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_0d_
+                        ), .datab (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_4d_
+                        ), .datac (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_5d_
+                        ), .datad (
+                        NOT_main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_2d_dfm_3d_)
+                        , .datae (nx16068z2), .dataf (nx16068z3)) ;
+                        defparam ix29926z62808.lut_mask = 64'h000000ff010404ff;
+    cyclonev_lcell_comb ix34205z62807 (.combout (
+                        main_ip_get_ang_zero_core_inst_and_dcpl_3d7), .datad (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+                        ), .datae (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        ), .dataf (
+                        main_ip_get_ang_zero_core_inst_for_1d_stage_0d_3d)) ;
+                        defparam ix34205z62807.lut_mask = 64'hff00000000000000;
+    cyclonev_lcell_comb ix54114z62837 (.combout (src2_rsc_addr_0d_), .datad (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+                        ), .datae (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        ), .dataf (main_ip_get_ang_zero_core_inst_k_sva[0])) ;
+                        defparam ix54114z62837.lut_mask = 64'h00ffffffffffffff;
+    cyclonev_lcell_comb ix54114z62836 (.combout (src2_rsc_addr_1d_), .dataa (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+                        ), .datab (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        ), .datac (main_ip_get_ang_zero_core_inst_for_stage_0d), 
+                        .datad (main_ip_get_ang_zero_core_inst_k_sva[0]), .datae (
+                        main_ip_get_ang_zero_core_inst_k_sva[1]), .dataf (
+                        src2_rsc_addr_8d_)) ;
+                        defparam ix54114z62836.lut_mask = 64'h40c8c84000888800;
+    cyclonev_lcell_comb ix54114z62825 (.combout (src2_rsc_addr_2d_), .datab (
+                        src2_rsc_addr_9d_), .datac (nx7794z1), .datad (
+                        src1_rsc_we_1d_), .datae (nx34911z1), .dataf (nx31920z1)
+                        ) ;
+                        defparam ix54114z62825.lut_mask = 64'h00cc0fcc0fcc00cc;
+    cyclonev_lcell_comb ix54114z62820 (.combout (src2_rsc_addr_3d_), .dataa (
+                        nx31920z1), .datab (
+                        main_ip_get_ang_zero_core_inst_k_sva[2]), .datac (
+                        main_ip_get_ang_zero_core_inst_k_sva[3]), .datad (
+                        src1_rsc_we_1d_), .datae (src2_rsc_addr_1d0_), .dataf (
+                        nx7794z1)) ;
+                        defparam ix54114z62820.lut_mask = 64'h00ff000078ff7800;
+    cyclonev_lcell_comb ix54114z62826 (.combout (src2_rsc_addr_4d_), .dataa (
+                        nx54114z8), .datab (nx31920z1), .datac (
+                        main_ip_get_ang_zero_core_inst_k_sva[4]), .datad (
+                        src1_rsc_we_1d_), .datae (src2_rsc_addr_1d1_), .dataf (
+                        nx7794z1)) ;
+                        defparam ix54114z62826.lut_mask = 64'h00ff0000b4ffb400;
+    cyclonev_lcell_comb ix54114z62821 (.combout (src2_rsc_addr_5d_), .dataa (
+                        nx54114z5), .datab (nx54114z6), .datac (nx34911z1), .datad (
+                        main_ip_get_ang_zero_core_inst_mux_4d5_nl_5d_), .datae (
+                        nx34911z2), .dataf (nx31920z1)) ;
+                        defparam ix54114z62821.lut_mask = 64'h5775775577557755;
+    cyclonev_lcell_comb ix51243z62837 (.combout (src1_rsc_addr_1d_), .datab (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+                        ), .datac (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        ), .datad (
+                        main_ip_get_ang_zero_core_inst_exit_for_1d_for_sva), .datae (
+                        main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_3d[0]), .dataf (
+                        src2_rsc_addr_8d_)) ;
+                        defparam ix51243z62837.lut_mask = 64'hff3fffffc000c0c0;
+    dffeas ix51243z26569 (.q (nx71_repl0), .d (src1_rsc_data_in[3]), .clk (
+           clk_int), .clrn (nx11340z1), .prn (nx11340z1)) ;
+    cyclonev_lcell_comb ix51243z62836 (.combout (src1_rsc_addr_2d_), .dataa (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+                        ), .datab (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        ), .datac (
+                        main_ip_get_ang_zero_core_inst_exit_for_1d_for_sva), .datad (
+                        main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_3d[0]), .datae (
+                        main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_3d[1]), .dataf (
+                        src2_rsc_addr_9d_)) ;
+                        defparam ix51243z62836.lut_mask = 64'h777f7f7700080800;
+    cyclonev_lcell_comb ix51243z62835 (.combout (src1_rsc_addr_3d_), .datac (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+                        ), .datad (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        ), .datae (src2_rsc_addr_1d0_), .dataf (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_acc_3d_psp_sva_2d_
+                        )) ;
+                        defparam ix51243z62835.lut_mask = 64'hfffff0000fff0000;
+    cyclonev_lcell_comb ix51243z62834 (.combout (src1_rsc_addr_4d_), .datac (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+                        ), .datad (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        ), .datae (src2_rsc_addr_1d1_), .dataf (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_acc_3d_psp_sva_3d_
+                        )) ;
+                        defparam ix51243z62834.lut_mask = 64'hfffff0000fff0000;
+    cyclonev_lcell_comb ix51243z62833 (.combout (src1_rsc_addr_5d_), .datab (
+                        main_ip_get_ang_zero_core_inst_exit_for_1d_for_sva), .datac (
+                        main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_3d[3]), .datad (
+                        src2_rsc_addr_1d2_), .datae (nx7794z1), .dataf (nx16068z2
+                        )) ;
+                        defparam ix51243z62833.lut_mask = 64'hff000000ff003030;
+    cyclonev_lcell_comb ix51243z62820 (.combout (src1_rsc_addr_8d_), .datab (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+                        ), .datac (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        ), .datad (
+                        main_ip_get_ang_zero_core_inst_exit_for_1d_for_sva), .datae (
+                        main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_3d[0]), .dataf (
+                        src2_rsc_addr_8d_)) ;
+                        defparam ix51243z62820.lut_mask = 64'h3fff3f3f00c00000;
+    cyclonev_lcell_comb ix51243z62819 (.combout (src1_rsc_addr_9d_), .datab (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+                        ), .datac (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        ), .datad (
+                        main_ip_get_ang_zero_core_inst_exit_for_1d_for_sva), .datae (
+                        main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_3d[1]), .dataf (
+                        src2_rsc_addr_9d_)) ;
+                        defparam ix51243z62819.lut_mask = 64'h3fff3f3f00c00000;
+    cyclonev_lcell_comb ix51243z62818 (.combout (src1_rsc_addr_1d0_), .datab (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+                        ), .datac (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        ), .datad (
+                        main_ip_get_ang_zero_core_inst_exit_for_1d_for_sva), .datae (
+                        main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_3d[2]), .dataf (
+                        src2_rsc_addr_1d0_)) ;
+                        defparam ix51243z62818.lut_mask = 64'h3fff3f3f00c00000;
+    cyclonev_lcell_comb ix51243z62817 (.combout (src1_rsc_addr_1d1_), .datab (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+                        ), .datac (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        ), .datad (
+                        main_ip_get_ang_zero_core_inst_exit_for_1d_for_sva), .datae (
+                        main_ip_get_ang_zero_core_inst_l_1d_sg1_lpi_3d[3]), .dataf (
+                        src2_rsc_addr_1d1_)) ;
+                        defparam ix51243z62817.lut_mask = 64'h3fff3f3f00c00000;
+    cyclonev_lcell_comb ix54114z62815 (.combout (src1_rsc_we_1d_), .datad (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+                        ), .datae (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        ), .dataf (main_ip_get_ang_zero_core_inst_for_stage_0d)
+                        ) ;
+                        defparam ix54114z62815.lut_mask = 64'hff00ffffffffffff;
+    cyclonev_lcell_comb ix22308z62807 (.combout (data_out_rsc_lz_dup_0d), .datad (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_data_out_rsci_inst_main_ip_get_ang_zero_core_data_out_rsci_data_out_wait_ctrl_inst_data_out_rsci_icwt
+                        ), .datae (
+                        main_ip_get_ang_zero_core_inst_reg_data_out_rsci_ld_core_psct_cse
+                        ), .dataf (main_ip_get_ang_zero_core_inst_core_wten)) ;
+                        defparam ix22308z62807.lut_mask = 64'hff000000ffff0000;
+    cyclonev_lcell_comb ix33815z62807 (.combout (data_in_rsc_lz_dup_0d), .datad (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_data_in_rsci_inst_main_ip_get_ang_zero_core_data_in_rsci_data_in_wait_ctrl_inst_data_in_rsci_icwt
+                        ), .datae (
+                        main_ip_get_ang_zero_core_inst_reg_data_in_rsci_ld_core_psct_cse
+                        ), .dataf (main_ip_get_ang_zero_core_inst_core_wten)) ;
+                        defparam ix33815z62807.lut_mask = 64'hff000000ffff0000;
+    cyclonev_lcell_comb ix42314z62809 (.combout (nx42314z3), .datac (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_data_out_rsci_inst_main_ip_get_ang_zero_core_data_out_rsci_data_out_wait_ctrl_inst_data_out_rsci_icwt
+                        ), .datad (
+                        main_ip_get_ang_zero_core_inst_reg_data_out_rsci_ld_core_psct_cse
+                        ), .datae (data_out_rsc_vz_int), .dataf (
+                        main_ip_get_ang_zero_core_inst_core_wten)) ;
+                        defparam ix42314z62809.lut_mask = 64'hf0ff00ffffff00ff;
+    cyclonev_lcell_comb ix42314z62808 (.combout (nx42314z2), .datae (
+                        data_in_rsc_z_int_3d_), .dataf (data_in_rsc_z_int_4d_)) ;
+                        defparam ix42314z62808.lut_mask = 64'hffff0000ffffffff;
+    cyclonev_lcell_comb ix5_repl (.combout (
+                        NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+                        ), .datac (
+                        NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_data_in_rsci_inst_data_in_rsci_biwt
+                        ), .datad (
+                        main_ip_get_ang_zero_core_inst_reg_data_out_rsci_ld_core_psct_cse
+                        ), .datae (
+                        NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_data_out_rsci_inst_data_out_rsci_biwt
+                        ), .dataf (
+                        main_ip_get_ang_zero_core_inst_reg_data_in_rsci_ld_core_psct_cse
+                        )) ;
+                        defparam ix5_repl.lut_mask = 64'h000f0f0f00ffffff;
+    dffeas ix51243z26570 (.q (nx56_repl0), .d (src1_rsc_data_in[2]), .clk (
+           clk_int), .clrn (nx11340z1), .prn (nx11340z1)) ;
+    cyclonev_lcell_comb ix51243z62824 (.combout (
+                        NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen
+                        ), .datac (
+                        NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_data_in_rsci_inst_data_in_rsci_biwt
+                        ), .datad (
+                        main_ip_get_ang_zero_core_inst_reg_data_out_rsci_ld_core_psct_cse
+                        ), .datae (
+                        NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_data_out_rsci_inst_data_out_rsci_biwt
+                        ), .dataf (
+                        main_ip_get_ang_zero_core_inst_reg_data_in_rsci_ld_core_psct_cse
+                        )) ;
+                        defparam ix51243z62824.lut_mask = 64'h000f0f0f00ffffff;
+    dffeas ix54114z26562 (.q (nx48_repl0), .d (src2_rsc_data_in[10]), .clk (
+           clk_int), .clrn (nx11340z1), .prn (nx11340z1)) ;
+    cyclonev_lcell_comb ix51243z62807 (.combout (src1_rsc_data_in[15]), .datad (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d1_
+                        ), .datae (data_in_rsc_z_int_7d_), .dataf (
+                        data_in_rsc_z_int_2d3_)) ;
+                        defparam ix51243z62807.lut_mask = 64'hffff00ffff000000;
+    cyclonev_lcell_comb ix51243z62808 (.combout (src1_rsc_data_in[14]), .datad (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d1_
+                        ), .datae (
+                        main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_6d_), 
+                        .dataf (data_in_rsc_z_int_2d2_)) ;
+                        defparam ix51243z62808.lut_mask = 64'hffff00ffff000000;
+    cyclonev_lcell_comb ix51243z62809 (.combout (src1_rsc_data_in[13]), .datad (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d1_
+                        ), .datae (
+                        main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_5d_), 
+                        .dataf (data_in_rsc_z_int_2d1_)) ;
+                        defparam ix51243z62809.lut_mask = 64'hffff00ffff000000;
+    cyclonev_lcell_comb ix51243z62810 (.combout (src1_rsc_data_in[12]), .datad (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d1_
+                        ), .datae (data_in_rsc_z_int_4d_), .dataf (
+                        main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_2d0_)
+                        ) ;
+                        defparam ix51243z62810.lut_mask = 64'hffff00ffff000000;
+    cyclonev_lcell_comb ix51243z62811 (.combout (src1_rsc_data_in[11]), .datad (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d1_
+                        ), .datae (data_in_rsc_z_int_3d_), .dataf (
+                        main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_1d9_)
+                        ) ;
+                        defparam ix51243z62811.lut_mask = 64'hffff00ffff000000;
+    cyclonev_lcell_comb ix51243z62812 (.combout (src1_rsc_data_in[10]), .datad (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d1_
+                        ), .datae (data_in_rsc_z_int_2d_), .dataf (
+                        main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_1d8_)
+                        ) ;
+                        defparam ix51243z62812.lut_mask = 64'hffff00ffff000000;
+    cyclonev_lcell_comb ix9673z62807 (.combout (nx9673z1), .datac (
+                        NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_data_in_rsci_inst_data_in_rsci_biwt
+                        ), .datad (
+                        main_ip_get_ang_zero_core_inst_reg_data_out_rsci_ld_core_psct_cse
+                        ), .datae (
+                        NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_data_out_rsci_inst_data_out_rsci_biwt
+                        ), .dataf (
+                        main_ip_get_ang_zero_core_inst_reg_data_in_rsci_ld_core_psct_cse
+                        )) ;
+                        defparam ix9673z62807.lut_mask = 64'hfff0f0f0ff000000;
+    cyclonev_lcell_comb ix51243z62813 (.combout (src1_rsc_data_in[9]), .datad (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d1_
+                        ), .datae (
+                        main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_1d_), 
+                        .dataf (data_in_rsc_z_int_1d7_)) ;
+                        defparam ix51243z62813.lut_mask = 64'hffff00ffff000000;
+    cyclonev_lcell_comb ix51243z62814 (.combout (src1_rsc_data_in[8]), .datad (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d1_
+                        ), .datae (
+                        main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_0d_), 
+                        .dataf (data_in_rsc_z_int_1d6_)) ;
+                        defparam ix51243z62814.lut_mask = 64'hffff00ffff000000;
+    cyclonev_lcell_comb ix51243z62825 (.combout (src1_rsc_data_in[7]), .datad (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d1_
+                        ), .datae (data_in_rsc_z_int_1d5_), .dataf (
+                        data_in_rsc_z_int_3d1_)) ;
+                        defparam ix51243z62825.lut_mask = 64'hffff00ffff000000;
+    cyclonev_lcell_comb ix51243z62826 (.combout (src1_rsc_data_in[6]), .datad (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d1_
+                        ), .datae (data_in_rsc_z_int_1d4_), .dataf (
+                        data_in_rsc_z_int_3d0_)) ;
+                        defparam ix51243z62826.lut_mask = 64'hffff00ffff000000;
+    cyclonev_lcell_comb ix51243z62827 (.combout (src1_rsc_data_in[5]), .datad (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d1_
+                        ), .datae (data_in_rsc_z_int_1d3_), .dataf (
+                        data_in_rsc_z_int_2d9_)) ;
+                        defparam ix51243z62827.lut_mask = 64'hffff00ffff000000;
+    cyclonev_lcell_comb ix51243z62828 (.combout (src1_rsc_data_in[4]), .datad (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d1_
+                        ), .datae (data_in_rsc_z_int_1d2_), .dataf (
+                        data_in_rsc_z_int_2d8_)) ;
+                        defparam ix51243z62828.lut_mask = 64'hffff00ffff000000;
+    cyclonev_lcell_comb ix51243z62829 (.combout (src1_rsc_data_in[3]), .datad (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d1_
+                        ), .datae (
+                        main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_1d1_)
+                        , .dataf (data_in_rsc_z_int_2d7_)) ;
+                        defparam ix51243z62829.lut_mask = 64'hffff00ffff000000;
+    cyclonev_lcell_comb ix51243z62830 (.combout (src1_rsc_data_in[2]), .datad (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d1_
+                        ), .datae (data_in_rsc_z_int_1d0_), .dataf (
+                        data_in_rsc_z_int_2d6_)) ;
+                        defparam ix51243z62830.lut_mask = 64'hffff00ffff000000;
+    cyclonev_lcell_comb ix51243z62831 (.combout (src1_rsc_data_in[1]), .datad (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d1_
+                        ), .datae (data_in_rsc_z_int_9d_), .dataf (
+                        data_in_rsc_z_int_2d5_)) ;
+                        defparam ix51243z62831.lut_mask = 64'hffff00ffff000000;
+    cyclonev_lcell_comb ix51243z62832 (.combout (src1_rsc_data_in[0]), .datad (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d1_
+                        ), .datae (data_in_rsc_z_int_8d_), .dataf (
+                        data_in_rsc_z_int_2d4_)) ;
+                        defparam ix51243z62832.lut_mask = 64'hffff00ffff000000;
+    cyclonev_lcell_comb ix54114z62807 (.combout (src2_rsc_data_in[15]), .datad (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d1_
+                        ), .datae (data_in_rsc_z_int_2d3_), .dataf (
+                        data_in_rsc_z_int_7d_)) ;
+                        defparam ix54114z62807.lut_mask = 64'hffff00ffff000000;
+    cyclonev_lcell_comb ix54114z62808 (.combout (src2_rsc_data_in[14]), .datad (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d1_
+                        ), .datae (data_in_rsc_z_int_2d2_), .dataf (
+                        main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_6d_)
+                        ) ;
+                        defparam ix54114z62808.lut_mask = 64'hffff00ffff000000;
+    cyclonev_lcell_comb ix54114z62809 (.combout (src2_rsc_data_in[13]), .datad (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d1_
+                        ), .datae (data_in_rsc_z_int_2d1_), .dataf (
+                        main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_5d_)
+                        ) ;
+                        defparam ix54114z62809.lut_mask = 64'hffff00ffff000000;
+    cyclonev_lcell_comb ix54114z62810 (.combout (src2_rsc_data_in[12]), .datad (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d1_
+                        ), .datae (
+                        main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_2d0_)
+                        , .dataf (data_in_rsc_z_int_4d_)) ;
+                        defparam ix54114z62810.lut_mask = 64'hffff00ffff000000;
+    cyclonev_lcell_comb ix54114z62811 (.combout (src2_rsc_data_in[11]), .datad (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d1_
+                        ), .datae (
+                        main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_1d9_)
+                        , .dataf (data_in_rsc_z_int_3d_)) ;
+                        defparam ix54114z62811.lut_mask = 64'hffff00ffff000000;
+    dffeas ix51243z26557 (.q (nx246_repl0), .d (src1_rsc_data_in[15]), .clk (
+           clk_int), .clrn (nx11340z1), .prn (nx11340z1)) ;
+    cyclonev_lcell_comb ix54114z62812 (.combout (src2_rsc_data_in[10]), .datad (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d1_
+                        ), .datae (
+                        main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_1d8_)
+                        , .dataf (data_in_rsc_z_int_2d_)) ;
+                        defparam ix54114z62812.lut_mask = 64'hffff00ffff000000;
+    dffeas ix51243z26558 (.q (nx232_repl0), .d (src1_rsc_data_in[14]), .clk (
+           clk_int), .clrn (nx11340z1), .prn (nx11340z1)) ;
+    cyclonev_lcell_comb ix54114z62813 (.combout (src2_rsc_data_in[9]), .datad (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d1_
+                        ), .datae (data_in_rsc_z_int_1d7_), .dataf (
+                        main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_1d_)
+                        ) ;
+                        defparam ix54114z62813.lut_mask = 64'hffff00ffff000000;
+    cyclonev_lcell_comb ix54114z62814 (.combout (src2_rsc_data_in[8]), .datad (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d1_
+                        ), .datae (data_in_rsc_z_int_1d6_), .dataf (
+                        main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_0d_)
+                        ) ;
+                        defparam ix54114z62814.lut_mask = 64'hffff00ffff000000;
+    dffeas ix51243z26559 (.q (nx218_repl0), .d (src1_rsc_data_in[13]), .clk (
+           clk_int), .clrn (nx11340z1), .prn (nx11340z1)) ;
+    cyclonev_lcell_comb ix54114z62828 (.combout (src2_rsc_data_in[7]), .datad (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d1_
+                        ), .datae (data_in_rsc_z_int_3d1_), .dataf (
+                        data_in_rsc_z_int_1d5_)) ;
+                        defparam ix54114z62828.lut_mask = 64'hffff00ffff000000;
+    dffeas ix51243z26560 (.q (nx204_repl0), .d (src1_rsc_data_in[12]), .clk (
+           clk_int), .clrn (nx11340z1), .prn (nx11340z1)) ;
+    cyclonev_lcell_comb ix54114z62829 (.combout (src2_rsc_data_in[6]), .datad (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d1_
+                        ), .datae (data_in_rsc_z_int_3d0_), .dataf (
+                        data_in_rsc_z_int_1d4_)) ;
+                        defparam ix54114z62829.lut_mask = 64'hffff00ffff000000;
+    dffeas ix51243z26561 (.q (nx190_repl0), .d (src1_rsc_data_in[11]), .clk (
+           clk_int), .clrn (nx11340z1), .prn (nx11340z1)) ;
+    cyclonev_lcell_comb ix54114z62830 (.combout (src2_rsc_data_in[5]), .datad (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d1_
+                        ), .datae (data_in_rsc_z_int_2d9_), .dataf (
+                        data_in_rsc_z_int_1d3_)) ;
+                        defparam ix54114z62830.lut_mask = 64'hffff00ffff000000;
+    cyclonev_lcell_comb ix54114z62831 (.combout (src2_rsc_data_in[4]), .datad (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d1_
+                        ), .datae (data_in_rsc_z_int_2d8_), .dataf (
+                        data_in_rsc_z_int_1d2_)) ;
+                        defparam ix54114z62831.lut_mask = 64'hffff00ffff000000;
+    cyclonev_lcell_comb ix54114z62832 (.combout (src2_rsc_data_in[3]), .datad (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d1_
+                        ), .datae (data_in_rsc_z_int_2d7_), .dataf (
+                        main_ip_get_ang_zero_core_inst_data_in_rsci_d_mxwt_1d1_)
+                        ) ;
+                        defparam ix54114z62832.lut_mask = 64'hffff00ffff000000;
+    dffeas ix51243z26563 (.q (nx162_repl0), .d (src1_rsc_data_in[9]), .clk (
+           clk_int), .clrn (nx11340z1), .prn (nx11340z1)) ;
+    cyclonev_lcell_comb ix54114z62833 (.combout (src2_rsc_data_in[2]), .datad (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d1_
+                        ), .datae (data_in_rsc_z_int_2d6_), .dataf (
+                        data_in_rsc_z_int_1d0_)) ;
+                        defparam ix54114z62833.lut_mask = 64'hffff00ffff000000;
+    cyclonev_lcell_comb ix54114z62834 (.combout (src2_rsc_data_in[1]), .datad (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d1_
+                        ), .datae (data_in_rsc_z_int_2d5_), .dataf (
+                        data_in_rsc_z_int_9d_)) ;
+                        defparam ix54114z62834.lut_mask = 64'hffff00ffff000000;
+    dffeas ix51243z26564 (.q (nx148_repl0), .d (src1_rsc_data_in[8]), .clk (
+           clk_int), .clrn (nx11340z1), .prn (nx11340z1)) ;
+    cyclonev_lcell_comb ix54114z62835 (.combout (src2_rsc_data_in[0]), .datad (
+                        main_ip_get_ang_zero_core_inst_config_temp_data_in_tmp_1d_sva_1d1_
+                        ), .datae (data_in_rsc_z_int_2d4_), .dataf (
+                        data_in_rsc_z_int_8d_)) ;
+                        defparam ix54114z62835.lut_mask = 64'hffff00ffff000000;
+    cyclonev_lcell_comb ix13422z62807 (.combout (nx13422z1), .datac (
+                        main_ip_get_ang_zero_core_inst_reg_data_out_rsci_ld_core_psct_cse
+                        ), .datad (nx60617z2), .datae (
+                        main_ip_get_ang_zero_core_inst_for_stage_0d), .dataf (
+                        NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_data_out_rsci_inst_data_out_rsci_biwt
+                        )) ;
+                        defparam ix13422z62807.lut_mask = 64'h0f000000ff000000;
+    dffeas ix51243z26565 (.q (nx127_repl0), .d (src1_rsc_data_in[7]), .clk (
+           clk_int), .clrn (nx11340z1), .prn (nx11340z1)) ;
+    dffeas ix54114z26564 (.q (nx20_repl0), .d (src2_rsc_data_in[8]), .clk (
+           clk_int), .clrn (nx11340z1), .prn (nx11340z1)) ;
+    dffeas ix54114z26563 (.q (nx34_repl0), .d (src2_rsc_data_in[9]), .clk (
+           clk_int), .clrn (nx11340z1), .prn (nx11340z1)) ;
+    dffeas ix54114z26561 (.q (nx63_repl0), .d (src2_rsc_data_in[11]), .clk (
+           clk_int), .clrn (nx11340z1), .prn (nx11340z1)) ;
+    dffeas ix54114z26557 (.q (nx119_repl0), .d (src2_rsc_data_in[15]), .clk (
+           clk_int), .clrn (nx11340z1), .prn (nx11340z1)) ;
+    dffeas ix51243z26572 (.q (nx28_repl0), .d (src1_rsc_data_in[0]), .clk (
+           clk_int), .clrn (nx11340z1), .prn (nx11340z1)) ;
+    dffeas ix51243z26571 (.q (nx42_repl0), .d (src1_rsc_data_in[1]), .clk (
+           clk_int), .clrn (nx11340z1), .prn (nx11340z1)) ;
+    dffeas ix51243z26562 (.q (nx176_repl0), .d (src1_rsc_data_in[10]), .clk (
+           clk_int), .clrn (nx11340z1), .prn (nx11340z1)) ;
+    cyclonev_lcell_comb ix60617z62808 (.combout (nx60617z2), .datac (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_data_in_rsci_inst_main_ip_get_ang_zero_core_data_in_rsci_data_in_wait_ctrl_inst_data_in_rsci_icwt
+                        ), .datad (
+                        main_ip_get_ang_zero_core_inst_reg_data_in_rsci_ld_core_psct_cse
+                        ), .datae (data_in_rsc_vz_int), .dataf (
+                        main_ip_get_ang_zero_core_inst_core_wten)) ;
+                        defparam ix60617z62808.lut_mask = 64'hf0ff00ffffff00ff;
+    dffeas ix51243z26566 (.q (nx113_repl0), .d (src1_rsc_data_in[6]), .clk (
+           clk_int), .clrn (nx11340z1), .prn (nx11340z1)) ;
+    cyclonev_lcell_comb ix6488z62809 (.combout (nx6488z1), .datab (
+                        main_ip_get_ang_zero_core_inst_for_stage_0d), .datac (
+                        main_ip_get_ang_zero_core_inst_reg_data_out_rsci_ld_core_psct_cse
+                        ), .datad (
+                        NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_data_out_rsci_inst_data_out_rsci_biwt
+                        ), .datae (nx7794z1), .dataf (nx60617z2)) ;
+                        defparam ix6488z62809.lut_mask = 64'h0ccc000000000000;
+    dffeas ix54114z26558 (.q (nx105_repl0), .d (src2_rsc_data_in[14]), .clk (
+           clk_int), .clrn (nx11340z1), .prn (nx11340z1)) ;
+    cyclonev_lcell_comb ix57300z62807 (.combout (
+                        main_ip_get_ang_zero_core_inst_rtlc10_copy_n402[7]), .datad (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_asn_6d_itm_1d), .datae (
+                        nx57300z1), .dataf (
+                        main_ip_get_ang_zero_core_inst_src2_temp_lpi_3d[7])) ;
+                        defparam ix57300z62807.lut_mask = 64'h00ffffff0000ff00;
+    dffeas ix51243z26567 (.q (nx99_repl0), .d (src1_rsc_data_in[5]), .clk (
+           clk_int), .clrn (nx11340z1), .prn (nx11340z1)) ;
+    cyclonev_lcell_comb ix53775z62807 (.combout (nx53775z1), .datab (
+                        main_ip_get_ang_zero_core_inst_reg_data_out_rsci_ld_core_psct_cse
+                        ), .datac (
+                        main_ip_get_ang_zero_core_inst_for_1d_stage_0d_3d), .datad (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_asn_1d0_itm_4d), 
+                        .datae (
+                        NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_data_out_rsci_inst_data_out_rsci_biwt
+                        ), .dataf (nx60617z2)) ;
+                        defparam ix53775z62807.lut_mask = 64'h003000f000000000;
+    cyclonev_lcell_comb ix51902z62809 (.sumout (
+                        main_ip_get_ang_zero_core_inst_acc_1d_nl_5d_), .dataa (
+                        main_ip_get_ang_zero_core_inst_k_sva[5]), .datab (
+                        src2_rsc_addr_1d3_), .datac (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[1]
+                        ), .datad (
+                        main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_core_fsm_inst_state_var[0]
+                        ), .dataf (nx11340z1), .cin (GND)) ;
+                        defparam ix51902z62809.lut_mask = 64'h000000ff0000accc;
+    cyclonev_lcell_comb ix2029z62814 (.sumout (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_value_sva_3d_mx0[1]
+                        ), .cout (nx2029z7), .dataa (
+                        main_ip_get_ang_zero_core_inst_reg_for_1d_for_land_lpi_2d_dfm_st_2d_cse
+                        ), .datad (src1_rsci_data_out_d_oreg[9]), .dataf (
+                        main_ip_get_ang_zero_core_inst_src2_temp_lpi_2d_dfm_2d[1])
+                        , .cin (nx2029z8)) ;
+                        defparam ix2029z62814.lut_mask = 64'h000055ff0000aa00;
+    cyclonev_lcell_comb ix24957z62815 (.cout (nx24957z9), .dataa (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_asn_6d_itm_1d), .datad (
+                        src2_rsci_data_out_d_oreg[0]), .dataf (
+                        main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d[0]), .cin (
+                        nx24957z10)) ;
+                        defparam ix24957z62815.lut_mask = 64'h0000ff550000aa00;
+    cyclonev_lcell_comb ix2029z62815 (.sumout (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_value_sva_3d_mx0[0]
+                        ), .cout (nx2029z8), .dataa (
+                        main_ip_get_ang_zero_core_inst_reg_for_1d_for_land_lpi_2d_dfm_st_2d_cse
+                        ), .datad (src1_rsci_data_out_d_oreg[8]), .dataf (
+                        main_ip_get_ang_zero_core_inst_src2_temp_lpi_2d_dfm_2d[0])
+                        , .cin (GND)) ;
+                        defparam ix2029z62815.lut_mask = 64'h000055ff0000aa00;
+    cyclonev_lcell_comb ix24957z62816 (.cout (nx24957z10), .dataa (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_asn_6d_itm_1d), .dataf (
+                        nx11340z1), .cin (GND)) ;
+                        defparam ix24957z62816.lut_mask = 64'h000000ff0000aaaa;
+    cyclonev_lcell_comb ix24957z62811 (.sumout (
+                        main_ip_get_ang_zero_core_inst_rtlc10_copy_n402[3]), .cout (
+                        nx24957z5), .dataa (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_asn_6d_itm_1d), .datac (
+                        src2_rsci_data_out_d_oreg[4]), .datad (
+                        main_ip_get_ang_zero_core_inst_src2_temp_lpi_3d[3]), .dataf (
+                        main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d[4]), .cin (
+                        nx24957z6)) ;
+                        defparam ix24957z62811.lut_mask = 64'h0000ff550000f5a0;
+    cyclonev_lcell_comb ix192_buf (.sumout (nx57300z1), .datac (GND), .cin (
+                        nx24957z2)) ;
+                        defparam ix192_buf.lut_mask = 64'h00000f0f0000f0f0;
+    cyclonev_lcell_comb ix24957z62808 (.sumout (
+                        main_ip_get_ang_zero_core_inst_rtlc10_copy_n402[6]), .cout (
+                        nx24957z2), .dataa (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_asn_6d_itm_1d), .datac (
+                        src2_rsci_data_out_d_oreg[7]), .datad (
+                        main_ip_get_ang_zero_core_inst_src2_temp_lpi_3d[6]), .dataf (
+                        main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d[7]), .cin (
+                        nx24957z3)) ;
+                        defparam ix24957z62808.lut_mask = 64'h0000ff550000f5a0;
+    cyclonev_lcell_comb ix2029z62816 (.sumout (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_value_sva_3d_mx0[8]
+                        ), .datac (
+                        main_ip_get_ang_zero_core_inst_src2_temp_lpi_2d_dfm_2d[7])
+                        , .datad (GND), .dataf (
+                        main_ip_get_ang_zero_core_inst_reg_for_1d_for_land_lpi_2d_dfm_st_2d_cse
+                        ), .cin (nx2029z10)) ;
+                        defparam ix2029z62816.lut_mask = 64'h00000fff0000ff00;
+    cyclonev_lcell_comb ix24957z62809 (.sumout (
+                        main_ip_get_ang_zero_core_inst_rtlc10_copy_n402[5]), .cout (
+                        nx24957z3), .dataa (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_asn_6d_itm_1d), .datac (
+                        src2_rsci_data_out_d_oreg[6]), .datad (
+                        main_ip_get_ang_zero_core_inst_src2_temp_lpi_3d[5]), .dataf (
+                        main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d[6]), .cin (
+                        nx24957z4)) ;
+                        defparam ix24957z62809.lut_mask = 64'h0000ff550000f5a0;
+    cyclonev_lcell_comb ix2029z62808 (.sumout (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_value_sva_3d_mx0[7]
+                        ), .cout (nx2029z10), .dataa (
+                        main_ip_get_ang_zero_core_inst_reg_for_1d_for_land_lpi_2d_dfm_st_2d_cse
+                        ), .datad (src1_rsci_data_out_d_oreg[15]), .dataf (
+                        main_ip_get_ang_zero_core_inst_src2_temp_lpi_2d_dfm_2d[7])
+                        , .cin (nx2029z2)) ;
+                        defparam ix2029z62808.lut_mask = 64'h000055ff0000aa00;
+    cyclonev_lcell_comb ix24957z62810 (.sumout (
+                        main_ip_get_ang_zero_core_inst_rtlc10_copy_n402[4]), .cout (
+                        nx24957z4), .dataa (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_asn_6d_itm_1d), .datac (
+                        src2_rsci_data_out_d_oreg[5]), .datad (
+                        main_ip_get_ang_zero_core_inst_src2_temp_lpi_3d[4]), .dataf (
+                        main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d[5]), .cin (
+                        nx24957z5)) ;
+                        defparam ix24957z62810.lut_mask = 64'h0000ff550000f5a0;
+    cyclonev_lcell_comb ix2029z62809 (.sumout (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_value_sva_3d_mx0[6]
+                        ), .cout (nx2029z2), .dataa (
+                        main_ip_get_ang_zero_core_inst_reg_for_1d_for_land_lpi_2d_dfm_st_2d_cse
+                        ), .datad (src1_rsci_data_out_d_oreg[14]), .dataf (
+                        main_ip_get_ang_zero_core_inst_src2_temp_lpi_2d_dfm_2d[6])
+                        , .cin (nx2029z3)) ;
+                        defparam ix2029z62809.lut_mask = 64'h000055ff0000aa00;
+    cyclonev_lcell_comb ix2029z62810 (.sumout (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_value_sva_3d_mx0[5]
+                        ), .cout (nx2029z3), .dataa (
+                        main_ip_get_ang_zero_core_inst_reg_for_1d_for_land_lpi_2d_dfm_st_2d_cse
+                        ), .datad (src1_rsci_data_out_d_oreg[13]), .dataf (
+                        main_ip_get_ang_zero_core_inst_src2_temp_lpi_2d_dfm_2d[5])
+                        , .cin (nx2029z4)) ;
+                        defparam ix2029z62810.lut_mask = 64'h000055ff0000aa00;
+    cyclonev_lcell_comb ix2029z62811 (.sumout (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_value_sva_3d_mx0[4]
+                        ), .cout (nx2029z4), .dataa (
+                        main_ip_get_ang_zero_core_inst_reg_for_1d_for_land_lpi_2d_dfm_st_2d_cse
+                        ), .datad (src1_rsci_data_out_d_oreg[12]), .dataf (
+                        main_ip_get_ang_zero_core_inst_src2_temp_lpi_2d_dfm_2d[4])
+                        , .cin (nx2029z5)) ;
+                        defparam ix2029z62811.lut_mask = 64'h000055ff0000aa00;
+    cyclonev_lcell_comb ix24957z62812 (.sumout (
+                        main_ip_get_ang_zero_core_inst_rtlc10_copy_n402[2]), .cout (
+                        nx24957z6), .dataa (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_asn_6d_itm_1d), .datac (
+                        src2_rsci_data_out_d_oreg[3]), .datad (
+                        main_ip_get_ang_zero_core_inst_src2_temp_lpi_3d[2]), .dataf (
+                        main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d[3]), .cin (
+                        nx24957z7)) ;
+                        defparam ix24957z62812.lut_mask = 64'h0000ff550000f5a0;
+    cyclonev_lcell_comb ix2029z62812 (.sumout (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_value_sva_3d_mx0[3]
+                        ), .cout (nx2029z5), .dataa (
+                        main_ip_get_ang_zero_core_inst_reg_for_1d_for_land_lpi_2d_dfm_st_2d_cse
+                        ), .datad (src1_rsci_data_out_d_oreg[11]), .dataf (
+                        main_ip_get_ang_zero_core_inst_src2_temp_lpi_2d_dfm_2d[3])
+                        , .cin (nx2029z6)) ;
+                        defparam ix2029z62812.lut_mask = 64'h000055ff0000aa00;
+    cyclonev_lcell_comb ix24957z62813 (.sumout (
+                        main_ip_get_ang_zero_core_inst_rtlc10_copy_n402[1]), .cout (
+                        nx24957z7), .dataa (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_asn_6d_itm_1d), .datac (
+                        src2_rsci_data_out_d_oreg[2]), .datad (
+                        main_ip_get_ang_zero_core_inst_src2_temp_lpi_3d[1]), .dataf (
+                        main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d[2]), .cin (
+                        nx24957z8)) ;
+                        defparam ix24957z62813.lut_mask = 64'h0000ff550000f5a0;
+    cyclonev_lcell_comb ix2029z62813 (.sumout (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_value_sva_3d_mx0[2]
+                        ), .cout (nx2029z6), .dataa (
+                        main_ip_get_ang_zero_core_inst_reg_for_1d_for_land_lpi_2d_dfm_st_2d_cse
+                        ), .datad (src1_rsci_data_out_d_oreg[10]), .dataf (
+                        main_ip_get_ang_zero_core_inst_src2_temp_lpi_2d_dfm_2d[2])
+                        , .cin (nx2029z7)) ;
+                        defparam ix2029z62813.lut_mask = 64'h000055ff0000aa00;
+    cyclonev_lcell_comb ix24957z62814 (.sumout (
+                        main_ip_get_ang_zero_core_inst_rtlc10_copy_n402[0]), .cout (
+                        nx24957z8), .dataa (
+                        main_ip_get_ang_zero_core_inst_for_1d_for_asn_6d_itm_1d), .datac (
+                        src2_rsci_data_out_d_oreg[1]), .datad (
+                        main_ip_get_ang_zero_core_inst_src2_temp_lpi_3d[0]), .dataf (
+                        main_ip_get_ang_zero_core_inst_ref_zero_sva_dfm_1d[1]), .cin (
+                        nx24957z9)) ;
+                        defparam ix24957z62814.lut_mask = 64'h0000ff550000f5a0;
+endmodule
+
+
+module ram_dq_8d_1d ( wr_data1, rd_data1, addr1, wr_clk1, rd_clk1, wr_ena1, 
+                    rd_ena1, ena1, rst1, regce1, regrst1, wr_data2, rd_data2, 
+                    addr2, wr_clk2, rd_clk2, wr_ena2, rd_ena2, ena2, rst2, 
+                    regce2, regrst2, p_not_arst_n, 
+                    p_src2_rsci_data_out_d_oreg_0d__repl0, 
+                    p_src2_rsci_data_out_d_oreg_1d__repl0, 
+                    p_src2_rsci_data_out_d_oreg_2d__repl0, 
+                    p_src2_rsci_data_out_d_oreg_3d__repl0, 
+                    p_src2_rsci_data_out_d_oreg_4d__repl0, 
+                    p_src2_rsci_data_out_d_oreg_5d__repl0, 
+                    p_src2_rsci_data_out_d_oreg_6d__repl0, 
+                    p_src2_rsci_data_out_d_oreg_7d__repl0, p_rd_ena1, 
+                    p_nx119_repl0, p_nx105_repl0, p_nx91_repl0, p_nx77_repl0, 
+                    p_nx63_repl0, p_nx48_repl0, p_nx34_repl0, p_nx20_repl0, 
+                    p_NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+                     ) ;
+
+    input [7:0]wr_data1 ;
+    output [7:0]rd_data1 ;
+    input [6:0]addr1 ;
+    input wr_clk1 ;
+    input rd_clk1 ;
+    input wr_ena1 ;
+    input rd_ena1 ;
+    input ena1 ;
+    input rst1 ;
+    input regce1 ;
+    input regrst1 ;
+    input [7:0]wr_data2 ;
+    output [7:0]rd_data2 ;
+    input [6:0]addr2 ;
+    input wr_clk2 ;
+    input rd_clk2 ;
+    input wr_ena2 ;
+    input rd_ena2 ;
+    input ena2 ;
+    input rst2 ;
+    input regce2 ;
+    input regrst2 ;
+    input p_not_arst_n ;
+    output p_src2_rsci_data_out_d_oreg_0d__repl0 ;
+    output p_src2_rsci_data_out_d_oreg_1d__repl0 ;
+    output p_src2_rsci_data_out_d_oreg_2d__repl0 ;
+    output p_src2_rsci_data_out_d_oreg_3d__repl0 ;
+    output p_src2_rsci_data_out_d_oreg_4d__repl0 ;
+    output p_src2_rsci_data_out_d_oreg_5d__repl0 ;
+    output p_src2_rsci_data_out_d_oreg_6d__repl0 ;
+    output p_src2_rsci_data_out_d_oreg_7d__repl0 ;
+    output p_rd_ena1 ;
+    input p_nx119_repl0 ;
+    input p_nx105_repl0 ;
+    input p_nx91_repl0 ;
+    input p_nx77_repl0 ;
+    input p_nx63_repl0 ;
+    input p_nx48_repl0 ;
+    input p_nx34_repl0 ;
+    input p_nx20_repl0 ;
+    input 
+    p_NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+     ;
+
+    wire nx65403z5, nx864z1, nx1861z1, nx2858z1, nx3855z1, nx4852z1, nx5849z1, 
+         nx6846z1, nx65403z1, nx65403z2;
+    wire [7:0]rd_data2_rename105;
+    wire ena1_rename99, nx65403z4, nx65403z3, nx65403z6, ix797;
+    wire [750:0] xmplr_dummy ;
+
+
+
+
+    cyclonev_ram_block ix65403z12886 (.portbdataout ({nx6846z1,nx5849z1,nx4852z1
+                       ,nx3855z1,nx2858z1,nx1861z1,nx864z1,nx65403z5}), .portadatain (
+                       {wr_data1[7],wr_data1[6],wr_data1[5],wr_data1[4],
+                       wr_data1[3],wr_data1[2],wr_data1[1],wr_data1[0]}), .portaaddr (
+                       {addr1[6],addr1[5],addr1[4],addr1[3],addr1[2],addr1[1],
+                       addr1[0]}), .portawe (wr_ena1), .portare (ix797), .portbdatain (
+                       {wr_data2[7],wr_data2[6],wr_data2[5],wr_data2[4],
+                       wr_data2[3],wr_data2[2],wr_data2[1],wr_data2[0]}), .portbaddr (
+                       {ix797,addr2[5],addr2[4],addr2[3],addr2[2],addr2[1],
+                       addr2[0]}), .portbwe (wr_ena2), .portbre (ena1_rename99)
+                       , .clk0 (wr_clk1), .clk1 (wr_clk1), .ena0 (ena1_rename99)
+                       , .ena1 (ena2)) ;
+                       defparam ix65403z12886.operation_mode = "bidir_dual_port";
+                       defparam ix65403z12886.mixed_port_feed_through_mode = "dont_care";
+                       defparam ix65403z12886.ram_block_type = "auto";
+                       defparam ix65403z12886.logical_ram_name = "altsyncram:ix12_1d";
+                       defparam ix65403z12886.init_file_layout = "port_a";
+                       defparam ix65403z12886.port_a_logical_ram_depth = 128;
+                       defparam ix65403z12886.port_a_logical_ram_width = 8;
+                       defparam ix65403z12886.port_a_first_address = 0;
+                       defparam ix65403z12886.port_a_last_address = 127;
+                       defparam ix65403z12886.port_a_first_bit_number = 0;
+                       defparam ix65403z12886.port_a_address_clear = "none";
+                       defparam ix65403z12886.port_a_data_out_clear = "none";
+                       defparam ix65403z12886.port_a_data_out_clock = "none";
+                       defparam ix65403z12886.port_a_data_width = 8;
+                       defparam ix65403z12886.port_a_address_width = 7;
+                       defparam ix65403z12886.port_b_logical_ram_depth = 128;
+                       defparam ix65403z12886.port_b_logical_ram_width = 8;
+                       defparam ix65403z12886.port_b_first_address = 0;
+                       defparam ix65403z12886.port_b_last_address = 127;
+                       defparam ix65403z12886.port_b_first_bit_number = 0;
+                       defparam ix65403z12886.port_b_address_clear = "none";
+                       defparam ix65403z12886.port_b_data_in_clock = "clock1";
+                       defparam ix65403z12886.port_b_address_clock = "clock1";
+                       defparam ix65403z12886.port_b_write_enable_clock = "clock1";
+                       defparam ix65403z12886.port_b_read_enable_clock = "clock1";
+                       defparam ix65403z12886.port_b_data_out_clock = "none";
+                       defparam ix65403z12886.port_b_data_width = 8;
+                       defparam ix65403z12886.port_b_address_width = 7;
+                       defparam ix65403z12886.port_b_read_during_write_mode = "new_data_no_nbe_read";
+                       defparam ix65403z12886.clk0_input_clock_enable = "ena0";
+                       defparam ix65403z12886.clk0_core_clock_enable = "ena0";
+                       defparam ix65403z12886.clk1_input_clock_enable = "ena1";
+                       defparam ix65403z12886.clk1_core_clock_enable = "ena1";
+    assign ena1_rename99 = 1'b1 ;
+    dffeas reg_src2_rsci_data_out_d_oreg_7d_ (.q (
+           p_src2_rsci_data_out_d_oreg_7d__repl0), .d (rd_data2_rename105[7]), .clk (
+           rd_clk2), .ena (
+           p_NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (nx65403z6), .prn (ena1_rename99)) ;
+    assign nx65403z6 = ~p_not_arst_n ;
+    dffeas reg_src2_rsci_data_out_d_oreg_6d_ (.q (
+           p_src2_rsci_data_out_d_oreg_6d__repl0), .d (rd_data2_rename105[6]), .clk (
+           rd_clk2), .ena (
+           p_NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (nx65403z6), .prn (ena1_rename99)) ;
+    dffeas reg_src2_rsci_data_out_d_oreg_5d_ (.q (
+           p_src2_rsci_data_out_d_oreg_5d__repl0), .d (rd_data2_rename105[5]), .clk (
+           rd_clk2), .ena (
+           p_NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (nx65403z6), .prn (ena1_rename99)) ;
+    dffeas reg_src2_rsci_data_out_d_oreg_4d_ (.q (
+           p_src2_rsci_data_out_d_oreg_4d__repl0), .d (rd_data2_rename105[4]), .clk (
+           rd_clk2), .ena (
+           p_NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (nx65403z6), .prn (ena1_rename99)) ;
+    dffeas reg_src2_rsci_data_out_d_oreg_3d_ (.q (
+           p_src2_rsci_data_out_d_oreg_3d__repl0), .d (rd_data2_rename105[3]), .clk (
+           rd_clk2), .ena (
+           p_NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (nx65403z6), .prn (ena1_rename99)) ;
+    dffeas reg_src2_rsci_data_out_d_oreg_2d_ (.q (
+           p_src2_rsci_data_out_d_oreg_2d__repl0), .d (rd_data2_rename105[2]), .clk (
+           rd_clk2), .ena (
+           p_NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (nx65403z6), .prn (ena1_rename99)) ;
+    dffeas reg_src2_rsci_data_out_d_oreg_1d_ (.q (
+           p_src2_rsci_data_out_d_oreg_1d__repl0), .d (rd_data2_rename105[1]), .clk (
+           rd_clk2), .ena (
+           p_NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (nx65403z6), .prn (ena1_rename99)) ;
+    dffeas reg_src2_rsci_data_out_d_oreg_0d_ (.q (
+           p_src2_rsci_data_out_d_oreg_0d__repl0), .d (rd_data2_rename105[0]), .clk (
+           rd_clk2), .ena (
+           p_NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (nx65403z6), .prn (ena1_rename99)) ;
+    cyclonev_lcell_comb ix65403z62810 (.combout (nx65403z3), .datac (addr2[2]), 
+                        .datad (addr2[3]), .datae (addr1[2]), .dataf (addr1[3])
+                        ) ;
+                        defparam ix65403z62810.lut_mask = 64'h0ffff0ffff0ffff0;
+    cyclonev_lcell_comb ix65403z62811 (.combout (nx65403z4), .dataa (addr2[0]), 
+                        .datab (addr2[1]), .datac (wr_ena1), .datad (addr1[0]), 
+                        .datae (addr1[1]), .dataf (addr1[6])) ;
+                        defparam ix65403z62811.lut_mask = 64'hffffffff7fbfdfef;
+    cyclonev_lcell_comb ix6846z62807 (.combout (rd_data2_rename105[7]), .datad (
+                        p_nx119_repl0), .datae (nx65403z1), .dataf (nx6846z1)) ;
+                        defparam ix6846z62807.lut_mask = 64'hff00ffffff000000;
+    cyclonev_lcell_comb ix5849z62807 (.combout (rd_data2_rename105[6]), .datad (
+                        p_nx105_repl0), .datae (nx65403z1), .dataf (nx5849z1)) ;
+                        defparam ix5849z62807.lut_mask = 64'hff00ffffff000000;
+    cyclonev_lcell_comb ix4852z62807 (.combout (rd_data2_rename105[5]), .datad (
+                        p_nx91_repl0), .datae (nx65403z1), .dataf (nx4852z1)) ;
+                        defparam ix4852z62807.lut_mask = 64'hff00ffffff000000;
+    cyclonev_lcell_comb ix3855z62807 (.combout (rd_data2_rename105[4]), .datad (
+                        p_nx77_repl0), .datae (nx65403z1), .dataf (nx3855z1)) ;
+                        defparam ix3855z62807.lut_mask = 64'hff00ffffff000000;
+    cyclonev_lcell_comb ix2858z62807 (.combout (rd_data2_rename105[3]), .datad (
+                        p_nx63_repl0), .datae (nx65403z1), .dataf (nx2858z1)) ;
+                        defparam ix2858z62807.lut_mask = 64'hff00ffffff000000;
+    cyclonev_lcell_comb ix1861z62807 (.combout (rd_data2_rename105[2]), .datad (
+                        p_nx48_repl0), .datae (nx65403z1), .dataf (nx1861z1)) ;
+                        defparam ix1861z62807.lut_mask = 64'hff00ffffff000000;
+    cyclonev_lcell_comb ix864z62807 (.combout (rd_data2_rename105[1]), .datad (
+                        p_nx34_repl0), .datae (nx65403z1), .dataf (nx864z1)) ;
+                        defparam ix864z62807.lut_mask = 64'hff00ffffff000000;
+    cyclonev_lcell_comb ix65403z62807 (.combout (rd_data2_rename105[0]), .datad (
+                        nx65403z1), .datae (p_nx20_repl0), .dataf (nx65403z5)) ;
+                        defparam ix65403z62807.lut_mask = 64'hffff00ffff000000;
+    cyclonev_lcell_comb ix65403z62809 (.combout (nx65403z2), .dataa (addr2[4]), 
+                        .datab (addr2[5]), .datac (addr1[4]), .datad (addr1[5])
+                        , .datae (nx65403z3), .dataf (nx65403z4)) ;
+                        defparam ix65403z62809.lut_mask = 64'h0000000000008421;
+    dffeas ix65403z26527 (.q (nx65403z1), .d (nx65403z2), .clk (wr_clk1), .clrn (
+           ena1_rename99), .prn (ena1_rename99)) ;
+    assign ix797 = 1'b0 ;
+endmodule
+
+
+module ram_dq_8d_0d ( wr_data1, rd_data1, addr1, wr_clk1, rd_clk1, wr_ena1, 
+                    rd_ena1, ena1, rst1, regce1, regrst1, wr_data2, rd_data2, 
+                    addr2, wr_clk2, rd_clk2, wr_ena2, rd_ena2, ena2, rst2, 
+                    regce2, regrst2, p_not_arst_n, 
+                    p_src1_rsci_data_out_d_oreg_8d__repl0, 
+                    p_src1_rsci_data_out_d_oreg_9d__repl0, 
+                    p_src1_rsci_data_out_d_oreg_1d0__repl0, 
+                    p_src1_rsci_data_out_d_oreg_1d1__repl0, 
+                    p_src1_rsci_data_out_d_oreg_1d2__repl0, 
+                    p_src1_rsci_data_out_d_oreg_1d3__repl0, 
+                    p_src1_rsci_data_out_d_oreg_1d4__repl0, 
+                    p_src1_rsci_data_out_d_oreg_1d5__repl0, 
+                    p_src1_rsci_data_out_d_oreg_0d__repl0, 
+                    p_src1_rsci_data_out_d_oreg_1d__repl0, 
+                    p_src1_rsci_data_out_d_oreg_2d__repl0, 
+                    p_src1_rsci_data_out_d_oreg_3d__repl0, 
+                    p_src1_rsci_data_out_d_oreg_4d__repl0, 
+                    p_src1_rsci_data_out_d_oreg_5d__repl0, 
+                    p_src1_rsci_data_out_d_oreg_6d__repl0, 
+                    p_src1_rsci_data_out_d_oreg_7d__repl0, p_addr2_6d_, 
+                    p_nx246_repl0, p_nx232_repl0, p_nx218_repl0, p_nx204_repl0, 
+                    p_nx190_repl0, p_nx176_repl0, p_nx162_repl0, p_nx148_repl0, 
+                    p_nx127_repl0, p_nx113_repl0, p_nx99_repl0, p_nx85_repl0, 
+                    p_nx71_repl0, p_nx56_repl0, p_nx42_repl0, p_nx28_repl0, 
+                    p_NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+                     ) ;
+
+    input [7:0]wr_data1 ;
+    output [7:0]rd_data1 ;
+    input [6:0]addr1 ;
+    input wr_clk1 ;
+    input rd_clk1 ;
+    input wr_ena1 ;
+    input rd_ena1 ;
+    input ena1 ;
+    input rst1 ;
+    input regce1 ;
+    input regrst1 ;
+    input [7:0]wr_data2 ;
+    output [7:0]rd_data2 ;
+    input [6:0]addr2 ;
+    input wr_clk2 ;
+    input rd_clk2 ;
+    input wr_ena2 ;
+    input rd_ena2 ;
+    input ena2 ;
+    input rst2 ;
+    input regce2 ;
+    input regrst2 ;
+    input p_not_arst_n ;
+    output p_src1_rsci_data_out_d_oreg_8d__repl0 ;
+    output p_src1_rsci_data_out_d_oreg_9d__repl0 ;
+    output p_src1_rsci_data_out_d_oreg_1d0__repl0 ;
+    output p_src1_rsci_data_out_d_oreg_1d1__repl0 ;
+    output p_src1_rsci_data_out_d_oreg_1d2__repl0 ;
+    output p_src1_rsci_data_out_d_oreg_1d3__repl0 ;
+    output p_src1_rsci_data_out_d_oreg_1d4__repl0 ;
+    output p_src1_rsci_data_out_d_oreg_1d5__repl0 ;
+    output p_src1_rsci_data_out_d_oreg_0d__repl0 ;
+    output p_src1_rsci_data_out_d_oreg_1d__repl0 ;
+    output p_src1_rsci_data_out_d_oreg_2d__repl0 ;
+    output p_src1_rsci_data_out_d_oreg_3d__repl0 ;
+    output p_src1_rsci_data_out_d_oreg_4d__repl0 ;
+    output p_src1_rsci_data_out_d_oreg_5d__repl0 ;
+    output p_src1_rsci_data_out_d_oreg_6d__repl0 ;
+    output p_src1_rsci_data_out_d_oreg_7d__repl0 ;
+    output p_addr2_6d_ ;
+    input p_nx246_repl0 ;
+    input p_nx232_repl0 ;
+    input p_nx218_repl0 ;
+    input p_nx204_repl0 ;
+    input p_nx190_repl0 ;
+    input p_nx176_repl0 ;
+    input p_nx162_repl0 ;
+    input p_nx148_repl0 ;
+    input p_nx127_repl0 ;
+    input p_nx113_repl0 ;
+    input p_nx99_repl0 ;
+    input p_nx85_repl0 ;
+    input p_nx71_repl0 ;
+    input p_nx56_repl0 ;
+    input p_nx42_repl0 ;
+    input p_nx28_repl0 ;
+    input 
+    p_NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+     ;
+
+    wire nx47102z6, nx46105z1, nx24391z1, nx25388z1, nx26385z1, nx27382z1, 
+         nx28379z1, nx29376z1, nx55078z4, nx54081z1, nx53084z1, nx52087z1, 
+         nx51090z1, nx50093z1, nx49096z1, nx48099z1, nx47102z1, nx55078z1, 
+         nx47102z2;
+    wire [7:0]rd_data1_rename55;
+    wire nx55078z2;
+    wire [7:0]rd_data2_rename56;
+    wire rd_ena1_rename50, nx47102z5, nx55078z3, nx47102z4, nx47102z3, nx47102z7, 
+         ix1061;
+    wire [875:0] xmplr_dummy ;
+
+
+
+
+    cyclonev_ram_block ix47102z12886 (.portadataout ({nx29376z1,nx28379z1,
+                       nx27382z1,nx26385z1,nx25388z1,nx24391z1,nx46105z1,
+                       nx47102z6}), .portbdataout ({nx48099z1,nx49096z1,
+                       nx50093z1,nx51090z1,nx52087z1,nx53084z1,nx54081z1,
+                       nx55078z4}), .portadatain ({wr_data1[7],wr_data1[6],
+                       wr_data1[5],wr_data1[4],wr_data1[3],wr_data1[2],
+                       wr_data1[1],wr_data1[0]}), .portaaddr ({addr1[6],addr1[5]
+                       ,addr1[4],addr1[3],addr1[2],addr1[1],addr1[0]}), .portawe (
+                       wr_ena1), .portare (rd_ena1_rename50), .portbdatain ({
+                       wr_data2[7],wr_data2[6],wr_data2[5],wr_data2[4],
+                       wr_data2[3],wr_data2[2],wr_data2[1],wr_data2[0]}), .portbaddr (
+                       {ix1061,addr2[5],addr2[4],addr2[3],addr2[2],addr2[1],
+                       addr2[0]}), .portbwe (wr_ena2), .portbre (
+                       rd_ena1_rename50), .clk0 (wr_clk1), .clk1 (wr_clk1), .ena0 (
+                       ena1), .ena1 (ena1)) ;
+                       defparam ix47102z12886.operation_mode = "bidir_dual_port";
+                       defparam ix47102z12886.mixed_port_feed_through_mode = "dont_care";
+                       defparam ix47102z12886.ram_block_type = "auto";
+                       defparam ix47102z12886.logical_ram_name = "altsyncram:ix20_0d";
+                       defparam ix47102z12886.init_file_layout = "port_a";
+                       defparam ix47102z12886.port_a_logical_ram_depth = 128;
+                       defparam ix47102z12886.port_a_logical_ram_width = 8;
+                       defparam ix47102z12886.port_a_first_address = 0;
+                       defparam ix47102z12886.port_a_last_address = 127;
+                       defparam ix47102z12886.port_a_first_bit_number = 0;
+                       defparam ix47102z12886.port_a_address_clear = "none";
+                       defparam ix47102z12886.port_a_data_out_clear = "none";
+                       defparam ix47102z12886.port_a_data_out_clock = "none";
+                       defparam ix47102z12886.port_a_data_width = 8;
+                       defparam ix47102z12886.port_a_address_width = 7;
+                       defparam ix47102z12886.port_b_logical_ram_depth = 128;
+                       defparam ix47102z12886.port_b_logical_ram_width = 8;
+                       defparam ix47102z12886.port_b_first_address = 0;
+                       defparam ix47102z12886.port_b_last_address = 127;
+                       defparam ix47102z12886.port_b_first_bit_number = 0;
+                       defparam ix47102z12886.port_b_address_clear = "none";
+                       defparam ix47102z12886.port_b_data_in_clock = "clock1";
+                       defparam ix47102z12886.port_b_address_clock = "clock1";
+                       defparam ix47102z12886.port_b_write_enable_clock = "clock1";
+                       defparam ix47102z12886.port_b_read_enable_clock = "clock1";
+                       defparam ix47102z12886.port_b_data_out_clock = "none";
+                       defparam ix47102z12886.port_b_data_width = 8;
+                       defparam ix47102z12886.port_b_address_width = 7;
+                       defparam ix47102z12886.port_a_read_during_write_mode = "new_data_no_nbe_read";
+                       defparam ix47102z12886.port_b_read_during_write_mode = "new_data_no_nbe_read";
+                       defparam ix47102z12886.clk0_input_clock_enable = "ena0";
+                       defparam ix47102z12886.clk0_core_clock_enable = "ena0";
+                       defparam ix47102z12886.clk1_input_clock_enable = "ena1";
+                       defparam ix47102z12886.clk1_core_clock_enable = "ena1";
+    assign rd_ena1_rename50 = 1'b1 ;
+    dffeas reg_src1_rsci_data_out_d_oreg_9d_ (.q (
+           p_src1_rsci_data_out_d_oreg_9d__repl0), .d (rd_data1_rename55[1]), .clk (
+           rd_clk1), .ena (
+           p_NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (nx47102z7), .prn (rd_ena1_rename50)) ;
+    assign nx47102z7 = ~p_not_arst_n ;
+    dffeas reg_src1_rsci_data_out_d_oreg_8d_ (.q (
+           p_src1_rsci_data_out_d_oreg_8d__repl0), .d (rd_data1_rename55[0]), .clk (
+           rd_clk1), .ena (
+           p_NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (nx47102z7), .prn (rd_ena1_rename50)) ;
+    dffeas reg_src1_rsci_data_out_d_oreg_7d_ (.q (
+           p_src1_rsci_data_out_d_oreg_7d__repl0), .d (rd_data2_rename56[7]), .clk (
+           rd_clk1), .ena (
+           p_NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (nx47102z7), .prn (rd_ena1_rename50)) ;
+    dffeas reg_src1_rsci_data_out_d_oreg_6d_ (.q (
+           p_src1_rsci_data_out_d_oreg_6d__repl0), .d (rd_data2_rename56[6]), .clk (
+           rd_clk1), .ena (
+           p_NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (nx47102z7), .prn (rd_ena1_rename50)) ;
+    dffeas reg_src1_rsci_data_out_d_oreg_5d_ (.q (
+           p_src1_rsci_data_out_d_oreg_5d__repl0), .d (rd_data2_rename56[5]), .clk (
+           rd_clk1), .ena (
+           p_NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (nx47102z7), .prn (rd_ena1_rename50)) ;
+    dffeas reg_src1_rsci_data_out_d_oreg_4d_ (.q (
+           p_src1_rsci_data_out_d_oreg_4d__repl0), .d (rd_data2_rename56[4]), .clk (
+           rd_clk1), .ena (
+           p_NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (nx47102z7), .prn (rd_ena1_rename50)) ;
+    dffeas reg_src1_rsci_data_out_d_oreg_3d_ (.q (
+           p_src1_rsci_data_out_d_oreg_3d__repl0), .d (rd_data2_rename56[3]), .clk (
+           rd_clk1), .ena (
+           p_NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (nx47102z7), .prn (rd_ena1_rename50)) ;
+    dffeas reg_src1_rsci_data_out_d_oreg_2d_ (.q (
+           p_src1_rsci_data_out_d_oreg_2d__repl0), .d (rd_data2_rename56[2]), .clk (
+           rd_clk1), .ena (
+           p_NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (nx47102z7), .prn (rd_ena1_rename50)) ;
+    dffeas reg_src1_rsci_data_out_d_oreg_1d5_ (.q (
+           p_src1_rsci_data_out_d_oreg_1d5__repl0), .d (rd_data1_rename55[7]), .clk (
+           rd_clk1), .ena (
+           p_NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (nx47102z7), .prn (rd_ena1_rename50)) ;
+    dffeas reg_src1_rsci_data_out_d_oreg_1d4_ (.q (
+           p_src1_rsci_data_out_d_oreg_1d4__repl0), .d (rd_data1_rename55[6]), .clk (
+           rd_clk1), .ena (
+           p_NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (nx47102z7), .prn (rd_ena1_rename50)) ;
+    dffeas reg_src1_rsci_data_out_d_oreg_1d3_ (.q (
+           p_src1_rsci_data_out_d_oreg_1d3__repl0), .d (rd_data1_rename55[5]), .clk (
+           rd_clk1), .ena (
+           p_NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (nx47102z7), .prn (rd_ena1_rename50)) ;
+    dffeas reg_src1_rsci_data_out_d_oreg_1d2_ (.q (
+           p_src1_rsci_data_out_d_oreg_1d2__repl0), .d (rd_data1_rename55[4]), .clk (
+           rd_clk1), .ena (
+           p_NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (nx47102z7), .prn (rd_ena1_rename50)) ;
+    dffeas reg_src1_rsci_data_out_d_oreg_1d1_ (.q (
+           p_src1_rsci_data_out_d_oreg_1d1__repl0), .d (rd_data1_rename55[3]), .clk (
+           rd_clk1), .ena (
+           p_NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (nx47102z7), .prn (rd_ena1_rename50)) ;
+    dffeas reg_src1_rsci_data_out_d_oreg_1d0_ (.q (
+           p_src1_rsci_data_out_d_oreg_1d0__repl0), .d (rd_data1_rename55[2]), .clk (
+           rd_clk1), .ena (
+           p_NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (nx47102z7), .prn (rd_ena1_rename50)) ;
+    dffeas reg_src1_rsci_data_out_d_oreg_1d_ (.q (
+           p_src1_rsci_data_out_d_oreg_1d__repl0), .d (rd_data2_rename56[1]), .clk (
+           rd_clk1), .ena (
+           p_NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (nx47102z7), .prn (rd_ena1_rename50)) ;
+    dffeas reg_src1_rsci_data_out_d_oreg_0d_ (.q (
+           p_src1_rsci_data_out_d_oreg_0d__repl0), .d (rd_data2_rename56[0]), .clk (
+           rd_clk1), .ena (
+           p_NOT_main_ip_get_ang_zero_core_inst_main_ip_get_ang_zero_core_staller_inst_not_core_wen_repl
+           ), .clrn (nx47102z7), .prn (rd_ena1_rename50)) ;
+    cyclonev_lcell_comb ix47102z62810 (.combout (nx47102z3), .datac (addr2[2]), 
+                        .datad (addr2[3]), .datae (addr1[2]), .dataf (addr1[3])
+                        ) ;
+                        defparam ix47102z62810.lut_mask = 64'h0ffff0ffff0ffff0;
+    cyclonev_lcell_comb ix47102z62811 (.combout (nx47102z4), .datac (addr2[0]), 
+                        .datad (ena1), .datae (addr1[0]), .dataf (addr1[6])) ;
+                        defparam ix47102z62811.lut_mask = 64'h00000000f0000f00;
+    cyclonev_lcell_comb ix55078z62810 (.combout (nx55078z3), .datac (addr2[0]), 
+                        .datad (wr_ena1), .datae (addr1[0]), .dataf (addr1[6])
+                        ) ;
+                        defparam ix55078z62810.lut_mask = 64'h00000000f0000f00;
+    cyclonev_lcell_comb ix47102z62812 (.combout (nx47102z5), .datac (addr2[4]), 
+                        .datad (addr2[5]), .datae (addr1[4]), .dataf (addr1[5])
+                        ) ;
+                        defparam ix47102z62812.lut_mask = 64'h0ffff0ffff0ffff0;
+    cyclonev_lcell_comb ix48099z62807 (.combout (rd_data2_rename56[7]), .datad (
+                        p_nx246_repl0), .datae (nx55078z1), .dataf (nx48099z1)
+                        ) ;
+                        defparam ix48099z62807.lut_mask = 64'hff00ffffff000000;
+    cyclonev_lcell_comb ix49096z62807 (.combout (rd_data2_rename56[6]), .datad (
+                        p_nx232_repl0), .datae (nx55078z1), .dataf (nx49096z1)
+                        ) ;
+                        defparam ix49096z62807.lut_mask = 64'hff00ffffff000000;
+    cyclonev_lcell_comb ix50093z62807 (.combout (rd_data2_rename56[5]), .datad (
+                        p_nx218_repl0), .datae (nx55078z1), .dataf (nx50093z1)
+                        ) ;
+                        defparam ix50093z62807.lut_mask = 64'hff00ffffff000000;
+    cyclonev_lcell_comb ix51090z62807 (.combout (rd_data2_rename56[4]), .datad (
+                        p_nx204_repl0), .datae (nx55078z1), .dataf (nx51090z1)
+                        ) ;
+                        defparam ix51090z62807.lut_mask = 64'hff00ffffff000000;
+    cyclonev_lcell_comb ix52087z62807 (.combout (rd_data2_rename56[3]), .datad (
+                        p_nx190_repl0), .datae (nx55078z1), .dataf (nx52087z1)
+                        ) ;
+                        defparam ix52087z62807.lut_mask = 64'hff00ffffff000000;
+    cyclonev_lcell_comb ix53084z62807 (.combout (rd_data2_rename56[2]), .datad (
+                        p_nx176_repl0), .datae (nx55078z1), .dataf (nx53084z1)
+                        ) ;
+                        defparam ix53084z62807.lut_mask = 64'hff00ffffff000000;
+    cyclonev_lcell_comb ix54081z62807 (.combout (rd_data2_rename56[1]), .datad (
+                        p_nx162_repl0), .datae (nx55078z1), .dataf (nx54081z1)
+                        ) ;
+                        defparam ix54081z62807.lut_mask = 64'hff00ffffff000000;
+    cyclonev_lcell_comb ix55078z62807 (.combout (rd_data2_rename56[0]), .datad (
+                        nx55078z1), .datae (p_nx148_repl0), .dataf (nx55078z4)
+                        ) ;
+                        defparam ix55078z62807.lut_mask = 64'hffff00ffff000000;
+    cyclonev_lcell_comb ix55078z62809 (.combout (nx55078z2), .dataa (addr2[1]), 
+                        .datab (ena1), .datac (addr1[1]), .datad (nx47102z3), .datae (
+                        nx55078z3), .dataf (nx47102z5)) ;
+                        defparam ix55078z62809.lut_mask = 64'h0000000000840000;
+    cyclonev_lcell_comb ix29376z62807 (.combout (rd_data1_rename55[7]), .datad (
+                        p_nx127_repl0), .datae (nx47102z1), .dataf (nx29376z1)
+                        ) ;
+                        defparam ix29376z62807.lut_mask = 64'hff00ffffff000000;
+    cyclonev_lcell_comb ix28379z62807 (.combout (rd_data1_rename55[6]), .datad (
+                        p_nx113_repl0), .datae (nx47102z1), .dataf (nx28379z1)
+                        ) ;
+                        defparam ix28379z62807.lut_mask = 64'hff00ffffff000000;
+    cyclonev_lcell_comb ix27382z62807 (.combout (rd_data1_rename55[5]), .datad (
+                        p_nx99_repl0), .datae (nx47102z1), .dataf (nx27382z1)) ;
+                        defparam ix27382z62807.lut_mask = 64'hff00ffffff000000;
+    cyclonev_lcell_comb ix26385z62807 (.combout (rd_data1_rename55[4]), .datad (
+                        p_nx85_repl0), .datae (nx47102z1), .dataf (nx26385z1)) ;
+                        defparam ix26385z62807.lut_mask = 64'hff00ffffff000000;
+    cyclonev_lcell_comb ix25388z62807 (.combout (rd_data1_rename55[3]), .datad (
+                        p_nx71_repl0), .datae (nx47102z1), .dataf (nx25388z1)) ;
+                        defparam ix25388z62807.lut_mask = 64'hff00ffffff000000;
+    cyclonev_lcell_comb ix24391z62807 (.combout (rd_data1_rename55[2]), .datad (
+                        p_nx56_repl0), .datae (nx47102z1), .dataf (nx24391z1)) ;
+                        defparam ix24391z62807.lut_mask = 64'hff00ffffff000000;
+    cyclonev_lcell_comb ix46105z62807 (.combout (rd_data1_rename55[1]), .datad (
+                        p_nx42_repl0), .datae (nx47102z1), .dataf (nx46105z1)) ;
+                        defparam ix46105z62807.lut_mask = 64'hff00ffffff000000;
+    cyclonev_lcell_comb ix47102z62807 (.combout (rd_data1_rename55[0]), .datad (
+                        nx47102z1), .datae (p_nx28_repl0), .dataf (nx47102z6)) ;
+                        defparam ix47102z62807.lut_mask = 64'hffff00ffff000000;
+    cyclonev_lcell_comb ix47102z62809 (.combout (nx47102z2), .dataa (wr_ena2), .datab (
+                        addr2[1]), .datac (addr1[1]), .datad (nx47102z3), .datae (
+                        nx47102z4), .dataf (nx47102z5)) ;
+                        defparam ix47102z62809.lut_mask = 64'h0000000000820000;
+    dffeas ix47102z26527 (.q (nx47102z1), .d (nx47102z2), .clk (wr_clk1), .clrn (
+           rd_ena1_rename50), .prn (rd_ena1_rename50)) ;
+    dffeas ix55078z26527 (.q (nx55078z1), .d (nx55078z2), .clk (wr_clk1), .clrn (
+           rd_ena1_rename50), .prn (rd_ena1_rename50)) ;
+    assign ix1061 = 1'b0 ;
+endmodule
+

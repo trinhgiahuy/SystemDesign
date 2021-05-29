@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.TUNI.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014/ http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>TUNI.COMP.CE.400</ipxact:vendor>
+	<ipxact:library>ip.sw</ipxact:library>
+	<ipxact:name>SystemC-Example</ipxact:name>
+	<ipxact:version>1.0</ipxact:version>
+	<ipxact:fileSets>
+		<ipxact:fileSet>
+			<ipxact:name>Files</ipxact:name>
+			<ipxact:description>Files used in the example.</ipxact:description>
+			<ipxact:file>
+				<ipxact:name>hello.cpp</ipxact:name>
+				<ipxact:fileType>cppSource</ipxact:fileType>
+				<ipxact:description>g++ -I. -I$SYSTEMC_HOME/include -L. -L$SYSTEMC_HOME/lib -std=c++11 -o hellobin hello.c -lsystemc -lm</ipxact:description>
+			</ipxact:file>
+		</ipxact:fileSet>
+	</ipxact:fileSets>
+	<ipxact:description>Example to demonstrate SystemC and gtkwave.</ipxact:description>
+	<ipxact:vendorExtensions>
+		<kactus2:author>Janne Virtanen</kactus2:author>
+		<kactus2:kts_attributes>
+			<kactus2:kts_implementation>SW</kactus2:kts_implementation>
+		</kactus2:kts_attributes>
+	</ipxact:vendorExtensions>
+</ipxact:component>

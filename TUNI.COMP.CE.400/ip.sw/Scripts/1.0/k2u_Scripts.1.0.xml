@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ipxact:component xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ipxact:vendor>TUNI.COMP.CE.400</ipxact:vendor>
+  <ipxact:library>ip.sw</ipxact:library>
+  <ipxact:name>Scripts</ipxact:name>
+  <ipxact:version>1.0</ipxact:version>
+  <ipxact:model />
+  <ipxact:fileSets>
+    <ipxact:fileSet>
+      <ipxact:name>Executables</ipxact:name>
+      <ipxact:description>The scripts.</ipxact:description>
+      <ipxact:file>
+        <ipxact:name>encode_video.sh</ipxact:name>
+        <ipxact:fileType user="shellScript">user</ipxact:fileType>
+        <ipxact:isIncludeFile externalDeclarations="false">false</ipxact:isIncludeFile>
+        <ipxact:description>Script used to call Kvazaar. Expects parameters on call.</ipxact:description>
+        <ipxact:vendorExtensions xmlns:kactus2="http://funbase.cs.TUNI.fi/">
+          <kactus2:hash>a8595610caeb047c7e9dfa037f75c378</kactus2:hash>
+        </ipxact:vendorExtensions>
+      </ipxact:file>
+      <ipxact:file>
+        <ipxact:name>gprof2dot.py</ipxact:name>
+        <ipxact:fileType user="pythonSource">user</ipxact:fileType>
+        <ipxact:isIncludeFile externalDeclarations="false">false</ipxact:isIncludeFile>
+        <ipxact:description>Creates a PNG-image out of profiling results. Expects paramaters on call.</ipxact:description>
+      </ipxact:file>
+    </ipxact:fileSet>
+  </ipxact:fileSets>
+  <ipxact:description>Some of the scripts used in exercises.
+
+These are usually supplemented by another script that initializes the parameters.</ipxact:description>
+  <ipxact:vendorExtensions xmlns:kactus2="http://funbase.cs.TUNI.fi/">
+    <kactus2:kts_attributes>
+      <kactus2:kts_productHier>Flat</kactus2:kts_productHier>
+      <kactus2:kts_implementation>SW</kactus2:kts_implementation>
+      <kactus2:kts_firmness>Mutable</kactus2:kts_firmness>
+    </kactus2:kts_attributes>
+    <kactus2:author>Janne Virtanen</kactus2:author>
+    <kactus2:version>2,7,617,0</kactus2:version>
+  </ipxact:vendorExtensions>
+</ipxact:component>

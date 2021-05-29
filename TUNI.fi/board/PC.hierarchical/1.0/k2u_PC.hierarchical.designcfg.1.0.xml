@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ipxact:designConfiguration xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ipxact:vendor>TUNI.fi</ipxact:vendor>
+  <ipxact:library>board</ipxact:library>
+  <ipxact:name>PC.hierarchical.designcfg</ipxact:name>
+  <ipxact:version>1.0</ipxact:version>
+  <ipxact:designRef vendor="TUNI.fi" library="board" name="PC.hierarchical.design" version="1.0" />
+  <ipxact:viewConfiguration>
+    <ipxact:instanceName>x86_64_0</ipxact:instanceName>
+    <ipxact:view viewRef="flat" />
+  </ipxact:viewConfiguration>
+  <ipxact:vendorExtensions xmlns:kactus2="http://funbase.cs.TUNI.fi/">
+    <kactus2:kts_attributes>
+      <kactus2:kts_implementation>HW</kactus2:kts_implementation>
+    </kactus2:kts_attributes>
+  </ipxact:vendorExtensions>
+</ipxact:designConfiguration>
